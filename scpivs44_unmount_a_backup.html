@@ -1,0 +1,2044 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head class="at-element-marker">
+  <title>Smontare un backup</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Smontare un backup" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_unmount_a_backup.html" />
+	<meta property="og:description" content="È possibile smontare un backup quando non è più necessario accedere ai file nel datastore." />
+  <meta property="og:image" content="https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="È possibile smontare un backup quando non è più necessario accedere ai file nel datastore.">
+  <meta name="keywords" content=" "><!-- Icons -->
+  <link rel="icon" href="/it-it/sc-plugin-vmware-vsphere/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+  <!-- Elastic Search -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
+
+  <!-- Combined CSS -->
+  <link rel="stylesheet" type="text/css" href="/it-it/sc-plugin-vmware-vsphere/css/netappdocs.css">
+
+  
+  <link rel="stylesheet" href="/it-it/sc-plugin-vmware-vsphere/css/landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/it-it/sc-plugin-vmware-vsphere/css/tabbed-blocks.css" type="text/css">
+  <!-- Canonical url -->
+  <link rel="canonical" href="https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_unmount_a_backup.html" />
+  <link rel="alternate" hreflang="x-default" href="https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_unmount_a_backup.html" />
+  <link rel="alternate" hreflang="it" href="https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_unmount_a_backup.html" />
+  <link rel="alternate" hreflang="en" href="https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_unmount_a_backup.html" />
+  <link rel="alternate" hreflang="ja" href="https://docs.netapp.com/ja-jp/sc-plugin-vmware-vsphere/scpivs44_unmount_a_backup.html" />
+  <link rel="alternate" hreflang="ko" href="https://docs.netapp.com/ko-kr/sc-plugin-vmware-vsphere/scpivs44_unmount_a_backup.html" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://docs.netapp.com/zh-cn/sc-plugin-vmware-vsphere/scpivs44_unmount_a_backup.html" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://docs.netapp.com/zh-tw/sc-plugin-vmware-vsphere/scpivs44_unmount_a_backup.html" />
+  <link rel="alternate" hreflang="de" href="https://docs.netapp.com/de-de/sc-plugin-vmware-vsphere/scpivs44_unmount_a_backup.html" />
+  <link rel="alternate" hreflang="es" href="https://docs.netapp.com/es-es/sc-plugin-vmware-vsphere/scpivs44_unmount_a_backup.html" />
+  <link rel="alternate" hreflang="fr" href="https://docs.netapp.com/fr-fr/sc-plugin-vmware-vsphere/scpivs44_unmount_a_backup.html" />
+  <link rel='stylesheet' href='/it-it/sc-plugin-vmware-vsphere/css/na-feature.css' type='text/css'><!-- Top level site integrations --><script>
+    function addAdobeLaunch(adobeId) {
+      var head = document.getElementsByTagName('head')[0];
+      var adobe = document.createElement("script");
+      adobe.type = "text/plain";
+      adobe.className = "optanon-category-C0002";
+      adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/"+adobeId+".min.js";
+      head.appendChild(adobe);
+    }
+
+    function addGoogleAnalytics(gtagId) {
+      var google = document.createElement("script");
+      google.type = "text/plain";
+      google.className = "optanon-category-C0002";
+      google.src = "https://www.googletagmanager.com/gtag/js?id="+gtagId;
+      var head = document.getElementsByTagName('head')[0];
+      head.appendChild(google);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', gtagId);
+    }
+
+    function addConsent(consentId) {
+      var head = document.getElementsByTagName('head')[0];
+      var onetrustConsent = document.createElement("script");
+      onetrustConsent.type = "text/javascript";
+      onetrustConsent.src = "https://cdn.cookielaw.org/consent/"+consentId+"/OtAutoBlock.js";
+      head.appendChild(onetrustConsent);
+
+      var onetrustScript = document.createElement("script");
+      onetrustScript.type = "text/javascript";
+      onetrustScript.src = "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js";
+      onetrustScript.charset = "UTF-8";
+      onetrustScript.dataset.documentLanguage = "true";
+      onetrustScript.dataset.domainScript = consentId;
+      head.appendChild(onetrustScript);
+    }addConsent("72570c5c-fe30-465f-b0e0-b77f7fb4ae34");
+    addAdobeLaunch("launch-e9ff3acac59f");
+    addGoogleAnalytics("UA-81697994-3");function OptanonWrapper() { }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/it-it/sc-plugin-vmware-vsphere/js/na-search.js'></script><script src='/it-it/sc-plugin-vmware-vsphere/js/na-pagenav.js'></script><script src='/it-it/sc-plugin-vmware-vsphere/js/na-utility.js'></script>
+ <!--  
+  <link rel='stylesheet' href='/it-it/sc-plugin-vmware-vsphere/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/it-it/sc-plugin-vmware-vsphere/css/prism-netapp.css' type='text/css'>
+ -->
+
+  <!-- <script src='/it-it/sc-plugin-vmware-vsphere/js/na-utility.js'></script> -->
+  <script src='/it-it/sc-plugin-vmware-vsphere/js/clouddocs.js'></script>
+  <script src='/it-it/sc-plugin-vmware-vsphere/js/jquery.navgoco.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- <script src='/it-it/sc-plugin-vmware-vsphere/js/toc.js'></script> -->
+  <!-- <script src='/it-it/sc-plugin-vmware-vsphere/js/customscripts.js'></script> --><script>
+      $(document).ready(function() {
+          
+          var collapseOnInit = true;
+          
+
+          var navSettings = {
+              "caretHtml": '',
+              "accordion": collapseOnInit,
+              "openClass": 'active', // open
+              "save": false, // leave false or nav highlighting doesn't work right
+              "cookie": {
+                  "name": 'navgoco',
+                  "expires": false,
+                  "path": '/'
+              },
+              "slide": {
+                  "duration": 400,
+                  "easing": 'swing'
+              }
+          };
+
+          // Initialize navgoco with default options
+          $("#mysidebar").navgoco(navSettings);
+          
+
+          $("#collapseAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', false);
+          });
+
+          $("#expandAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', true);
+          });
+
+          $(".sidebar-nav-container").on("scroll", function() {
+            $.cookie("sidebarScroll", $(".sidebar-nav-container").scrollTop(), {
+              path    : "/it-it/sc-plugin-vmware-vsphere"  
+            });
+          });
+          $(function() {
+            if ($.cookie("sidebarScroll")) {
+              $(".sidebar-nav-container").scrollTop($.cookie("sidebarScroll"));
+            }
+          });
+
+      });
+
+  </script>
+  <script>
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+  </script>
+  <script src='/it-it/sc-plugin-vmware-vsphere/js/custom-dropdown.js'></script>
+  <script src='/it-it/sc-plugin-vmware-vsphere/js/FileSaver.min.js'></script>
+  <script src='/it-it/sc-plugin-vmware-vsphere/js/jszip-utils.min.js'></script>
+  <script src='/it-it/sc-plugin-vmware-vsphere/js/jszip.min.js'></script>
+  <!-- <script src='/it-it/sc-plugin-vmware-vsphere/js/pdf-ux.js'></script> -->
+</head>
+
+
+  <body class role="document" data-flavor="">
+    <div id="page" class="n-off-canvas-menu">
+      <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
+      <div class="n-off-canvas-menu__content-wrap">
+        <header class="site-header" id="banner">
+  
+  <!-- Start Page Toolbar -->
+  
+  <div class="page-nav-toolbar"><div id="version-dropdown-new" class="custom-dropdown" >
+  <div class="custom-dropdown-select unselected" title="Plug-in SnapCenter per VMware vSphere 4.8">
+    <label>Versione</label>
+    <span translate="no" class="notranslate">Plug-in SnapCenter per VMware vSphere 4.8</span>
+    <img src="/it-it/sc-plugin-vmware-vsphere/images/chevron_up.svg" alt="" class="custom-icon chevrondown invisible" />
+    <img src="/it-it/sc-plugin-vmware-vsphere/images/chevron_down.svg" alt="" class="custom-icon chevronup" />
+  </div>
+
+  <ul class="custom-dropdown-menu"><li>
+      
+      <a href="https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_unmount_a_backup.html" target="_self">
+        <span translate="no" class="notranslate"><span>Plug-in SnapCenter per VMware vSphere</span><span class="version"> 4.8</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere-47/scpivs44_unmount_a_backup.html" target="_self">
+        <span translate="no" class="notranslate"><span>Plug-in SnapCenter per VMware vSphere</span><span class="version"> 4.7</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere-46/scpivs44_unmount_a_backup.html" target="_self">
+        <span translate="no" class="notranslate"><span>Plug-in SnapCenter per VMware vSphere</span><span class="version"> 4.6</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere-45/scpivs44_unmount_a_backup.html" target="_self">
+        <span translate="no" class="notranslate"><span>Plug-in SnapCenter per VMware vSphere</span><span class="version"> 4.5</span></span>
+      </a>
+                     
+    </li>
+    
+  </ul>
+</div><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/sc-plugin-vmware-vsphere.it-it/issues/new?template=new-from-page.yml&page-url=https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_unmount_a_backup.html&page-title=Smontare un backup" class="page-nav-contribute-link" role="button"><img src="/it-it/sc-plugin-vmware-vsphere/images/discuss-sm.svg" alt="" class="github-icon" />Richiedi modifiche alla documentazione</a><a target="_blank" href="https://github.com/NetAppDocs/sc-plugin-vmware-vsphere/blob/main/scpivs44_unmount_a_backup.adoc" class="page-nav-contribute-link" role="button"><img src="/it-it/sc-plugin-vmware-vsphere/images/edit-sm.svg" alt="" class="github-icon" />Modifica questa pagina</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/it-it/sc-plugin-vmware-vsphere/images/article-sm.svg" alt="" class="github-icon" />Scopri come collaborare</a></div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">IN QUESTA PAGINA</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+  
+  <!-- Start top_hat -->
+  <div class="n-top-hat">
+    <div class="n-container">
+      <div class="n-top-hat__cross-property-nav">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/products-a-z/" class="n-top-hat__link">Prodotto e soluzioni</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/support-and-training/netapp-university/" class="n-top-hat__link">Supporto e training</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://cloud.netapp.com" class="n-top-hat__link">Cloud Central</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://community.netapp.com/" class="n-top-hat__link">Community</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://blog.netapp.com/" class="n-top-hat__link">Blog</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://customers.netapp.com/en/" class="n-top-hat__link">Testimonianze dei clienti</a>
+          </li>
+        </ul>
+      </div>
+      <div class="n-top-hat__utils">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/company/contact-us/" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Contatto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End top_hat -->
+
+  <!-- Start property bar -->
+  <style>
+    .n-property-navigation-bar__menus--desktop-experience .n-menu--mega__default-content__heading span {
+    color: #34B0FF;
+    }
+  </style>
+  <div class="n-property-bar " data-ntap-ui="sticky-nav">
+    <div class="n-property-bar__inner-wrap">
+      <div class="n-property-bar__menu-toggle">
+        <a href="#" class="n-property-bar__menu-toggle-link">
+          <span class="n-property-bar__menu-toggle-text">Menu</span>
+          <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
+            <title>bars</title>
+            <use xlink:href="/it-it/sc-plugin-vmware-vsphere/images/sprite.svg#bars"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="n-property-bar__property-mark ">
+        <a href="https://www.netapp.com" class="n-property-bar__property-link">
+          <div class="n-property-bar__logo">
+            <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
+              <title>netapp-mark</title>
+              <use xlink:href="/it-it/sc-plugin-vmware-vsphere/images/sprite.svg#netapp-mark"></use>
+            </svg>
+            <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
+              <title>netapp-logo</title>
+              <use xlink:href="/it-it/sc-plugin-vmware-vsphere/images/sprite.svg#netapp-logo"></use>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      
+      
+      
+      <div class="search-property-bar">
+        <div id="search-demo-container" class="searchbox n-property-bar__search">
+          <div id="react-search" 
+          data-search-html="/it-it/sc-plugin-vmware-vsphere/search.html"
+          data-type="widget" 
+          data-placeholder="Esplora la documentazione"
+          data-no-results-found="Nessun risultato per {query}"
+          data-did-you-mean="Cerca {suggestion}."
+          data-no-results-found-did-you-mean="Nessun risultato per {query}. Intendi {suggestion}?"
+          data-results-found="{hitCount} risultati trovati"
+          data-error-message="Si è verificato un problema durante il recupero dei risultati. Riprova."
+          data-error-reset="Reimposta ricerca"
+          data-sk-es-pf-indexes=""
+          data-flavor=""></div>
+          <button class="n-property-bar__search-toggle-button" type="button">
+            <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/it-it/sc-plugin-vmware-vsphere/images/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="n-property-bar__toolbar">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">Italiano</span>
+          <svg class="n-globe__icon" aria-labelledby="title">
+            <title>globe</title>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/it-it/sc-plugin-vmware-vsphere/images/sprite.svg#globe"></use>
+          </svg>
+        </button>
+      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_unmount_a_backup.html" target="_self"><span translate="no" class="notranslate">Italiano</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_unmount_a_backup.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/sc-plugin-vmware-vsphere/scpivs44_unmount_a_backup.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/sc-plugin-vmware-vsphere/scpivs44_unmount_a_backup.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/sc-plugin-vmware-vsphere/scpivs44_unmount_a_backup.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/sc-plugin-vmware-vsphere/scpivs44_unmount_a_backup.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/de-de/sc-plugin-vmware-vsphere/scpivs44_unmount_a_backup.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/es-es/sc-plugin-vmware-vsphere/scpivs44_unmount_a_backup.html" target="_self"><span translate="no" class="notranslate">Español</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/fr-fr/sc-plugin-vmware-vsphere/scpivs44_unmount_a_backup.html" target="_self"><span translate="no" class="notranslate">Français</span></a>
+        </li></ul>
+    </div>
+    <!-- End Language Selector -->
+
+    <div class="n-property-bar__cta"></div>
+  </div>
+  <!-- End property bar -->
+</header>
+
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+  <!-- Sidebar Column -->
+  
+  <div class="col-md-3" id="sidebar-height">
+      <button id="btn-sidebar-collapse" onclick="hideSidebar()"><img src="/it-it/sc-plugin-vmware-vsphere/images/collapse.png" alt="Comprimi pannello di navigazione"></button>
+      <div class="n-pdf-header">
+  <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+    <img src="/it-it/sc-plugin-vmware-vsphere/images/pdf.png" alt="" width="16" height="16"/>PDF disponibili<span>
+    </span>
+  </a>
+</div>
+<div class="n-pdf-body-container">
+  <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+        
+        
+        
+        <a target="_blank" href="/it-it/sc-plugin-vmware-vsphere/pdfs/fullsite-sidebar/Plug_in_SnapCenter_per_la_documentazione_di_VMware_vSphere.pdf" >
+          <img src="/it-it/sc-plugin-vmware-vsphere/images/pdf.png" alt="" width="16" height="16"/>PDF del sito di questa documentazione</a>
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/sc-plugin-vmware-vsphere/pdfs/sidebar/Concetti.pdf" 
+            
+          >
+            <img src="/it-it/sc-plugin-vmware-vsphere/images/pdf.png" alt="" width="16" height="16"/>
+            Concetti
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/sc-plugin-vmware-vsphere/pdfs/sidebar/Inizia_subito.pdf" 
+            
+          >
+            <img src="/it-it/sc-plugin-vmware-vsphere/images/pdf.png" alt="" width="16" height="16"/>
+            Inizia subito
+          </a>
+          
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/sc-plugin-vmware-vsphere/pdfs/sidebar/Requisiti_per_l_implementazione_del_distributore_idraulico.pdf" 
+            
+          >
+            <img src="/it-it/sc-plugin-vmware-vsphere/images/pdf.png" alt="" width="16" height="16"/>
+            Requisiti per l'implementazione del distributore idraulico
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/sc-plugin-vmware-vsphere/pdfs/sidebar/Avvio_rapido.pdf" 
+            
+          >
+            <img src="/it-it/sc-plugin-vmware-vsphere/images/pdf.png" alt="" width="16" height="16"/>
+            Avvio rapido
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/sc-plugin-vmware-vsphere/pdfs/sidebar/Monitorare_e_generare_report.pdf" 
+            
+          >
+            <img src="/it-it/sc-plugin-vmware-vsphere/images/pdf.png" alt="" width="16" height="16"/>
+            Monitorare e generare report
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/sc-plugin-vmware-vsphere/pdfs/sidebar/Gestire_lo_storage.pdf" 
+            
+          >
+            <img src="/it-it/sc-plugin-vmware-vsphere/images/pdf.png" alt="" width="16" height="16"/>
+            Gestire lo storage
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/sc-plugin-vmware-vsphere/pdfs/sidebar/Proteggere_i_dati.pdf" 
+            
+          >
+            <img src="/it-it/sc-plugin-vmware-vsphere/images/pdf.png" alt="" width="16" height="16"/>
+            Proteggere i dati
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/sc-plugin-vmware-vsphere/pdfs/sidebar/Montare_e_smontare_gli_archivi_dati.pdf" 
+            
+          >
+            <img src="/it-it/sc-plugin-vmware-vsphere/images/pdf.png" alt="" width="16" height="16"/>
+            Montare e smontare gli archivi dati
+          </a>
+          
+
+
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/sc-plugin-vmware-vsphere/pdfs/sidebar/Ripristinare_dai_backup.pdf" 
+            
+          >
+            <img src="/it-it/sc-plugin-vmware-vsphere/images/pdf.png" alt="" width="16" height="16"/>
+            Ripristinare dai backup
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/sc-plugin-vmware-vsphere/pdfs/sidebar/Collegare_e_scollegare_i_VMDK.pdf" 
+            
+          >
+            <img src="/it-it/sc-plugin-vmware-vsphere/images/pdf.png" alt="" width="16" height="16"/>
+            Collegare e scollegare i VMDK
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/sc-plugin-vmware-vsphere/pdfs/sidebar/Ripristinare_file_e_cartelle_guest.pdf" 
+            
+          >
+            <img src="/it-it/sc-plugin-vmware-vsphere/images/pdf.png" alt="" width="16" height="16"/>
+            Ripristinare file e cartelle guest
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/sc-plugin-vmware-vsphere/pdfs/sidebar/Gestire_il_plug_in_SnapCenter_per_l_appliance_VMware_vSphere.pdf" 
+            
+          >
+            <img src="/it-it/sc-plugin-vmware-vsphere/images/pdf.png" alt="" width="16" height="16"/>
+            Gestire il plug-in SnapCenter per l'appliance VMware vSphere
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/sc-plugin-vmware-vsphere/pdfs/sidebar/Gestire_la_configurazione.pdf" 
+            
+          >
+            <img src="/it-it/sc-plugin-vmware-vsphere/images/pdf.png" alt="" width="16" height="16"/>
+            Gestire la configurazione
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/sc-plugin-vmware-vsphere/pdfs/sidebar/API_REST.pdf" 
+            
+          >
+            <img src="/it-it/sc-plugin-vmware-vsphere/images/pdf.png" alt="" width="16" height="16"/>
+            API REST
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/sc-plugin-vmware-vsphere/pdfs/sidebar/Eseguire_l_upgrade.pdf" 
+            
+          >
+            <img src="/it-it/sc-plugin-vmware-vsphere/images/pdf.png" alt="" width="16" height="16"/>
+            Eseguire l'upgrade
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+</li></ul>
+  <div class="zip-pdf-link-container" style="display: none;">   
+    <a href="#" id="zipPdf">
+      <img src="/it-it/sc-plugin-vmware-vsphere/images/pdf-zip.png" alt="" width="16" height="16"/>
+      <pre>Raccolta di documenti PDF separati<span class="zip-size"></span></pre>
+    </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+</div>
+<script>
+  $("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+  $("#toggleButtonPdf").click(function () {
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+  });
+</script><div class="sidebar-nav-container" id="mysidebardiv">
+  <ul id="mysidebar" class="nav"><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Documenti del plug-in SnapCenter per VMware vSphere 4.8"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/index.html">
+        Documenti del plug-in SnapCenter per VMware vSphere 4.8
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Note di rilascio"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_release_notes.html">
+        Note di rilascio
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Concetti"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Concetti</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Panoramica del prodotto"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_concepts_overview.html">
+        Panoramica del prodotto
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Panoramica delle diverse GUI di SnapCenter"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_overview_of_different_snapcenter_guis.html">
+        Panoramica delle diverse GUI di SnapCenter
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Licensing"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_licensing.html">
+        Licensing
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="RBAC (Role-Based Access Control)"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_role_based_access_control.html">
+        RBAC (Role-Based Access Control)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Tipi di plug-in RBAC per SnapCenter per utenti di VMware vSphere"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_types_of_rbac_for_snapcenter_users.html">
+        Tipi di plug-in RBAC per SnapCenter per utenti di VMware vSphere
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Funzionalità RBAC di ONTAP nel plug-in SnapCenter per VMware vSphere"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_ontap_rbac_features_in_snapcenter.html">
+        Funzionalità RBAC di ONTAP nel plug-in SnapCenter per VMware vSphere
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Ruoli predefiniti in pacchetto con il plug-in SnapCenter per VMware vSphere"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_predefined_roles_packaged_with_snapcenter.html">
+        Ruoli predefiniti in pacchetto con il plug-in SnapCenter per VMware vSphere
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Come configurare il plug-in ONTAP RBAC per SnapCenter per VMware vSphere"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_how_to_configure_ontap_rbac_for_snapcenter_plug-in_for_vmware_vsphere.html">
+        Come configurare il plug-in ONTAP RBAC per SnapCenter per VMware vSphere
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Inizia subito"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Inizia subito</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Panoramica sull'implementazione"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_get_started_overview.html">
+        Panoramica sull'implementazione
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Workflow di implementazione per nuovi utenti"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_deployment_workflow_for_new_users.html">
+        Workflow di implementazione per nuovi utenti
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Workflow di implementazione per gli utenti esistenti"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_deployment_workflow_for_existing_users.html">
+        Workflow di implementazione per gli utenti esistenti
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Requisiti per l'implementazione del distributore idraulico"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Requisiti per l'implementazione del distributore idraulico</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Pianificazione e requisiti dell'implementazione"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_deployment_planning_and_requirements.html">
+        Pianificazione e requisiti dell'implementazione
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Privilegi ONTAP richiesti"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_minimum_ontap_privileges_required.html">
+        Privilegi ONTAP richiesti
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sono richiesti privilegi minimi per vCenter"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_minimum_vcenter_privileges_required.html">
+        Sono richiesti privilegi minimi per vCenter
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Scarica Open Virtual Appliance (OVA)"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_download_the_ova_open_virtual_appliance.html">
+        Scarica Open Virtual Appliance (OVA)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Implementare il plug-in SnapCenter per VMware vSphere"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere.html">
+        Implementare il plug-in SnapCenter per VMware vSphere
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Operazioni e problemi richiesti dopo l'implementazione"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_post_deployment_required_operations_and_issues.html">
+        Operazioni e problemi richiesti dopo l'implementazione
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Accedere al client VMware vSphere di SnapCenter"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_log_in_to_the_snapcenter_vmware_vsphere_web_client.html">
+        Accedere al client VMware vSphere di SnapCenter
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Avvio rapido"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Avvio rapido</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Panoramica"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_quick_start_overview.html">
+        Panoramica
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Scarica Open Virtual Appliance (OVA)"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_download_the_ova_open_virtual_appliance.html">
+        Scarica Open Virtual Appliance (OVA)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Implementare il plug-in SnapCenter per VMware vSphere"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere_01.html">
+        Implementare il plug-in SnapCenter per VMware vSphere
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Aggiungere storage"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_add_storage.html">
+        Aggiungere storage
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Creare policy di backup"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_create_backup_policies.html">
+        Creare policy di backup
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Creare gruppi di risorse"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_create_resource_groups.html">
+        Creare gruppi di risorse
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Monitorare e generare report"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Monitorare e generare report</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Visualizzare le informazioni di stato"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_view_status_information.html">
+        Visualizzare le informazioni di stato
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Monitorare i lavori"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_monitor_jobs.html">
+        Monitorare i lavori
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Scaricare i log dei lavori"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_download_job_logs.html">
+        Scaricare i log dei lavori
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Accesso ai report"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_access_reports.html">
+        Accesso ai report
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Generare un bundle di supporto dal plug-in SnapCenter per l'interfaccia grafica di VMware vSphere"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_generate_a_support_bundle_from_the_snapcenter_plug-in_for_vmware_vsphere_gui.html">
+        Generare un bundle di supporto dal plug-in SnapCenter per l'interfaccia grafica di VMware vSphere
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Generare un bundle di supporto dalla console di manutenzione"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_generate_a_support_bundle_from_the_maintenance_console.html">
+        Generare un bundle di supporto dalla console di manutenzione
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Registri di audit"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scv48_audit_logs.html">
+        Registri di audit
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Gestire lo storage"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Gestire lo storage</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Aggiungere storage"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_add_storage_01.html">
+        Aggiungere storage
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Gestire le macchine virtuali dello storage: Modificare, rinominare e rimuovere"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_manage_storage_systems.html">
+        Gestire le macchine virtuali dello storage: Modificare, rinominare e rimuovere
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Modificare il timeout dello storage configurato"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_modify_storage_timeout.html">
+        Modificare il timeout dello storage configurato
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Proteggere i dati"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Proteggere i dati</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Workflow di data Protection"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_protect_data_overview.html">
+        Workflow di data Protection
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Visualizzare i backup"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_view_vm_and_datastore_backups.html">
+        Visualizzare i backup
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Creare policy di backup"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_create_backup_policies_for_vms_and_datastores.html">
+        Creare policy di backup
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Creare gruppi di risorse"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_create_resource_groups_for_vms_and_datastores.html">
+        Creare gruppi di risorse
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Prescrizioni e post-script"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_prescripts_and_postscripts.html">
+        Prescrizioni e post-script
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Aggiungere una singola VM o un datastore a un gruppo di risorse"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_add_a_single_vm_or_datastore_to_a_resource_group.html">
+        Aggiungere una singola VM o un datastore a un gruppo di risorse
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Aggiungere più macchine virtuali e datastore a un gruppo di risorse"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_add_multiple_vms_and_datastores_to_a_resource_group.html">
+        Aggiungere più macchine virtuali e datastore a un gruppo di risorse
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Backup dei gruppi di risorse on-demand"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_back_up_resource_groups_on_demand.html">
+        Backup dei gruppi di risorse on-demand
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Eseguire il backup del database MySQL"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_back_up_the_snapcenter_plug-in_for_vmware_vsphere_mysql_database.html">
+        Eseguire il backup del database MySQL
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Gestire i gruppi di risorse: Sospendere, riprendere, modificare, eliminare"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_manage_resource_groups.html">
+        Gestire i gruppi di risorse: Sospendere, riprendere, modificare, eliminare
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Gestire le policy - scollegare, modificare, eliminare"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_manage_policies.html">
+        Gestire le policy - scollegare, modificare, eliminare
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Gestire i backup - rinominare, eliminare"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_manage_backups.html">
+        Gestire i backup - rinominare, eliminare
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Montare e smontare gli archivi dati"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Montare e smontare gli archivi dati</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Montare un backup"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_mount_a_backup.html">
+        Montare un backup
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Smontare un backup"
+      data-li-level="2#" 
+      class="  active "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_unmount_a_backup.html">
+        Smontare un backup
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Ripristinare dai backup"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Ripristinare dai backup</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Panoramica"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_restore_from_backups_overview.html">
+        Panoramica
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Come vengono eseguite le operazioni di ripristino"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_how_restore_operations_are_performed.html">
+        Come vengono eseguite le operazioni di ripristino
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Cercare i backup"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_search_for_backups.html">
+        Cercare i backup
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Ripristinare le macchine virtuali dai backup"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_restore_vms_from_backups.html">
+        Ripristinare le macchine virtuali dai backup
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Ripristinare le macchine virtuali eliminate dai backup"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_restore_deleted_vms_from_backups.html">
+        Ripristinare le macchine virtuali eliminate dai backup
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Ripristinare i VMDK dai backup"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_restore_vmdks_from_backups.html">
+        Ripristinare i VMDK dai backup
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Ripristinare il backup più recente del database MySQL"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_restore_the_most_recent_backup_of_the_mysql_database.html">
+        Ripristinare il backup più recente del database MySQL
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Ripristinare un backup specifico del database MySQL"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_restore_a_specific_backup_of_the_mysql_database.html">
+        Ripristinare un backup specifico del database MySQL
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Collegare e scollegare i VMDK"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Collegare e scollegare i VMDK</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Collegare i VMDK a una VM o a una VM vVol"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_attach_vmdks_to_a_vm.html">
+        Collegare i VMDK a una VM o a una VM vVol
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Scollegare un disco virtuale"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_detach_a_virtual_disk.html">
+        Scollegare un disco virtuale
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Ripristinare file e cartelle guest"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Ripristinare file e cartelle guest</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Workflow, prerequisiti e limitazioni"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_restore_guest_files_and_folders_overview.html">
+        Workflow, prerequisiti e limitazioni
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Ripristinare file e cartelle guest da VMDK"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_restore_guest_files_and_folders_from_vmdks.html">
+        Ripristinare file e cartelle guest da VMDK
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurare le macchine virtuali proxy per le operazioni di ripristino"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_set_up_proxy_vms_for_restore_operations.html">
+        Configurare le macchine virtuali proxy per le operazioni di ripristino
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurare le credenziali per il ripristino del file guest della macchina virtuale"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_configure_credentials_for_vm_guest_file_restores.html">
+        Configurare le credenziali per il ripristino del file guest della macchina virtuale
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Estendere il tempo di una sessione di ripristino del file guest"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_extend_the_time_of_a_guest_file_restore_session.html">
+        Estendere il tempo di una sessione di ripristino del file guest
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Scenari di ripristino dei file guest che potrebbero verificarsi"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_guest_file_restore_scenarios_you_might_encounter.html">
+        Scenari di ripristino dei file guest che potrebbero verificarsi
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Gestire il plug-in SnapCenter per l'appliance VMware vSphere"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Gestire il plug-in SnapCenter per l'appliance VMware vSphere</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Riavviare il servizio client VMware vSphere"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_restart_the_vmware_vsphere_web_client_service.html">
+        Riavviare il servizio client VMware vSphere
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Accedere alla console di manutenzione"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_access_the_maintenance_console.html">
+        Accedere alla console di manutenzione
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Modificare la password del plug-in VMware di SnapCenter dalla console di manutenzione"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_modify_plugin_password.html">
+        Modificare la password del plug-in VMware di SnapCenter dalla console di manutenzione
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Creare e importare certificati"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_create_and_import_certificates.html">
+        Creare e importare certificati
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Annullare la registrazione del plug-in SnapCenter per VMware vSphere da vCenter"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_unregister_plugin_from_vcenter.html">
+        Annullare la registrazione del plug-in SnapCenter per VMware vSphere da vCenter
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Disattivare e attivare il plug-in SnapCenter per VMware vSphere"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_disable_and_enable_plugin.html">
+        Disattivare e attivare il plug-in SnapCenter per VMware vSphere
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Rimuovere il plug-in SnapCenter per VMware vSphere"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_remove_plugin.html">
+        Rimuovere il plug-in SnapCenter per VMware vSphere
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Gestire la configurazione"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Gestire la configurazione</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Modificare i fusi orari"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_modify_the_time_zones.html">
+        Modificare i fusi orari
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Modificare le credenziali di accesso"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_modify_the_logon_credentials.html">
+        Modificare le credenziali di accesso
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Modificare le credenziali di accesso di vCenter"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_modify_the_vcenter_logon_credentials.html">
+        Modificare le credenziali di accesso di vCenter
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Modificare le impostazioni di rete"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_modify_the_network_settings.html">
+        Modificare le impostazioni di rete
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Modificare i valori predefiniti della configurazione"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_modify_configuration_default_values.html">
+        Modificare i valori predefiniti della configurazione
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Creare il file scbr.override"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_create_the_scbr_override_file.html">
+        Creare il file scbr.override
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Proprietà di configurazione che è possibile sovrascrivere"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_properties_you_can_override.html">
+        Proprietà di configurazione che è possibile sovrascrivere
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Abilitare SSH"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_enable_ssh.html">
+        Abilitare SSH
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="API REST"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> API REST</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Panoramica"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_rest_apis_overview.html">
+        Panoramica
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Accedere alle API REST utilizzando la pagina Web Swagger API"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_access_rest_apis_using_the_swagger_api_web_page.html">
+        Accedere alle API REST utilizzando la pagina Web Swagger API
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Flussi di lavoro API REST per aggiungere e modificare le VM di storage"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_rest_api_workflows__add_and_modify_storage_vms.html">
+        Flussi di lavoro API REST per aggiungere e modificare le VM di storage
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Flussi di lavoro API REST per creare e modificare gruppi di risorse"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_rest_api_workflows__create_and_modify_resource_groups.html">
+        Flussi di lavoro API REST per creare e modificare gruppi di risorse
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Workflow API REST per il backup on-demand"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_rest_api_workflow__back_up_on_demand.html">
+        Workflow API REST per il backup on-demand
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Workflow API REST per il ripristino delle macchine virtuali"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_rest_api_workflow__restore_vms.html">
+        Workflow API REST per il ripristino delle macchine virtuali
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Workflow API REST per ripristinare le macchine virtuali eliminate"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_rest_api_workflow__restore_deleted_vms.html">
+        Workflow API REST per ripristinare le macchine virtuali eliminate
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Workflow API REST per ripristinare i VMDK"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_rest_api_workflow__restore_vmdks.html">
+        Workflow API REST per ripristinare i VMDK
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Flussi di lavoro API REST per collegare e scollegare VMDK"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_rest_api_workflows__attach_and_detach_vmdks.html">
+        Flussi di lavoro API REST per collegare e scollegare VMDK
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Flussi di lavoro API REST per montare e smontare datastore"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html">
+        Flussi di lavoro API REST per montare e smontare datastore
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="API REST per scaricare i lavori e generare report"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_rest_apis__download_jobs_and_generate_reports.html">
+        API REST per scaricare i lavori e generare report
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Flussi di lavoro delle API REST per modificare le pianificazioni integrate"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_rest_api_workflows__modify_built-in_schedules.html">
+        Flussi di lavoro delle API REST per modificare le pianificazioni integrate
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="API REST per contrassegnare i lavori bloccati come non riusciti"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_rest_apis_fail_stuck_jobs.html">
+        API REST per contrassegnare i lavori bloccati come non riusciti
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="API REST per generare log di audit"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs48_rest_apis_audit_logs.html">
+        API REST per generare log di audit
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Eseguire l'upgrade"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Eseguire l'upgrade</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Aggiornamento da una versione precedente del plug-in SnapCenter per VMware vSphere"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_upgrade.html">
+        Aggiornamento da una versione precedente del plug-in SnapCenter per VMware vSphere
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Eseguire l'aggiornamento a una nuova patch della stessa release"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_upgrade_to_a_new_patch.html">
+        Eseguire l'aggiornamento a una nuova patch della stessa release
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Informazioni non visualizzate dopo l'aggiornamento a una nuova patch della stessa release"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/scpivs44_information_not_displayed_after_upgrading_to_a_new_patch_of_the_same_release.html">
+        Informazioni non visualizzate dopo l'aggiornamento a una nuova patch della stessa release
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Note legali"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/legal-notices.html">
+        Note legali
+      </a></li></ul>
+</div>
+<script>
+  window.onscroll = () => {
+    const value = -40 - (document.body.scrollHeight - (window.innerHeight + document.scrollingElement.scrollTop));
+    
+    document.getElementById("sidebar-height").style.bottom = Math.max(0,value) + "px";
+};
+</script>
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+<script>$("#mysidebar li.active").parents('ul').css("display","block");</script>
+
+
+  </div>
+  
+
+  <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
+    <!-- Begin of page container --><article class="page-content" id="main">
+      <div class="ie-utility">
+  <button id="btn-sidebar-expand" onclick="showSidebar()"><img src="/it-it/sc-plugin-vmware-vsphere/images/expand.png" alt="Espandi pannello di navigazione"></button>
+  <div class="ie-menu">
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">docs.netapp.com</a>
+        </li>
+        
+
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/it-it/sc-plugin-vmware-vsphere/">SnapCenter&nbsp;Plug-in&nbsp;for&nbsp;VMware&nbsp;vSphere&nbsp;4.8</a>
+        </li>
+
+      </ul>
+    </div>
+    <div style="clear: both"></div><!-- Main needs to have height -->
+  </div>
+</div>
+
+      <div class="ie-nmt-disclaimer">
+  <span>
+    <div class="ie-nmt-disclaimer-container">
+      <div class="ie-nmt-disclaimer-icon">
+        <svg class="luci-icon" aria-hidden="true">
+          <use xlink:href="/it-it/sc-plugin-vmware-vsphere/images/sprite.svg#circle-info">
+        </svg>
+      </div>
+      <div class="ie-nmt-disclaimer-content">
+        <span> La versione in lingua italiana fornita proviene da una traduzione automatica. Per eventuali incoerenze, fare riferimento alla versione in lingua inglese. </span>
+      </div>
+      <div style="clear:both;"></div>
+    </div>
+  </span>
+</div><div class="n-doc__component-detail-heading-wrap">
+  <h1 class="n-doc__component-detail-heading">Smontare un backup</h1>
+</div>
+
+
+<p class="page-details">
+  
+    
+    <time datetime="2023-05-23 12:48:18 +0000">05/23/2023</time>
+    
+  
+
+<span>Collaboratori
+</span>
+
+
+</p>
+
+<div class="paragraph lead">
+<p>È possibile smontare un backup quando non è più necessario accedere ai file nel datastore.</p>
+</div>
+<div class="paragraph">
+<p>Se un backup è elencato come montato nella GUI del client VMware vSphere, ma non è elencato nella schermata di disinstallazione del backup, è necessario utilizzare l&#8217;API REST <code>/backup/{backup-Id}/cleanup</code> per pulire gli archivi dati fuori associazione e provare nuovamente a eseguire la procedura di disinstallazione.</p>
+</div>
+<div class="paragraph">
+<p>Se si tenta di montare una copia di backup di un datastore NFS su una VM di storage (SVM) con il volume root in una relazione mirror di condivisione del carico, potrebbe verificarsi l&#8217;errore <code>You may have reached the maximum number of NFS volumes configured in the vCenter. Check the vSphere Client for any error messages.</code> Per evitare questo problema, modificare l&#8217;impostazione dei volumi massimi selezionando <strong>ESX</strong> &gt; <strong>Manage</strong> &gt; <strong>Settings</strong> &gt; <strong>Advance System Settings</strong> e modificando il valore NFS.MaxVolumes. Il valore massimo è 256.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Fasi</div>
+<ol class="arabic">
+<li>
+<p>Nel client VMware vSphere, fare clic su <strong>Menu</strong> nella barra degli strumenti, quindi selezionare <strong>Storage</strong> dall&#8217;elenco a discesa.</p>
+</li>
+<li>
+<p>Nel riquadro sinistro del Navigatore, fare clic con il pulsante destro del mouse su un datastore, quindi selezionare <strong>NetApp SnapCenter</strong> nell&#8217;elenco a discesa, quindi selezionare Unmount (Disinstalla) nell&#8217;elenco a discesa secondario.</p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/sc-plugin-vmware-vsphere/images/important.svg" alt="Importante">
+</td>
+<td class="content">
+Assicurarsi di selezionare l&#8217;archivio dati corretto da smontare. In caso contrario, si potrebbe avere un impatto sul lavoro di produzione.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Nella finestra di dialogo <strong>Unmount cloned Datastore</strong>, selezionare un datastore, selezionare la casella di controllo <strong>Unmount the cloned datastore</strong>, quindi fare clic su <strong>Unmount</strong>.</p>
+</li>
+</ol>
+</div>
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+      <div class="n-footer__bottom-left">
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/copyright/">© 2023 NetApp, Inc.</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">Condizioni per l'utilizzo</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">Direttiva sulla privacy</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">Direttiva sui Cookie</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">Impostazioni cookie</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="n-footer__bottom-right">
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a target="_self" href="javascript:netapp_mailto()">Invia feedback su questa pagina</a>
+            </li>
+          </ul>
+        </div>
+        <div class="n-footer__social-links">
+          <ul class="n-footer__social-link-list">
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com"
+                target="_blank" title="blog" alt="blog">
+                <span class="n-footer__social-link-text">blog</span>
+                <svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+                  <title>blog@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/sc-plugin-vmware-vsphere/images/sprite.svg#blog"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/"
+                target="_blank" title="community" alt="community">
+                <span class="n-footer__social-link-text">community</span>
+                <svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
+                  <title>community@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/sc-plugin-vmware-vsphere/images/sprite.svg#comments"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp"
+                target="_blank" title="twitter" alt="twitter">
+                <span class="n-footer__social-link-text">twitter</span>
+                <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+                  <title>twitter@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/sc-plugin-vmware-vsphere/images/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp"
+                target="_blank" title="facebook" alt="facebook">
+                <span class="n-footer__social-link-text">facebook</span>
+                <svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
+                  <title>facebook@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/sc-plugin-vmware-vsphere/images/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-linkedin"
+                href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
+                <span class="n-footer__social-link-text">linkedin</span>
+                <svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
+                  <title>linkedin@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/sc-plugin-vmware-vsphere/images/sprite.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-youtube"
+                href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
+                <span class="n-footer__social-link-text">youtube</span>
+                <svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+                  <title>youtube@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/sc-plugin-vmware-vsphere/images/sprite.svg#youtube"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-slideshare"
+                href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
+                <span class="n-footer__social-link-text">slideshare</span>
+                <svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
+                  <title>slideshare@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/sc-plugin-vmware-vsphere/images/sprite.svg#slideshare"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+      </div><!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/it-it/sc-plugin-vmware-vsphere/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/it-it/sc-plugin-vmware-vsphere/js/prism.js'></script>
+      <script type="text/javascript" src='/it-it/sc-plugin-vmware-vsphere/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/it-it/sc-plugin-vmware-vsphere/js/tabbed-blocks.js'></script>
+    <script src='/it-it/sc-plugin-vmware-vsphere/js/sidebar.js'></script>
+  </body></html>
