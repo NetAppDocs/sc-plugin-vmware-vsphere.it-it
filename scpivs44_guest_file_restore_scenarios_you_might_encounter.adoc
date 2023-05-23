@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_guest_file_restore_scenarios_you_might_encounter.html 
+keywords:  
+summary: 'Quando si tenta di ripristinare un file guest, si potrebbero verificare scenari in cui la sessione di ripristino del file guest è vuota, l"operazione di ripristino del file guest non riesce o i backup non vengono scollegati dopo l"interruzione della sessione di ripristino del file guest.' 
+---
+= Scenari di ripristino dei file guest che potrebbero verificarsi
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Quando si tenta di ripristinare un file guest, potrebbe verificarsi uno dei seguenti scenari.
+
+
+
+== La sessione di ripristino del file guest è vuota
+
+Questo problema si verifica quando si crea una sessione di ripristino del file guest e mentre tale sessione era attiva, il sistema operativo guest viene riavviato. In questo caso, i VMDK nel sistema operativo guest potrebbero rimanere offline. Pertanto, quando si tenta di sfogliare la sessione di ripristino del file guest, l'elenco è vuoto.
+
+Per risolvere il problema, riportare manualmente i VMDK online nel sistema operativo guest. Quando i VMDK sono online, la sessione di ripristino del file guest visualizza il contenuto corretto.
+
+
+
+== L'operazione di collegamento del disco di ripristino del file guest non riesce
+
+Questo problema si verifica quando si avvia un'operazione di ripristino del file guest, ma l'operazione di collegamento del disco non riesce anche se VMware Tools è in esecuzione e le credenziali del sistema operativo guest sono corrette. In questo caso, viene visualizzato il seguente errore:
+
+`Error while validating guest credentials, failed to access guest system using specified credentials: Verify VMWare tools is running properly on system and account used is Administrator account, Error is SystemError vix error codes = (3016, 0).`
+
+Per risolvere il problema, riavviare il servizio Windows di VMware Tools sul sistema operativo guest, quindi riprovare l'operazione di ripristino del file guest.
+
+
+
+== L'e-mail dell'ospite mostra ??????? per il nome del file
+
+Questo problema si verifica quando si utilizza la funzione di ripristino dei file guest per ripristinare file o cartelle con caratteri non inglesi nei nomi e la notifica e-mail visualizza "??????? " per i nomi dei file ripristinati. L'allegato di posta elettronica elenca correttamente i nomi dei file e delle cartelle ripristinati.
+
+
+
+== I backup non vengono scollegati dopo l'interruzione della sessione di ripristino del file guest
+
+Questo problema si verifica quando si esegue un'operazione di ripristino del file guest da un backup coerente con la macchina virtuale. Mentre la sessione di ripristino del file guest è attiva, viene eseguito un altro backup coerente con la macchina virtuale per la stessa macchina virtuale. Quando la sessione di ripristino del file guest viene disconnessa, manualmente o automaticamente dopo 24 ore, i backup della sessione non vengono disconnessi.
+
+Per risolvere il problema, scollegare manualmente i VMDK allegati dalla sessione di ripristino del file guest attiva.

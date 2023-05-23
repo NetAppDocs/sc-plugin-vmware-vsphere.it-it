@@ -1,0 +1,169 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_prescripts_and_postscripts.html 
+keywords:  
+summary: 'È possibile utilizzare prescritture e postscript personalizzati come parte delle operazioni di protezione dei dati. Questi script consentono l"automazione prima o dopo il lavoro di protezione dei dati.' 
+---
+= Prescrizioni e post-script
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile utilizzare prescritture e postscript personalizzati come parte delle operazioni di protezione dei dati. Questi script consentono l'automazione prima o dopo il lavoro di protezione dei dati. Ad esempio, è possibile includere uno script che notifica automaticamente gli errori o gli avvisi dei processi di protezione dei dati. Prima di impostare le prescrizioni e i postscript, è necessario comprendere alcuni dei requisiti per la creazione di questi script.
+
+
+
+== Tipi di script supportati
+
+Sono supportati gli script Perl e shell. Gli script della shell devono iniziare con `!/bin/bash`. (`!/bin/sh` non è supportato).
+
+
+
+== Percorso dello script
+
+Le prescritture e i postscript vengono eseguiti dal plug-in SnapCenter per VMware vSphere. Pertanto, gli script devono trovarsi nel plug-in SnapCenter per VMware vSphere OVA, con autorizzazioni per l'esecuzione.
+
+Ad esempio: * Potrebbe essere Un percorso di script PERL `/support/support/script.pl`* Potrebbe essere Un percorso di script della shell `/support/support/script.sh`
+
+Il percorso dello script viene convalidato al momento dell'esecuzione dello script.
+
+
+
+== Dove specificare gli script
+
+Gli script sono specificati nelle policy di backup. Quando viene avviato un processo di backup, il criterio associa automaticamente lo script alle risorse di cui viene eseguito il backup.
+
+Per specificare più script, premere *Invio* dopo ogni percorso di script per elencare ciascuno script su una riga separata. I punti e virgola (;) non sono consentiti. È possibile specificare più prescrizioni e più post-script. Un singolo script può essere codificato sia come prescrittivo che come postscript e può chiamare altri script.
+
+
+
+== Quando vengono eseguiti gli script
+
+Gli script vengono eseguiti in base al valore impostato per BACKUP_PHASE.
+
+* BACKUP_PHASE=PRE_BACKUP
++
+Le prescrizioni vengono eseguite nella fase PRE_BACKUP dell'operazione.
+
+
+
+
+NOTE: Se una prescrizione non riesce, il backup viene completato correttamente e viene inviato un messaggio di avviso.
+
+* BACKUP_PHASE=POST_BACKUP O BACKUP_PHASE=FAILED_BACKUP
++
+Gli script Postscript vengono eseguiti nella fase POST_BACKUP dell'operazione dopo il completamento del backup o nella fase FAILED_BACKUP se il backup non viene completato correttamente.
+
+
+
+
+NOTE: Se un postscript non riesce, il backup viene completato correttamente e viene inviato un messaggio di avviso.
+
+Controllare quanto segue per verificare che i valori dello script siano popolati: * Per gli script PERL: `/support/support/log_env.log`* Per gli script shell: `/support/support/log_file.log`
+
+
+
+== Variabili di ambiente passate agli script
+
+È possibile utilizzare le variabili di ambiente mostrate nella seguente tabella negli script.
+
+|===
+| Variabile di ambiente | Descrizione 
+
+
+| `BACKUP_NAME` | Nome del backup. Variabile passata solo in postscript. 
+
+
+| `BACKUP_DATE` | Data del backup, nel formato `yyyymmdd`Variabile passata solo in postscript. 
+
+
+| `BACKUP_TIME` | Ora del backup, nel formato `hhmmss`Variabile passata solo in postscript. 
+
+
+| `BACKUP_PHASE` | Fase del backup in cui si desidera eseguire lo script. I valori validi sono: `PRE_BACKUP, POST_BACKUP, and FAILED_BACKUP`. Variabile passata in prescritture e postscript. 
+
+
+| `STORAGE_SNAPSHOTS` | Il numero di snapshot di storage nel backup. Variabile passata solo in postscript. 
+
+
+| `STORAGE_SNAPSHOT.#` | Uno degli snapshot di storage definiti, nel seguente formato:
+`<filer>:/vol/<volume>:<ONTAP-snapshot-name>`Variabile passata solo in postscript. 
+
+
+| `VIRTUAL_MACHINES` | Il numero di macchine virtuali nel backup. Variabile passata in prescritture e postscript. 
+
+
+| `VIRTUAL_MACHINE.#` | Una delle macchine virtuali definite, nel seguente formato:
+`<VM name>[vertical bar]<VM UUID>[vertical bar]<power-state>[vertical bar]<VM snapshot>[vertical bar]<ip-addresses>
+<power-state> has the values POWERED_ON, POWERED_OFF, or
+SUSPENDED`
+`<VM snapshot>` ha i valori `true` oppure `false`Variabile passata in prescritture e postscript. 
+|===
+
+
+== Timeout dello script
+
+Il timeout per gli script di backup è di 15 minuti e non può essere modificato.
+
+
+
+== Esempio di script PERL n. 1
+
+Lo script PERL di esempio riportato di seguito stampa le variabili ambientali quando viene eseguito un backup.
+
+`#!/usr/bin/perl`
+`use warnings;`
+`use strict;`
+`my $argnum;`
+`my $logfile = '/support/support/log_env.log';`
+`open (FH, '>>', $logfile) or die $!;`
+`foreach (sort keys %ENV) {`
+`print FH "$_ = $ENV{$_}\n";`
+`}`
+`print FH "=========\n";`
+`close (FH);`
+
+
+
+== Esempio di script PERL n. 2
+
+Nell'esempio riportato di seguito vengono stampate le informazioni relative al backup.
+
+`#!/usr/bin/perl`
+`use warnings;`
+`use strict;`
+
+`my $argnum;`
+`my $logfile = '/support/support/log_env.log';`
+`open (FH, '>>', $logfile) or die $!;`
+
+`print FH "BACKUP_PHASE is $ENV{'BACKUP_PHASE'}\n";`
+`print FH "Backup name  $ENV{'BACKUP_NAME'}\n";`
+`print FH "Virtual Machine  $ENV{'VIRTUAL_MACHINES'}\n";`
+`print FH "VIRTUAL_MACHINE # is $ENV{'VIRTUAL_MACHINE.1'}\n";`
+`print FH "BACKUP_DATE is $ENV{'BACKUP_DATE'}\n";`
+`print FH "BACKUP_TIME is $ENV{'BACKUP_TIME'}\n";`
+`print FH "STORAGE_SNAPSHOTS is $ENV{'STORAGE_SNAPSHOTS'}\n";`
+`print FH "STORAGE_SNAPSHOT # is $ENV{'STORAGE_SNAPSHOT.1'}\n";`
+
+`print FH "PWD is $ENV{'PWD'}\n";`
+`print FH "INVOCATION_ID is $ENV{'INVOCATION_ID'}\n";`
+
+`print FH "=========\n";`
+`close (FH);`
+
+
+
+== Script shell di esempio
+
+
+`===============================================`
+`#!/bin/bash`
+`echo Stage $BACKUP_NAME >> /support/support/log_file.log`
+`env >> /support/support/log_file.log`
+`===============================================`

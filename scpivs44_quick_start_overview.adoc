@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_quick_start_overview.html 
+keywords:  
+summary: 'La documentazione di avvio rapido fornisce una serie di istruzioni per l"implementazione del plug-in SnapCenter per l"appliance virtuale VMware vSphere e l"abilitazione del plug-in SnapCenter per VMware vSphere. Queste istruzioni sono destinate ai clienti che non hanno già installato SnapCenter e che desiderano proteggere solo macchine virtuali e datastore.' 
+---
+= Panoramica
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+La documentazione di avvio rapido fornisce una serie di istruzioni per l'implementazione del plug-in SnapCenter per l'appliance virtuale VMware vSphere e l'abilitazione del plug-in SnapCenter per VMware vSphere. Queste istruzioni sono destinate ai clienti che non hanno già installato SnapCenter e che desiderano proteggere solo macchine virtuali e datastore.
+
+Prima di iniziare, vedere link:scpivs44_deployment_planning_and_requirements.html["Pianificazione e requisiti dell'implementazione"].

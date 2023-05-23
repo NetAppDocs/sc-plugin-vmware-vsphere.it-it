@@ -1,0 +1,72 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_how_restore_operations_are_performed.html 
+keywords:  
+summary: 'Per gli ambienti VMFS, il plug-in SnapCenter per VMware vSphere utilizza operazioni di cloning e montaggio con Storage VMotion per eseguire operazioni di ripristino. Per gli ambienti NFS, il plug-in utilizza SFSR (Single file SnapRestore) ONTAP nativo per fornire una maggiore efficienza per la maggior parte delle operazioni di ripristino. Per le macchine virtuali vVol, il plug-in utilizza il ripristino snapshot a file singolo di ONTAP e il ripristino SnapMirror per le operazioni di ripristino.' 
+---
+= Come vengono eseguite le operazioni di ripristino
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Per gli ambienti VMFS, il plug-in SnapCenter per VMware vSphere utilizza operazioni di cloning e montaggio con Storage VMotion per eseguire operazioni di ripristino. Per gli ambienti NFS, il plug-in utilizza SFSR (Single file SnapRestore) ONTAP nativo per fornire una maggiore efficienza per la maggior parte delle operazioni di ripristino. Per le macchine virtuali vVol, il plug-in utilizza il ripristino snapshot di file singolo (SFSR ONTAP) e il ripristino SnapMirror di ONTAP per le operazioni di ripristino. La seguente tabella elenca le modalità di esecuzione delle operazioni di ripristino.
+
+|===
+| Operazioni di ripristino | Da | Eseguito con 
+
+
+| VM e VMDK | Backup primari | Ambienti NFS: Ambienti VMFS di ONTAP Single file SnapRestore: Clonare e montare con Storage VMotion 
+
+
+| VM e VMDK | Backup secondari | Ambienti NFS: Ambienti VMFS di ONTAP Single file SnapRestore: Clonare e montare con Storage VMotion 
+
+
+| Macchine virtuali e VMDK eliminati | Backup primari | Ambienti NFS: Ambienti VMFS di ONTAP Single file SnapRestore: Clonare e montare con Storage VMotion 
+
+
+| Macchine virtuali e VMDK eliminati | Backup secondari | Ambienti NFS: Clonare e montare con ambienti Storage VMotion VMFS: Clonare e montare con Storage VMotion 
+
+
+| VM e VMDK | Backup primari coerenti con le macchine virtuali | Ambienti NFS: Ambienti VMFS di ONTAP Single file SnapRestore: Clonare e montare con Storage VMotion 
+
+
+| VM e VMDK | Backup secondari coerenti con le macchine virtuali | Ambienti NFS: Clonare e montare con ambienti Storage VMotion VMFS: Clonare e montare con Storage VMotion 
+
+
+| VM vVol | Backup primari coerenti con il crash | ONTAP Single file SnapRestore per tutti i protocolli 
+
+
+| VM vVol | Backup secondari coerenti con il crash | Ripristino SnapMirror di ONTAP per tutti i protocolli 
+
+
+| Macchine virtuali FlexGroup | Backup primari  a| 
+Ambienti NFS: * ONTAP Single file SnapRestore se si utilizza ONTAP versione 9.10.1 e successive * Clona e monta con Storage VMotion sulle versioni precedenti di ONTAP
+
+Ambienti VMFS: Non supportati per FlexGroups
+
+
+
+| Macchine virtuali FlexGroup | Backup secondari  a| 
+Ambienti NFS:
+
+* Ripristino SnapMirror di ONTAP se si utilizza ONTAP versione 9.10.1 e successive
+* Clonare e montare con Storage VMotion per le versioni precedenti di ONTAP
+
+
+Ambienti VMFS: Non supportati per FlexGroups
+
+|===
+
+NOTE: Non è possibile ripristinare una VM vVol dopo il ribilanciamento di un container vVol.
+
+Le operazioni di ripristino dei file guest vengono eseguite utilizzando operazioni di clone e montaggio (non Storage VMotion) in ambienti NFS e VMFS.
+
+
+IMPORTANT: Durante un'operazione di ripristino, potrebbe verificarsi l'errore `Host unresolved volumes is null` oppure `Exception while calling pre-restore on SCV….Error mounting cloned LUN as datastore…` Ciò si verifica quando il plug-in VMware di SnapCenter tenta di firmare nuovamente il clone. A causa delle restrizioni di VMware, il plug-in VMware di SnapCenter non può controllare il valore di revigenizione automatica delle firme nelle configurazioni ESXi avanzate.
+
+Vedere https://kb.netapp.com/mgmt/SnapCenter/SCV_clone_or_restores_fail_with_error_'Host_Unresolved_volumes_is_null'#["Articolo della Knowledge base: Il clone o il ripristino dei distributori idraulici non riesce e viene visualizzato l'errore "host Unresolved Volumes is Null"^] per ulteriori informazioni sull'errore.

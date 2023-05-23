@@ -1,0 +1,258 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_create_resource_groups_for_vms_and_datastores.html 
+keywords:  
+summary: Un gruppo di risorse è il container per macchine virtuali, datastore o macchine virtuali vVol che si desidera proteggere. 
+---
+= Creare gruppi di risorse
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Un gruppo di risorse è il container per macchine virtuali, datastore e macchine virtuali vVol che si desidera proteggere.
+
+Un gruppo di risorse può contenere quanto segue:
+
+* Macchine virtuali e datastore tradizionali
++
+Qualsiasi combinazione di macchine virtuali tradizionali, datastore SAN tradizionali e datastore NAS tradizionali. Le macchine virtuali tradizionali non possono essere combinate con le macchine virtuali vVol.
+
+* Datastore FlexGroup
++
+Un singolo datastore FlexGroup. Gli archivi dati di spanning FlexGroup non sono supportati. Un datastore FlexGroup non può essere combinato con macchine virtuali o datastore tradizionali.
+
+* Datastore FlexVol
++
+Uno o più datastore FlexVol. Sono supportati gli archivi dati di spanning.
+
+* VM vVol
++
+Una o più VM vVol. Le macchine virtuali vVol non possono essere combinate con macchine virtuali o datastore tradizionali.
+
+* VVol VM con tag
++
+Tutte le VM vVol con un tag vCenter specificato. Altre entità con tag, come datastore o macchine virtuali tradizionali, con lo stesso tag nello stesso vCenter o in un vCenter diverso, non sono supportate. Se l'elenco delle macchine virtuali con il tag specificato contiene una combinazione di macchine virtuali vVol e macchine virtuali tradizionali, il plug-in SnapCenter per VMware vSphere esegue il backup delle macchine virtuali vVol e ignora le macchine virtuali tradizionali.
+
+* VVol VM in una cartella
++
+Tutti i vVol in una singola cartella vVol specificata. Se la cartella contiene una combinazione di macchine virtuali vVol e macchine virtuali tradizionali, il plug-in SnapCenter per VMware vSphere esegue il backup delle macchine virtuali vVol e ignora le macchine virtuali tradizionali.
+
+
+
+Per tutti i gruppi di risorse:
+
+
+IMPORTANT: Se si utilizza il servizio cluster VMware vSphere, non includere le macchine virtuali gestite da VCLS nei gruppi di risorse del plug-in SnapCenter.
+
+
+TIP: Il plug-in SnapCenter per VMware vSphere 4.5 e versioni successive supporta datastore su LUN di grandi dimensioni fino a 128 TB su aggregati ASA. Se si stanno proteggendo LUN di grandi dimensioni, utilizzare solo LUN con thick provisioning per evitare la latenza.
+
+
+IMPORTANT: Non aggiungere macchine virtuali che si trovano in uno stato inaccessibile. Sebbene sia possibile creare un gruppo di risorse che contiene macchine virtuali inaccessibili, i backup per quel gruppo di risorse non avranno esito positivo.
+
+.Prima di iniziare
+I tool ONTAP per VMware devono essere implementati prima di creare un gruppo di risorse che contiene macchine virtuali vVol.
+
+Per ulteriori informazioni, vedere https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html["Strumenti ONTAP per VMware vSphere"^].
+
+.A proposito di questa attività
+È possibile aggiungere o rimuovere risorse da un gruppo di risorse in qualsiasi momento.
+
+* Backup di una singola risorsa
++
+Per eseguire il backup di una singola risorsa (ad esempio, una singola macchina virtuale), è necessario creare un gruppo di risorse che contenga tale singola risorsa.
+
+* Backup di più risorse
++
+Per eseguire il backup di più risorse, è necessario creare un gruppo di risorse contenente più risorse.
+
+* Gruppi di risorse che contengono volumi FlexGroup negli ambienti MetroCluster
++
+Se si utilizza ONTAP 9.8 o ONTAP 9.9, dopo uno switchover o uno switchback, è necessario riavviare il servizio plug-in SnapCenter e risincronizzare le relazioni di SnapMirror prima di eseguire il backup dei gruppi di risorse negli ambienti MetroCluster.
+
++
+In ONTAP 9.8, i backup si blocchano dopo lo switchback. Questo problema è stato risolto in ONTAP 9.9.
+
+* Ottimizzazione delle copie Snapshot
++
+Per ottimizzare le copie Snapshot, è necessario raggruppare le macchine virtuali e i datastore associati allo stesso volume in un unico gruppo di risorse.
+
+* Policy di backup
++
+Sebbene sia possibile creare un gruppo di risorse senza una policy di backup, è possibile eseguire operazioni di protezione dei dati pianificate solo quando almeno una policy è associata al gruppo di risorse. È possibile utilizzare un criterio esistente oppure creare un nuovo criterio durante la creazione di un gruppo di risorse.
+
+* Controlli di compatibilità
++
+SnapCenter esegue controlli di compatibilità quando si crea un gruppo di risorse.
+
++
+<<Gestire gli errori del controllo di compatibilità>>
+
+
+
+.Fasi
+. Nel riquadro sinistro del Navigator del plug-in SCV, fare clic su *Resource Groups*, quindi su image:scpivs44_image6.png["Errore: Immagine grafica mancante"] *Crea* per avviare la procedura guidata.
+
+
+Questo è il modo più semplice per creare un gruppo di risorse. Tuttavia, è anche possibile creare un gruppo di risorse con una risorsa eseguendo una delle seguenti operazioni:
+
++ ** per creare un gruppo di risorse per una macchina virtuale, fare clic su *Menu* > *host e cluster*, quindi fare clic con il pulsante destro del mouse su una macchina virtuale, selezionare NetApp SnapCenter e fare clic su image:scpivs44_image6.png["Errore: Immagine grafica mancante"] *Crea gruppo di risorse*. ** Per creare un gruppo di risorse per un datastore, fare clic su *Menu* > *host e cluster*, quindi fare clic con il pulsante destro del mouse su un datastore, quindi selezionare *NetApp SnapCenter* e fare clic su image:scpivs44_image6.png["Errore: Immagine grafica mancante"] *Crea gruppo di risorse*.
+
+. Nella pagina *Info generali e notifica* della procedura guidata, eseguire le seguenti operazioni:
++
+|===
+| Per questo campo… | Eseguire questa operazione… 
+
+
+| Server vCenter | Selezionare un server vCenter. 
+
+
+| Nome | Immettere un nome per il gruppo di risorse. Non utilizzare i seguenti caratteri speciali nei nomi di macchine virtuali, datastore, policy, backup o gruppi di risorse: % & * N. @ ! / : * ? " < > - [barra verticale] ; ' , . È consentito un carattere di sottolineatura (_). I nomi delle macchine virtuali o degli archivi dati con caratteri speciali vengono troncati, rendendo difficile la ricerca di un backup specifico. In modalità Linked, ogni vCenter dispone di un repository di plug-in VMware SnapCenter separato. Pertanto, è possibile utilizzare nomi duplicati nei vCenter. 
+
+
+| Descrizione | Inserire una descrizione del gruppo di risorse. 
+
+
+| Notifica | Selezionare quando si desidera ricevere notifiche relative alle operazioni su questo gruppo di risorse: Errore o avvisi: Invia notifica solo per errori e avvisi errori: Invia notifica solo per errori sempre: Invia notifica per tutti i tipi di messaggi mai: Non inviare notifica 
+
+
+| E-mail da inviare | Immettere l'indirizzo e-mail da cui si desidera inviare la notifica. 
+
+
+| E-mail di invio a. | Inserire l'indirizzo e-mail della persona che si desidera ricevere la notifica. Per più destinatari, utilizzare una virgola per separare gli indirizzi e-mail. 
+
+
+| Oggetto dell'e-mail | Inserire l'oggetto desiderato per le e-mail di notifica. 
+
+
+| Nome Snapshot più recente  a| 
+Se si desidera aggiungere il suffisso "_Recent" all'ultima copia Snapshot, selezionare questa casella. Il suffisso "_Recent" sostituisce la data e l'ora.
+
+
+NOTE: R `_recent` il backup viene creato per ogni policy associata a un gruppo di risorse. Pertanto, un gruppo di risorse con più policy avrà più policy `_recent` backup. Non rinominare manualmente `_recent` backup.
+
+
+
+| Formato Snapshot personalizzato  a| 
+Se si desidera utilizzare un formato personalizzato per i nomi delle copie Snapshot, selezionare questa casella e immettere il formato del nome.
+
+** Per impostazione predefinita, questa funzione è disattivata.
+** I nomi predefiniti delle copie Snapshot utilizzano il formato `<ResourceGroup>_<Date-TimeStamp>`Tuttavia, è possibile specificare un formato personalizzato utilizzando le variabili: €ResourceGroup, €Policy, €HostName, €ScheduleType e €CustomText. Utilizzare l'elenco a discesa nel campo Custom name (Nome personalizzato) per selezionare le variabili da utilizzare e l'ordine di utilizzo. Se si seleziona CustomText, il formato del nome è `<CustomName>_<Date-TimeStamp>`. Inserire il testo personalizzato nella casella aggiuntiva fornita. NOTA: Se si seleziona anche il suffisso "_Recent", assicurarsi che i nomi Snapshot personalizzati siano univoci nell'archivio dati, quindi aggiungere al nome le variabili ResourceGroup e policy.
+** Caratteri speciali per i caratteri speciali nei nomi, seguire le stesse linee guida fornite per il campo Nome.
+
+
+|===
+. Nella pagina *risorse*, effettuare le seguenti operazioni:
++
+|===
+| Per questo campo… | Eseguire questa operazione… 
+
+
+| Scopo | Selezionare il tipo di risorsa che si desidera proteggere: * Datastore (tutte le macchine virtuali tradizionali in uno o più datastore specificati). Non è possibile selezionare un datastore vVol. * Macchine virtuali (singole macchine virtuali tradizionali o vVol; sul campo è necessario accedere all'archivio dati che contiene le macchine virtuali o le macchine virtuali vVol). Non è possibile selezionare singole macchine virtuali in un datastore FlexGroup. * Tags (tutte le VM vVol con un singolo tag VMware specificato; nella casella di riepilogo è necessario inserire il tag) * VM Folder (tutte le VM vVol in una cartella specificata; nel campo popup è necessario accedere al data center in cui si trova la cartella) 
+
+
+| Data center | Accedere alle macchine virtuali, agli archivi dati o alla cartella che si desidera aggiungere. 
+
+
+| Entità disponibili | Selezionare le risorse da proteggere, quindi fare clic su *>* per spostare le selezioni nell'elenco delle entità selezionate. 
+|===
++
+Quando si fa clic su *Avanti*, il sistema verifica prima che SnapCenter gestisca e sia compatibile con lo storage su cui si trovano le risorse selezionate.
+
++
+Se il messaggio `Selected <resource-name> is not SnapCenter compatible` Una risorsa selezionata non è compatibile con SnapCenter. Vedere <<Gestire gli errori del controllo di compatibilità>> per ulteriori informazioni.
+
++
+Per escludere globalmente uno o più datastore dai backup, è necessario specificare i nomi dei datastore in `global.ds.exclusion.pattern` proprietà in `scbr.override` file di configurazione. Vedere <<scpivs44_properties_you_can_override.adoc#Properties you can override,Proprietà che è possibile eseguire l'override>>.
+
+. Nella pagina *Spanning disks*, selezionare un'opzione per le macchine virtuali con più VMDK in più datastore:
++
+** Escludi sempre tutti gli archivi dati di spanning [questa è l'impostazione predefinita per gli archivi dati.]
+** Includi sempre tutti i datastore di spanning [questa è l'impostazione predefinita per le macchine virtuali.]
+** Selezionare manualmente gli archivi dati di spanning da includere
++
+Le macchine virtuali di spanning non sono supportate per gli archivi dati FlexGroup e vVol.
+
+
+
+. Nella pagina *Policy*, selezionare o creare uno o più criteri di backup, come mostrato nella tabella seguente:
++
+|===
+| Per utilizzare… | Eseguire questa operazione… 
+
+
+| Una policy esistente | Selezionare uno o più criteri dall'elenco. 
+
+
+| Una nuova policy  a| 
+.. Fare clic su image:scpivs44_image6.png["Errore: Immagine grafica mancante"] *Crea*.
+.. Completare la procedura guidata nuovo criterio di backup per tornare alla procedura guidata Crea gruppo di risorse.
+
+
+|===
++
+In Linked Mode, l'elenco include i criteri in tutti i vCenter collegati. È necessario selezionare un criterio che si trova sullo stesso vCenter del gruppo di risorse.
+
+. Nella pagina *programmi*, configurare la pianificazione del backup per ogni policy selezionata.
++
+image:scpivs44_image18.png["Errore: Immagine grafica mancante"]
+
++
+Nel campo Starting hour (ora di inizio), immettere una data e un'ora diverse da zero. La data deve essere nel formato `day/month/year`.
+
++
+Quando si seleziona un numero di giorni nel campo *ogni*, i backup vengono eseguiti il giorno 1 del mese e successivamente a ogni intervallo specificato. Ad esempio, se si seleziona l'opzione *ogni 2 giorni*, i backup vengono eseguiti il giorno 1, 3, 5, 7 e così via per tutto il mese, indipendentemente dal fatto che la data di inizio sia pari o dispari.
+
++
+È necessario compilare ciascun campo. Il plug-in VMware di SnapCenter crea pianificazioni nel fuso orario in cui viene implementato il plug-in VMware di SnapCenter. È possibile modificare il fuso orario utilizzando il plug-in SnapCenter per l'interfaccia grafica di VMware vSphere.
+
++
+link:scpivs44_modify_the_time_zones.html["Modificare i fusi orari per i backup"].
+
+. Esaminare il riepilogo, quindi fare clic su *fine*.
++
+Prima di fare clic su *fine*, è possibile tornare a qualsiasi pagina della procedura guidata e modificare le informazioni.
+
++
+Dopo aver fatto clic su *fine*, il nuovo gruppo di risorse viene aggiunto all'elenco dei gruppi di risorse.
+
++
+
+NOTE: Se l'operazione di quiesce non riesce per una qualsiasi delle macchine virtuali nel backup, il backup viene contrassegnato come non coerente con la macchina virtuale anche se la policy selezionata ha la coerenza della macchina virtuale selezionata. In questo caso, è possibile che alcune macchine virtuali siano state correttamente rinunciate.
+
+
+
+
+
+== Gestire gli errori del controllo di compatibilità
+
+SnapCenter esegue controlli di compatibilità quando si tenta di creare un gruppo di risorse.
+
+I motivi dell'incompatibilità potrebbero essere:
+
+* I VMDK si trovano sullo storage non supportato, ad esempio su un sistema ONTAP in esecuzione in 7-Mode o su un dispositivo non ONTAP.
+* Un datastore si trova sullo storage NetApp con Clustered Data ONTAP 8.2.1 o versione precedente.
++
+SnapCenter versione 4.x supporta ONTAP 8.3.1 e versioni successive.
+
++
+Il plug-in SnapCenter per VMware vSphere non esegue controlli di compatibilità per tutte le versioni di ONTAP, ma solo per ONTAP 8.2.1 e versioni precedenti. Pertanto, vedere sempre https://imt.netapp.com/matrix/imt.jsp?components=108380;&solution=1257&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp (IMT)"^] Per informazioni aggiornate sul supporto SnapCenter.
+
+* Un dispositivo PCI condiviso è collegato a una macchina virtuale.
+* Un IP preferito non è configurato in SnapCenter.
+* Non è stato aggiunto l'IP di gestione delle macchine virtuali storage (SVM) a SnapCenter.
+* La VM di storage non è disponibile.
+
+
+Per correggere un errore di compatibilità, attenersi alla seguente procedura:
+
+. Assicurarsi che la VM di storage sia in esecuzione.
+. Assicurarsi che il sistema storage su cui si trovano le macchine virtuali sia stato aggiunto all'inventario del plug-in SnapCenter per VMware vSphere.
+. Assicurarsi che la VM di storage sia aggiunta a SnapCenter. Utilizzare l'opzione Add storage system (Aggiungi sistema di storage) nella GUI del client VMware vSphere.
+. Se sono presenti macchine virtuali di spanning che dispongono di VMDK su datastore NetApp e non NetApp, spostare le VMDK negli archivi dati NetApp.
+

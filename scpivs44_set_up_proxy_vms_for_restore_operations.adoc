@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_set_up_proxy_vms_for_restore_operations.html 
+keywords:  
+summary: 'Se si desidera utilizzare una macchina virtuale proxy per collegare un disco virtuale per le operazioni di ripristino dei file guest, è necessario configurare la macchina virtuale proxy prima di iniziare l"operazione di ripristino. Sebbene sia possibile configurare una macchina virtuale proxy in qualsiasi momento, potrebbe essere più conveniente configurarla subito dopo il completamento dell"implementazione del plug-in.' 
+---
+= Configurare le macchine virtuali proxy per le operazioni di ripristino
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Se si desidera utilizzare una macchina virtuale proxy per collegare un disco virtuale per le operazioni di ripristino dei file guest, è necessario configurare la macchina virtuale proxy prima di iniziare l'operazione di ripristino. Sebbene sia possibile configurare una macchina virtuale proxy in qualsiasi momento, potrebbe essere più conveniente configurarla subito dopo il completamento dell'implementazione del plug-in.
+
+.Fasi
+. Nel client VMware vSphere, fare clic su *Guest file Restore*.
+. Nella sezione *Esegui come credenziali*, eseguire una delle seguenti operazioni:
++
+|===
+| A tal fine… | Eseguire questa operazione… 
+
+
+| Utilizzare le credenziali esistenti | Selezionare una delle credenziali configurate. 
+
+
+| Aggiungere nuove credenziali  a| 
+.. Fare clic su image:scpivs44_image6.png["Errore: Immagine grafica mancante"] *Aggiungi*.
+.. Nella finestra di dialogo *Esegui come credenziali*, immettere le credenziali.
+.. Fare clic su *Select VM*, quindi selezionare una VM nella finestra di dialogo *Proxy VM*. Fare clic su *Save* (Salva) per tornare alla finestra di dialogo *Run as Credentials* (Esegui come credenziali).
+.. Immettere le credenziali. Per Nome utente, immettere "Amministratore".
+
+
+|===
++
+Il plug-in VMware di SnapCenter utilizza le credenziali selezionate per accedere alla macchina virtuale proxy selezionata.
+
++
+Le credenziali Esegui come devono essere l'amministratore di dominio predefinito fornito da Windows o dall'amministratore locale incorporato. Gli utenti di Workgroup possono utilizzare l'account di amministratore locale integrato.
+
+. Nella sezione *credenziali proxy*, fare clic su *Aggiungi* per aggiungere una macchina virtuale da utilizzare come proxy.
+. Nella finestra di dialogo *Proxy VM*, completare le informazioni, quindi fare clic su *Save* (Salva).
+

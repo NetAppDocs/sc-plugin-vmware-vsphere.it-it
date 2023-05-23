@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_deployment_workflow_for_existing_users.html 
+keywords:  
+summary: È possibile utilizzare questo flusso di lavoro se si utilizza SnapCenter e si dispone di backup SnapCenter. 
+---
+= Workflow di implementazione per gli utenti esistenti
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Se si utilizza SnapCenter e si dispone di backup SnapCenter, utilizzare il seguente flusso di lavoro per iniziare.
+
+image:scpivs44_image3.png["Errore: Immagine grafica mancante"]

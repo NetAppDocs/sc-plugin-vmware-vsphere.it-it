@@ -1,0 +1,79 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_restore_deleted_vms_from_backups.html 
+keywords:  
+summary: È possibile ripristinare una macchina virtuale eliminata da un backup primario o secondario di un datastore su un host ESXi selezionato. 
+---
+= Ripristinare le macchine virtuali eliminate dai backup
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile ripristinare una macchina virtuale eliminata da un backup primario o secondario di un datastore su un host ESXi selezionato.
+
+È possibile ripristinare le macchine virtuali nelle seguenti posizioni:
+
+* Ripristinare la posizione originale
++
+** Al datastore originale montato sull'host ESXi originale (in questo modo viene creata una copia della macchina virtuale)
+
+
+* Ripristinare in una posizione alternativa
++
+** Su un datastore diverso montato sull'host ESXi originale
+** Al datastore originale montato su un host ESXi diverso gestito dallo stesso vCenter
+** A un datastore diverso montato su un host ESXi diverso gestito dallo stesso vCenter
+** A un datastore diverso montato su un host ESXi diverso gestito da un vCenter diverso in modalità collegata
+
+
+
+
+
+NOTE: Quando si esegue il ripristino in una posizione diversa, il plug-in SnapCenter per VMware vSphere deve essere in esecuzione nel Linked vCenter, che è la destinazione dell'operazione di ripristino. Il datastore di destinazione deve disporre di spazio sufficiente.
+
+
+NOTE: Non è possibile ripristinare le VM vVol in una posizione alternativa.
+
+
+NOTE: Quando si ripristina una macchina virtuale eliminata, i tag o le cartelle originariamente assegnati alla macchina virtuale non vengono ripristinati.
+
+.Prima di iniziare
+* L'account utente del sistema storage, nella pagina Storage Systems del client VMware vSphere, deve disporre di link:scpivs44_minimum_ontap_privileges_required.html["Privilegi minimi di ONTAP richiesti per ONTAP"].
+* L'account utente in vCenter deve disporre di link:scpivs44_minimum_vcenter_privileges_required.html["Privilegi minimi vCenter richiesti per il plug-in SnapCenter per VMware vSphere"].
+* Deve esistere un backup.
++
+È necessario aver creato un backup della macchina virtuale utilizzando il plug-in SnapCenter per VMware vSphere prima di poter ripristinare i VMDK su tale macchina virtuale.
+
+
+
+
+TIP: Per migliorare le performance delle operazioni di ripristino in ambienti NFS, abilitare l'applicazione VMware vStorage API for Array Integration (VAAI).
+
+.A proposito di questa attività
+Non è possibile ripristinare un datastore, ma è possibile ripristinare qualsiasi macchina virtuale nel datastore.
+
+Un'operazione di ripristino potrebbe non riuscire se il livello di storage di FabricPool in cui si trova la macchina virtuale non è disponibile.
+
+.Fasi
+. Fare clic su *Menu* e selezionare l'opzione di menu *Storage*, quindi selezionare un datastore, selezionare la scheda *Configura*, quindi fare clic su *Backup* nella sezione *plug-in SnapCenter per VMware vSphere*.
+. Fare doppio clic su un backup per visualizzare un elenco di tutte le macchine virtuali incluse nel backup.
+. Selezionare la VM eliminata dall'elenco di backup e fare clic su *Restore* (Ripristina).
+. Nella procedura guidata *Restore*, nella pagina *Select Backup* (Seleziona backup), selezionare la copia di backup da cui si desidera eseguire il ripristino.
++
+È possibile cercare un nome di backup specifico o un nome di backup parziale oppure filtrare l'elenco di backup facendo clic sull'icona del filtro e selezionando una data e un intervallo di tempo, selezionando se si desidera che i backup contengano VMware Snapshots, se si desidera montare i backup e la posizione. Fare clic su *OK* per tornare alla procedura guidata.
+
+. Nella pagina *Select scope* (Seleziona ambito), selezionare *entire virtual machine* (intera macchina virtuale) nel campo *Restore scope* (ambito ripristino), quindi selezionare la posizione di ripristino e immettere le informazioni ESXi di destinazione in cui deve essere montato il backup.
++
+La destinazione di ripristino può essere qualsiasi host ESXi aggiunto a SnapCenter. Questa opzione ripristina il contenuto del backup selezionato in cui la VM risiedeva da una copia Snapshot con l'ora e la data specificate. La casella di controllo *Restart VM* (Riavvia macchina virtuale) viene selezionata se si seleziona questa opzione e la macchina virtuale viene accesa.
+
++
+Se si sta ripristinando una macchina virtuale in un datastore NFS su un host ESXi alternativo che si trova in un cluster ESXi, dopo il ripristino la macchina virtuale viene registrata sull'host alternativo.
+
+. Nella pagina *Select Location* (Seleziona percorso), selezionare la posizione del backup da cui si desidera eseguire il ripristino (primario o secondario).
+. Esaminare la pagina Summary (Riepilogo) e fare clic su *Finish* (fine).
+

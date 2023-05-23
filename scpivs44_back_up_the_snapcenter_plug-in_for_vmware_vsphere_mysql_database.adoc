@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_back_up_the_snapcenter_plug-in_for_vmware_vsphere_mysql_database.html 
+keywords:  
+summary: 'Il plug-in VMware di SnapCenter include un database MySQL (chiamato anche database NSM) che contiene i metadati per tutti i processi eseguiti dal plug-in. Eseguire regolarmente il backup di questo repository.' 
+---
+= Eseguire il backup del plug-in SnapCenter per il database VMware vSphere MySQL
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Il plug-in VMware di SnapCenter include un database MySQL (chiamato anche database NSM) che contiene i metadati per tutti i processi eseguiti dal plug-in. Eseguire regolarmente il backup di questo repository.
+
+È inoltre necessario eseguire il backup del repository prima di eseguire migrazioni o aggiornamenti.
+
+.Prima di iniziare
+Non avviare un processo di backup del database MySQL quando è già in esecuzione un processo di backup on-demand.
+
+.Fasi
+. Dal client VMware vSphere, selezionare la macchina virtuale in cui si trova il plug-in SnapCenter.
+. Fare clic con il pulsante destro del mouse sulla macchina virtuale, quindi sulla scheda *Summary* dell'appliance virtuale fare clic su *Launch Remote Console* *o Launch Web Console* per aprire una finestra della console di manutenzione.
++
+image:scpivs44_image21.png["Errore: Immagine grafica mancante"]
+
+. Dal menu principale, immettere l'opzione *1) Application Configuration (Configurazione applicazione).*
+. Dal menu Application Configuration (Configurazione applicazione), immettere l'opzione *6) MySQL backup and restore (Backup e ripristino MySQL).*
+. Dal menu MySQL Backup and Restore Configuration (Configurazione backup e ripristino MySQL), inserire l'opzione *1) Configure MySQL backup* (Configura backup MySQL).
+. Quando richiesto, immettere la posizione di backup per il repository, il numero di backup da conservare e l'ora di avvio del backup.
++
+Tutti gli input vengono salvati quando vengono immessi. Una volta raggiunto il numero di conservazione del backup, i backup meno recenti vengono cancellati quando vengono eseguiti nuovi backup.
+
++
+
+TIP: I backup del repository sono denominati "backup-<date>". Poiché la funzione di ripristino del repository cerca il prefisso di "backup", non è necessario modificarlo.
+
+

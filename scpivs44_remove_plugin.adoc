@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_remove_plugin.html 
+keywords:  
+summary: Se non è più necessario utilizzare le funzionalità di protezione dei dati di SnapCenter, è necessario disattivare il plug-in VMware di SnapCenter per annullarne la registrazione da vCenter, quindi rimuovere il plug-in VMware di SnapCenter da vCenter ed eliminare manualmente i file residui. 
+---
+= Rimuovere il plug-in SnapCenter per VMware vSphere
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Se non è più necessario utilizzare le funzionalità di protezione dei dati di SnapCenter, è necessario disattivare il plug-in VMware di SnapCenter per annullarne la registrazione da vCenter, quindi rimuovere il plug-in VMware di SnapCenter da vCenter ed eliminare manualmente i file residui.
+
+.Prima di iniziare
+* È necessario disporre dei privilegi di amministratore.
+* Assicurarsi che non siano in esecuzione processi SnapCenter.
+
+
+.Fasi
+. Accedere alla GUI di gestione del plug-in VMware di SnapCenter utilizzando il formato `https://<OVA-IP-address>:8080`.
++
+L'IP del plug-in VMware di SnapCenter viene visualizzato quando si implementa il plug-in.
+
+. Fare clic su *Configuration* nel riquadro di navigazione a sinistra, quindi deselezionare l'opzione Service (Servizio) nella sezione *Plug-in Details* (Dettagli plug-in) per disattivare il plug-in.
+. Accedere a VMware vSphere.
+. Nella schermata di navigazione a sinistra, fare clic con il pulsante destro del mouse sull'istanza del plug-in VMware di SnapCenter (il nome di `.tar` File utilizzato al momento dell'implementazione dell'appliance virtuale) e selezionare *Delete from Disk* (Elimina dal disco).
+. Se è stato utilizzato il plug-in VMware di SnapCenter per supportare altri plug-in SnapCenter per backup coerenti con l'applicazione, accedere a SnapCenter e rimuovere l'host vSphere.
+
+
+.Al termine
+L'appliance virtuale viene ancora implementata, ma il plug-in VMware di SnapCenter viene rimosso.
+
+Dopo aver rimosso la VM host per il plug-in VMware di SnapCenter, il plug-in potrebbe rimanere elencato in vCenter fino a quando la cache vCenter locale non viene aggiornata. Tuttavia, poiché il plug-in è stato rimosso, non è possibile eseguire operazioni SnapCenter vSphere su tale host. Se si desidera aggiornare la cache locale di vCenter, assicurarsi innanzitutto che l'appliance si trovi in uno stato Disattivato nella pagina di configurazione del plug-in VMware di SnapCenter, quindi riavviare il servizio client Web di vCenter.

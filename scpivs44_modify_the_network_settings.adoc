@@ -1,0 +1,48 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_modify_the_network_settings.html 
+keywords:  
+summary: È possibile modificare le impostazioni di rete configurate nel plug-in SnapCenter per VMware vSphere. Queste impostazioni vengono utilizzate dal plug-in per accedere a vCenter. 
+---
+= Modificare le impostazioni di rete
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile modificare le impostazioni di rete configurate nel plug-in SnapCenter per VMware vSphere. Queste impostazioni vengono utilizzate dal plug-in per accedere a vCenter.
+
+.Prima di iniziare
+È necessario conoscere l'indirizzo IP e le credenziali di accesso per l'interfaccia grafica di gestione del plug-in SnapCenter per VMware vSphere.
+
+* L'indirizzo IP è stato visualizzato al momento dell'implementazione del plug-in VMware di SnapCenter.
+* Utilizzare le credenziali di accesso fornite durante l'implementazione del plug-in VMware di SnapCenter o come successivamente modificato.
+
+
+.Fasi
+. Accedere alla GUI di gestione del plug-in VMware di SnapCenter.
++
+Utilizzare il formato `https://<appliance-IP-address>:8080`
+
+. Fare clic sull'icona Impostazioni nella barra degli strumenti superiore.
++
+image:scpivs44_image31.png["Errore: Immagine grafica mancante"]
+
+. Nella sezione *Impostazioni di rete* della pagina *Impostazioni*, fare clic su *IPv4* o *IPv6*, quindi su *Modifica*.
++
+Inserire le nuove informazioni e fare clic su *Save* (Salva).
+
+. Se si sta rimuovendo un'impostazione di rete, procedere come segue:
++
+** IPv4: Nel campo *IP Address*, immettere `0.0.0.0` Quindi fare clic su *Salva*.
+** IPv6: Nel campo *IP Address*: Immettere `: :0` Quindi fare clic su *Salva*.
+
+
+
+
+
+NOTE: Se si utilizzano sia IPv4 che IPv6, non è possibile rimuovere entrambe le impostazioni di rete. La rete rimanente deve specificare i campi Server DNS e domini di ricerca.

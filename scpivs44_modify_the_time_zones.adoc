@@ -1,0 +1,43 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_modify_the_time_zones.html 
+keywords:  
+summary: Quando si configura una pianificazione di backup per un plug-in SnapCenter per il gruppo di risorse VMware vSphere, la pianificazione viene impostata automaticamente per il fuso orario in cui viene implementato il plug-in VMware SnapCenter. È possibile modificare tale fuso orario utilizzando la GUI di gestione o la console di manutenzione del plug-in SnapCenter per VMware vSphere. 
+---
+= Modificare i fusi orari per i backup
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:firstname: [.lead]
+:author: [.lead]
+:authorinitials: [
+:authors: [.lead]
+:revnumber: 
+:revdate: the schedule is automatically set for the time zone in which SnapCenter VMware plug-in is deployed. You can modify that time zone by using the SnapCenter Plug-in for VMware vSphere management GUI or maintenance console.
+
+
+.Prima di iniziare
+È necessario conoscere l'indirizzo IP e le credenziali di accesso per l'interfaccia grafica di gestione del plug-in SnapCenter per VMware vSphere.
+
+* L'indirizzo IP è stato visualizzato al momento dell'implementazione del plug-in VMware di SnapCenter.
+* Utilizzare le credenziali di accesso fornite durante l'implementazione del plug-in VMware di SnapCenter o come successivamente modificato.
+
+
+.Fasi
+. Accedere alla GUI di gestione del plug-in VMware di SnapCenter.
++
+Utilizzare il formato `https://<appliance-IP-address>:8080`
+
+. Fare clic sull'icona Impostazioni nella barra degli strumenti superiore.
++
+image:scpivs44_image28.jpg["Errore: Immagine grafica mancante"]
+
+. Nella pagina *Impostazioni*, nella sezione *Data e ora*, fare clic su *Modifica*.
+. Selezionare il nuovo fuso orario e fare clic su *Salva*.
++
+Il nuovo fuso orario verrà utilizzato per tutti i backup eseguiti dal plug-in VMware di SnapCenter.
+
+

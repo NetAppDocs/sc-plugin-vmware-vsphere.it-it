@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_create_backup_policies.html 
+keywords:  
+summary:  
+---
+= Creare policy di backup
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Seguire le istruzioni fornite di seguito per creare policy di backup
+
+. Nel riquadro sinistro del Navigator del plug-in SCV, fare clic su *Policies*, quindi su image:scpivs44_image6.png["Errore: Immagine grafica mancante"] *Nuova policy*.
+. Nella pagina *New Backup Policy*, immettere le informazioni di configurazione del criterio, quindi fare clic su *Add* (Aggiungi).
++
+Se il criterio verrà utilizzato per le relazioni del vault mirror, nel campo Replication (Replica), selezionare solo l'opzione *Update SnapVault after backup* (Aggiorna backup dopo backup) se si desidera copiare i backup nelle destinazioni del vault mirror.
+
+

@@ -1,0 +1,66 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_minimum_vcenter_privileges_required.html 
+keywords:  
+summary: 'Prima di iniziare l"implementazione del plug-in SnapCenter per VMware vSphere, assicurarsi di disporre dei privilegi minimi richiesti per vCenter.' 
+---
+= Sono richiesti privilegi minimi per vCenter
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Prima di iniziare l'implementazione del plug-in SnapCenter per VMware vSphere, assicurarsi di disporre dei privilegi minimi richiesti per vCenter.
+
+
+
+== Privilegi richiesti per il ruolo vCenter Admin
+
+Datastore.AllocateSpace Datastore.Browse Datastore.Delete Datastore.FileManagement Datastore.Move Datastore.Rename Extension.Registrati Extension.Unregister Extension.Update host.Config.AdvancedConfig.Modify.VirtualMachine.Modif.Modif.Modif.Modif.ModificaConfig.ModificaConfig.ModificaConfig.ModificaModificaModaModaConfig.ModaModaConfig.ModaConfig.ModaConfig.ModificaConfig.ModaModaConfig.ModaConfig.ModaConfig.ModaConfig.ModaConfig.ModaConfig.ModificaConfig.ModificaConfig.ModificaConfig.ModaModaModaModaModaConfig.ModificaModaModaModaConfig.ModaIndicaIndicaModaConfig.ModaIntermeModaModaConfig.ModificaModaModaIndicaIndicaIndicaIndicaIn
+
+
+
+== Privilegi richiesti specifici del plug-in SnapCenter per VMware vCenter
+
+|===
+
+
+| *Privilegi* | *Etichetta* 
+
+
+| NetappSCV.Guest.RestoreFile | Ripristino del file guest 
+
+
+| NetappSCV.Recovery.MountUnmount | Montare/smontare 
+
+
+| NetappSCV.Backup.DeleteBackupJob | Elimina gruppo di risorse/backup 
+
+
+| NetappSCV.Configure.Configure.StorageSystems.Delete | Rimuovere i sistemi storage 
+
+
+| NetappSCV.View | Visualizza 
+
+
+| NetappSCV.Recovery.RecoverVM | Ripristinare la macchina virtuale 
+
+
+| NetappSCV.Configure.Configure.StorageSystems.AddUpdate | Aggiungere/modificare i sistemi storage 
+
+
+| NetappSCV.Backup.BackupNow | Esegui il backup ora 
+
+
+| NetappSCV.Guest.Configure | Configurazione guest 
+
+
+| NetappSCV.Configure.ConfigureSnapCenterServer | Configurare il server SnapCenter 
+
+
+| NetappSCV.Backup.BackupScheduled | Crea gruppo di risorse 
+|===

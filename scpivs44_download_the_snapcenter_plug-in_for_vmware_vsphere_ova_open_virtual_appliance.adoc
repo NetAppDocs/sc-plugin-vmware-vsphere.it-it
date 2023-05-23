@@ -1,0 +1,36 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_download_the_snapcenter_plug-in_for_vmware_vsphere_ova_open_virtual_appliance.html 
+keywords:  
+summary: È possibile scaricare il file .tar per il plug-in SnapCenter per VMware vSphere dal sito del supporto NetApp. 
+---
+= Scarica Open Virtual Appliance (OVA)
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Prima di installare Open Virtual Appliance (OVA), aggiungere il certificato a vCenter. Il file .tar contiene i certificati OVA e Entrust Root e Intermediate; i certificati si trovano nella cartella dei certificati. L'implementazione di OVA è supportata in VMware vCenter 7u1 e versioni successive.
+
+Nelle versioni di VMware vCenter 7.0.3 e successive, l'OVA firmato dal certificato Entrust non è più attendibile. Per risolvere il problema, attenersi alla seguente procedura.
+
+.Fasi
+. Per scaricare il plug-in SnapCenter per VMware:
++
+** Accedere al NetApp Support Site ( https://mysupport.netapp.com/products/index.html["https://mysupport.netapp.com/products/index.html"^]).
+** Dall'elenco dei prodotti, selezionare *plug-in SnapCenter per VMware vSphere*, quindi fare clic sul pulsante *Scarica ultima release*.
+** Scarica il plug-in SnapCenter per VMware vSphere `.tar` file in qualsiasi posizione.
+
+
+. Accedere con il client vSphere al server vCenter.
+. Accedere a *Amministrazione > certificati > Gestione certificati*.
+. Accanto a *Trusted Root Store*, fare clic su *Add* (Aggiungi)
+. Cercare e selezionare la posizione dei certificati Entrust Root e Intermediate. Il certificato viene aggiunto in un pannello in *certificati root attendibili*. Una volta installati i certificati, è possibile verificare e implementare OVA.
+
+
+
+NOTE: Se l'OVA scaricato non viene manomesso, nella colonna *Publisher* viene visualizzato *Trusted certificate*.

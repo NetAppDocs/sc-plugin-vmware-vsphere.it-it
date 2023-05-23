@@ -1,0 +1,59 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_access_the_maintenance_console.html 
+keywords:  
+summary: 'È possibile gestire le configurazioni di applicazioni, sistemi e reti utilizzando la console di manutenzione per il plug-in SnapCenter per VMware vSphere. È possibile modificare la password dell"amministratore, la password di manutenzione, generare pacchetti di supporto e avviare la diagnostica remota.' 
+---
+= Accedere alla console di manutenzione
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile gestire le configurazioni di applicazioni, sistemi e reti utilizzando la console di manutenzione per il plug-in SnapCenter per VMware vSphere. È possibile modificare la password dell'amministratore, la password di manutenzione, generare pacchetti di supporto e avviare la diagnostica remota.
+
+.Prima di iniziare
+Prima di interrompere e riavviare il servizio del plug-in SnapCenter per VMware vSphere, è necessario sospendere tutte le pianificazioni.
+
+.A proposito di questa attività
+* Nel plug-in SnapCenter per VMware vSphere 4.6P1, è necessario specificare una password al momento della prima installazione del plug-in SnapCenter per VMware vSphere. Se si esegue l'aggiornamento dalla versione 4.6 o precedente alla versione 4.6P1 o successiva, viene accettata la password predefinita precedente.
+* Durante l'attivazione della diagnostica remota, è necessario impostare una password per l'utente "DIAG".
++
+Per ottenere l'autorizzazione dell'utente root per eseguire il comando, utilizzare sudo <command>.
+
+
+
+.Fasi
+. Dal client VMware vSphere, selezionare la macchina virtuale in cui si trova il plug-in SnapCenter.
+. Fare clic con il pulsante destro del mouse sulla macchina virtuale, quindi sulla scheda *Summary* dell'appliance virtuale fare clic su *Launch Remote Console* (Avvia console remota) per aprire una finestra della console di manutenzione.
++
+Accedere utilizzando il nome utente predefinito della console di manutenzione `maint` e la password impostata al momento dell'installazione.
+
++
+image:scpivs44_image11.png["Errore: Immagine grafica mancante"]
+
+. È possibile eseguire le seguenti operazioni:
++
+** Opzione 1: Configurazione dell'applicazione
++
+Visualizza un riepilogo del plug-in VMware SnapCenter Avvia o arresta il servizio plug-in VMware Modifica nome utente o password di accesso per il plug-in SnapCenter SnapCenter Modifica password MySQL Backup e ripristino MySQL, configurazione ed elenco dei backup MySQL
+
+** Opzione 2: Configurazione del sistema
++
+Riavviare o arrestare la macchina virtuale modificare la password utente 'maint' modificare il fuso orario cambiare il server NTP abilitare/disabilitare l'accesso SSH aumentare la dimensione del disco jail (/jail) aggiornare installare VMware Tools
+
+** Opzione 3: Configurazione di rete
++
+Visualizzare o modificare le impostazioni dell'indirizzo IP visualizzare o modificare le impostazioni di ricerca dei nomi di dominio visualizzare o modificare i percorsi statici commit changes Ping a host
+
+** Opzione 4: Supporto e diagnostica
++
+Genera bundle di supporto Access Diagnostic shell attiva l'accesso di diagnostica remota genera bundle di dump core
+
+
+
+

@@ -1,0 +1,155 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere.html 
+keywords:  
+summary: Per utilizzare le funzionalità di SnapCenter per proteggere macchine virtuali, datastore e database coerenti con le applicazioni su macchine virtualizzate, è necessario implementare il plug-in SnapCenter per VMware vSphere. 
+---
+= Implementare il plug-in SnapCenter per VMware vSphere
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Per utilizzare le funzionalità di SnapCenter per proteggere macchine virtuali, datastore e database coerenti con le applicazioni su macchine virtualizzate, è necessario implementare il plug-in SnapCenter per VMware vSphere.
+
+....
+[Note]
+The OVA deployment is supported in VMware vCenter 7u1 and above.
+....
+* È necessario aver letto i requisiti di implementazione.
+* È necessario eseguire una versione supportata di vCenter Server.
+* È necessario aver configurato e configurato l'ambiente vCenter Server.
+* È necessario aver configurato un host ESXi per la VM plug-in VMware di SnapCenter.
+* È necessario aver scaricato il plug-in SnapCenter per il file .tar di VMware vSphere.
+* È necessario disporre dei dettagli di autenticazione dell'accesso per l'istanza di vCenter Server.
+* È necessario disporre di un certificato con file di chiavi pubbliche e private validi. Per ulteriori informazioni, consulta gli articoli sotto https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_Certificate_Resolution_Guide["Gestione dei certificati di storage"] sezione.
+* È necessario disconnettersi e chiudere tutte le sessioni del browser del client vSphere ed eliminare la cache del browser per evitare qualsiasi problema di cache del browser durante l'implementazione del plug-in VMware di SnapCenter.
+* È necessario aver attivato TLS (Transport Layer Security) in vCenter. Consultare la documentazione VMware.
+* Se si prevede di eseguire backup in vCenter diversi da quello in cui viene implementato il plug-in VMware di SnapCenter, è necessario sincronizzare contemporaneamente il server ESXi, il plug-in VMware di SnapCenter e ciascun vCenter.
+* Per proteggere le macchine virtuali su datastore vVol, è necessario prima implementare i tool ONTAP per VMware vSphere. Sono supportati i tool ONTAP per VMware vSphere versione 9.10 e successive. I tool ONTAP consentono di eseguire il provisioning e la configurazione dello storage su ONTAP e sul client Web VMware.
+
+
+Implementare il plug-in VMware SnapCenter nello stesso fuso orario di vCenter. Le pianificazioni di backup vengono eseguite nel fuso orario in cui viene implementato il plug-in VMware di SnapCenter. VCenter riporta i dati nel fuso orario in cui si trova vCenter. Pertanto, se SnapCenter il plug-in VMware e vCenter si trovano in fusi orari diversi, i dati nel dashboard del plug-in VMware di SnapCenter potrebbero non coincidere con quelli dei report.
+
+.Fasi
+. Per VMware vCenter 7.0.3 e versioni successive, seguire la procedura descritta in link:scpivs44_download_the_ova_open_virtual_appliance.html["Scarica Open Virtual Appliance (OVA)"^] Per importare i certificati in vCenter.
+. Nel browser, accedere a VMware vSphere vCenter.
++
+
+NOTE: Per i client Web IPv6 HTML, è necessario utilizzare Chrome o Firefox.
+
+. Accedere alla pagina *VMware vCenter Single Sign-on*.
+. Nel riquadro Navigator, fare clic con il pulsante destro del mouse su qualsiasi oggetto di inventario che sia un oggetto padre valido di una macchina virtuale, ad esempio un data center, un cluster o un host, quindi selezionare *Deploy OVF Template* (implementa modello OVF) per avviare la procedura guidata di implementazione di VMware.
+. Estrarre il file .tar, che contiene il file .ova nel sistema locale. Nella pagina *Select an OVF template* (Seleziona un modello OVF), specificare la posizione di `.ova` file all'interno della cartella .tar estratta.
+. Fare clic su *Avanti*.
+. Nella pagina *Select a name and folder* (Seleziona un nome e una cartella), immettere un nome univoco per la macchina virtuale o la vApp, selezionare un percorso di implementazione, quindi fare clic su *Next* (Avanti).
++
+Questa operazione specifica dove importare `.tar` File in vCenter. Il nome predefinito per la macchina virtuale è lo stesso del nome della macchina selezionata `.ova` file. Se si modifica il nome predefinito, scegliere un nome univoco all'interno di ciascuna cartella VM di vCenter Server.
+
++
+La posizione di implementazione predefinita per la macchina virtuale è l'oggetto di inventario in cui è stata avviata la procedura guidata.
+
+. Nella pagina *Select a resource* (Seleziona una risorsa), selezionare la risorsa in cui si desidera eseguire il modello di macchina virtuale distribuito e fare clic su *Next* (Avanti).
+. Nella pagina *Dettagli revisione*, verificare `.tar` Dettagli del modello e fare clic su *Avanti*.
+. Nella pagina *contratti di licenza*, selezionare la casella di controllo *Accetto tutti i contratti di licenza*.
+. Nella pagina *Select storage*, definire dove e come memorizzare i file per il modello OVF distribuito.
++
+.. Selezionare il formato del disco per i VMDK.
+.. Selezionare un criterio di storage della macchina virtuale.
++
+Questa opzione è disponibile solo se i criteri di storage sono attivati sulla risorsa di destinazione.
+
+.. Selezionare un datastore per memorizzare il modello OVA implementato.
++
+Il file di configurazione e i file dei dischi virtuali vengono memorizzati nell'archivio dati.
+
++
+Selezionare un datastore di dimensioni tali da ospitare la macchina virtuale o la vApp e tutti i file dei dischi virtuali associati.
+
+
+
+. Nella pagina *Select networks* (Seleziona reti), effettuare le seguenti operazioni:
++
+.. Selezionare una rete di origine e associarla a una rete di destinazione,
++
+La colonna Source Network (rete di origine) elenca tutte le reti definite nel modello OVA.
+
+.. Nella sezione *IP Allocation Settings* (Impostazioni allocazione IP), selezionare il protocollo IP richiesto e fare clic su *Next* (Avanti).
++
+Il plug-in SnapCenter per VMware vSphere supporta un'unica interfaccia di rete. Se sono necessari più adattatori di rete, è necessario impostarli manualmente. Vedere https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_create_additional_network_adapters_in_NDB_and_SCV_4.3["Articolo della Knowledge base: Come creare adattatori di rete aggiuntivi"^].
+
+
+
+. Nella pagina *Personalizza modello*, effettuare le seguenti operazioni:
++
+.. Nella sezione *Register to existing vCenter* (Registra su vCenter esistente), immettere il nome vCenter e le credenziali vCenter dell'appliance virtuale.
++
+Nel campo *vCenter username*, immettere il nome utente nel formato `domain\username`.
+
+.. Nella sezione *Crea credenziali SCV*, immettere le credenziali locali.
++
+Nel campo *Nome utente*, immettere il nome utente locale; non includere i dettagli del dominio.
+
++
+
+IMPORTANT: Annotare il nome utente e la password specificati. È necessario utilizzare queste credenziali se si desidera modificare la configurazione del plug-in SnapCenter in un secondo momento.
+
+.. Immettere le credenziali per l'utente principale.
+.. In *Setup Network Properties* (Impostazioni proprietà di rete), immettere il nome host.
++
+... Nella sezione *Setup IPv4 Network Properties* (impostazione delle proprietà di rete IPv4), immettere le informazioni di rete, ad esempio indirizzo IPv4, Netmask IPv4, gateway IPv4, DNS primario IPv4, DNS secondario IPv4, E IPv4 Search Domains.
+... Nella sezione *Setup IPv6 Network Properties* (Configurazione delle proprietà di rete IPv6), immettere le informazioni di rete, ad esempio l'indirizzo IPv6, la netmask IPv6, il gateway IPv6, il DNS primario IPv6, il DNS secondario IPv6, E IPv6 Search Domains.
++
+Selezionare i campi IPv4 o IPv6, o entrambi, se appropriato. Se si utilizzano sia IPv4 che IPv6, è necessario specificare il DNS primario per uno solo di essi.
+
++
+
+IMPORTANT: Se si desidera procedere con DHCP come configurazione di rete, è possibile ignorare questi passaggi e lasciare vuote le voci nella sezione *Setup Network Properties* (Impostazioni delle proprietà di rete).
+
+
+
+.. In *Setup Date and Time* (Data e ora di installazione), selezionare il fuso orario in cui si trova vCenter.
+
+
+. Nella pagina *Pronto per il completamento*, esaminare la pagina e fare clic su *fine*.
++
+Tutti gli host devono essere configurati con indirizzi IP (i nomi host FQDN non sono supportati). L'operazione di implementazione non convalida l'input prima dell'implementazione.
+
++
+È possibile visualizzare lo stato di avanzamento della distribuzione dalla finestra Recent Tasks (attività recenti) mentre si attende il completamento delle attività di importazione e distribuzione di OVF.
+
++
+Una volta implementato correttamente, il plug-in SnapCenter viene implementato come macchina virtuale Linux, registrato con vCenter, e viene installato un client VMware vSphere.
+
+. Accedere alla VM in cui è stato implementato il plug-in VMware SnapCenter, quindi fare clic sulla scheda *Riepilogo*, quindi fare clic sulla casella *accensione* per avviare l'appliance virtuale.
+. Mentre il plug-in VMware SnapCenter è in fase di accensione, fare clic con il pulsante destro del mouse sul plug-in VMware distribuito, selezionare *sistema operativo guest*, quindi fare clic su *Installa strumenti SnapCenter*.
++
+I tool VMware vengono installati sulla macchina virtuale in cui viene implementato il plug-in VMware di SnapCenter. Per ulteriori informazioni sull'installazione degli strumenti VMware, consultare la documentazione VMware.
+
++
+Il completamento dell'implementazione potrebbe richiedere alcuni minuti. Una corretta implementazione viene indicata quando il plug-in VMware SnapCenter viene acceso, i tool VMware installati e la schermata richiede di accedere al plug-in VMware SnapCenter. Durante il primo riavvio, è possibile impostare la configurazione di rete da DHCP a static. Tuttavia, il passaggio da statico a DHCP non è supportato.
+
++
+Viene visualizzato l'indirizzo IP in cui viene implementato il plug-in VMware di SnapCenter. Annotare l'indirizzo IP. Se si desidera modificare la configurazione del plug-in SnapCenter, è necessario accedere all'interfaccia grafica di gestione del plug-in VMware di SnapCenter.
+
+. Accedere alla GUI di gestione del plug-in VMware di SnapCenter utilizzando l'indirizzo IP visualizzato nella schermata di implementazione e utilizzando le credenziali fornite nella procedura guidata di implementazione, quindi verificare sul pannello di controllo che il plug-in VMware di SnapCenter sia connesso correttamente a vCenter e sia attivato.
++
+Utilizzare il formato `https://<appliance-IP-address>:8080` Per accedere alla GUI di gestione.
+
++
+Accedere utilizzando il nome utente predefinito della console di manutenzione `maint` e la password impostata al momento dell'installazione.
+
++
+Se il plug-in VMware di SnapCenter non è attivato, vedere link:scpivs44_restart_the_vmware_vsphere_web_client_service.html["Riavviare il servizio client VMware vSphere"].
+
++
+Se il nome host è "UnifiedVSC/SCV", riavviare l'appliance. Se il riavvio dell'appliance non modifica il nome host con il nome host specificato, è necessario reinstallare l'appliance.
+
+
+
+.Al termine
+Completare la richiesta link:scpivs44_post_deployment_required_operations_and_issues.html["operazioni post-implementazione"].

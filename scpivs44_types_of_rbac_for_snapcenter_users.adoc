@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_types_of_rbac_for_snapcenter_users.html 
+keywords:  
+summary: Se si utilizza il plug-in SnapCenter per VMware vSphere, il server vCenter fornisce un livello aggiuntivo di RBAC. Il plug-in supporta sia vCenter Server RBAC che ONTAP RBAC. 
+---
+= Tipi di plug-in RBAC per SnapCenter per utenti di VMware vSphere
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Se si utilizza il plug-in SnapCenter per VMware vSphere, il server vCenter fornisce un livello aggiuntivo di RBAC. Il plug-in supporta sia vCenter Server RBAC che ONTAP RBAC.
+
+
+
+== RBAC vCenter Server
+
+Questo meccanismo di sicurezza si applica a tutti i processi eseguiti dal plug-in VMware di SnapCenter, che include processi coerenti con le macchine virtuali, coerenti con il crash delle macchine virtuali e coerenti con le applicazioni del server SnapCenter (applicazione su VMDK). Questo livello di RBAC limita la capacità degli utenti di vSphere di eseguire task di plug-in SnapCenter su oggetti vSphere, come macchine virtuali (VM) e datastore.
+
+L'implementazione del plug-in VMware di SnapCenter crea i seguenti ruoli per le operazioni SnapCenter su vCenter:
+
+`SCV Administrator`
+`SCV Backup`
+`SCV Guest File Restore`
+`SCV Restore`
+`SCV View`
+
+L'amministratore di vSphere imposta vCenter Server RBAC effettuando le seguenti operazioni:
+
+* Impostazione delle autorizzazioni vCenter Server sull'oggetto root (nota anche come cartella root). È quindi possibile perfezionare la protezione limitando le entità figlio che non necessitano di tali autorizzazioni.
+* Assegnazione dei ruoli SCV agli utenti di Active Directory.
++
+Come minimo, tutti gli utenti devono essere in grado di visualizzare gli oggetti vCenter. Senza questo privilegio, gli utenti non possono accedere alla GUI del client VMware vSphere.
+
+
+
+
+
+== ONTAP RBAC
+
+Questo meccanismo di sicurezza si applica solo ai processi coerenti con le applicazioni (applicazione su VMDK) del server SnapCenter. Questo livello limita la capacità di SnapCenter di eseguire specifiche operazioni di storage, come il backup dello storage per datastore, su un sistema storage specifico.
+
+Utilizzare il seguente flusso di lavoro per impostare ONTAP e SnapCenter RBAC:
+
+. L'amministratore dello storage crea un ruolo nella VM dello storage con i privilegi necessari.
+. Quindi, l'amministratore dello storage assegna il ruolo a un utente dello storage.
+. L'amministratore di SnapCenter aggiunge la VM di storage al server SnapCenter, utilizzando il nome utente dello storage.
+. Quindi, l'amministratore di SnapCenter assegna i ruoli agli utenti di SnapCenter.
+
+
+
+
+== Workflow di validazione per i privilegi RBAC
+
+La figura seguente fornisce una panoramica del flusso di lavoro di convalida per i privilegi RBAC (sia vCenter che ONTAP):
+
+image:scpivs44_image1.png["Errore: Immagine grafica mancante"]

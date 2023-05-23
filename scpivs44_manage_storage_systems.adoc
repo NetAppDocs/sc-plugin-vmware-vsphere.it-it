@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_manage_storage_systems.html 
+keywords:  
+summary: Prima di eseguire il backup o il ripristino di macchine virtuali o datastore utilizzando il client VMware vSphere, è necessario aggiungere lo storage. 
+---
+= Gestire i sistemi storage
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Prima di eseguire il backup o il ripristino di macchine virtuali o datastore utilizzando il client VMware vSphere, è necessario aggiungere lo storage.
+
+
+
+== Modificare le VM di storage
+
+È possibile utilizzare il client VMware vSphere per modificare le configurazioni di cluster e storage VM registrate nel plug-in SnapCenter per VMware vSphere e utilizzate per le operazioni di protezione dei dati delle macchine virtuali.
+
+Se si modifica una VM di storage aggiunta automaticamente come parte di un cluster (a volte chiamata VM di storage implicita), tale VM di storage passa a una VM di storage esplicita e può essere eliminata separatamente senza modificare il resto delle VM di storage in quel cluster. Nella pagina Storage Systems (sistemi storage), il nome utente viene visualizzato come N/A quando il metodo di autenticazione viene effettuato tramite il certificato; i nomi utente vengono visualizzati solo per le macchine virtuali di storage esplicite nell'elenco dei cluster e il flag ExplicitSVM è impostato su true. Tutte le VM di storage sono sempre elencate nel cluster associato.
+
+
+IMPORTANT: Se sono state aggiunte VM di storage per le operazioni di protezione dei dati basate sull'applicazione utilizzando l'interfaccia grafica utente di SnapCenter, è necessario utilizzare la stessa interfaccia grafica per modificare tali VM di storage.
+
+.Fasi
+. Nel riquadro sinistro del Navigator del plug-in SCV, fare clic su *Storage Systems*.
+. Nella pagina *Storage Systems*, selezionare la VM di storage da modificare, quindi fare clic su image:scpivs44_image25.png["Errore: Immagine grafica mancante"] *Modifica*.
+. Nella finestra *Edit Storage System* (Modifica sistema di storage), immettere i nuovi valori, quindi fare clic su *Update* (Aggiorna) per applicare le modifiche.
++
+image:scpivs44_image43.png["Errore: Immagine grafica mancante"]
+
+
+
+
+
+== Rimuovere le VM di storage
+
+È possibile utilizzare il client VMware vSphere per rimuovere le VM di storage dall'inventario in vCenter.
+
+
+NOTE: Se sono state aggiunte VM di storage per le operazioni di protezione dei dati basate sull'applicazione utilizzando l'interfaccia grafica utente di SnapCenter, è necessario utilizzare la stessa interfaccia grafica per modificare tali VM di storage.
+
+.Prima di iniziare
+Prima di rimuovere la VM di storage, è necessario smontare tutti gli archivi dati presenti nella VM di storage.
+
+.A proposito di questa attività
+Se un gruppo di risorse dispone di backup che risiedono su una macchina virtuale di storage che viene rimossa, i backup successivi di tale gruppo di risorse non vengono eseguiti correttamente.
+
+.Fasi
+. Nel riquadro sinistro del Navigator del plug-in SCV, fare clic su *Storage Systems*.
+. Nella pagina *Storage Systems*, selezionare la VM di storage da rimuovere, quindi fare clic su *Delete* (Elimina).
+. Nella casella di conferma *Remove Storage System* (Rimuovi sistema di storage), selezionare la casella *Delete storage system(s)* (Elimina sistema di storage*), quindi fare clic su *Yes* (Sì) per confermare. *Nota:* sono supportate solo ESXi 7.0U1 e versioni successive.
++
+link:scpivs44_manage_the_vmware_vsphere_web_client_service.html["Riavviare il servizio client VMware vSphere"].
+
+

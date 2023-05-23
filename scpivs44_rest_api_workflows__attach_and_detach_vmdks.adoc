@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_rest_api_workflows__attach_and_detach_vmdks.html 
+keywords:  
+summary: Per eseguire operazioni di collegamento e scollegamento per i VMDK utilizzando il plug-in SnapCenter per le API REST di VMware vSphere, è necessario seguire la sequenza prescritta di chiamate API REST. 
+---
+= Flussi di lavoro API REST per collegare e scollegare VMDK
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Per eseguire operazioni di collegamento e scollegamento per i VMDK utilizzando il plug-in SnapCenter per le API REST di VMware vSphere, è necessario seguire la sequenza prescritta di chiamate API REST.
+
+Per ogni API REST, aggiungere `https://<server>:<port>` All'inizio dell'API REST per formare un endpoint completo.
+
+
+
+== Per collegare i VMDK, seguire questo flusso di lavoro:
+
+|===
+| Fase | API REST | Commenti 
+
+
+| 1 | Passare a. `http://<vCenter-IP>/mob` | Individuare il moref delle macchine virtuali dall'URL VMware Managed Objects. Prendere nota del *moref* della macchina virtuale a cui si desidera collegare un VMDK. 
+
+
+| 2 | `/4.1/vm/{moref}/backups` | `Get VM Backups` Ottiene un elenco di backup per la macchina virtuale specificata. Passare il *moref* del passaggio 1. Annotare il *backupId* del backup che si desidera ripristinare. 
+
+
+| 3 | `/4.1/vm/{moref}/backups/
+{backupId}/vmdklocations` | `Get VMDK Locations` Ottiene un elenco di VMDK per la macchina virtuale specificata. Passare il *backupId* del passaggio 2 e il *moref* del passaggio 1. Annotare le informazioni *vmdkLocationsList*. 
+
+
+| 4 | `/4.1/vm/{moref}/attachvmdks`  a| 
+`Attach VMDKs` Collega il VMDK specificato alla macchina virtuale originale. Passare il *backupId* del passaggio 2 e il *moref* del passaggio 1. Passare *vmdkLocationsList* dal passaggio 3 all'attributo *vmdkLocations*.
+
+
+NOTE: Per collegare un VMDK a una macchina virtuale diversa, passare il moref della macchina virtuale di destinazione nell'attributo alternateVmMoref.
+
+|===
+
+
+== Per scollegare i VMDK, seguire questo flusso di lavoro:
+
+|===
+| Fase | API REST | Commenti 
+
+
+| 1 | Passare a. `http://<vCenter-IP>/mob` | Individuare il moref delle macchine virtuali dall'URL VMware Managed Objects. Notare il *moref* della macchina virtuale su cui si desidera scollegare un VMDK. 
+
+
+| 2 | `/4.1/vm/{moref}/backups` | `Get VM Backups` Ottiene un elenco di backup per la macchina virtuale specificata. Passare il *moref* del passaggio 1. Annotare il *backupId* del backup che si desidera ripristinare. 
+
+
+| 3 | `/4.1/vm/{moref}/backups/
+{backupId}/vmdklocations` | `Get VMDK Locations` Ottiene un elenco di VMDK per la macchina virtuale specificata. Passare il *backupId* del passaggio 2 e il *moref* del passaggio 1. Annotare le informazioni *vmdkLocationsList*. 
+
+
+| 4 | `/4.1/vm/{moref}/detachvmdks` | `Detach VMDKs` Disconnette il VMDK specificato. Passare il *moref* del passaggio 1. Passare i dettagli VMDK *vmdkLocationsList* dal passaggio 3 all'attributo *vmdksToDetach*. 
+|===

@@ -1,0 +1,21 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_add_storage.html 
+keywords:  
+summary:  
+---
+= Aggiungere storage
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Per aggiungere spazio di archiviazione, attenersi alla procedura descritta in questa sezione.
+
+. Nel riquadro sinistro del Navigator del plug-in SCV, fare clic su *Storage Systems*, quindi su image:scpivs44_image6.png["Errore: Immagine grafica mancante"] *Aggiungi*.
+. Nella finestra di dialogo Add Storage System (Aggiungi sistema di storage), immettere le informazioni di base su SVM o cluster, quindi fare clic su *Add* (Aggiungi).
+

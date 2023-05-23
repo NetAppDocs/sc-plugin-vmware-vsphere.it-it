@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_unmount_a_backup.html 
+keywords:  
+summary: È possibile smontare un backup quando non è più necessario accedere ai file nel datastore. 
+---
+= Smontare un backup
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile smontare un backup quando non è più necessario accedere ai file nel datastore.
+
+Se un backup è elencato come montato nella GUI del client VMware vSphere, ma non è elencato nella schermata di disinstallazione del backup, è necessario utilizzare l'API REST `/backup/{backup-Id}/cleanup` per pulire gli archivi dati fuori associazione e provare nuovamente a eseguire la procedura di disinstallazione.
+
+Se si tenta di montare una copia di backup di un datastore NFS su una VM di storage (SVM) con il volume root in una relazione mirror di condivisione del carico, potrebbe verificarsi l'errore `You may have reached the maximum number of NFS volumes configured in the vCenter. Check the vSphere Client for any error messages.` Per evitare questo problema, modificare l'impostazione dei volumi massimi selezionando *ESX* > *Manage* > *Settings* > *Advance System Settings* e modificando il valore NFS.MaxVolumes. Il valore massimo è 256.
+
+.Fasi
+. Nel client VMware vSphere, fare clic su *Menu* nella barra degli strumenti, quindi selezionare *Storage* dall'elenco a discesa.
+. Nel riquadro sinistro del Navigatore, fare clic con il pulsante destro del mouse su un datastore, quindi selezionare *NetApp SnapCenter* nell'elenco a discesa, quindi selezionare Unmount (Disinstalla) nell'elenco a discesa secondario.
++
+
+IMPORTANT: Assicurarsi di selezionare l'archivio dati corretto da smontare. In caso contrario, si potrebbe avere un impatto sul lavoro di produzione.
+
+. Nella finestra di dialogo *Unmount cloned Datastore*, selezionare un datastore, selezionare la casella di controllo *Unmount the cloned datastore*, quindi fare clic su *Unmount*.
+

@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_extend_the_time_of_a_guest_file_restore_session.html 
+keywords:  
+summary: Per impostazione predefinita, un VMDK di Ripristino file guest allegato è disponibile per 24 ore e viene quindi automaticamente scollegato. È possibile prolungare il tempo nella pagina Configurazione guest. 
+---
+= Estendere il tempo di una sessione di ripristino del file guest
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Per impostazione predefinita, un VMDK di Ripristino file guest allegato è disponibile per 24 ore e viene quindi automaticamente scollegato. È possibile prolungare l'intervallo di tempo nella pagina *Configurazione guest*.
+
+.A proposito di questa attività
+È possibile estendere una sessione di ripristino dei file guest se si desidera ripristinare file o cartelle aggiuntivi dal VMDK allegato in un secondo momento. Tuttavia, poiché le sessioni di ripristino dei file guest utilizzano molte risorse, l'estensione del tempo di sessione deve essere eseguita solo occasionalmente.
+
+.Fasi
+. Nel client VMware vSphere, fare clic su *Guest file Restore*.
+. Selezionare una sessione di ripristino del file guest, quindi fare clic sull'icona Extend Selected Guest Session (Estendi sessione ospite selezionata) nella barra del titolo di Guest Session Monitor.
++
+La sessione viene estesa per altre 24 ore.
+
+

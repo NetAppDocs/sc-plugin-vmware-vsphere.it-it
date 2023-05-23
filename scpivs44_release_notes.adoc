@@ -1,0 +1,17 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_release_notes.html 
+keywords:  
+summary: Le note sulla versione forniscono informazioni importanti su questa versione del plug-in SnapCenter per VMware vSphere, inclusi requisiti di licenza, problemi noti, precauzioni, limitazioni, e qualsiasi aggiornamento o correzione della documentazione. 
+---
+= Note di rilascio
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Le note sulla versione forniscono informazioni importanti su questa versione del plug-in SnapCenter per VMware vSphere, inclusi requisiti di licenza, problemi noti, precauzioni, limitazioni, e qualsiasi aggiornamento o correzione della documentazione. Per ulteriori informazioni, vedere https://library.netapp.com/ecm/ecm_download_file/ECMLP2885659["Note sulla versione del plug-in SnapCenter per VMware vSphere 4.8"^]

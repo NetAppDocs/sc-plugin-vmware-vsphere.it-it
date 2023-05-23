@@ -1,0 +1,115 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_restore_guest_files_and_folders_overview.html 
+keywords:  
+summary: 'È possibile ripristinare file o cartelle da un disco di macchine virtuali (VMDK) su un sistema operativo guest Windows.' 
+---
+= Workflow, prerequisiti e limitazioni
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile ripristinare file o cartelle da un disco di macchine virtuali (VMDK) su un sistema operativo guest Windows.
+
+
+
+== Workflow di ripristino guest
+
+Le operazioni di ripristino del sistema operativo guest includono i seguenti passaggi:
+
+. Allega
++
+Collegare un disco virtuale a una macchina virtuale guest o a una macchina virtuale proxy e avviare una sessione di ripristino del file guest.
+
+. Aspetta
++
+Attendere il completamento dell'operazione di collegamento prima di poter eseguire la ricerca e il ripristino. Quando si collega
+
++
+l'operazione termina, viene creata automaticamente una sessione di ripristino del file guest e viene inviata una notifica via email
+
++
+inviato.
+
+. Selezionare file o cartelle
++
+Sfogliare il VMDK nella sessione di Ripristino file guest e selezionare uno o più file o cartelle da ripristinare.
+
+. Ripristinare
++
+Ripristina i file o le cartelle selezionati in una posizione specifica.
+
+
+
+
+
+== Prerequisiti per il ripristino di file e cartelle guest
+
+Prima di ripristinare uno o più file o cartelle da un VMDK su un sistema operativo guest Windows, è necessario conoscere tutti i requisiti.
+
+* Gli strumenti VMware devono essere installati e in esecuzione.
++
+SnapCenter utilizza le informazioni fornite dagli strumenti VMware per stabilire una connessione al sistema operativo guest VMware.
+
+* Il sistema operativo Windows Guest deve eseguire Windows Server 2008 R2 o versione successiva.
++
+Per informazioni aggiornate sulle versioni supportate, consultare https://imt.netapp.com/matrix/imt.jsp?components=108380;&solution=1257&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp (IMT)"^].
+
+* Le credenziali per la macchina virtuale di destinazione devono specificare l'account amministratore di dominio incorporato o l'account amministratore locale incorporato. Il nome utente deve essere "Administrator". Prima di iniziare l'operazione di ripristino, è necessario configurare le credenziali per la macchina virtuale alla quale si desidera collegare il disco virtuale. Le credenziali sono necessarie sia per l'operazione di collegamento che per la successiva operazione di ripristino. Gli utenti di Workgroup possono utilizzare l'account di amministratore locale integrato.
++
+
+IMPORTANT: Se è necessario utilizzare un account che non sia l'account amministratore incorporato, ma che disponga di privilegi amministrativi all'interno della macchina virtuale, è necessario disattivare il controllo dell'account utente sulla macchina virtuale guest.
+
+* È necessario conoscere la copia Snapshot di backup e VMDK da cui eseguire il ripristino.
++
+Il plug-in SnapCenter per VMware vSphere non supporta la ricerca di file o cartelle da ripristinare. Pertanto, prima di iniziare, è necessario conoscere la posizione dei file o delle cartelle in relazione alla copia Snapshot e al VMDK corrispondente.
+
+* Il disco virtuale da collegare deve trovarsi in un backup SnapCenter.
++
+Il disco virtuale che contiene il file o la cartella da ripristinare deve trovarsi in un backup della macchina virtuale eseguito utilizzando l'appliance virtuale per il plug-in SnapCenter per VMware vSphere.
+
+* Per utilizzare una macchina virtuale proxy, è necessario configurare la macchina virtuale proxy.
++
+Se si desidera collegare un disco virtuale a una macchina virtuale proxy, è necessario configurare la macchina virtuale proxy prima di iniziare l'operazione di collegamento e ripristino.
+
+* Per i file con nomi diversi dall'alfabeto inglese, è necessario ripristinarli in una directory, non come singolo file.
++
+È possibile ripristinare i file con nomi non alfabetici, ad esempio giapponese Kanji, ripristinando la directory in cui si trovano i file.
+
+* Il ripristino da un sistema operativo guest Linux non è supportato
++
+Non è possibile ripristinare file e cartelle da una macchina virtuale che esegue il sistema operativo guest Linux. Tuttavia, è possibile collegare un VMDK e ripristinare manualmente i file e le cartelle. Per informazioni aggiornate sui sistemi operativi guest supportati, consultare https://imt.netapp.com/matrix/imt.jsp?components=108380;&solution=1257&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp (IMT)"^].
+
+
+
+
+
+== Limitazioni per il ripristino dei file guest
+
+Prima di ripristinare un file o una cartella da un sistema operativo guest, è necessario conoscere le funzionalità non supportate.
+
+* Non è possibile ripristinare i tipi di dischi dinamici all'interno di un sistema operativo guest.
+* Se si ripristina un file o una cartella crittografati, l'attributo di crittografia non viene conservato. Non è possibile ripristinare file o cartelle in una cartella crittografata.
+* La pagina Guest file Browse (Sfoglia file guest) visualizza i file e la cartella nascosti che non è possibile filtrare.
+* Non è possibile eseguire il ripristino da un sistema operativo guest Linux.
++
+Non è possibile ripristinare file e cartelle da una macchina virtuale che esegue il sistema operativo guest Linux. Tuttavia, è possibile collegare un VMDK e ripristinare manualmente i file e le cartelle. Per informazioni aggiornate sui sistemi operativi guest supportati, consultare https://imt.netapp.com/matrix/imt.jsp?components=108380;&solution=1257&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp (IMT)"^].
+
+* Non è possibile eseguire il ripristino da un file system NTFS a un file system FAT.
++
+Quando si tenta di eseguire il ripristino dal formato NTFS al formato FAT, il descrittore di protezione NTFS non viene copiato perché il file system FAT non supporta gli attributi di protezione di Windows.
+
+* Non è possibile ripristinare i file guest da un VMDK clonato o da un VMDK non inizializzato.
+* Non è possibile eseguire il ripristino da backup secondari se il backup è stato eseguito su un sistema con ONTAP 9.2 o versione successiva e se l'opzione di coerenza VMware era attiva.
+* Non è possibile ripristinare la struttura di directory per un file.
++
+Se si seleziona il ripristino di un file in una directory nidificata, il file non viene ripristinato con la stessa struttura di directory. La struttura delle directory non viene ripristinata, ma solo il file. Se si desidera ripristinare una struttura di directory, è possibile copiare la directory stessa nella parte superiore della struttura.
+
+* Non è possibile ripristinare i file guest da una VM vVol a un host alternativo.
+* Non è possibile ripristinare i file guest crittografati.
+

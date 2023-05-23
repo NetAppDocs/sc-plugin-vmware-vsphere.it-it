@@ -1,0 +1,146 @@
+---
+sidebar: sidebar 
+permalink: scv48_audit_logs.html 
+keywords:  
+summary: 'Il registro di audit fornisce la tracciabilità di chi ha fatto cosa e quando. Il registro di audit è una raccolta di eventi in ordine cronologico e viene scritto in un file all"interno dell"appliance.' 
+---
+= Registri di audit
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Il registro di audit è una raccolta di eventi in ordine cronologico, che viene scritta in un file all'interno dell'appliance. I file di log di audit vengono generati in `/var/log/netapp/audit` la posizione e i nomi dei file seguono una delle seguenti convenzioni di denominazione:
+
+* Audit.log: File di log di audit attivo in uso.
+* Audit-%d{yyyy-MM-dd-HH-mm-ss}.log.gz: Eseguito il rollover del file di log di audit. La data e l'ora nel nome del file indicano quando è stato creato il file, ad esempio: Audit-2022-12-15-16-28-01.log.gz.
+
+
+Nell'interfaccia utente del plug-in SCV, è possibile visualizzare ed esportare i dettagli del registro di controllo da *Dashboard* > *Settings* > *Audit Logs* Tab. È possibile visualizzare l'audit delle operazioni nei registri di controllo. I registri di controllo vengono scaricati con il pacchetto di supporto.
+
+Se sono configurate le impostazioni e-mail, SCV invia una notifica e-mail in caso di errore nella verifica dell'integrità del registro di controllo. Un errore di verifica dell'integrità del registro di controllo può verificarsi quando uno dei file viene manomesso o cancellato.
+
+Le configurazioni predefinite dei file di audit sono:
+
+* Il file di log di audit in uso può aumentare fino a un massimo di 10 MB
+* Vengono conservati un massimo di 10 file di log di audit
+
+
+Per modificare le configurazioni predefinite, aggiungere una coppia di valori chiave in /opt/netapp/scvservice/standalone_aegis/etc/scbr/scbr.properties e riavviare scvservice.
+
+Le configurazioni per i file di log di audit sono:
+
+* AuditMaxROFiles=<xx>, dove xx è il numero massimo di file di log di controllo di cui è stato eseguito il rollover, ad esempio: AuditMaxROFiles=15.
+* AuditLogSize=<XX>, dove xx è la dimensione del file in MB, ad esempio: AuditLogSize=15MB.
+
+
+I log di controllo di cui è stato eseguito il rollover vengono periodicamente verificati per verificarne l'integrità. SCV fornisce API REST per visualizzare i registri e verificarne l'integrità. Una pianificazione integrata attiva e assegna uno dei seguenti stati di integrità.
+
+|===
+
+
+| Stato | Descrizione 
+
+
+| MANOMESSO | Il contenuto del file di log di audit viene modificato 
+
+
+| NORMALE | Il file di log di audit non è stato modificato 
+
+
+| SPOSTA IL MOUSE SU ELIMINA | * Il file di registro di controllo viene cancellato in base alla conservazione * per impostazione predefinita, vengono conservati solo 10 file 
+
+
+| ELIMINAZIONE IMPREVISTA | Il file di log di audit viene cancellato 
+
+
+| ATTIVO | * Il file di registro di controllo è in uso * applicabile solo a audit.log 
+|===
+Gli eventi sono suddivisi in tre categorie principali:
+
+* Eventi di protezione dei dati
+* Eventi della console di manutenzione
+* Eventi della console di amministrazione
+
+
+
+
+== Eventi di protezione dei dati
+
+Le risorse di SCV sono:
+
+* Sistema storage
+* Gruppo di risorse
+* Policy
+* Backup
+
+
+La seguente tabella elenca le operazioni che possono essere eseguite su ciascuna risorsa:
+
+|===
+
+
+| Risorse | Operazioni 
+
+
+| Sistema storage | Creato, modificato, eliminato 
+
+
+| Gruppo di risorse | Creato, modificato, cancellato, sospeso, ripreso 
+
+
+| Policy | Creato, modificato, eliminato 
+
+
+| Backup | Creato, rinominato, cancellato, montato, non montato, Ripristino VMDK, ripristino VM, collegamento VMDK, scollegamento VMDK, Ripristino file guest 
+|===
+
+
+== Eventi della console di manutenzione
+
+Le operazioni amministrative nella console di manutenzione vengono controllate. Le opzioni della console di manutenzione disponibili sono:
+
+. Avvio/interruzione dei servizi
+. Modificare nome utente e password
+. Cambiare la password MySQL
+. Configurare MySQL Backup
+. Ripristinare MySQL Backup
+. Modificare la password utente "maint"
+. Modificare il fuso orario
+. Modificare il server NTP
+. Disattiva l'accesso SSH
+. Aumentare le dimensioni del disco jail
+. Eseguire l'upgrade
+. Installare VMware Tools (stiamo lavorando per sostituire questo con strumenti Open-vm)
+. Modificare le impostazioni dell'indirizzo IP
+. Modificare le impostazioni di ricerca dei nomi di dominio
+. Modificare i percorsi statici
+. Accedere alla shell di diagnostica
+. Abilitare l'accesso remoto alla diagnostica
+
+
+
+
+== Eventi della console di amministrazione
+
+Vengono controllate le seguenti operazioni nell'interfaccia utente della Admin Console:
+
+* Impostazioni
++
+** Modificare le credenziali di amministratore
+** Modificare il fuso orario
+** Modificare il server NTP
+** Modificare le impostazioni IPv4 / IPv6
+
+
+* Configurazione
++
+** Modificare le credenziali vCenter
+** Plug-in Enable/Disable (attiva/Disattiva plug-in
+
+
+

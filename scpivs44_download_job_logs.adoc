@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_download_job_logs.html 
+keywords:  
+summary: È possibile scaricare i registri dei processi dalla scheda monitoraggio processi del dashboard del client VMware vSphere di SnapCenter. 
+---
+= Scaricare i log dei lavori
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile scaricare i registri dei processi dalla scheda monitoraggio processi del dashboard del client VMware vSphere di SnapCenter.
+
+Se si verificano comportamenti imprevisti durante l'utilizzo del client VMware vSphere, è possibile utilizzare i file di log per identificare la causa e risolvere il problema.
+
+
+NOTE: Il valore predefinito per la conservazione dei registri dei lavori è 30 giorni; il valore predefinito per la conservazione dei lavori è 90 giorni. I log dei lavori e i lavori più vecchi della conservazione configurata vengono eliminati ogni sei ore. È possibile utilizzare la configurazione `jobs/cleanup` API REST per modificare la durata di conservazione dei job e dei log dei job. Non è possibile modificare il programma di eliminazione.
+
+.Fasi
+. Nel riquadro sinistro di Navigator del client vSphere, fare clic su *Dashboard*, selezionare un server vCenter, quindi fare clic sulla scheda *Job Monitor* nel pannello Dashboard.
+. Fare clic su image:scpivs44_image37.png["Errore: Immagine grafica mancante"] Icona Download nella barra del titolo di Job Monitor.
++
+Potrebbe essere necessario scorrere verso destra per visualizzare l'icona.
+
++
+È inoltre possibile fare doppio clic su un lavoro per accedere alla finestra Dettagli lavoro, quindi fare clic su *Download Job Logs*.
+
+
+
+.Risultato
+I log dei processi si trovano sull'host VM Linux in cui viene implementato il plug-in VMware di SnapCenter. La posizione predefinita del registro lavori è `/var/log/netapp`.
+
+Se si è tentato di scaricare i log dei lavori ma il file di log indicato nel messaggio di errore è stato eliminato, potrebbe verificarsi il seguente errore: `HTTP ERROR 500 Problem accessing /export-scv-logs`. Per correggere questo errore, controllare lo stato di accesso al file e le autorizzazioni per il file indicato nel messaggio di errore e correggere il problema di accesso.

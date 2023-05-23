@@ -1,0 +1,47 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_restore_from_backups_overview.html 
+keywords:  
+summary: È possibile ripristinare macchine virtuali, VMDK, file e cartelle da backup primari o secondari. 
+---
+= Panoramica del ripristino
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile ripristinare macchine virtuali, VMDK, file e cartelle da backup primari o secondari.
+
+* Destinazioni di ripristino delle macchine virtuali
++
+È possibile ripristinare le macchine virtuali tradizionali sull'host originale o su un host alternativo nello stesso vCenter Server o su un host ESXi alternativo gestito dallo stesso vCenter o da qualsiasi vCenter in modalità Linked.
+
++
+È possibile ripristinare le VM vVol nell'host originale.
+
+* Destinazioni di ripristino VMDK
++
+È possibile ripristinare i VMDK nelle macchine virtuali tradizionali nel datastore originale o in un datastore alternativo.
+
++
+È possibile ripristinare i VMDK nelle macchine virtuali vVol nel datastore originale.
+
+
+
+È inoltre possibile ripristinare singoli file e cartelle in una sessione di ripristino dei file guest, che allega una copia di backup di un disco virtuale e ripristina i file o le cartelle selezionati.
+
+Non è possibile ripristinare quanto segue:
+
+* Datastore
++
+Non è possibile utilizzare il plug-in SnapCenter per VMware vSphere per ripristinare un datastore, solo le singole macchine virtuali presenti nel datastore.
+
+* Backup delle macchine virtuali rimosse
++
+Non è possibile ripristinare i backup delle VM di storage che sono state rimosse. Ad esempio, se si aggiunge una VM di storage utilizzando la LIF di gestione e si crea un backup, quindi si rimuove la VM di storage e si aggiunge un cluster contenente la stessa VM di storage, l'operazione di ripristino del backup non avrà esito positivo.
+
+

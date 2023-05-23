@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_view_vm_and_datastore_backups.html 
+keywords:  
+summary: Quando si prepara il backup o il ripristino di una macchina virtuale o di un datastore, potrebbe essere necessario visualizzare tutti i backup disponibili per tale risorsa e i relativi dettagli. 
+---
+= Visualizzare i backup di macchine virtuali e datastore
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Quando si prepara il backup o il ripristino di una macchina virtuale o di un datastore, potrebbe essere necessario visualizzare tutti i backup disponibili per tale risorsa e i relativi dettagli.
+
+.A proposito di questa attività
+L'esplorazione di grandi cartelle di file, ad esempio 10.000 cartelle di file, potrebbe richiedere uno o più minuti la prima volta. Le sessioni di navigazione successive richiedono meno tempo.
+
+.Fasi
+. Fare clic su *Menu* e selezionare l'opzione di menu *host e cluster*, quindi selezionare una macchina virtuale, selezionare la scheda *Configura*, quindi fare clic su *Backup* nella sezione *plug-in SnapCenter per VMware vSphere*.
++
+image:scpivs44_image14.png["Errore: Immagine grafica mancante"]
+
+. Fare clic sul backup che si desidera visualizzare.
+

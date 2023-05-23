@@ -1,0 +1,22 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_manage_authentication_errors.html 
+keywords:  
+summary: 'Se non si utilizzano le credenziali di amministratore, potrebbe essere visualizzato un errore di autenticazione dopo l"implementazione del plug-in SnapCenter per VMware vSphere o dopo la migrazione. Se si verifica un errore di autenticazione, è necessario riavviare il servizio.' 
+---
+= Gestire gli errori di autenticazione
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Se non si utilizzano le credenziali di amministratore, potrebbe essere visualizzato un errore di autenticazione dopo l'implementazione del plug-in SnapCenter per VMware vSphere o dopo la migrazione. Se si verifica un errore di autenticazione, è necessario riavviare il servizio.
+
+.Fasi
+. Accedere alla GUI di gestione del plug-in VMware di SnapCenter utilizzando il formato `https://<OVA-IP-address>:8080.`
+. Riavviare il servizio.
+

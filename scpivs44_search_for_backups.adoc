@@ -1,0 +1,37 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_search_for_backups.html 
+keywords:  
+summary: È possibile cercare e trovare un backup specifico di una macchina virtuale o di un datastore utilizzando la procedura guidata di ripristino. Una volta individuato un backup, è possibile ripristinarlo. 
+---
+= Cercare i backup
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile cercare e trovare un backup specifico di una macchina virtuale o di un datastore utilizzando la procedura guidata di ripristino. Una volta individuato un backup, è possibile ripristinarlo.
+
+.Fasi
+. Nella GUI del client VMware vSphere, fare clic su *Menu* nella barra degli strumenti, quindi eseguire una delle seguenti operazioni:
++
+|===
+| Per visualizzare i backup di… | Eseguire le seguenti operazioni… 
+
+
+| Macchine virtuali | Fare clic sull'opzione di menu *host e cluster*, quindi selezionare una macchina virtuale, fare clic sulla scheda *Configura*, quindi fare clic su *Backup* nella sezione *plug-in SnapCenter per VMware vSphere*. 
+
+
+| Datastore | Fare clic sull'opzione di menu *Storage*, quindi selezionare un datastore, quindi fare clic sulla scheda *Configura*, quindi fare clic su *Backup* nella sezione *plug-in SnapCenter per VMware vSphere*. 
+|===
+. Nel riquadro sinistro del Navigator, espandere il data center che contiene la VM o il datastore.
+. Facoltativo: Fare clic con il pulsante destro del mouse su una macchina virtuale o su un datastore, quindi selezionare *NetApp SnapCenter* nell'elenco a discesa, quindi selezionare *Ripristina* nell'elenco a discesa secondario.
+. Nella procedura guidata *Restore* inserire un nome di ricerca e fare clic su *Search* (Ricerca).
++
+È possibile filtrare l'elenco di backup facendo clic su image:scpivs44_image41.png["Errore: Immagine grafica mancante"] Filtro e selezione di un intervallo di data e ora, selezionando se si desidera eseguire backup contenenti VMware Snapshots, se si desidera montare backup e la posizione. Fare clic su *OK*.
+
+
