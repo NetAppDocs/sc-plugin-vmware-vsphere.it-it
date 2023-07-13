@@ -83,7 +83,7 @@
       head.appendChild(onetrustScript);
     }addConsent("72570c5c-fe30-465f-b0e0-b77f7fb4ae34");
     addAdobeLaunch("launch-e9ff3acac59f");
-    addGoogleAnalytics("UA-81697994-3");function OptanonWrapper() { }
+    addGoogleAnalytics("G-KYN6T440WN");function OptanonWrapper() { }
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
@@ -178,9 +178,9 @@
   <!-- Start Page Toolbar -->
   
   <div class="page-nav-toolbar"><div id="version-dropdown-new" class="custom-dropdown" >
-  <div class="custom-dropdown-select unselected" title="Plug-in SnapCenter per VMware vSphere 4.8">
+  <div class="custom-dropdown-select unselected" title="Plug-in SnapCenter per VMware vSphere 4.9">
     <label>Versione</label>
-    <span translate="no" class="notranslate">Plug-in SnapCenter per VMware vSphere 4.8</span>
+    <span translate="no" class="notranslate">Plug-in SnapCenter per VMware vSphere 4.9</span>
     <img src="/it-it/sc-plugin-vmware-vsphere/images/chevron_up.svg" alt="" class="custom-icon chevrondown invisible" />
     <img src="/it-it/sc-plugin-vmware-vsphere/images/chevron_down.svg" alt="" class="custom-icon chevronup" />
   </div>
@@ -188,6 +188,13 @@
   <ul class="custom-dropdown-menu"><li>
       
       <a href="https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_create_resource_groups_for_vms_and_datastores.html" target="_self">
+        <span translate="no" class="notranslate"><span>Plug-in SnapCenter per VMware vSphere</span><span class="version"> 4.9</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere-48/scpivs44_create_resource_groups_for_vms_and_datastores.html" target="_self">
         <span translate="no" class="notranslate"><span>Plug-in SnapCenter per VMware vSphere</span><span class="version"> 4.8</span></span>
       </a>
                      
@@ -965,11 +972,11 @@
 </script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Documenti del plug-in SnapCenter per VMware vSphere 4.8"
+      data-pdf-filename="Documenti del plug-in SnapCenter per VMware vSphere 4.9"
       data-li-level="1#" 
       class=" "
     ><a class="na-navbar-padding" href="/it-it/sc-plugin-vmware-vsphere/index.html">
-        Documenti del plug-in SnapCenter per VMware vSphere 4.8
+        Documenti del plug-in SnapCenter per VMware vSphere 4.9
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Note di rilascio"
@@ -1823,7 +1830,7 @@
         
 
         <li class="n-breadcrumb__list-item">
-          <a href="/it-it/sc-plugin-vmware-vsphere/">SnapCenter&nbsp;Plug-in&nbsp;for&nbsp;VMware&nbsp;vSphere&nbsp;4.8</a>
+          <a href="/it-it/sc-plugin-vmware-vsphere/">SnapCenter&nbsp;Plug-in&nbsp;for&nbsp;VMware&nbsp;vSphere&nbsp;4.9</a>
         </li>
 
       </ul>
@@ -1832,21 +1839,21 @@
   </div>
 </div>
 
-      <div class="ie-nmt-disclaimer">
-  <span>
-    <div class="ie-nmt-disclaimer-container">
-      <div class="ie-nmt-disclaimer-icon">
-        <svg class="luci-icon" aria-hidden="true">
-          <use xlink:href="/it-it/sc-plugin-vmware-vsphere/images/sprite.svg#circle-info">
-        </svg>
+      <div class="ie-info-disclaimer">
+    <span>
+      <div class="ie-info-disclaimer-container">
+        <div class="ie-info-disclaimer-icon">
+          <svg class="luci-icon" aria-hidden="true">
+            <use xlink:href="/it-it/sc-plugin-vmware-vsphere/images/sprite.svg#circle-info">
+          </svg>
+        </div>
+        <div class="ie-info-disclaimer-content">
+          <span> La versione in lingua italiana fornita proviene da una traduzione automatica. Per eventuali incoerenze, fare riferimento alla versione in lingua inglese. </span>
+        </div>
+        <div style="clear:both;"></div>
       </div>
-      <div class="ie-nmt-disclaimer-content">
-        <span> La versione in lingua italiana fornita proviene da una traduzione automatica. Per eventuali incoerenze, fare riferimento alla versione in lingua inglese. </span>
-      </div>
-      <div style="clear:both;"></div>
-    </div>
-  </span>
-</div><div class="n-doc__component-detail-heading-wrap">
+    </span>
+  </div><div class="n-doc__component-detail-heading-wrap">
   <h1 class="n-doc__component-detail-heading">Creare gruppi di risorse</h1>
 </div>
 
@@ -1854,7 +1861,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-05-23 12:48:18 +0000">05/23/2023</time>
+    <time datetime="2023-07-13 19:02:16 +0000">07/13/2023</time>
     
   
 
@@ -2012,18 +2019,22 @@ Non aggiungere macchine virtuali che si trovano in uno stato inaccessibile. Sebb
 <div class="title">Fasi</div>
 <ol class="arabic">
 <li>
-<p>Nel riquadro sinistro del Navigator del plug-in SCV, fare clic su <strong>Resource Groups</strong>, quindi su <span class="image"><img src="./media/scpivs44_image6.png" alt="Errore: Immagine grafica mancante"></span> <strong>Crea</strong> per avviare la procedura guidata.</p>
+<p>Nel riquadro sinistro del Navigator del plug-in SCV, fare clic su <strong>Resource Groups</strong> (gruppi di risorse), quindi selezionare <strong>Create</strong> (Crea) per avviare la procedura guidata.</p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
 <p>Questo è il modo più semplice per creare un gruppo di risorse. Tuttavia, è anche possibile creare un gruppo di risorse con una risorsa eseguendo una delle seguenti operazioni:</p>
 </div>
-<div class="paragraph">
-<p>+ <strong> per creare un gruppo di risorse per una macchina virtuale, fare clic su <strong>Menu</strong> &gt; <strong>host e cluster</strong>, quindi fare clic con il pulsante destro del mouse su una macchina virtuale, selezionare NetApp SnapCenter e fare clic su <span class="image"><img src="./media/scpivs44_image6.png" alt="Errore: Immagine grafica mancante"></span> <strong>Crea gruppo di risorse</strong>. </strong> Per creare un gruppo di risorse per un datastore, fare clic su <strong>Menu</strong> &gt; <strong>host e cluster</strong>, quindi fare clic con il pulsante destro del mouse su un datastore, quindi selezionare <strong>NetApp SnapCenter</strong> e fare clic su <span class="image"><img src="./media/scpivs44_image6.png" alt="Errore: Immagine grafica mancante"></span> <strong>Crea gruppo di risorse</strong>.</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
+<div class="ulist">
+<ul>
+<li>
+<p>Per creare un gruppo di risorse per una macchina virtuale, fare clic su <strong>Menu</strong> &gt; <strong>host e cluster</strong>, quindi fare clic con il pulsante destro del mouse su una macchina virtuale, selezionare NetApp SnapCenter, quindi selezionare <strong>Crea gruppo di risorse</strong>.</p>
+</li>
+<li>
+<p>Per creare un gruppo di risorse per un datastore, fare clic su <strong>Menu</strong> &gt; <strong>host e cluster</strong>, quindi fare clic con il pulsante destro del mouse su un datastore, selezionare <strong>NetApp SnapCenter</strong>, quindi selezionare <strong>Crea gruppo di risorse</strong>.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
 <li>
 <p>Nella pagina <strong>Info generali e notifica</strong> della procedura guidata, eseguire le seguenti operazioni:</p>
 <table class="tableblock frame-all grid-all stretch">
@@ -2183,10 +2194,10 @@ R <code>_recent</code> il backup viene creato per ogni policy associata a un gru
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Una nuova policy</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="olist loweralpha">
-<ol class="loweralpha" type="a">
+<td class="tableblock halign-left valign-top"><div class="content"><div class="olist lowerroman">
+<ol class="lowerroman" type="i">
 <li>
-<p>Fare clic su <span class="image"><img src="./media/scpivs44_image6.png" alt="Errore: Immagine grafica mancante"></span> <strong>Crea</strong>.</p>
+<p>Selezionare <strong>Crea</strong>.</p>
 </li>
 <li>
 <p>Completare la procedura guidata nuovo criterio di backup per tornare alla procedura guidata Crea gruppo di risorse.</p>
@@ -2203,7 +2214,7 @@ R <code>_recent</code> il backup viene creato per ogni policy associata a un gru
 <li>
 <p>Nella pagina <strong>programmi</strong>, configurare la pianificazione del backup per ogni policy selezionata.</p>
 <div class="paragraph">
-<p><span class="image"><img src="./media/scpivs44_image18.png" alt="Errore: Immagine grafica mancante"></span></p>
+<p><span class="image"><img src="./media/scpivs44_image18.png" alt="Finestra di creazione del gruppo di risorse"></span></p>
 </div>
 <div class="paragraph">
 <p>Nel campo Starting hour (ora di inizio), immettere una data e un&#8217;ora diverse da zero. La data deve essere nel formato <code>day/month/year</code>.</p>
@@ -2226,6 +2237,9 @@ R <code>_recent</code> il backup viene creato per ogni policy associata a un gru
 <div class="paragraph">
 <p>Dopo aver fatto clic su <strong>fine</strong>, il nuovo gruppo di risorse viene aggiunto all&#8217;elenco dei gruppi di risorse.</p>
 </div>
+</li>
+</ol>
+</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -2239,7 +2253,7 @@ Se l&#8217;operazione di quiesce non riesce per una qualsiasi delle macchine vir
 </table>
 </div>
 </li>
-</ol>
+</ul>
 </div>
 </div>
 </div>
@@ -2263,7 +2277,7 @@ Se l&#8217;operazione di quiesce non riesce per una qualsiasi delle macchine vir
 <p>SnapCenter versione 4.x supporta ONTAP 8.3.1 e versioni successive.</p>
 </div>
 <div class="paragraph">
-<p>Il plug-in SnapCenter per VMware vSphere non esegue controlli di compatibilità per tutte le versioni di ONTAP, ma solo per ONTAP 8.2.1 e versioni precedenti. Pertanto, vedere sempre <a href="https://imt.netapp.com/matrix/imt.jsp?components=108380;&amp;solution=1257&amp;isHWU&amp;src=IMT" target="_blank" rel="noopener">"Tool di matrice di interoperabilità NetApp (IMT)"</a> Per informazioni aggiornate sul supporto SnapCenter.</p>
+<p>Il plug-in SnapCenter per VMware vSphere non esegue controlli di compatibilità per tutte le versioni di ONTAP, ma solo per ONTAP 8.2.1 e versioni precedenti. Pertanto, vedere sempre <a href="https://imt.netapp.com/matrix/imt.jsp?components=112310;&amp;solution=1517&amp;isHWU&amp;src=IMT" target="_blank" rel="noopener">"Tool di matrice di interoperabilità NetApp (IMT)"</a> Per informazioni aggiornate sul supporto SnapCenter.</p>
 </div>
 </li>
 <li>

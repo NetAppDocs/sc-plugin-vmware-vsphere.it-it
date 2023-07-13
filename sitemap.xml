@@ -15,35 +15,35 @@
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/legal-notices.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_access_reports.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_access_rest_apis_using_the_swagger_api_web_page.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_access_the_maintenance_console.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
@@ -57,56 +57,56 @@
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_add_multiple_vms_and_datastores_to_a_resource_group.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_add_storage.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_add_storage_01.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_attach_vmdks_to_a_vm.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_back_up_resource_groups_on_demand.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_back_up_the_snapcenter_plug-in_for_vmware_vsphere_mysql_database.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_concepts_overview.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_configure_credentials_for_vm_guest_file_restores.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
@@ -120,28 +120,28 @@
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_create_backup_policies.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_create_backup_policies_for_vms_and_datastores.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_create_resource_groups.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_create_resource_groups_for_vms_and_datastores.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
@@ -162,35 +162,35 @@
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere_01.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_deployment_planning_and_requirements.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_deployment_workflow_for_existing_users.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_deployment_workflow_for_new_users.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
@@ -204,14 +204,14 @@
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_disable_and_enable_plugin.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_download_job_logs.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
@@ -232,7 +232,7 @@
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_enable_ssh.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
@@ -246,14 +246,14 @@
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_generate_a_support_bundle_from_the_maintenance_console.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_generate_a_support_bundle_from_the_snapcenter_plug-in_for_vmware_vsphere_gui.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
@@ -295,7 +295,7 @@
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_licensing.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
@@ -307,16 +307,9 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_manage_authentication_errors.html</loc>
-      
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
-      
-    </url>
-  
-    <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_manage_backups.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
@@ -335,16 +328,9 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_manage_snapcenter_plug-in_for_vmware_vsphere.html</loc>
-      
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
-      
-    </url>
-  
-    <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_manage_storage_systems.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
@@ -386,7 +372,7 @@
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_modify_plugin_password.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
@@ -400,35 +386,35 @@
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_modify_the_logon_credentials.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_modify_the_network_settings.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_modify_the_time_zones.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_modify_the_vcenter_logon_credentials.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_monitor_jobs.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
@@ -456,7 +442,7 @@
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_post_deployment_required_operations_and_issues.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
@@ -484,7 +470,7 @@
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_protect_data_overview.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
@@ -498,14 +484,14 @@
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_register_snapcenter_plugin_vmware_vsphere_with_snapcenter_server.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_release_notes.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
@@ -610,7 +596,7 @@
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_restore_a_specific_backup_of_the_mysql_database.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
@@ -638,14 +624,14 @@
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_restore_guest_files_and_folders_overview.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_restore_the_most_recent_backup_of_the_mysql_database.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
@@ -673,21 +659,21 @@
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_search_for_backups.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_set_up_proxy_vms_for_restore_operations.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_types_of_rbac_for_snapcenter_users.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
@@ -708,7 +694,7 @@
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_upgrade.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
@@ -729,14 +715,14 @@
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_view_vm_and_datastore_backups.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs48_rest_apis_audit_logs.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
@@ -750,14 +736,14 @@
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scv48_audit_logs.html</loc>
       
-      <lastmod>2023-05-23T12:48:18+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:16+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere//search.html</loc>
       
-      <lastmod>2023-05-24T08:13:32+00:00</lastmod>
+      <lastmod>2023-07-13T19:02:33+00:00</lastmod>
       
     </url>
   
