@@ -16,4 +16,4 @@ summary: È possibile utilizzare questo flusso di lavoro se si utilizza SnapCent
 [role="lead"]
 Se si utilizza SnapCenter e si dispone di backup SnapCenter, utilizzare il seguente flusso di lavoro per iniziare.
 
-image:scpivs44_image3.png["Errore: Immagine grafica mancante"]
+image:scpivs44_image3.png["Workflow di implementazione"]

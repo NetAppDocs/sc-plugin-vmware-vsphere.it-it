@@ -14,7 +14,11 @@ summary: 'Dopo aver implementato il plug-in SnapCenter per VMware vSphere, è ne
 
 
 [role="lead"]
-Dopo aver implementato il plug-in SnapCenter per VMware vSphere, è necessario completare l'installazione. == operazioni richieste dopo l'implementazione
+Dopo aver implementato il plug-in SnapCenter per VMware vSphere, è necessario completare l'installazione.
+
+
+
+== Operazioni richieste dopo l'implementazione
 
 Se sei un nuovo utente SnapCenter, devi aggiungere le VM di storage a SnapCenter prima di poter eseguire qualsiasi operazione di protezione dei dati. Quando si aggiungono VM di storage, specificare la LIF di gestione. È inoltre possibile aggiungere un cluster e specificare la LIF di gestione del cluster. Per informazioni sull'aggiunta dello storage, vedere link:scpivs44_add_storage_01.html["Aggiungere storage"^].
 
@@ -53,7 +57,7 @@ Se il problema persiste, riavviare il servizio client VMware vSphere
 Se non si utilizzano le credenziali di amministratore, potrebbe essere visualizzato un errore di autenticazione dopo l'implementazione del plug-in SnapCenter per VMware vSphere o dopo la migrazione. Se si verifica un errore di autenticazione, è necessario riavviare il servizio.
 
 .Fasi
-. Accedere alla GUI di gestione del plug-in VMware di SnapCenter utilizzando il formato `https://<appliance-IP-address>:8080`.
+. Accedere alla GUI di gestione del plug-in VMware di SnapCenter utilizzando il formato `https://<appliance-IP-address>:8080`. Utilizzare il nome utente admin, la password e i dettagli del token MFA per effettuare l'accesso. Il token MFA può essere generato dalla console di manutenzione.
 . Riavviare il servizio.
 
 
@@ -101,7 +105,7 @@ La porta 8144 è predefinita per la comunicazione all'interno del plug-in VMware
 +
 Una volta aggiunto correttamente l'host VM, questo viene visualizzato nella scheda Managed hosts (host gestiti).
 
-. Nel riquadro di spostamento di sinistra, fare clic su *Impostazioni*, quindi sulla scheda *credenziale* e infine su image:scpivs44_image6.png["Errore: Immagine grafica mancante"] *Aggiungi* per aggiungere credenziali per l'appliance virtuale.
+. Nel riquadro di spostamento di sinistra, fare clic su *Impostazioni*, quindi sulla scheda *credenziale* e selezionare *Aggiungi* per aggiungere le credenziali per l'appliance virtuale.
 . Fornire le informazioni sulle credenziali specificate durante l'implementazione del plug-in SnapCenter per VMware vSphere.
 +
 

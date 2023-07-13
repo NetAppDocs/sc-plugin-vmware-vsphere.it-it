@@ -16,6 +16,6 @@ summary:
 [role="lead"]
 Per aggiungere spazio di archiviazione, attenersi alla procedura descritta in questa sezione.
 
-. Nel riquadro sinistro del Navigator del plug-in SCV, fare clic su *Storage Systems*, quindi su image:scpivs44_image6.png["Errore: Immagine grafica mancante"] *Aggiungi*.
-. Nella finestra di dialogo Add Storage System (Aggiungi sistema di storage), immettere le informazioni di base su SVM o cluster, quindi fare clic su *Add* (Aggiungi).
+. Nel riquadro sinistro del Navigator del plug-in SCV, fare clic su *Storage Systems* (sistemi storage), quindi selezionare l'opzione *Add* (Aggiungi).
+. Nella finestra di dialogo Add Storage System (Aggiungi sistema di storage), immettere le informazioni di base su SVM o cluster e selezionare *Add* (Aggiungi).
 

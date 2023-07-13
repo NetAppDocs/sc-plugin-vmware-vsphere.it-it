@@ -32,6 +32,6 @@ summary: È possibile cercare e trovare un backup specifico di una macchina virt
 . Facoltativo: Fare clic con il pulsante destro del mouse su una macchina virtuale o su un datastore, quindi selezionare *NetApp SnapCenter* nell'elenco a discesa, quindi selezionare *Ripristina* nell'elenco a discesa secondario.
 . Nella procedura guidata *Restore* inserire un nome di ricerca e fare clic su *Search* (Ricerca).
 +
-È possibile filtrare l'elenco di backup facendo clic su image:scpivs44_image41.png["Errore: Immagine grafica mancante"] Filtro e selezione di un intervallo di data e ora, selezionando se si desidera eseguire backup contenenti VMware Snapshots, se si desidera montare backup e la posizione. Fare clic su *OK*.
+È possibile filtrare l'elenco di backup selezionando l'icona del filtro e selezionando una data e un intervallo di tempo, selezionando se si desidera eseguire i backup che contengono VMware Snapshots, se si desidera montare i backup e la posizione. Fare clic su *OK*.
 
 

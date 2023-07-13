@@ -16,10 +16,12 @@ summary: Per utilizzare le funzionalità di SnapCenter per proteggere macchine v
 [role="lead"]
 Per utilizzare le funzionalità di SnapCenter per proteggere macchine virtuali, datastore e database coerenti con le applicazioni su macchine virtualizzate, è necessario implementare il plug-in SnapCenter per VMware vSphere.
 
-....
-[Note]
-The OVA deployment is supported in VMware vCenter 7u1 and above.
-....
+.Prima di iniziare
+Questa sezione elenca tutte le azioni necessarie da eseguire prima di iniziare la distribuzione.
+
+
+NOTE:  L'implementazione di OVA è supportata in VMware vCenter 7u1 e versioni successive.
+
 * È necessario aver letto i requisiti di implementazione.
 * È necessario eseguire una versione supportata di vCenter Server.
 * È necessario aver configurato e configurato l'ambiente vCenter Server.
@@ -141,7 +143,7 @@ Viene visualizzato l'indirizzo IP in cui viene implementato il plug-in VMware di
 Utilizzare il formato `https://<appliance-IP-address>:8080` Per accedere alla GUI di gestione.
 
 +
-Accedere utilizzando il nome utente predefinito della console di manutenzione `maint` e la password impostata al momento dell'installazione.
+Accedere con il nome utente e la password dell'amministratore impostati al momento dell'implementazione e il token MFA generato dalla console di manutenzione.
 
 +
 Se il plug-in VMware di SnapCenter non è attivato, vedere link:scpivs44_restart_the_vmware_vsphere_web_client_service.html["Riavviare il servizio client VMware vSphere"].

@@ -52,13 +52,15 @@ I log di controllo di cui è stato eseguito il rollover vengono periodicamente v
 | NORMALE | Il file di log di audit non è stato modificato 
 
 
-| SPOSTA IL MOUSE SU ELIMINA | * Il file di registro di controllo viene cancellato in base alla conservazione * per impostazione predefinita, vengono conservati solo 10 file 
+| SPOSTA IL MOUSE SU ELIMINA | - Il file di registro di controllo viene cancellato in base alla conservazione
+Per impostazione predefinita, vengono conservati solo 10 file 
 
 
 | ELIMINAZIONE IMPREVISTA | Il file di log di audit viene cancellato 
 
 
-| ATTIVO | * Il file di registro di controllo è in uso * applicabile solo a audit.log 
+| ATTIVO | - Il file di log di audit è in uso
+- Applicabile solo a audit.log 
 |===
 Gli eventi sono suddivisi in tre categorie principali:
 
@@ -143,4 +145,49 @@ Vengono controllate le seguenti operazioni nell'interfaccia utente della Admin C
 ** Plug-in Enable/Disable (attiva/Disattiva plug-in
 
 
+
+
+
+
+== Configurare i server syslog
+
+I registri di audit vengono memorizzati all'interno dell'appliance e verificati periodicamente per verificarne l'integrità. L'inoltro degli eventi consente di ottenere eventi dal computer di origine o di inoltro e di memorizzarli in un computer centralizzato, ovvero Syslog Server. I dati vengono crittografati durante il trasferimento tra l'origine e la destinazione.
+
+.Prima di iniziare
+È necessario disporre dei privilegi di amministratore.
+
+.A proposito di questa attività
+Questa attività consente di configurare il server syslog.
+
+.Fasi
+. Accedere al plug-in SnapCenter per VMware vSphere.
+. Nel riquadro di navigazione a sinistra, selezionare *Impostazioni* > *registri di controllo* > *Impostazioni*.
+. Nel riquadro *Audit Log Settings*, selezionare *Send audit logs to Syslog server* (Invia log di controllo al server Syslog)
+. Inserire i seguenti dati:
++
+** IP server syslog
+** Porta server syslog
+** Formato RFC
+** Certificato server syslog
+
+
+. Fare clic su *SAVE* (SALVA) per salvare le impostazioni del server Syslog.
+
+
+
+
+== Modificare le impostazioni del registro di controllo
+
+È possibile modificare le configurazioni predefinite delle impostazioni del registro.
+
+.Prima di iniziare
+È necessario disporre dei privilegi di amministratore.
+
+.A proposito di questa attività
+Questa attività consente di modificare le impostazioni predefinite del registro di controllo.
+
+.Fasi
+. Accedere al plug-in SnapCenter per VMware vSphere.
+. Nel riquadro di navigazione a sinistra, selezionare *Impostazioni* > *registri di controllo* > *Impostazioni*.
+. Nel riquadro *Audit Log Settings* (Impostazioni registro di controllo), immettere il *numero di voci di controllo* e il *limite di dimensione del registro di controllo* in base ai requisiti.
 

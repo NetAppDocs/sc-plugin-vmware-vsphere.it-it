@@ -23,7 +23,7 @@ NOTE: Il valore predefinito per la conservazione dei registri dei lavori è 30 g
 
 .Fasi
 . Nel riquadro sinistro di Navigator del client vSphere, fare clic su *Dashboard*, selezionare un server vCenter, quindi fare clic sulla scheda *Job Monitor* nel pannello Dashboard.
-. Fare clic su image:scpivs44_image37.png["Errore: Immagine grafica mancante"] Icona Download nella barra del titolo di Job Monitor.
+. Selezionare l'icona di download nella barra del titolo di Job Monitor.
 +
 Potrebbe essere necessario scorrere verso destra per visualizzare l'icona.
 

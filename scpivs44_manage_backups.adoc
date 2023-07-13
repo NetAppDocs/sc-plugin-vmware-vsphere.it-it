@@ -25,7 +25,7 @@ summary: È possibile rinominare ed eliminare i backup eseguiti dal plug-in Snap
 .Fasi
 . Fare clic su *Menu* e selezionare l'opzione di menu *host e cluster*, quindi selezionare una macchina virtuale, selezionare la scheda *Configura*, quindi fare clic su *Backup* nella sezione *plug-in SnapCenter per VMware vSphere*.
 +
-image:scpivs44_image14.png["Errore: Immagine grafica mancante"]
+image:scpivs44_image14.png["Schermata del client vSphere"]
 
 . Nella scheda Configura, selezionare un backup e fare clic su *Rinomina*.
 . Nella finestra di dialogo *Rename Backup*, immettere il nuovo nome e fare clic su *OK*.
@@ -48,7 +48,7 @@ Le copie Snapshot sullo storage secondario vengono gestite dalle impostazioni di
 
 . Fare clic su *Menu* e selezionare l'opzione di menu *host e cluster*, quindi selezionare una macchina virtuale, selezionare la scheda *Configura*, quindi fare clic su *Backup* nella sezione *plug-in SnapCenter per VMware vSphere*.
 +
-image:scpivs44_image14.png["Errore: Immagine grafica mancante"]
+image:scpivs44_image14.png["Finestra del client vSphere"]
 
 . Selezionare uno o più backup e fare clic su *Delete* (Elimina).
 +

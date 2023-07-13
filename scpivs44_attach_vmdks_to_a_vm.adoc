@@ -40,11 +40,11 @@ In questo caso, aggiungere i controller SCSI manualmente e provare a eseguire nu
 . Nella GUI del client VMware vSphere, fare clic su *Menu* nella barra degli strumenti, quindi selezionare *host e cluster* dall'elenco a discesa.
 . Nel riquadro di spostamento di sinistra, fare clic con il pulsante destro del mouse su una macchina virtuale, quindi selezionare *NetApp SnapCenter* nell'elenco a discesa, quindi selezionare *Allega disco virtuale* nell'elenco a discesa secondario.
 +
-image:scpivs44_image22.png["Errore: Immagine grafica mancante"]
+image:scpivs44_image22.png["Finestra di collegamento del disco virtuale"]
 
 . Nella sezione *Backup* della finestra *Allega disco virtuale*, selezionare un backup.
 +
-È possibile filtrare l'elenco di backup facendo clic su image:scpivs44_image41.png["Errore: Immagine grafica mancante"] Filtro e selezione di un intervallo di data e ora, selezionando se si desidera eseguire i backup che contengono copie VMware Snapshot, se si desidera montare i backup e la posizione. Fare clic su *OK*.
+È possibile filtrare l'elenco di backup selezionando l'icona del filtro e scegliendo una data e un intervallo di tempo, selezionando se si desidera eseguire i backup che contengono copie VMware Snapshot, se si desidera montare i backup e la posizione. Fare clic su *OK*.
 
 . Nella sezione *Select Disks* (Seleziona dischi), selezionare uno o più dischi da collegare e la posizione da cui si desidera collegare (primario o secondario).
 +
@@ -62,7 +62,7 @@ Aggiornare la schermata per visualizzare le informazioni aggiornate.
 .. Nel riquadro sinistro del Navigator, fare clic con il pulsante destro del mouse su una macchina virtuale, quindi selezionare *Edit settings* (Modifica impostazioni) nell'elenco a discesa.
 .. Nella finestra *Edit Settings* (Modifica impostazioni), espandere l'elenco di ciascun disco rigido per visualizzare l'elenco dei file su disco.
 +
-image:scpivs44_image23.png["Errore: Immagine grafica mancante"]
+image:scpivs44_image23.png["Finestra di modifica delle impostazioni"]
 
 +
 La pagina Edit Settings (Modifica impostazioni) elenca i dischi sulla macchina virtuale. È possibile espandere i dettagli di ciascun disco rigido per visualizzare l'elenco dei dischi virtuali collegati.

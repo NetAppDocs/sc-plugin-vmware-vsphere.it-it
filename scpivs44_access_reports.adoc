@@ -24,7 +24,7 @@ La scheda rapporti contiene informazioni sui lavori selezionati nella pagina lav
 +
 .. Modificare il report
 +
-Fare clic su image:scpivs44_image41.png["Errore: Immagine grafica mancante"] icona del filtro per modificare l'intervallo di tempo, il tipo di stato del lavoro, i gruppi di risorse e i criteri da includere nel report.
+Selezionare l'icona del filtro per modificare l'intervallo di tempo, il tipo di stato del processo, i gruppi di risorse e i criteri da includere nel report.
 
 .. Generare un report dettagliato
 +
@@ -34,7 +34,7 @@ Fare doppio clic su un lavoro per generare un report dettagliato per tale lavoro
 
 . Facoltativo: Nella scheda Report, fare clic su *Download* e selezionare il formato (HTML o CSV).
 +
-È inoltre possibile fare clic su image:scpivs44_image37.png["Errore: Immagine grafica mancante"] icona di download per scaricare i log dei plug-in.
+È inoltre possibile fare clic sull'icona di download per scaricare i log dei plug-in.
 
 
 

@@ -43,7 +43,7 @@ Il plug-in VMware di SnapCenter esegue operazioni di backup e ripristino su macc
 NOTE: Se si utilizza il plug-in VMware di SnapCenter per supportare backup basati su applicazioni su VMDK, è necessario utilizzare l'interfaccia grafica di SnapCenter per immettere i dettagli di autenticazione dello storage e registrare i sistemi storage.
 
 * Per i vCenter in modalità Linked, è necessario aggiungere separatamente i sistemi storage a ciascun vCenter.
-* I nomi delle VM storage devono essere risolti in LIF di gestione.
+* Se si aggiunge SVM, i nomi delle VM di storage devono essere risolti nelle LIF di gestione.
 +
 Se sono state aggiunte voci host etc per i nomi delle VM di storage in SnapCenter, è necessario verificare che siano risolvibili anche dall'appliance virtuale.
 
@@ -55,7 +55,7 @@ Se si aggiunge una VM di storage con un nome che non è in grado di risolvere ne
 
 .Fasi
 . Nel riquadro sinistro di Navigator del client vSphere, fare clic su *Storage Systems*.
-. Nella pagina Storage Systems (sistemi storage), fare clic su image:scpivs44_image6.png["Errore: Immagine grafica mancante"] *Aggiungi*.
+. Nella pagina Storage Systems (sistemi storage), selezionare l'opzione *Add* (Aggiungi).
 . Nella procedura guidata *Add Storage System*, immettere le informazioni di base relative alla VM di storage o al cluster, come indicato nella seguente tabella:
 +
 |===
@@ -71,10 +71,10 @@ Se si aggiunge una VM di storage con un nome che non è in grado di risolvere ne
 | Metodo di autenticazione | Selezionare credenziali o certificato. Sono supportati due tipi di certificati: - https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_a_CA_signed_certificate_for_storage_system_authentication_with_SCV["Certificato FIRMATO CA"^]- https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_a_self-signed_certificate_for_storage_system_authentication_with_SCV["Certificato autofirmato"^] 
 
 
-| Nome utente | Questo campo è visibile quando si seleziona credenziali come metodo di autenticazione. Inserire il nome utente ONTAP utilizzato per accedere alla VM di storage. 
+| Nome utente | Questo campo è visibile quando si seleziona credenziali come metodo di autenticazione. Inserire il nome utente ONTAP utilizzato per accedere alla VM di storage o al cluster. 
 
 
-| Password | Questo campo è visibile quando si seleziona credenziali come metodo di autenticazione. Inserire la password di accesso alla VM di storage. 
+| Password | Questo campo è visibile quando si seleziona credenziali come metodo di autenticazione. Inserire la password di accesso alla VM di storage o al cluster. 
 
 
 | Certificato | Questo campo è visibile quando si seleziona certificato come metodo di autenticazione. Selezionare il file del certificato. 

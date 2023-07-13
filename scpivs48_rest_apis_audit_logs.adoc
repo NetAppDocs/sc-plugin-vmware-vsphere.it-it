@@ -21,6 +21,8 @@ Di seguito sono riportate le API REST di swagger:
 . OTTIENI 4.1/audit/log: Ottieni i dati di audit per tutti i log
 . OTTIENI 4.1/audit/logs/{filename}: Ottieni i dati di audit per un file di log specifico
 . POST 4.1/audit/verify: Attiva la verifica del log di audit.
+. GET 4.1/audit/config: Ottenere l'audit e la configurazione del server syslog
+. PUT 4.1/audit/config: Aggiorna l'audit e la configurazione del server syslog
 
 
 Per generare log di audit per i processi del client VMware vSphere utilizzando il plug-in SnapCenter per le API REST di VMware vSphere, è necessario utilizzare le chiamate API REST per VMware vSphere.
@@ -40,4 +42,7 @@ Utilizzare le seguenti API REST nella sezione lavori per ottenere informazioni d
 
 
 | `4.1/audit/verify` | attiva la verifica dell'audit 
+
+
+| `4.1/audit/syslogcert` | aggiorna il certificato del server syslog 
 |===

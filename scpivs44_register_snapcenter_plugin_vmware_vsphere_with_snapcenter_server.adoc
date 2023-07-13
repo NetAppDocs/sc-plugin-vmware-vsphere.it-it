@@ -56,7 +56,7 @@ La porta 8144 è predefinita per la comunicazione all'interno del plug-in VMware
 +
 Una volta aggiunto correttamente l'host VM, questo viene visualizzato nella scheda Managed hosts (host gestiti).
 
-. Nel riquadro di spostamento di sinistra, fare clic su *Impostazioni*, quindi sulla scheda *credenziale* e infine su image:scpivs44_image6.png["Errore: Immagine grafica mancante"] *Aggiungi* per aggiungere credenziali per l'appliance virtuale.
+. Nel riquadro di spostamento di sinistra, fare clic su *Impostazioni*, quindi sulla scheda *credenziale* e selezionare *Aggiungi* per aggiungere le credenziali per l'appliance virtuale.
 . Fornire le informazioni sulle credenziali specificate durante l'implementazione del plug-in SnapCenter per VMware vSphere.
 +
 

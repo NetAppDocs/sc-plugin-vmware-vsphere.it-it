@@ -59,4 +59,4 @@ Utilizzare il seguente flusso di lavoro per impostare ONTAP e SnapCenter RBAC:
 
 La figura seguente fornisce una panoramica del flusso di lavoro di convalida per i privilegi RBAC (sia vCenter che ONTAP):
 
-image:scpivs44_image1.png["Errore: Immagine grafica mancante"]
+image:scpivs44_image1.png["Workflow di validazione per i privilegi RBAC"]

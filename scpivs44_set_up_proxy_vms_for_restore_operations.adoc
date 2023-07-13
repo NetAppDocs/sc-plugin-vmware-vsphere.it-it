@@ -28,7 +28,7 @@ Se si desidera utilizzare una macchina virtuale proxy per collegare un disco vir
 
 
 | Aggiungere nuove credenziali  a| 
-.. Fare clic su image:scpivs44_image6.png["Errore: Immagine grafica mancante"] *Aggiungi*.
+.. Selezionare *Aggiungi*.
 .. Nella finestra di dialogo *Esegui come credenziali*, immettere le credenziali.
 .. Fare clic su *Select VM*, quindi selezionare una VM nella finestra di dialogo *Proxy VM*. Fare clic su *Save* (Salva) per tornare alla finestra di dialogo *Run as Credentials* (Esegui come credenziali).
 .. Immettere le credenziali. Per Nome utente, immettere "Amministratore".

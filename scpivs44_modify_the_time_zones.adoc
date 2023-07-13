@@ -20,10 +20,11 @@ summary: Quando si configura una pianificazione di backup per un plug-in SnapCen
 
 
 .Prima di iniziare
-È necessario conoscere l'indirizzo IP e le credenziali di accesso per l'interfaccia grafica di gestione del plug-in SnapCenter per VMware vSphere.
+È necessario conoscere l'indirizzo IP e le credenziali di accesso per l'interfaccia grafica di gestione del plug-in SnapCenter per VMware vSphere. È inoltre necessario annotare il token MFA generato dalla console di manutenzione.
 
 * L'indirizzo IP è stato visualizzato al momento dell'implementazione del plug-in VMware di SnapCenter.
 * Utilizzare le credenziali di accesso fornite durante l'implementazione del plug-in VMware di SnapCenter o come successivamente modificato.
+* Generare un token MFA a 6 cifre utilizzando le opzioni di configurazione del sistema della console di manutenzione.
 
 
 .Fasi
@@ -33,7 +34,7 @@ Utilizzare il formato `https://<appliance-IP-address>:8080`
 
 . Fare clic sull'icona Impostazioni nella barra degli strumenti superiore.
 +
-image:scpivs44_image28.jpg["Errore: Immagine grafica mancante"]
+image:scpivs44_image28.jpg["Plug-in SnapCenter per VMware vSphere"]
 
 . Nella pagina *Impostazioni*, nella sezione *Data e ora*, fare clic su *Modifica*.
 . Selezionare il nuovo fuso orario e fare clic su *Salva*.

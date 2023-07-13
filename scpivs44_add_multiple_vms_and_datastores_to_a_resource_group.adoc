@@ -30,7 +30,7 @@ Un gruppo di risorse può contenere uno dei seguenti elementi:
 NOTE: Le VM vVol che si estendono su più datastore vVol non sono supportate perché SnapCenter esegue il backup solo dei vVol nel datastore vVol primario, selezionato.
 
 .Fasi
-. Nel riquadro di sinistra del Navigator del plug-in SCV, fare clic su *Resource Groups* (gruppi di risorse), quindi selezionare un gruppo di risorse e fare clic su image:scpivs44_image39.png["Errore: Immagine grafica mancante"] *Edit Resource Group* (Modifica gruppo di risorse) per avviare la procedura guidata.
+. Nel riquadro di sinistra del Navigator del plug-in SCV, fare clic su *Resource Groups* (gruppi di risorse), quindi selezionare un gruppo di risorse e fare clic su image:scpivs44_image39.png["icona edit (modifica)"] *Edit Resource Group* (Modifica gruppo di risorse) per avviare la procedura guidata.
 . Nella pagina *Resource*, effettuare le seguenti operazioni:
 +
 .. Nel campo Datastores (archivi dati), accedere alle macchine virtuali o agli archivi dati che si desidera aggiungere.

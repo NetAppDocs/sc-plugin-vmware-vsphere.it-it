@@ -14,7 +14,7 @@ summary: 'Se si utilizza il plug-in SnapCenter per l"appliance virtuale VMware v
 
 
 
-NOTE: L'aggiornamento a SCV 4.8 è supportato solo su VMware vCenter Server 7 update 1 e versioni successive; per VMware vCenter Server prima della versione 7 update 1, continuare a utilizzare SCV 4.7. L'aggiornamento è un'interruzione sulle versioni non supportate del server VMware vCenter.
+NOTE: L'aggiornamento a SCV 4.9 è supportato solo su VMware vCenter Server 7 update 1 e versioni successive; per VMware vCenter Server prima della versione 7 update 1, continuare a utilizzare SCV 4.7. L'aggiornamento è un'interruzione sulle versioni non supportate del server VMware vCenter.
 
 Se si utilizza il plug-in SnapCenter per l'appliance virtuale VMware vSphere, è possibile eseguire l'aggiornamento a una versione più recente. Il processo di aggiornamento disregistra il plug-in esistente e implementa un plug-in compatibile solo con vSphere 7.0U1 e versioni successive.
 
@@ -52,7 +52,7 @@ NOTE: Il passaggio dalla configurazione di rete statica a DHCP non è supportato
 .. Tornare alla macchina virtuale che si desidera aggiornare e fare clic sulla scheda *Summary* (Riepilogo). Nel riquadro *VM hardware*, nel campo CD/DVD, il valore deve essere "disconnesso".
 .. Fare clic sull'icona di connessione nel campo CD/DVD e selezionare *Connect to CD/DVD image on a datastore*.
 +
-image:scpivs44_image42.png["Errore: Immagine grafica mancante"]
+image:scpivs44_image42.png["Interfaccia utente di vCenter"]
 
 .. Nella procedura guidata, eseguire le seguenti operazioni:
 +

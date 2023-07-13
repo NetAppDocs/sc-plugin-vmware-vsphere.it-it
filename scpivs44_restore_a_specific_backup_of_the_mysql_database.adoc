@@ -19,7 +19,7 @@ summary: 'È possibile utilizzare la console di manutenzione per ripristinare un
 .Fasi
 . Aprire una finestra della console di manutenzione.
 +
-link:scpivs44_manage_snapcenter_plug-in_for_vmware_vsphere.html#access-the-maintenance-console["Accedere alla console di manutenzione"].
+link:scpivs44_access_the_maintenance_console.html["Accedere alla console di manutenzione"^].
 
 . Dal menu principale, immettere l'opzione *1) Application Configuration* (Configurazione applicazione).
 . Dal menu Application Configuration (Configurazione applicazione), inserire l'opzione *6) MySQL backup and restore*.

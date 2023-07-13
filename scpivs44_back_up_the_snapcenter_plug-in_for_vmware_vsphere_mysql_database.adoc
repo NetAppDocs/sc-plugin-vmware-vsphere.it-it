@@ -25,7 +25,7 @@ Non avviare un processo di backup del database MySQL quando è già in esecuzion
 . Dal client VMware vSphere, selezionare la macchina virtuale in cui si trova il plug-in SnapCenter.
 . Fare clic con il pulsante destro del mouse sulla macchina virtuale, quindi sulla scheda *Summary* dell'appliance virtuale fare clic su *Launch Remote Console* *o Launch Web Console* per aprire una finestra della console di manutenzione.
 +
-image:scpivs44_image21.png["Errore: Immagine grafica mancante"]
+image:scpivs44_image21.png["finestra della console di manutenzione"]
 
 . Dal menu principale, immettere l'opzione *1) Application Configuration (Configurazione applicazione).*
 . Dal menu Application Configuration (Configurazione applicazione), immettere l'opzione *6) MySQL backup and restore (Backup e ripristino MySQL).*

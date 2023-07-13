@@ -15,10 +15,11 @@ summary: 'È possibile generare un bundle di supporto dal plug-in SnapCenter per
 
 .Prima di iniziare
 [role="lead"]
-Per accedere all'interfaccia grafica di gestione del plug-in SnapCenter per VMware vSphere, è necessario conoscere l'indirizzo IP e le credenziali di accesso.
+Per accedere all'interfaccia grafica di gestione del plug-in SnapCenter per VMware vSphere, è necessario conoscere l'indirizzo IP e le credenziali di accesso. È inoltre necessario annotare il token MFA generato dalla console di manutenzione.
 
 * L'indirizzo IP è stato visualizzato al momento dell'implementazione del plug-in VMware di SnapCenter.
 * Utilizzare le credenziali di accesso fornite durante l'implementazione del plug-in VMware di SnapCenter o come successivamente modificato.
+* Generare un token MFA a 6 cifre utilizzando le opzioni di configurazione del sistema della console di manutenzione.
 
 
 .Fasi
@@ -28,7 +29,7 @@ Utilizzare il formato `https://<OVA-IP-address>:8080`.
 
 . Fare clic sull'icona Impostazioni nella barra degli strumenti superiore.
 +
-image:scpivs44_image10.png["Errore: Immagine grafica mancante"]
+image:scpivs44_image10.png["Plug-in SnapCenter per l'interfaccia VMware vSphere"]
 
 . Nella sezione *supporto* della pagina *Impostazioni*, fare clic su *genera bundle di supporto*.
 . Una volta generato il bundle di supporto, fare clic sul link fornito per scaricare il bundle su NetApp.

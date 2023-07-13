@@ -29,10 +29,10 @@ IMPORTANT: Se sono state aggiunte VM di storage per le operazioni di protezione 
 
 .Fasi
 . Nel riquadro sinistro del Navigator del plug-in SCV, fare clic su *Storage Systems*.
-. Nella pagina *Storage Systems*, selezionare la VM di storage da modificare, quindi fare clic su image:scpivs44_image25.png["Errore: Immagine grafica mancante"] *Modifica*.
+. Nella pagina *Storage Systems*, selezionare la VM di storage da modificare, quindi selezionare *Edit* (Modifica).
 . Nella finestra *Edit Storage System* (Modifica sistema di storage), immettere i nuovi valori, quindi fare clic su *Update* (Aggiorna) per applicare le modifiche.
 +
-image:scpivs44_image43.png["Errore: Immagine grafica mancante"]
+image:scpivs44_image43.png["Finestra Edit storage Systems (Modifica sistemi storage)"]
 
 
 

@@ -16,10 +16,10 @@ summary:
 [role="lead"]
 Per creare gruppi di risorse, attenersi alla procedura riportata di seguito.
 
-. Nel riquadro sinistro del Navigator del plug-in SCV, fare clic su *Resource Groups*, quindi su image:scpivs44_image6.png["Errore: Immagine grafica mancante"] *Crea*.
+. Nel riquadro sinistro del Navigator del plug-in SCV, fare clic su *Resource Groups*, quindi selezionare *Create* (Crea).
 . Inserire le informazioni richieste in ciascuna pagina della procedura guidata Crea gruppo di risorse, selezionare le macchine virtuali e gli archivi dati da includere nel gruppo di risorse, quindi selezionare i criteri di backup da applicare al gruppo di risorse e specificare la pianificazione del backup.
 
 
 I backup vengono eseguiti come specificato nei criteri di backup configurati per il gruppo di risorse.
 
-È possibile eseguire un backup su richiesta dalla pagina *gruppi di risorse* facendo clic su image:scpivs44_image38.png["Errore: Immagine grafica mancante"] *Esegui ora*.
+È possibile eseguire un backup su richiesta dalla pagina *gruppi di risorse* selezionando image:scpivs44_image38.png["icona di riproduzione"] *Esegui ora*.

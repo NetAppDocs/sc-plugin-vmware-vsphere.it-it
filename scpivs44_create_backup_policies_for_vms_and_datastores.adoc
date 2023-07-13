@@ -39,7 +39,7 @@ La maggior parte dei campi presenti in queste pagine della procedura guidata son
 
 .Fasi
 . Nel riquadro sinistro del Navigator del plug-in SCV, fare clic su *Policies* (Criteri).
-. Nella pagina *Policy*, fare clic su image:scpivs44_image6.png["Errore: Immagine grafica mancante"] *Crea* per avviare la procedura guidata.
+. Nella pagina *Criteri*, selezionare *Crea* per avviare la procedura guidata.
 . Nella pagina *New Backup Policy*, selezionare il server vCenter che utilizzerà il criterio, quindi immettere il nome del criterio e una descrizione.
 +
 ** Linked mode (modalità collegata
