@@ -44,3 +44,6 @@ Le credenziali Esegui come devono essere l'amministratore di dominio predefinito
 . Nella sezione *credenziali proxy*, fare clic su *Aggiungi* per aggiungere una macchina virtuale da utilizzare come proxy.
 . Nella finestra di dialogo *Proxy VM*, completare le informazioni, quindi fare clic su *Save* (Salva).
 
+
+
+NOTE: È necessario eliminare la VM proxy dal plug-in SnapCenter per l'interfaccia utente di VMware vSphere prima di poterla eliminare da ESXi.

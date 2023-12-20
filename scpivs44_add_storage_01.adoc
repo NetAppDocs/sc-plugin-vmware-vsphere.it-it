@@ -26,7 +26,7 @@ Il plug-in SnapCenter per VMware vSphere 4.5 e versioni successive supporta data
 
 * Volumi virtuali VMware (vVol)
 +
-È necessario prima aggiungere il sistema di storage vVol ai tool ONTAP per VMware vSphere, quindi aggiungere il sistema di storage vVol al plug-in SnapCenter per VMware vSphere.
+È necessario prima aggiungere il sistema storage vVol ai tool ONTAP per VMware vSphere, quindi aggiungerlo al plug-in SnapCenter per VMware vSphere.
 
 +
 Per ulteriori informazioni, vedere https://docs.netapp.com/vapp-98/index.jsp["Strumenti ONTAP per VMware vSphere"^]
@@ -45,7 +45,7 @@ NOTE: Se si utilizza il plug-in VMware di SnapCenter per supportare backup basat
 * Per i vCenter in modalità Linked, è necessario aggiungere separatamente i sistemi storage a ciascun vCenter.
 * Se si aggiunge SVM, i nomi delle VM di storage devono essere risolti nelle LIF di gestione.
 +
-Se sono state aggiunte voci host etc per i nomi delle VM di storage in SnapCenter, è necessario verificare che siano risolvibili anche dall'appliance virtuale.
+Se sono state aggiunte voci al file _etc\hosts_ per i nomi delle VM di archiviazione in SnapCenter, è necessario assicurarsi che siano risolvibili anche dall'appliance virtuale. In caso contrario, è necessario aggiungere voci simili al file _etc/hosts_ all'interno del dispositivo.
 
 +
 Se si aggiunge una VM di storage con un nome che non è in grado di risolvere nella LIF di gestione, i processi di backup pianificati non vengono eseguiti perché il plug-in non è in grado di rilevare alcun datastore o volume nella VM di storage. In questo caso, aggiungere la VM di storage a SnapCenter e specificare la LIF di gestione oppure aggiungere un cluster contenente la VM di storage e specificare la LIF di gestione del cluster.
@@ -62,10 +62,8 @@ Se si aggiunge una VM di storage con un nome che non è in grado di risolvere ne
 | Per questo campo… | Eseguire questa operazione… 
 
 
-| Sistema storage | Inserire l'FQDN o l'indirizzo IP di un cluster di storage o di una VM di storage. Il plug-in VMware di SnapCenter non supporta più sistemi storage con lo stesso nome su cluster diversi. Ogni sistema storage supportato da SnapCenter deve disporre di un indirizzo IP LIF dei dati univoco. 
-
-
-| Piattaforma | Selezionare la piattaforma. 
+| Sistema storage | Inserisci l'indirizzo IP dell'FQDN o della LIF di gestione di un cluster storage o di una VM storage.
+Il plug-in VMware di SnapCenter non supporta più VM storage con lo stesso nome su cluster diversi. 
 
 
 | Metodo di autenticazione | Selezionare credenziali o certificato. Sono supportati due tipi di certificati: - https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_a_CA_signed_certificate_for_storage_system_authentication_with_SCV["Certificato FIRMATO CA"^]- https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_a_self-signed_certificate_for_storage_system_authentication_with_SCV["Certificato autofirmato"^] 
@@ -86,13 +84,16 @@ Se si aggiunge una VM di storage con un nome che non è in grado di risolvere ne
 | Protocollo | Selezionare il protocollo di storage. 
 
 
-| Porta | Selezionare la porta 443 (predefinita) o la porta 80 per comunicare con vCenter. La porta 443 viene utilizzata per la comunicazione tra l'host VM di storage per il plug-in SnapCenter per VMware vSphere e vCenter durante le operazioni di backup e ripristino di macchine virtuali e datastore. Selezionare la porta predefinita 443 se si intende proteggere le macchine virtuali vVol. 
+| Porta | Porta accettata dal sistema di archiviazione.
+- 443 per la connessione HTTPS
+- 80 per la connessione HTTP 
 
 
-| Timeout | Inserire il numero di secondi che vCenter deve attendere prima di eseguire il timeout dell'operazione. L'impostazione predefinita è 60 secondi. 
+| Timeout | Immettere il numero di secondi che il plug-in SnapCenter VMware deve attendere prima di terminare l'operazione. L'impostazione predefinita è 60 secondi. 
 
 
-| IP preferito | Se la VM di storage dispone di più indirizzi IP di gestione, selezionare questa casella e inserire l'indirizzo IP che si desidera utilizzare con SnapCenter. *Nota:* non utilizzare parentesi quadre ([]) quando si inserisce l'indirizzo IP. 
+| IP preferito | Se la VM di storage dispone di più indirizzi IP di gestione, selezionare questa casella e immettere l'indirizzo IP che si desidera utilizzare con il plug-in SnapCenter VMware.
+*Nota:* non utilizzare parentesi quadre ([]) quando si inserisce l'indirizzo IP. 
 
 
 | Sistema di gestione degli eventi (EMS) e impostazione AutoSupport | Se si desidera inviare messaggi EMS al syslog del sistema di storage o inviare messaggi AutoSupport al sistema di storage per la protezione applicata, le operazioni di ripristino completate o le operazioni non riuscite, selezionare la casella di controllo appropriata. Selezionare la casella di controllo *Invia notifica AutoSupport per operazioni non riuscite al sistema di storage* e la casella di controllo *Registra eventi server SnapCenter su syslog* per attivare le notifiche AutoSupport. 
