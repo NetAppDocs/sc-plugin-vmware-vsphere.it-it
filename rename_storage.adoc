@@ -1,0 +1,59 @@
+---
+sidebar: sidebar 
+permalink: rename_storage.html 
+keywords:  
+summary: 'È possibile rinominare lo storage utilizzando l"API REST.' 
+---
+= Ripristinare il backup dello spazio di archiviazione rinominato
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Quando lo storage viene rinominato, i flussi di lavoro che utilizzano i backup eseguiti prima della ridenominazione utilizzata non riescono. Con l'introduzione della funzione di ridenominazione del backup, accessibile esclusivamente tramite l'API REST, è ora possibile utilizzare i backup eseguiti prima della ridenominazione dello storage. Il flusso di lavoro e l'utilizzo dell'API REST sono descritti di seguito.
+
+.Fasi
+. Aggiungere o aggiornare la nuova connessione storage, assicurandosi che il nuovo nome del cluster o della SVM venga riflesso in SCV.
+. Riavviare il servizio per aggiornare le cache come descritto nell'articolo della Knowledge base: https://kb.netapp.com/mgmt/SnapCenter/SCV_backups_fail_after_SVM_rename["I backup dei distributori idraulici non riescono dopo la ridenominazione della SVM"]
+. Creare un nuovo backup.
+. Utilizzare i dettagli del backup per trovare i nomi di archiviazione vecchi e nuovi.
+. Nella schermata *backups* del client vSphere, selezionare il backup per visualizzarne i dettagli.
+. Accedere a Swagger dall'URL: https://<SCV-IP>:8144/api/swagger-ui/index.html[]
++
+Utilizzare la seguente API per rinominare l'archiviazione:
+
++
+PATCH
+/4,1/storage-system
+
++
+Esempio:
+{
+  "ExistingSVM": {
+    "nome": "stringa"
+  },
+  "NewSVM": {
+    "nome": "stringa"
+  }
+}
+
++
+Risposta:
+
++
+{
+  "StatusMessage": "OK",
+  "Codice di stato": 200,
+  "ResponseMessage": [
+    "Sistema di archiviazione rinominato correttamente."
+  ]
+}
+
++
+Dopo aver eseguito questa API, sarà possibile eseguire tutti i flussi di lavoro, compresa l'operazione di ripristino dal vecchio backup.
+
+

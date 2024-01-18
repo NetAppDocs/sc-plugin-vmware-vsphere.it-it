@@ -59,14 +59,25 @@ Genera token MFA
 
 NOTE: MFA è sempre attivato, non è possibile disattivare MFA.
 
-** Opzione 3: Configurazione di rete
+
+
+
+
 +
-Visualizzare o modificare le impostazioni dell'indirizzo IP visualizzare o modificare le impostazioni di ricerca dei nomi di dominio visualizzare o modificare i percorsi statici commit changes Ping a host
+* Opzione 3: Configurazione di rete
 
-** Opzione 4: Supporto e diagnostica
 +
-Genera bundle di supporto Access Diagnostic shell attiva l'accesso di diagnostica remota genera bundle di dump core
+Visualizzare o modificare le impostazioni dell'indirizzo IP
+Visualizzare o modificare le impostazioni di ricerca dei nomi di dominio
+Visualizzare o modificare i percorsi statici
+Eseguire il commit delle modifiche
+Eseguire il ping di un host
 
++
+* Opzione 4: Supporto e diagnostica
 
-
-
++
+Generare bundle di supporto
+Accedere alla shell di diagnostica
+Abilitare l'accesso remoto alla diagnostica
+Generare bundle di core dump

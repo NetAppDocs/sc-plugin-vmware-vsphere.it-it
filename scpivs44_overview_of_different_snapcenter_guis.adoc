@@ -16,22 +16,22 @@ summary: 'Il plug-in SnapCenter per VMware vSphere è un plug-in standalone dive
 [role="lead"]
 Nell'ambiente SnapCenter, è necessario utilizzare la GUI appropriata per eseguire operazioni di gestione e protezione dei dati.
 
-Il plug-in SnapCenter per VMware vSphere è un plug-in standalone diverso dagli altri plug-in SnapCenter. È necessario utilizzare l'interfaccia grafica del client VMware vSphere in vCenter per tutte le operazioni di backup e ripristino per macchine virtuali, VMDK e datastore. È inoltre possibile utilizzare la GUI Dashboard del client Web per monitorare l'elenco delle macchine virtuali protette e non protette. Per tutti gli altri plug-in SnapCenter (plug-in basati sull'applicazione), si utilizza l'interfaccia grafica utente di SnapCenter per le operazioni di backup e ripristino e per il monitoraggio dei processi.
+Il plug-in SnapCenter per VMware vSphere è un plug-in standalone diverso dagli altri plug-in SnapCenter. È necessario utilizzare l'interfaccia grafica del client VMware vSphere in vCenter per tutte le operazioni di backup e ripristino per macchine virtuali, VMDK e datastore. È inoltre possibile utilizzare la GUI Dashboard del client Web per monitorare l'elenco delle macchine virtuali protette e non protette. Per tutte le altre operazioni dei plug-in SnapCenter (plug-in basati sull'applicazione), come backup, ripristino e monitoring dei processi, puoi usare la GUI di SnapCenter.
 
 Per proteggere macchine virtuali e datastore, si utilizza l'interfaccia client di VMware vSphere. L'interfaccia grafica del client Web si integra con la tecnologia di copia Snapshot di NetApp sul sistema storage. In questo modo è possibile eseguire il backup di macchine virtuali e datastore in pochi secondi e ripristinare le macchine virtuali senza interrompere la linea di un host ESXi.
 
 È inoltre disponibile una GUI di gestione per eseguire operazioni amministrative sul plug-in VMware di SnapCenter.
 
-La seguente tabella mostra le operazioni eseguite da ciascuna GUI di SnapCenter.
+Nella tabella seguente sono illustrate le operazioni eseguite dalla GUI di SnapCenter.
 
 |===
 | Utilizzare questa GUI… | Per eseguire queste operazioni... | E per accedere a questi backup... 
 
 
-| GUI del client SnapCenter vSphere | Backup di VM e datastore VMDK collega e scollega Datastore monta e smonta VM e VMDK ripristina file guest e cartelle | Backup di macchine virtuali e datastore eseguiti utilizzando la GUI del client VMware vSphere. 
+| GUI del client SnapCenter vSphere | Backup di VM e datastore VMDK collega e scollega Datastore monta e smonta VM e VMDK ripristina file guest e cartelle | Backup di VM e datastore utilizzando la GUI del client VMware vSphere. 
 
 
-| GUI di SnapCenter | Backup e ripristino di database e applicazioni su macchine virtuali, inclusa la protezione dei database per Microsoft SQL Server, Microsoft Exchange e Oracle. Clone del database | Backup eseguiti utilizzando l'interfaccia grafica di SnapCenter. 
+| GUI di SnapCenter | Backup e ripristino di database e applicazioni su macchine virtuali, inclusa la protezione dei database per Microsoft SQL Server, Microsoft Exchange e Oracle. Clone del database | Backup eseguiti utilizzando la GUI di SnapCenter. 
 
 
 | Plug-in SnapCenter per l'interfaccia grafica di gestione di VMware vSphere | Modificare la configurazione di rete generare un bundle di supporto modificare le impostazioni del server NTP disattivare/attivare il plug-in | N.D. 

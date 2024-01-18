@@ -22,7 +22,7 @@ L'esplorazione di grandi cartelle di file, ad esempio 10.000 cartelle di file, p
 .Fasi
 . Fare clic su *Menu* e selezionare l'opzione di menu *host e cluster*, quindi selezionare una macchina virtuale, selezionare la scheda *Configura*, quindi fare clic su *Backup* nella sezione *plug-in SnapCenter per VMware vSphere*.
 +
-image:scpivs44_image14.png["Interfaccia utente del client vSphere"]
+image:scv50_image1.png["Interfaccia utente del client vSphere"]
 
 . Fare clic sul backup che si desidera visualizzare.
 

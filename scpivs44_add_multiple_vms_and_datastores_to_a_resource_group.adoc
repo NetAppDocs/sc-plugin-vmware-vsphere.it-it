@@ -22,7 +22,7 @@ Un gruppo di risorse può contenere uno dei seguenti elementi:
 * Un datastore FlexGroup (le macchine virtuali di spanning non sono supportate).
 * Uno o più datastore FlexVol (sono supportate le macchine virtuali di spanning).
 * Una o più VM vVol.
-* Tutte le VM vVol con un tag vCenter specificato.
+* Tutte le macchine virtuali vVol con un tag vSphere specifico.
 * Tutte le VM vVol in una cartella specificata.
 
 

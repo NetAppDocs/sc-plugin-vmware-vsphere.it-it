@@ -14,7 +14,7 @@ summary: 'Prima di implementare l"appliance virtuale, è necessario conoscere i 
 
 
 [role="lead"]
-Prima di implementare l'appliance virtuale, è necessario conoscere i requisiti di implementazione. I requisiti di implementazione sono elencati nelle cinque tabelle seguenti.
+Prima di implementare l'appliance virtuale, è necessario conoscere i requisiti di implementazione. I requisiti di distribuzione sono elencati nelle tabelle seguenti.
 
 
 
@@ -162,7 +162,7 @@ Per informazioni aggiornate sulle versioni supportate, consultare https://imt.ne
 | Plug-in SnapCenter per porta VMware vSphere  a| 
 8144 (HTTPS), bidirezionale: La porta viene utilizzata per le comunicazioni dal client VMware vSphere e dal server SnapCenter. 8080 bidirezionale questa porta viene utilizzata per gestire l'appliance virtuale.
 
-Nota: Non è possibile modificare la configurazione della porta.
+Nota: È supportata la porta personalizzata per l'aggiunta dell'host distributore idraulico a SnapCenter.
 
 
 

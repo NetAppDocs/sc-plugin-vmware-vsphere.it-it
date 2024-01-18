@@ -32,6 +32,19 @@ Per informazioni sulle modalità di assegnazione delle risorse agli utenti da pa
 
 
 * Se si desidera eseguire backup coerenti con le macchine virtuali, è necessario disporre dei tool VMware installati e in esecuzione. I tool VMware sono necessari per interrompere le macchine virtuali. I backup coerenti con le macchine virtuali non sono supportati per le macchine virtuali vVol.
+* SnapMirror Business Continuity (SM-BC) consente ai servizi di business di continuare a funzionare anche in caso di guasto completo del sito, supportando il failover delle applicazioni in modo trasparente utilizzando una copia secondaria.
++
+
+NOTE: SM-BC è supportato solo per gli archivi dati VMFS.
+
++
+Per proteggere un datastore VMFS in un'implementazione SM-BC, in qualità di amministratore SnapCenter devi:
+
++
+** Configurare cluster e mediatore come descritto nel report tecnico: https://www.netapp.com/pdf.html?item=/media/21888-tr-4878.pdf["TR-4878: Business continuity SnapMirror"].
+** Aggiungi il volume associato al datastore VMFS al gruppo di coerenza e crea una relazione di data Protection utilizzando la policy di protezione _AutomatedFailOver_ tra due sistemi storage ONTAP.
+
+
 
 
 .A proposito di questa attività
@@ -55,6 +68,11 @@ Non utilizzare i seguenti caratteri speciali in VM, datastore, cluster, policy, 
 
 
 
+. Specificare le impostazioni della frequenza.
++
+Il criterio specifica solo la frequenza di backup. La pianificazione di protezione specifica per il backup viene definita nel gruppo di risorse. Pertanto, due o più gruppi di risorse possono condividere la stessa policy e la stessa frequenza di backup, ma hanno diverse pianificazioni di backup.
+
+. Selezionare la casella di controllo *periodo di blocco* per attivare il blocco delle istantanee. È possibile selezionare il periodo di blocco dell'istantanea come giorni/mesi/anni.
 . Specificare le impostazioni di conservazione.
 +
 
@@ -63,10 +81,6 @@ IMPORTANT: Se si prevede di attivare la replica SnapVault, è necessario imposta
 +
 
 NOTE: Il valore massimo di conservazione è 1018 backup per le risorse su ONTAP 9.4 o versioni successive e 254 backup per le risorse su ONTAP 9.3 o versioni precedenti. I backup non avranno esito positivo se la conservazione viene impostata su un valore superiore a quello supportato dalla versione di ONTAP sottostante. Ciò vale anche per gli archivi dati di spanning. Se un datastore di spanning include risorse su ONTAP 9.3 e versioni precedenti e su ONTAP 9.4 e versioni successive, assicurarsi di impostare il valore di conservazione al di sotto di 254.
-
-. Specificare le impostazioni della frequenza.
-+
-Il criterio specifica solo la frequenza di backup. La pianificazione di protezione specifica per il backup viene definita nel gruppo di risorse. Pertanto, due o più gruppi di risorse possono condividere la stessa policy e la stessa frequenza di backup, ma hanno diverse pianificazioni di backup.
 
 . Nei campi *Replication*, specificare il tipo di replica sullo storage secondario, come mostrato nella tabella seguente:
 +
@@ -79,6 +93,9 @@ Selezionare questa opzione per creare copie mirror dei set di backup su un altro
 
 
 NOTE: Questa opzione è supportata per i datastore nei volumi FlexGroup nel plug-in SnapCenter per VMware vSphere 4.5 e versioni successive.
+
+
+NOTE: Per proteggere il datastore VMFS nella distribuzione di SM-BC, è necessario completare i prerequisiti indicati nella sezione _prima di iniziare_ e abilitare *Update SnapMirror after backup*.
 
 
 

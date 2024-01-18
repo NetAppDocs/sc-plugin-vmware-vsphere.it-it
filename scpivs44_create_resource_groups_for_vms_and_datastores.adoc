@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: scpivs44_create_resource_groups_for_vms_and_datastores.html 
 keywords:  
-summary: Un gruppo di risorse è il container per macchine virtuali, datastore o macchine virtuali vVol che si desidera proteggere. 
+summary: Un gruppo di risorse è il contenitore per VM, datastore, vSphere Tag e vSphere VM Folders che si desidera proteggere. 
 ---
 = Creare gruppi di risorse
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Un gruppo di risorse è il container per macchine virtuali, datastore o
 
 
 [role="lead"]
-Un gruppo di risorse è il container per macchine virtuali, datastore e macchine virtuali vVol che si desidera proteggere.
+Un gruppo di risorse è il contenitore per VM, datastore, vSphere Tag e vSphere VM Folders che si desidera proteggere.
 
 Un gruppo di risorse può contenere quanto segue:
 
@@ -34,9 +34,9 @@ Uno o più datastore FlexVol. Sono supportati gli archivi dati di spanning.
 +
 Una o più VM vVol. Le macchine virtuali vVol non possono essere combinate con macchine virtuali o datastore tradizionali.
 
-* VVol VM con tag
+* Tag vSphere
 +
-Tutte le VM vVol con un tag vCenter specificato. Altre entità con tag, come datastore o macchine virtuali tradizionali, con lo stesso tag nello stesso vCenter o in un vCenter diverso, non sono supportate. Se l'elenco delle macchine virtuali con il tag specificato contiene una combinazione di macchine virtuali vVol e macchine virtuali tradizionali, il plug-in SnapCenter per VMware vSphere esegue il backup delle macchine virtuali vVol e ignora le macchine virtuali tradizionali.
+Tutte le macchine virtuali e i datastore, esclusi i datastore vVol, che hanno il tag vSphere specificato.
 
 * VVol VM in una cartella
 +
@@ -84,7 +84,13 @@ Per ottimizzare le copie Snapshot, è necessario raggruppare le macchine virtual
 
 * Policy di backup
 +
-Sebbene sia possibile creare un gruppo di risorse senza una policy di backup, è possibile eseguire operazioni di protezione dei dati pianificate solo quando almeno una policy è associata al gruppo di risorse. È possibile utilizzare un criterio esistente oppure creare un nuovo criterio durante la creazione di un gruppo di risorse.
+Sebbene sia possibile creare un gruppo di risorse senza un criterio di backup, le operazioni di protezione dei dati sono possibili solo quando al gruppo di risorse è associato almeno un criterio. È possibile utilizzare un criterio esistente o crearne uno nuovo durante il processo di creazione del gruppo di risorse.
+
++
+
+NOTE: Se si seleziona un criterio di backup con periodo di blocco snapshot, è necessario selezionare ONTAP 9.12.1 o versione successiva.
+
+
 
 * Controlli di compatibilità
 +
@@ -154,7 +160,13 @@ Se si desidera utilizzare un formato personalizzato per i nomi delle copie Snaps
 | Per questo campo… | Eseguire questa operazione… 
 
 
-| Scopo | Selezionare il tipo di risorsa che si desidera proteggere: * Datastore (tutte le macchine virtuali tradizionali in uno o più datastore specificati). Non è possibile selezionare un datastore vVol. * Macchine virtuali (singole macchine virtuali tradizionali o vVol; sul campo è necessario accedere all'archivio dati che contiene le macchine virtuali o le macchine virtuali vVol). Non è possibile selezionare singole macchine virtuali in un datastore FlexGroup. * Tags (tutte le VM vVol con un singolo tag VMware specificato; nella casella di riepilogo è necessario inserire il tag) * VM Folder (tutte le VM vVol in una cartella specificata; nel campo popup è necessario accedere al data center in cui si trova la cartella) 
+| Scopo | Selezionare il tipo di risorsa che si desidera proteggere:
+* Datastore (tutte le macchine virtuali tradizionali in uno o più datastore specificati). Non è possibile selezionare un datastore vVol.
+* Macchine virtuali (singole macchine virtuali tradizionali o vVol; sul campo è necessario accedere all'archivio dati che contiene le macchine virtuali o le macchine virtuali vVol).
+Non è possibile selezionare singole macchine virtuali in un datastore FlexGroup.
+* Tag
+La protezione del datastore basata su tag è supportata solo per i datastore NFS e VMFS, oltre che per le macchine virtuali e le macchine virtuali vVol.
+* VM Folder (tutte le VM vVol in una cartella specificata; nel campo a comparsa è necessario accedere al data center in cui si trova la cartella) 
 
 
 | Data center | Accedere alle macchine virtuali, agli archivi dati o alla cartella che si desidera aggiungere. 
@@ -173,8 +185,8 @@ Per escludere globalmente uno o più datastore dai backup, è necessario specifi
 
 .. Nella pagina *Spanning disks*, selezionare un'opzione per le macchine virtuali con più VMDK in più datastore:
 +
-*** Escludi sempre tutti gli archivi dati di spanning [questa è l'impostazione predefinita per gli archivi dati.]
-*** Includi sempre tutti i datastore di spanning [questa è l'impostazione predefinita per le macchine virtuali.]
+*** Escludi sempre tutti i datastore di spanning (questo è il valore predefinito per i datastore).
+*** Includi sempre tutti i datastore estesi (impostazione predefinita per le macchine virtuali).
 *** Selezionare manualmente gli archivi dati di spanning da includere
 +
 Le macchine virtuali di spanning non sono supportate per gli archivi dati FlexGroup e vVol.

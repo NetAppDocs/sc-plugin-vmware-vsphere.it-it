@@ -1,14 +1,16 @@
 ---
 settings:
-  name: SnapCenter Plug-in for VMware vSphere 4.9
+  name: SnapCenter Plug-in for VMware vSphere 5.0
   internal:
     pdf_enabled: true
   prod:
     pdf_enabled: true
     harmony_enabled: false
   versions:
-  - version-number: '4.9'
+  - version-number: '5.0'
     url: "/sc-plugin-vmware-vsphere"
+  - version-number: '4.9'
+    url: "/sc-plugin-vmware-vsphere-49"
   - version-number: '4.8'
     url: "/sc-plugin-vmware-vsphere-48"
   - version-number: '4.7'
@@ -20,7 +22,7 @@ settings:
   langs: it-it,us-en,ja-jp,ko-kr,zh-cn,zh-tw,de-de,es-es,fr-fr
 sidebar:
   entries:
-  - title: Documenti del plug-in SnapCenter per VMware vSphere 4.9
+  - title: Plug-in SnapCenter per documentazione VMware vSphere 5,0
     url: "/index.html"
   - title: Note di rilascio
     url: "/scpivs44_release_notes.html"
@@ -122,6 +124,8 @@ sidebar:
       url: "/scpivs44_add_a_single_vm_or_datastore_to_a_resource_group.html"
     - title: Aggiungere più macchine virtuali e datastore a un gruppo di risorse
       url: "/scpivs44_add_multiple_vms_and_datastores_to_a_resource_group.html"
+    - title: Rinomina l'archiviazione
+      url: "/rename_storage.html"
     - title: Backup dei gruppi di risorse on-demand
       url: "/scpivs44_back_up_resource_groups_on_demand.html"
     - title: Eseguire il backup del database MySQL
@@ -255,37 +259,3 @@ sidebar:
       url: "/scpivs44_information_not_displayed_after_upgrading_to_a_new_patch_of_the_same_release.html"
   - title: Note legali
     url: "/legal-notices.html"
-homepage:
-  tiles:
-  - title: Inizia subito
-    links:
-    - title: Note di rilascio
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886207
-    - title: Informazioni sul distributore idraulico
-      url: "/scpivs44_concepts_overview.html"
-    - title: Requisiti di implementazione
-      url: "/scpivs44_deployment_planning_and_requirements.html"
-    - title: Avvio rapido
-      url: "/scpivs44_download_the_ova_open_virtual_appliance.html"
-  - title: Protezione di macchine virtuali, VMDK e datastore
-    links:
-    - title: Proteggi i tuoi dati
-      url: "/scpivs44_protect_data_overview.html"
-    - title: Ripristinare dai backup
-      url: "/scpivs44_restore_from_backups_overview.html"
-    - title: Utilizzare API REST
-      url: "/scpivs44_rest_apis_overview.html"
-  - title: Blog e community
-    links:
-    - title: Blog NetApp – SCV
-      url: https://blog.netapp.com/tag/snapcenter/
-    - title: Community NetApp – SCV
-      url: https://community.netapp.com/t5/forums/filteredbylabelpage/board-id/backup-and-restore-discussions/label-name/snapcenter
-  - title: Più risorse
-    links:
-    - title: Documentazione del software SnapCenter
-      url: https://docs.netapp.com/us-en/snapcenter/index.html
-    - title: Documentazione per le versioni precedenti del distributore idraulico
-      url: https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=63240
-    - title: Knowledge base di NetApp – SCV
-      url: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter

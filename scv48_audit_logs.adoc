@@ -30,14 +30,6 @@ Le configurazioni predefinite dei file di audit sono:
 * Vengono conservati un massimo di 10 file di log di audit
 
 
-Per modificare le configurazioni predefinite, aggiungere una coppia di valori chiave in /opt/netapp/scvservice/standalone_aegis/etc/scbr/scbr.properties e riavviare scvservice.
-
-Le configurazioni per i file di log di audit sono:
-
-* AuditMaxROFiles=<xx>, dove xx è il numero massimo di file di log di controllo di cui è stato eseguito il rollover, ad esempio: AuditMaxROFiles=15.
-* AuditLogSize=<XX>, dove xx è la dimensione del file in MB, ad esempio: AuditLogSize=15MB.
-
-
 I log di controllo di cui è stato eseguito il rollover vengono periodicamente verificati per verificarne l'integrità. SCV fornisce API REST per visualizzare i registri e verificarne l'integrità. Una pianificazione integrata attiva e assegna uno dei seguenti stati di integrità.
 
 |===
@@ -79,6 +71,8 @@ Le risorse di SCV sono:
 * Gruppo di risorse
 * Policy
 * Backup
+* Iscrizione
+* Account
 
 
 La seguente tabella elenca le operazioni che possono essere eseguite su ciascuna risorsa:
@@ -86,10 +80,16 @@ La seguente tabella elenca le operazioni che possono essere eseguite su ciascuna
 |===
 
 
-| Risorse | Operazioni 
+| *Risorse* | *Operazioni* 
 
 
 | Sistema storage | Creato, modificato, eliminato 
+
+
+| Iscrizione | Creato, modificato, eliminato 
+
+
+| Account | Creato, modificato, eliminato 
 
 
 | Gruppo di risorse | Creato, modificato, cancellato, sospeso, ripreso 
@@ -189,5 +189,5 @@ Questa attività consente di modificare le impostazioni predefinite del registro
 .Fasi
 . Accedere al plug-in SnapCenter per VMware vSphere.
 . Nel riquadro di navigazione a sinistra, selezionare *Impostazioni* > *registri di controllo* > *Impostazioni*.
-. Nel riquadro *Audit Log Settings* (Impostazioni registro di controllo), immettere il *numero di voci di controllo* e il *limite di dimensione del registro di controllo* in base ai requisiti.
+. Nel riquadro *Impostazioni registro di controllo*, immettere il numero massimo di file di registro di controllo e il limite di dimensioni del file di registro di controllo.
 
