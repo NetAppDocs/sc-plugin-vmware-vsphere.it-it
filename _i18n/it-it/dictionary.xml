@@ -1354,7 +1354,6 @@
   <block id="dc9d5117fa27f9852d62a28174a9c1bf" category="paragraph">Tutti i vVol in una singola cartella vVol specificata. Se la cartella contiene una combinazione di macchine virtuali vVol e macchine virtuali tradizionali, il plug-in SnapCenter per VMware vSphere esegue il backup delle macchine virtuali vVol e ignora le macchine virtuali tradizionali.</block>
   <block id="c7fda16b0d034ce0f2afcab4d2064e02" category="paragraph">Per tutti i gruppi di risorse:</block>
   <block id="32e5f7f976ca899df5a227d732f28456" category="admonition">Se si utilizza il servizio cluster VMware vSphere, non includere le macchine virtuali gestite da VCLS nei gruppi di risorse del plug-in SnapCenter.</block>
-  <block id="c8e385cc7a112ebc9131fa51b5a3767b" category="admonition">Il plug-in SnapCenter per VMware vSphere 4.5 e versioni successive supporta datastore su LUN di grandi dimensioni fino a 128 TB su aggregati ASA. Se si stanno proteggendo LUN di grandi dimensioni, utilizzare solo LUN con thick provisioning per evitare la latenza.</block>
   <block id="14a4c06df8c2378b5b2b307902f01931" category="admonition">Non aggiungere macchine virtuali che si trovano in uno stato inaccessibile. Sebbene sia possibile creare un gruppo di risorse che contiene macchine virtuali inaccessibili, i backup per quel gruppo di risorse non avranno esito positivo.</block>
   <block id="a751540accbac3082773b3074f77377e" category="paragraph">I tool ONTAP per VMware devono essere implementati prima di creare un gruppo di risorse che contiene macchine virtuali vVol.</block>
   <block id="dbe8d9afdbe58c6e60fa055bbaa03417" category="paragraph">Per ulteriori informazioni, vedere<block ref="803b0580f102da00b07f33d2f17fdadb" category="inline-link-rx"></block>.</block>
@@ -1393,12 +1392,10 @@
   <block id="db483b4b52b624fc9163590680bfec11" category="cell">Formato Snapshot personalizzato</block>
   <block id="cdd24b9d1a277d3a5383ba07346b9f5a" category="paragraph">Se si desidera utilizzare un formato personalizzato per i nomi delle copie Snapshot, selezionare questa casella e immettere il formato del nome.</block>
   <block id="424f6337d74c16c2d02e5cb2e6d97f82" category="list-text">Per impostazione predefinita, questa funzione è disattivata.</block>
-  <block id="b5fa0613e2fb44b25ee1739ace5e3746" category="list-text">I nomi predefiniti delle copie Snapshot utilizzano il formato<block ref="ba8f4cc4ace4f3315ea21bd52fbde9d9" prefix=" " category="inline-code"></block>Tuttavia, è possibile specificare un formato personalizzato utilizzando le variabili: €ResourceGroup, €Policy, €HostName, €ScheduleType e €CustomText. Utilizzare l'elenco a discesa nel campo Custom name (Nome personalizzato) per selezionare le variabili da utilizzare e l'ordine di utilizzo. Se si seleziona CustomText, il formato del nome è<block ref="ad231838859064f0fe437a9669c0d36f" prefix=" " category="inline-code"></block>. Inserire il testo personalizzato nella casella aggiuntiva fornita. NOTA: Se si seleziona anche il suffisso "_Recent", assicurarsi che i nomi Snapshot personalizzati siano univoci nell'archivio dati, quindi aggiungere al nome le variabili ResourceGroup e policy.</block>
   <block id="f6023484d4c2c1da1f8822ae43bc066a" category="list-text">Caratteri speciali per i caratteri speciali nei nomi, seguire le stesse linee guida fornite per il campo Nome.</block>
   <block id="2b2620f1962d78eb23f6f754d96e6546" category="list-text">Nella pagina *risorse*, effettuare le seguenti operazioni:</block>
   <block id="5d113f2038d289f391614c39043629e8" category="cell">Scopo</block>
   <block id="615707baa418ce315e44ac2a5d6164af" category="cell">Data center</block>
-  <block id="d1fce2857d6a7747bc3a9e485e2cf30f" category="cell">Accedere alle macchine virtuali, agli archivi dati o alla cartella che si desidera aggiungere.</block>
   <block id="4c928d1c171b7d62d8f758ffa689710f" category="cell">Entità disponibili</block>
   <block id="0ae7bb79645eeb5721a499d2799dbf70" category="cell">Selezionare le risorse da proteggere, quindi fare clic su *&gt;* per spostare le selezioni nell'elenco delle entità selezionate.</block>
   <block id="749435efb6e9940bcadad406e3a36d76" category="paragraph">Quando si fa clic su *Avanti*, il sistema verifica prima che SnapCenter gestisca e sia compatibile con lo storage su cui si trovano le risorse selezionate.</block>
@@ -2121,4 +2118,12 @@ Generare bundle di core dump</block>
   <block id="8857a92c9dd7ad8b9a97a4565e945efb" category="paragraph"><block ref="8857a92c9dd7ad8b9a97a4565e945efb" category="inline-image-macro-rx" type="image"></block></block>
   <block id="d8c6c8a7a8f9e330585c15378277631e" category="sidebar">Plug-in SnapCenter per documentazione VMware vSphere 5,0</block>
   <block id="9f4e4670e68c9e84125d82202a3b5d12" category="sidebar">Rinomina l'archiviazione</block>
+  <block id="8cf2f0f05d235c9fc28a55c8caf77bb9" category="admonition">Il plug-in SnapCenter per VMware vSphere 4,5 e versioni successive supporta datastore su LUN di grandi dimensioni e file fino a 128TB TB con volumi fino a 300 TB. Se si stanno proteggendo LUN di grandi dimensioni, utilizzare solo LUN con thick provisioning per evitare la latenza.</block>
+  <block id="ca70c61465600177453c8557e7c34dfb" category="list-text">I nomi predefiniti delle copie Snapshot utilizzano il formato<block ref="ba8f4cc4ace4f3315ea21bd52fbde9d9" prefix=" " category="inline-code"></block>
+Tuttavia, è possibile specificare un formato personalizzato utilizzando le variabili: €ResourceGroup, €Policy, €HostName, €ScheduleType e €CustomText. Utilizzare l'elenco a discesa nel campo Custom name (Nome personalizzato) per selezionare le variabili da utilizzare e l'ordine di utilizzo.
+Se si seleziona CustomText, il formato del nome è<block ref="ad231838859064f0fe437a9669c0d36f" prefix=" " category="inline-code"></block>. Inserire il testo personalizzato nella casella aggiuntiva fornita.
+[NOTA]:
+Se si seleziona anche il suffisso "_Recent", è necessario assicurarsi che i nomi delle istantanee personalizzate siano univoci nell'archivio dati, pertanto è necessario aggiungere al nome le variabili $ResourceGroup e $Policy.</block>
+  <block id="d07079db3fe1ac66c315b010e4b99b35" category="cell">Accedere alle macchine virtuali, agli archivi dati o alla cartella che si desidera aggiungere.
+I nomi di VM e datastore in un gruppo di risorse devono essere univoci.</block>
 </blocks>
