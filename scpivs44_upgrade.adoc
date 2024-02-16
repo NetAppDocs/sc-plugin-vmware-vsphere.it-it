@@ -18,8 +18,27 @@ NOTE: L'aggiornamento a SCV 5,0 è supportato solo su VMware vCenter Server 7 up
 
 Se si utilizza il plug-in SnapCenter per l'appliance virtuale VMware vSphere, è possibile eseguire l'aggiornamento a una versione più recente. Il processo di aggiornamento disregistra il plug-in esistente e implementa un plug-in compatibile solo con vSphere 7.0U1 e versioni successive.
 
-Vedere link:scpivs44_release_notes.html["Note sulla versione del plug-in SnapCenter per VMware vSphere"] per informazioni sui percorsi di aggiornamento supportati.
 
+
+== Percorsi di aggiornamento
+
+|===
+
+
+| Se si è su SnapCenter Plugin per la versione VMware vSphere (SCV)... | È possibile aggiornare direttamente il plugin SnapCenter per VMware vSphere a... 
+
+
+| DISTRIBUTORE IDRAULICO 4,9 | Aggiornamento al distributore idraulico 5,0 
+
+
+| DISTRIBUTORE IDRAULICO 4,8 | Aggiornamento ai distributori idraulici 4,9 e 5,0 
+
+
+| DISTRIBUTORE IDRAULICO 4,7 | Aggiornamento ai distributori idraulici 4,8 e 4,9 
+
+
+| DISTRIBUTORE IDRAULICO 4,6 | Aggiornamento ai distributori idraulici 4,7 e 4,8 
+|===
 
 TIP: Eseguire il backup del plug-in SnapCenter per VMware vSphere OVA prima di avviare un aggiornamento.
 

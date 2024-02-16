@@ -50,7 +50,7 @@ Per tutti i gruppi di risorse:
 IMPORTANT: Se si utilizza il servizio cluster VMware vSphere, non includere le macchine virtuali gestite da VCLS nei gruppi di risorse del plug-in SnapCenter.
 
 
-TIP: Il plug-in SnapCenter per VMware vSphere 4,5 e versioni successive supporta datastore su LUN di grandi dimensioni e file fino a 128TB TB con volumi fino a 300 TB. Se si stanno proteggendo LUN di grandi dimensioni, utilizzare solo LUN con thick provisioning per evitare la latenza.
+TIP: Il plug-in SnapCenter per VMware vSphere 4,5 e versioni successive supporta datastore su LUN di grandi dimensioni e file fino a 128 TB con volumi fino a 300 TB. Se si stanno proteggendo LUN di grandi dimensioni, utilizzare solo LUN con thick provisioning per evitare la latenza.
 
 
 IMPORTANT: Non aggiungere macchine virtuali che si trovano in uno stato inaccessibile. Sebbene sia possibile creare un gruppo di risorse che contiene macchine virtuali inaccessibili, i backup per quel gruppo di risorse non avranno esito positivo.
@@ -261,7 +261,7 @@ I motivi dell'incompatibilità potrebbero essere:
 SnapCenter versione 4.x supporta ONTAP 8.3.1 e versioni successive.
 
 +
-Il plug-in SnapCenter per VMware vSphere non esegue controlli di compatibilità per tutte le versioni di ONTAP, ma solo per ONTAP 8.2.1 e versioni precedenti. Pertanto, vedere sempre https://imt.netapp.com/matrix/imt.jsp?components=112310;&solution=1517&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp (IMT)"^] Per informazioni aggiornate sul supporto SnapCenter.
+Il plug-in SnapCenter per VMware vSphere non esegue controlli di compatibilità per tutte le versioni di ONTAP, ma solo per ONTAP 8.2.1 e versioni precedenti. Pertanto, vedere sempre https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp (IMT)"^] Per informazioni aggiornate sul supporto SnapCenter.
 
 * Un dispositivo PCI condiviso è collegato a una macchina virtuale.
 * Un IP preferito non è configurato in SnapCenter.
