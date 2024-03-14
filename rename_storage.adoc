@@ -22,7 +22,7 @@ Quando lo storage viene rinominato, i flussi di lavoro che utilizzano i backup e
 . Creare un nuovo backup.
 . Utilizzare i dettagli del backup per trovare i nomi di archiviazione vecchi e nuovi.
 . Nella schermata *backups* del client vSphere, selezionare il backup per visualizzarne i dettagli.
-. Accedere a Swagger dall'URL: https://<SCV-IP>:8144/api/swagger-ui/index.html[]
+. Accedere a Swagger dall'URL: `\https://<SCV-IP>:8144/api/swagger-ui/index.html`
 +
 Utilizzare la seguente API per rinominare l'archiviazione:
 

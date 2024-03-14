@@ -16,7 +16,7 @@ summary: Per trovare gli ID lavoro per i lavori del client VMware vSphere utiliz
 [role="lead"]
 Per trovare gli ID lavoro per i lavori del client VMware vSphere utilizzando il plug-in SnapCenter per le API REST di VMware vSphere, è necessario utilizzare le chiamate API REST per VMware vSphere. Queste API REST sono state aggiunte nel plug-in SnapCenter per VMware vSphere 4.4.
 
-Per ogni API REST, aggiungere `https://<server>:<port>` All'inizio dell'API REST per formare un endpoint completo.
+Per ogni API REST, aggiungere \https://<server>:<port>` nella parte anteriore dell'API REST per formare un endpoint completo.
 
 Utilizzare la seguente API REST nella sezione lavori per modificare i lavori bloccati in uno stato di esecuzione in uno stato di errore:
 

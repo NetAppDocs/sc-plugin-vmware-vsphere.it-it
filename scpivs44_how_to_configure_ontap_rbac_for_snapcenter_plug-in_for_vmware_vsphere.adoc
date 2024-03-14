@@ -16,11 +16,14 @@ summary: 'ONTAP RBAC si applica solo ai processi coerenti con le applicazioni (a
 [role="lead"]
 ONTAP RBAC si applica solo ai processi coerenti con le applicazioni (applicazione su VMDK) del server SnapCenter.
 
+
+NOTE: A partire dal plug-in SnapCenter per VMware (SCV) 5,0, è necessario aggiungere applicazioni di tipo HTTP e ONTAPI come metodi di accesso utente per qualsiasi utente ONTAP con accesso personalizzato basato sui ruoli al SCV. Senza l'accesso a queste applicazioni, i backup non avranno esito positivo. È necessario riavviare il servizio SCV per riconoscere le modifiche apportate ai metodi di accesso utente ONTAP. Per informazioni sulla creazione o la modifica degli account di accesso, vedere https://docs.netapp.com/us-en/ontap/authentication/config-worksheets-reference.html["Fogli di lavoro per l'autenticazione dell'amministratore e la configurazione RBAC"].
+
 Se si desidera utilizzare ONTAP con il plug-in SnapCenter, è necessario configurare RBAC sul sistema storage. Da ONTAP, è necessario eseguire le seguenti operazioni:
 
 * Creare un singolo ruolo.
 +
-http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.pow-adm-auth-rbac%2Fhome.html["Autenticazione amministratore di ONTAP 9 e guida all'alimentazione RBAC"^]
+https://docs.netapp.com/us-en/ontap/concepts/administrator-authentication-rbac-concept.html["Autenticazione amministratore e RBAC"]
 
 * Creare un nome utente e una password (credenziali del sistema di storage) in ONTAP per il ruolo.
 +

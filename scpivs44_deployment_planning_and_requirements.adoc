@@ -20,7 +20,7 @@ Prima di implementare l'appliance virtuale, è necessario conoscere i requisiti 
 
 == Requisiti dell'host
 
-Prima di iniziare l'implementazione del plug-in SnapCenter per VMware vSphere, è necessario conoscere i requisiti dell'host.
+Prima di iniziare l'implementazione del plug-in SnapCenter per VMware vSphere (SCV), è necessario conoscere i requisiti dell'host.
 
 * Il plug-in VMware di SnapCenter viene implementato come macchina virtuale Linux indipendentemente dal fatto che si utilizzi il plug-in per proteggere i dati su sistemi Windows o Linux.
 * È necessario implementare il plug-in VMware di SnapCenter sul server vCenter.

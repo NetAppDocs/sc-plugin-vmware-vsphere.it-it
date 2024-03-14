@@ -15,6 +15,7 @@ summary:
 
 [role="lead"]
 Per utilizzare le funzionalità di SnapCenter per proteggere macchine virtuali, datastore e database coerenti con le applicazioni su macchine virtualizzate, è necessario implementare il plug-in SnapCenter per VMware vSphere.
+Seguire le istruzioni riportate in link:scpivs44_download_the_ova_open_virtual_appliance.html["Scarica Open Virtual Appliance (OVA)"^] Per scaricare i file OVA.
 
 . Per VMware vCenter 7.0.3 e versioni successive, seguire la procedura descritta in link:scpivs44_download_the_ova_open_virtual_appliance.html["Scarica Open Virtual Appliance (OVA)"^] Per importare i certificati in vCenter.
 . Nel browser, accedere a VMware vSphere vCenter.
@@ -74,7 +75,7 @@ Viene visualizzato l'indirizzo IP in cui viene implementato il plug-in VMware di
 
 . Accedere alla GUI di gestione del plug-in VMware di SnapCenter utilizzando l'indirizzo IP visualizzato nella schermata di implementazione utilizzando le credenziali fornite nella procedura guidata di implementazione, quindi verificare sul pannello di controllo che il plug-in VMware di SnapCenter sia connesso correttamente a vCenter e sia attivato.
 +
-Utilizzare il formato `https://<appliance-IP-address>:8080` Per accedere alla GUI di gestione.
+Utilizzare il formato `\https://<appliance-IP-address>:8080` Per accedere alla GUI di gestione.
 
 +
 Accedere con il nome utente e la password dell'amministratore impostati al momento dell'implementazione e il token MFA generato dalla console di manutenzione.

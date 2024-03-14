@@ -16,7 +16,7 @@ summary: Per eseguire operazioni di montaggio e smontaggio per i backup del data
 [role="lead"]
 Per eseguire operazioni di montaggio e smontaggio per i backup del datastore utilizzando il plug-in SnapCenter per le API REST di VMware vSphere, è necessario seguire la sequenza prescritta di chiamate API REST.
 
-Per ogni API REST, aggiungere `https://<server>:<port>` All'inizio dell'API REST per formare un endpoint completo.
+Per ogni API REST, aggiungere `\https://<server>:<port>` All'inizio dell'API REST per formare un endpoint completo.
 
 
 
@@ -26,7 +26,7 @@ Per ogni API REST, aggiungere `https://<server>:<port>` All'inizio dell'API REST
 | Fase | API REST | Commenti 
 
 
-| 1 | Passare a. `http://<vCenter-IP>/mob` | Individuare il moref del datastore dall'URL di VMware Managed Objects. Notare il *moref* del datastore che si desidera montare. 
+| 1 | Passare a. `\http://<vCenter-IP>/mob` | Individuare il moref del datastore dall'URL di VMware Managed Objects. Notare il *moref* del datastore che si desidera montare. 
 
 
 | 2 | `/4.1/datastores/{moref}/

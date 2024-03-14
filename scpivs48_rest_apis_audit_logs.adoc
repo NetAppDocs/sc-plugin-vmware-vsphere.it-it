@@ -27,7 +27,7 @@ Di seguito sono riportate le API REST di swagger:
 
 Per generare log di audit per i processi del client VMware vSphere utilizzando il plug-in SnapCenter per le API REST di VMware vSphere, è necessario utilizzare le chiamate API REST per VMware vSphere.
 
-Per ogni API REST, aggiungere `https://<server>:<port>/api` All'inizio dell'API REST per formare un endpoint completo.
+Per ogni API REST, aggiungere `\https://<server>:<port>/api` All'inizio dell'API REST per formare un endpoint completo.
 
 Utilizzare le seguenti API REST nella sezione lavori per ottenere informazioni dettagliate sui lavori:
 

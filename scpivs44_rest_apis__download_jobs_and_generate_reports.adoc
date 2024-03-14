@@ -16,7 +16,7 @@ summary: Per generare report e scaricare log per i processi del client VMware vS
 [role="lead"]
 Per generare report e scaricare log per i processi del client VMware vSphere utilizzando il plug-in SnapCenter per le API REST di VMware vSphere, è necessario utilizzare le chiamate API REST per VMware vSphere.
 
-Per ogni API REST, aggiungere `https://<server>:<port>` All'inizio dell'API REST per formare un endpoint completo.
+Per ogni API REST, aggiungere `\https://<server>:<port>` All'inizio dell'API REST per formare un endpoint completo.
 
 
 

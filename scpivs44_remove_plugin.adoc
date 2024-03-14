@@ -22,7 +22,7 @@ Se non è più necessario utilizzare le funzionalità di protezione dei dati di 
 
 
 .Fasi
-. Accedere alla GUI di gestione del plug-in VMware di SnapCenter utilizzando il formato `https://<OVA-IP-address>:8080`.
+. Accedere alla GUI di gestione del plug-in VMware di SnapCenter utilizzando il formato `\https://<OVA-IP-address>:8080`.
 +
 L'IP del plug-in VMware di SnapCenter viene visualizzato quando si implementa il plug-in.
 

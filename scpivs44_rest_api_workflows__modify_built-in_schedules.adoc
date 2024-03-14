@@ -23,7 +23,7 @@ Le pianificazioni integrate sono le pianificazioni fornite come parte del prodot
 `Schedule-ComputeStorageSaving`
 `Schedule-PurgeJobs`
 
-Per ogni API REST, aggiungere `https://<server>:<port>` All'inizio dell'API REST per formare un endpoint completo.
+Per ogni API REST, aggiungere `\https://<server>:<port>` All'inizio dell'API REST per formare un endpoint completo.
 
 |===
 | Fase | API REST | Commenti 

@@ -25,7 +25,7 @@ Per accedere all'interfaccia grafica di gestione del plug-in SnapCenter per VMwa
 .Fasi
 . Accedere al plug-in SnapCenter per l'interfaccia grafica di VMware vSphere.
 +
-Utilizzare il formato `https://<OVA-IP-address>:8080`.
+Utilizzare il formato `\https://<OVA-IP-address>:8080`.
 
 . Fare clic sull'icona Impostazioni nella barra degli strumenti superiore.
 +

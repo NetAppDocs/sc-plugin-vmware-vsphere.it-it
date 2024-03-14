@@ -30,7 +30,7 @@ summary: Quando si configura una pianificazione di backup per un plug-in SnapCen
 .Fasi
 . Accedere alla GUI di gestione del plug-in VMware di SnapCenter.
 +
-Utilizzare il formato `https://<appliance-IP-address>:8080`
+Utilizzare il formato `\https://<appliance-IP-address>:8080`
 
 . Fare clic sull'icona Impostazioni nella barra degli strumenti superiore.
 +

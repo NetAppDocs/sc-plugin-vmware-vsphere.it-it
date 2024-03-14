@@ -16,13 +16,13 @@ summary: Per eseguire operazioni di ripristino per i backup delle macchine virtu
 [role="lead"]
 Per eseguire operazioni di ripristino per i backup delle macchine virtuali utilizzando il plug-in SnapCenter per le API REST di VMware vSphere, è necessario seguire la sequenza prescritta di chiamate API REST.
 
-Per ogni API REST, aggiungere `https://<server>:<port>` All'inizio dell'API REST per formare un endpoint completo.
+Per ogni API REST, aggiungere `\https://<server>:<port>` All'inizio dell'API REST per formare un endpoint completo.
 
 |===
 | Fase | API REST | Commenti 
 
 
-| 1 | Passare a. `http://<vCenter-IP>/mob` | Individuare il moref delle macchine virtuali dall'URL VMware Managed Objects. Notare il *moref* della macchina virtuale che si desidera ripristinare. 
+| 1 | Passare a. `\http://<vCenter-IP>/mob` | Individuare il moref delle macchine virtuali dall'URL VMware Managed Objects. Notare il *moref* della macchina virtuale che si desidera ripristinare. 
 
 
 | 2 | `/4.1/vm/{moref}/backups` | `Get VM Backups` Ottiene un elenco di backup per la macchina virtuale specificata. Passare il *moref* del passaggio 1. Annotare il *backupId* del backup che si desidera ripristinare. 
