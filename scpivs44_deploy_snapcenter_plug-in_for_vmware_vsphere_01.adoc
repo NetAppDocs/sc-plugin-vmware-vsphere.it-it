@@ -15,7 +15,7 @@ summary:
 
 [role="lead"]
 Per utilizzare le funzionalità di SnapCenter per proteggere macchine virtuali, datastore e database coerenti con le applicazioni su macchine virtualizzate, è necessario implementare il plug-in SnapCenter per VMware vSphere.
-Seguire le istruzioni riportate in link:scpivs44_download_the_ova_open_virtual_appliance.html["Scarica Open Virtual Appliance (OVA)"^] Per scaricare i file OVA.
+Il link:scpivs44_download_the_ova_open_virtual_appliance.html["Scarica Open Virtual Appliance (OVA)"^] Fornisce istruzioni per scaricare i file OVA.
 
 . Per VMware vCenter 7.0.3 e versioni successive, seguire la procedura descritta in link:scpivs44_download_the_ova_open_virtual_appliance.html["Scarica Open Virtual Appliance (OVA)"^] Per importare i certificati in vCenter.
 . Nel browser, accedere a VMware vSphere vCenter.
