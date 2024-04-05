@@ -38,7 +38,7 @@ Le linee guida per la rimozione delle policy dai gruppi di risorse del plug-in V
 
 == Modificare i criteri
 
-È possibile modificare i criteri per un plug-in SnapCenter per il gruppo di risorse VMware vSphere. È possibile modificare la frequenza, le opzioni di replica, le impostazioni di conservazione delle copie Snapshot o le informazioni degli script mentre un criterio è associato a un gruppo di risorse.
+È possibile modificare i criteri per un plug-in SnapCenter per il gruppo di risorse VMware vSphere.  È possibile modificare la frequenza, le opzioni di replica, le impostazioni di conservazione di Snapshot o le informazioni degli script, mentre una policy è associata a un gruppo di risorse.
 
 .A proposito di questa attività
 La modifica dei criteri di backup dei plug-in di SnapCenter differisce dalla modifica dei criteri di backup per i plug-in basati sull'applicazione SnapCenter. Non è necessario scollegare i criteri dai gruppi di risorse quando si modificano i criteri del plug-in.

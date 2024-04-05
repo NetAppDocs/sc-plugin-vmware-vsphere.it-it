@@ -53,14 +53,38 @@ La dashboard visualizza le informazioni sui backup migrati solo dopo l'esecuzion
 | Tipo di report | Descrizione 
 
 
-| Report di backup | Visualizza una panoramica dei dati relativi ai processi di backup. Fare clic su una sezione/stato del grafico per visualizzare un elenco di lavori con tale stato nella scheda *Report*. Per ogni lavoro, il report elenca l'ID del lavoro, il gruppo di risorse corrispondente, la politica di backup, l'ora e la durata di inizio, lo stato e i dettagli del lavoro, che includono il nome del lavoro (nome della copia Snapshot) se il lavoro è stato completato, nonché eventuali messaggi di avviso o di errore. È possibile scaricare la tabella dei report in formato HTML o CSV. È inoltre possibile scaricare i log dei lavori di Job Monitor per tutti i lavori (non solo per quelli contenuti nel report). I backup cancellati non sono inclusi nel report. 
+| Report di backup | Visualizza una panoramica dei dati relativi ai processi di backup. Fare clic su una sezione/stato del grafico per visualizzare un elenco di lavori con tale stato nella scheda *Report*.
+
+Per ogni lavoro, il rapporto elenca l'ID del lavoro, il gruppo di risorse corrispondente, il criterio di backup, l'ora e la durata di inizio, lo stato e i dettagli del lavoro che includono il nome del lavoro (nome istantanea) se il lavoro è stato completato ed eventuali messaggi di avviso o di errore.
+
+È possibile scaricare la tabella dei report in formato HTML o CSV. È inoltre possibile scaricare i log dei lavori di Job Monitor per tutti i lavori (non solo per quelli contenuti nel report).
+I backup cancellati non sono inclusi nel report. 
 
 
-| Report di montaggio | Visualizza una panoramica dei lavori di montaggio. Fare clic su una sezione/stato del grafico per visualizzare un elenco di processi con tale stato nella scheda Report. Per ogni lavoro, il report elenca l'ID del lavoro, lo stato del lavoro, il nome del lavoro e gli orari di inizio e di fine del lavoro. Il nome del lavoro include il nome della copia Snapshot. Ad esempio: `Mount Backup <snapshot-copy-name>`È possibile scaricare la tabella dei report in formato HTML o CSV. È inoltre possibile scaricare i log dei lavori di Job Monitor per tutti i lavori (non solo per quelli contenuti nel report). 
+| Report di montaggio | Visualizza una panoramica dei lavori di montaggio. Fare clic su una sezione/stato del grafico per visualizzare un elenco di processi con tale stato nella scheda Report.
+
+Per ogni lavoro, il report elenca l'ID del lavoro, lo stato del lavoro, il nome del lavoro e gli orari di inizio e di fine del lavoro. Il nome del lavoro include il nome dell'istantanea.
+
+Ad esempio: `Mount Backup <snapshot-copy-name>`
+
+È possibile scaricare la tabella dei report in formato HTML o CSV.
+
+È inoltre possibile scaricare i log dei lavori di Job Monitor per tutti i lavori (non solo per quelli contenuti nel report). 
 
 
-| Ripristina report | Visualizza informazioni generali sullo stato dei processi di ripristino. Fare clic su una sezione/stato del grafico per visualizzare un elenco di processi con tale stato nella scheda Report. Per ogni lavoro, il report elenca l'ID del lavoro, lo stato del lavoro, il nome del lavoro e gli orari di inizio e di fine del lavoro. Il nome del lavoro include il nome della copia Snapshot. Ad esempio: `Restore Backup <snapshot-copy-name>`È possibile scaricare la tabella dei report in formato HTML o CSV. È inoltre possibile scaricare i log dei lavori di Job Monitor per tutti i lavori (non solo per quelli contenuti nel report). 
+| Ripristina report | Visualizza informazioni generali sullo stato dei processi di ripristino. Fare clic su una sezione/stato del grafico per visualizzare un elenco di processi con tale stato nella scheda Report.
+Per ogni lavoro, il report elenca l'ID del lavoro, lo stato del lavoro, il nome del lavoro e gli orari di inizio e di fine del lavoro. Il nome del lavoro include il nome dell'istantanea. Ad esempio: `Restore Backup <snapshot-copy-name>`
+
+È possibile scaricare la tabella dei report in formato HTML o CSV. È inoltre possibile scaricare i log dei lavori di Job Monitor per tutti i lavori (non solo per quelli contenuti nel report). 
 
 
-| Report Last Protection Status of VM or Datastores | Visualizza informazioni generali sullo stato della protezione, durante il numero di giorni configurato, per macchine virtuali e datastore gestiti dal plug-in VMware di SnapCenter. L'impostazione predefinita è 7 giorni. Per modificare il valore nel file di proprietà, vedere link:scpivs44_modify_configuration_default_values.html["Modificare i valori predefiniti della configurazione"]. Fare clic su una sezione/stato del grafico di protezione principale per visualizzare un elenco di VM o datastore con tale stato nella scheda *Report*. Il report sullo stato di protezione di VM o datastore per VM e datastore protetti visualizza i nomi delle macchine virtuali o datastore di cui è stato eseguito il backup durante il numero di giorni configurato, il nome della copia Snapshot più recente e gli orari di inizio e fine dell'ultima esecuzione del backup. Il report sullo stato di protezione di VM o datastore per VM o datastore non protetti visualizza i nomi delle macchine virtuali o datastore che non dispongono di backup riusciti durante il numero di giorni configurato. È possibile scaricare la tabella dei report in formato HTML o CSV. È inoltre possibile scaricare i log dei lavori di Job Monitor per tutti i lavori (non solo per quelli contenuti nel report). Questo report viene aggiornato ogni ora quando la cache del plug-in viene aggiornata. Pertanto, il report potrebbe non visualizzare le macchine virtuali o gli archivi dati di cui è stato eseguito il backup di recente. 
+| Report Last Protection Status of VM or Datastores | Visualizza informazioni generali sullo stato della protezione, durante il numero di giorni configurato, per macchine virtuali e datastore gestiti dal plug-in VMware di SnapCenter. L'impostazione predefinita è 7 giorni. Per modificare il valore nel file di proprietà, vedere link:scpivs44_modify_configuration_default_values.html["Modificare i valori predefiniti della configurazione"].
+
+Fare clic su una sezione/stato del grafico di protezione principale per visualizzare un elenco di VM o datastore con tale stato nella scheda *Report*.
+
+Il report sullo stato della protezione dei datastore o delle macchine virtuali protette visualizza i nomi delle macchine virtuali o dei datastore di cui è stato eseguito il backup durante il numero di giorni configurato, il nome dell'ultimo Snapshot e gli orari di inizio e fine dell'ultima esecuzione di backup.
+
+Il report sullo stato di protezione di VM o datastore per VM o datastore non protetti visualizza i nomi delle macchine virtuali o datastore che non dispongono di backup riusciti durante il numero di giorni configurato.
+
+È possibile scaricare la tabella dei report in formato HTML o CSV. È inoltre possibile scaricare i log dei lavori di Job Monitor per tutti i lavori (non solo per quelli contenuti nel report). Questo report viene aggiornato ogni ora quando la cache del plug-in viene aggiornata. Pertanto, il report potrebbe non visualizzare le macchine virtuali o gli archivi dati di cui è stato eseguito il backup di recente. 
 |===

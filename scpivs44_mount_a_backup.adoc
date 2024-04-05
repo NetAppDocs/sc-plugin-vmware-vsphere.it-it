@@ -45,10 +45,10 @@ Un'operazione di montaggio potrebbe non riuscire se il livello di storage di Fab
 .. Fare clic su *Menu* nella barra degli strumenti, quindi selezionare *Storage* dall'elenco a discesa.
 .. Il riquadro sinistro del Navigator visualizza l'archivio dati montato nella parte superiore dell'elenco.
 +
-Se si esegue un'operazione di collegamento o montaggio su un volume di destinazione SnapVault protetto dalle pianificazioni SnapVault e che esegue ONTAP 8.3, potrebbe essere visualizzata una copia Snapshot aggiuntiva elencata nella finestra di dialogo di collegamento o montaggio. Ciò si verifica perché l'operazione di collegamento o montaggio clona il volume di destinazione SnapVault e ONTAP aggiorna il volume creando una nuova copia Snapshot.
+Se si esegue un'operazione di collegamento o montaggio su un volume di destinazione SnapVault protetto dalle pianificazioni SnapVault e che esegue ONTAP 8,3, è possibile che venga visualizzata un'istantanea aggiuntiva nella finestra di dialogo collega o monta. Ciò si verifica perché l'operazione di collegamento o montaggio clona il volume di destinazione SnapVault e ONTAP aggiorna il volume creando un nuovo Snapshot.
 
 +
-Per impedire la creazione di nuove copie Snapshot durante la clonazione del volume, disattivare la pianificazione ONTAP per il volume SnapVault. Le copie Snapshot esistenti in precedenza non vengono eliminate.
+Per evitare che vengano creati nuovi Snapshot quando si clona il volume, disattiva la pianificazione ONTAP per il volume SnapVault. Gli snapshot esistenti in precedenza non vengono eliminati.
 
 
 

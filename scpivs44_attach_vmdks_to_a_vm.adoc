@@ -41,7 +41,7 @@ In questo caso, aggiungere i controller SCSI manualmente e provare a eseguire nu
 . Nel riquadro di spostamento di sinistra, fare clic con il pulsante destro del mouse su una macchina virtuale, quindi selezionare *NetApp SnapCenter* nell'elenco a discesa, quindi selezionare *Allega disco virtuale* nell'elenco a discesa secondario.
 . Nella sezione *Backup* della finestra *Allega disco virtuale*, selezionare un backup.
 +
-È possibile filtrare l'elenco di backup selezionando l'icona del filtro e scegliendo una data e un intervallo di tempo, selezionando se si desidera eseguire i backup che contengono copie VMware Snapshot, se si desidera montare i backup e la posizione. Fare clic su *OK*.
+È possibile filtrare l'elenco di backup selezionando l'icona del filtro e scegliendo una data e un intervallo di tempo, selezionando se si desidera che i backup che contengono snapshot VMware, se si desidera montare i backup e la posizione. Fare clic su *OK*.
 
 . Nella sezione *Select Disks* (Seleziona dischi), selezionare uno o più dischi da collegare e la posizione da cui si desidera collegare (primario o secondario).
 +

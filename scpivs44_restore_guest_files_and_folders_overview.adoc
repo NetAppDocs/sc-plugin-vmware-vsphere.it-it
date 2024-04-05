@@ -65,9 +65,9 @@ Per informazioni aggiornate sulle versioni supportate, consultare https://imt.ne
 
 IMPORTANT: Se è necessario utilizzare un account che non sia l'account amministratore incorporato, ma che disponga di privilegi amministrativi all'interno della macchina virtuale, è necessario disattivare il controllo dell'account utente sulla macchina virtuale guest.
 
-* È necessario conoscere la copia Snapshot di backup e VMDK da cui eseguire il ripristino.
+* È necessario conoscere la snapshot di backup e VMDK da cui eseguire il ripristino.
 +
-Il plug-in SnapCenter per VMware vSphere non supporta la ricerca di file o cartelle da ripristinare. Pertanto, prima di iniziare, è necessario conoscere la posizione dei file o delle cartelle in relazione alla copia Snapshot e al VMDK corrispondente.
+Il plug-in SnapCenter per VMware vSphere non supporta la ricerca di file o cartelle da ripristinare. Pertanto, prima di iniziare è necessario conoscere la posizione dei file o delle cartelle rispetto all'istantanea e al VMDK corrispondente.
 
 * Il disco virtuale da collegare deve trovarsi in un backup SnapCenter.
 +

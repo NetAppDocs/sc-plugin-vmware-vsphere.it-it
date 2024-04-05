@@ -49,7 +49,7 @@ Prima di poter ripristinare la macchina virtuale, è necessario aver creato un b
 
 +
 
-NOTE: Le operazioni di ripristino non possono essere completate correttamente se sono presenti copie Snapshot della macchina virtuale eseguite da software diverso dal plug-in SnapCenter per VMware vSphere.
+NOTE: Le operazioni di ripristino non possono essere completate correttamente se sono presenti Snapshot della macchina virtuale eseguite da software diverso dal plug-in SnapCenter per VMware vSphere.
 
 * Il datastore di destinazione deve essere pronto.
 +
@@ -76,7 +76,7 @@ Assicurarsi che non siano visualizzati errori di configurazione ha nella scherma
 .A proposito di questa attività
 * La macchina virtuale non è registrata e viene nuovamente registrata
 +
-L'operazione di ripristino per le macchine virtuali annulla la registrazione della macchina virtuale originale, ripristina la macchina virtuale da una copia Snapshot di backup e registra la macchina virtuale ripristinata con lo stesso nome e configurazione sullo stesso server ESXi. Dopo il ripristino, è necessario aggiungere manualmente le macchine virtuali ai gruppi di risorse.
+L'operazione di ripristino delle VM annulla la registrazione della VM originale, ripristina la VM da una Snapshot di backup e registra la VM ripristinata con lo stesso nome e la stessa configurazione sullo stesso server ESXi. Dopo il ripristino, è necessario aggiungere manualmente le macchine virtuali ai gruppi di risorse.
 
 * Ripristino datastore
 +
@@ -103,7 +103,7 @@ Anche in caso di errore di uno snapshot di coerenza VMware per una macchina virt
 NOTE: Se si sta ripristinando una macchina virtuale eliminata, le credenziali della macchina virtuale di storage aggiunte al plug-in VMware di SnapCenter devono essere `vsadmin` oppure un account utente con gli stessi privilegi di `vsadmin`. L'host deve trovarsi su un sistema storage che esegue ONTAP 8.2.2 o versione successiva.
 
 . Nel riquadro sinistro del Navigatore, fare clic con il pulsante destro del mouse su una macchina virtuale, quindi selezionare *NetApp SnapCenter* nell'elenco a discesa, quindi selezionare *Ripristina* nell'elenco a discesa secondario per avviare la procedura guidata.
-. Nella procedura guidata *Restore*, nella pagina *Select Backup*, selezionare la copia Snapshot di backup che si desidera ripristinare.
+. Nella procedura guidata *Restore*, nella pagina *Select Backup*, selezionare l'istantanea di backup che si desidera ripristinare.
 +
 È possibile cercare un nome di backup specifico o un nome di backup parziale oppure filtrare l'elenco di backup facendo clic sull'icona del filtro e selezionando una data e un intervallo di tempo, selezionando se si desidera che i backup contengano VMware Snapshots, se si desidera montare i backup e la posizione. Fare clic su *OK* per tornare alla procedura guidata.
 

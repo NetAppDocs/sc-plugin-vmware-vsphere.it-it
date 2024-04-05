@@ -20,11 +20,11 @@ summary: È necessario creare policy di backup prima di utilizzare il plug-in Sn
 * È necessario aver letto i prerequisiti.
 * È necessario configurare le relazioni di storage secondario.
 +
-** Se si stanno replicando le copie Snapshot in uno storage secondario mirror o vault, è necessario configurare le relazioni e assegnare all'amministratore di SnapCenter le VM di storage per i volumi di origine e di destinazione.
-** Per trasferire correttamente le copie Snapshot nello storage secondario per le relazioni Version-FlexibleMirror su un datastore NFS o VMFS, assicurarsi che il tipo di policy SnapMirror sia Asynchronous Mirror e che l'opzione "all_source_Snapshot" sia selezionata.
-** Quando il numero di copie Snapshot sullo storage secondario (vault mirror) raggiunge il limite massimo, l'attività di registrazione del backup e di applicazione della conservazione nell'operazione di backup non riesce e viene visualizzato il seguente errore: `This Snapshot copy is currently used as a reference Snapshot copy by one or more SnapMirror relationships. Deleting the Snapshot copy can cause future SnapMirror operations to fail.`
+** Se si stanno replicando snapshot in uno storage secondario mirror o vault, è necessario configurare le relazioni e assegnare le VM di storage all'amministratore SnapCenter sia per i volumi di origine che di destinazione.
+** Per trasferire correttamente le Snapshot sullo storage secondario per le relazioni Version-FlexibleMirror in un datastore NFS o VMFS, verificare che il tipo di policy SnapMirror sia Asynchronous Mirror e che l'opzione "All_source_Snapshots" sia selezionata.
+** Quando il numero di istantanee sullo storage secondario (mirror-vault) raggiunge il limite massimo, l'attività di registrazione del backup e di applicazione della conservazione nell'operazione di backup non riesce e viene visualizzato il seguente errore: `This Snapshot is currently used as a reference Snapshot by one or more SnapMirror relationships. Deleting the Snapshot can cause future SnapMirror operations to fail.`
 +
-Per risolvere questo problema, configurare il criterio di conservazione di SnapMirror per lo storage secondario per evitare di raggiungere il limite massimo di copie Snapshot.
+Per correggere questo problema, configurare la policy di conservazione SnapMirror per lo storage secondario in modo da evitare di raggiungere il limite massimo di Snapshot.
 
 +
 Per informazioni sulle modalità di assegnazione delle risorse agli utenti da parte degli amministratori, vedere https://docs.netapp.com/us-en/snapcenter/concept/concept_types_of_role_based_access_control_in_snapcenter.html["Informazioni SnapCenter sull'utilizzo del controllo degli accessi basato sui ruoli"^].
@@ -76,7 +76,7 @@ Il criterio specifica solo la frequenza di backup. La pianificazione di protezio
 . Specificare le impostazioni di conservazione.
 +
 
-IMPORTANT: Se si prevede di attivare la replica SnapVault, è necessario impostare il numero di conservazione su 2 backup o su un valore superiore. Se si imposta il conteggio di conservazione su 1 backup da mantenere, l'operazione di conservazione potrebbe non riuscire. Questo perché la prima copia Snapshot è la copia Snapshot di riferimento per la relazione SnapVault fino a quando la nuova copia Snapshot non viene replicata nella destinazione.
+IMPORTANT: Se si prevede di attivare la replica SnapVault, è necessario impostare il numero di conservazione su 2 backup o su un valore superiore. Se si imposta il conteggio di conservazione su 1 backup da mantenere, l'operazione di conservazione potrebbe non riuscire. Questo perché il primo Snapshot è lo Snapshot di riferimento per la relazione di SnapVault fino a quando il più recente Snapshot non viene replicato sulla destinazione.
 
 +
 
@@ -111,10 +111,11 @@ NOTE: Questa opzione è supportata per i datastore nei volumi FlexGroup nel plug
 
 
 | Etichetta Snapshot  a| 
-Inserire un'etichetta personalizzata opzionale da aggiungere alle copie Snapshot di SnapVault e SnapMirror create con questo criterio. L'etichetta Snapshot consente di distinguere le istantanee create con questa policy da altre istantanee sul sistema di storage secondario.
+Immettere un'etichetta opzionale personalizzata da aggiungere alle Snapshot SnapVault e SnapMirror create con questa policy.
+L'etichetta Snapshot consente di distinguere le istantanee create con questa policy da altre istantanee sul sistema di storage secondario.
 
 
-NOTE: È consentito un massimo di 31 caratteri per le etichette di copia Snapshot.
+NOTE: È consentito un massimo di 31 caratteri per le etichette delle istantanee.
 
 |===
 . Facoltativo: Nei campi *Avanzate*, selezionare i campi necessari. I dettagli dei campi avanzati sono elencati nella seguente tabella.

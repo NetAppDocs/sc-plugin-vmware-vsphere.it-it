@@ -66,7 +66,8 @@ Il numero totale di ciascun tipo di oggetto gestito dal plug-in SnapCenter per V
  a| 
 Storage
  a| 
-Il numero totale di copie Snapshot, SnapVault e Snapshot SnapMirror, generate e la quantità di storage utilizzata per le copie Snapshot primarie e secondarie. Il grafico a linee traccia separatamente il consumo di storage primario e secondario su base giornaliera in un periodo di 90 giorni. Le informazioni sullo storage vengono aggiornate ogni 24 ore alle 1:08 Il risparmio dello storage è il rapporto tra la capacità logica (risparmio di copie Snapshot e storage consumato) e la capacità fisica dello storage primario. Il grafico a barre illustra i risparmi in termini di storage.
+Il numero totale di Snapshot, SnapVault e SnapMirror Snapshot generati e la quantità di storage utilizzata per gli Snapshot primari e secondari. Il grafico a linee traccia separatamente il consumo di storage primario e secondario su base giornaliera in un periodo di 90 giorni. Le informazioni sullo storage vengono aggiornate ogni 24 ore alle 1:08
+I risparmi offerti dallo storage sono il rapporto tra la capacità logica (risparmi di Snapshot più storage consumato) e la capacità fisica dello storage primario. Il grafico a barre illustra i risparmi in termini di storage.
 
 Posizionare il cursore su una riga del grafico per visualizzare i risultati dettagliati giornalieri.
 

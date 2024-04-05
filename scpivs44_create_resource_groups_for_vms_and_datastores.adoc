@@ -78,9 +78,9 @@ Se si utilizza ONTAP 9.8 o ONTAP 9.9, dopo uno switchover o uno switchback, è n
 +
 In ONTAP 9.8, i backup si blocchano dopo lo switchback. Questo problema è stato risolto in ONTAP 9.9.
 
-* Ottimizzazione delle copie Snapshot
+* Ottimizzazione delle istantanee
 +
-Per ottimizzare le copie Snapshot, è necessario raggruppare le macchine virtuali e i datastore associati allo stesso volume in un unico gruppo di risorse.
+Per ottimizzare le snapshot, è necessario raggruppare le macchine virtuali e i datastore associati allo stesso volume in un gruppo di risorse.
 
 * Policy di backup
 +
@@ -138,7 +138,7 @@ Questo è il modo più semplice per creare un gruppo di risorse. Tuttavia, è an
 
 
 | Nome Snapshot più recente  a| 
-Se si desidera aggiungere il suffisso "_Recent" all'ultima copia Snapshot, selezionare questa casella. Il suffisso "_Recent" sostituisce la data e l'ora.
+Se si desidera aggiungere il suffisso "_Recent" all'ultima istantanea, selezionare questa casella. Il suffisso "_Recent" sostituisce la data e l'ora.
 
 
 NOTE: R `_recent` il backup viene creato per ogni policy associata a un gruppo di risorse. Pertanto, un gruppo di risorse con più policy avrà più policy `_recent` backup. Non rinominare manualmente `_recent` backup.
@@ -146,10 +146,10 @@ NOTE: R `_recent` il backup viene creato per ogni policy associata a un gruppo d
 
 
 | Formato Snapshot personalizzato  a| 
-Se si desidera utilizzare un formato personalizzato per i nomi delle copie Snapshot, selezionare questa casella e immettere il formato del nome.
+Se si desidera utilizzare un formato personalizzato per i nomi delle istantanee, selezionare questa casella e immettere il formato del nome.
 
 *** Per impostazione predefinita, questa funzione è disattivata.
-*** I nomi predefiniti delle copie Snapshot utilizzano il formato `<ResourceGroup>_<Date-TimeStamp>`
+*** I nomi predefiniti delle istantanee utilizzano il formato `<ResourceGroup>_<Date-TimeStamp>`
 Tuttavia, è possibile specificare un formato personalizzato utilizzando le variabili: €ResourceGroup, €Policy, €HostName, €ScheduleType e €CustomText. Utilizzare l'elenco a discesa nel campo Custom name (Nome personalizzato) per selezionare le variabili da utilizzare e l'ordine di utilizzo.
 Se si seleziona CustomText, il formato del nome è `<CustomName>_<Date-TimeStamp>`. Inserire il testo personalizzato nella casella aggiuntiva fornita.
 [NOTA]:

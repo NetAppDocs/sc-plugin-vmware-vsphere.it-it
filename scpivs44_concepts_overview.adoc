@@ -41,9 +41,9 @@ Il plug-in VMware di SnapCenter include un database MySQL che contiene i metadat
 SnapCenter sfrutta in modo nativo il plug-in VMware di SnapCenter per tutte le operazioni di protezione dei dati su VMDK, RDM (raw Device Mapping) e datastore NFS. Una volta implementata l'appliance virtuale, il plug-in gestisce tutte le interazioni con vCenter. Il plug-in VMware di SnapCenter supporta tutti i plug-in basati sulle applicazioni SnapCenter.
 
 +
-SnapCenter non supporta copie Snapshot singole di database e VM insieme. I backup di macchine virtuali e database devono essere pianificati ed eseguiti in modo indipendente, creando copie Snapshot separate, anche se i database e le macchine virtuali sono ospitati nello stesso volume. Pianifica i backup dell'applicazione di database utilizzando l'interfaccia grafica di SnapCenter; pianifica i backup di macchine virtuali e datastore utilizzando l'interfaccia grafica del client VMware vSphere.
+SnapCenter non supporta snapshot singole di database e VM insieme. I backup di VM e database devono essere pianificati ed eseguiti in maniera indipendente, creando Snapshot separate, anche se i database e le VM sono ospitati nello stesso volume. Pianifica i backup dell'applicazione di database utilizzando l'interfaccia grafica di SnapCenter; pianifica i backup di macchine virtuali e datastore utilizzando l'interfaccia grafica del client VMware vSphere.
 
-* I tool VMware sono necessari per le copie Snapshot coerenti delle macchine virtuali
+* Per snapshot coerenti con le macchine virtuali sono necessari tool VMware
 +
 Se i tool VMware non sono installati e in esecuzione, il file system non viene dismesso e viene creata un'istantanea coerente con il crash.
 

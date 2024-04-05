@@ -69,7 +69,7 @@ Un'operazione di ripristino potrebbe non riuscire se il livello di storage di Fa
 
 . Nella pagina *Select scope* (Seleziona ambito), selezionare *entire virtual machine* (intera macchina virtuale) nel campo *Restore scope* (ambito ripristino), quindi selezionare la posizione di ripristino e immettere le informazioni ESXi di destinazione in cui deve essere montato il backup.
 +
-La destinazione di ripristino può essere qualsiasi host ESXi aggiunto a SnapCenter. Questa opzione ripristina il contenuto del backup selezionato in cui la VM risiedeva da una copia Snapshot con l'ora e la data specificate. La casella di controllo *Restart VM* (Riavvia macchina virtuale) viene selezionata se si seleziona questa opzione e la macchina virtuale viene accesa.
+La destinazione di ripristino può essere qualsiasi host ESXi aggiunto a SnapCenter. Questa opzione ripristina il contenuto del backup selezionato in cui la VM risiedeva da uno snapshot con l'ora e la data specificate. La casella di controllo *Restart VM* (Riavvia macchina virtuale) viene selezionata se si seleziona questa opzione e la macchina virtuale viene accesa.
 
 +
 Se si sta ripristinando una macchina virtuale in un datastore NFS su un host ESXi alternativo che si trova in un cluster ESXi, dopo il ripristino la macchina virtuale viene registrata sull'host alternativo.

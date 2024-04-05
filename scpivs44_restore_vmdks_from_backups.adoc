@@ -56,7 +56,7 @@ La macchina virtuale che si desidera ripristinare non deve trovarsi in uno stato
 
 | Un datastore alternativo in una posizione alternativa | Fare clic sull'archivio dati di destinazione e selezionare un altro archivio dati dall'elenco. 
 |===
-. Nella pagina *Select Location* (Seleziona posizione), selezionare la copia Snapshot che si desidera ripristinare (primaria o secondaria).
+. Nella pagina *Seleziona posizione*, selezionare l'istantanea che si desidera ripristinare (primaria o secondaria).
 . Esaminare la pagina Summary (Riepilogo) e fare clic su *Finish* (fine).
 . Facoltativo: Monitorare l'avanzamento dell'operazione facendo clic su *Recent Tasks* (attività recenti) nella parte inferiore della schermata.
 . Aggiornare la schermata per visualizzare le informazioni aggiornate.
