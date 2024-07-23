@@ -28,8 +28,8 @@ summary: È possibile cercare e trovare un backup specifico di una macchina virt
 
 | Datastore | Fare clic sull'opzione di menu *Storage*, quindi selezionare un datastore, quindi fare clic sulla scheda *Configura*, quindi fare clic su *Backup* nella sezione *plug-in SnapCenter per VMware vSphere*. 
 |===
-. Nel riquadro sinistro del Navigator, espandere il data center che contiene la VM o il datastore.
-. Facoltativo: Fare clic con il pulsante destro del mouse su una macchina virtuale o su un datastore, quindi selezionare *NetApp SnapCenter* nell'elenco a discesa, quindi selezionare *Ripristina* nell'elenco a discesa secondario.
+. Nel riquadro di navigazione sinistro, espandere il data center che contiene la macchina virtuale o il datastore.
+. Facoltativo: Fare clic con il pulsante destro del mouse su una macchina virtuale o su un datastore, quindi selezionare *SnapCenter Plug-in for VMware vSphere* nell'elenco a discesa, quindi selezionare *Ripristina* nell'elenco a discesa secondario.
 . Nella procedura guidata *Restore* inserire un nome di ricerca e fare clic su *Search* (Ricerca).
 +
 È possibile filtrare l'elenco di backup selezionando l'icona del filtro e selezionando una data e un intervallo di tempo, selezionando se si desidera eseguire i backup che contengono VMware Snapshots, se si desidera montare i backup e la posizione. Fare clic su *OK*.

@@ -21,7 +21,7 @@ Se si esegue l'aggiornamento a una nuova patch della stessa release, è necessar
 Se la cache del plug-in non viene cancellata, i job recenti non vengono visualizzati nella dashboard e nel monitor dei job nei seguenti scenari:
 
 * Il plug-in SnapCenter per VMware vSphere è stato implementato utilizzando vCenter e successivamente aggiornato a una patch nella stessa release.
-* L'appliance virtuale VMware di SnapCenter è stata implementata in vCenter 1. In seguito, questo plug-in VMware di SnapCenter è stato registrato su un nuovo vCenter2. Una nuova istanza del plug-in VMware di SnapCenter viene creata con una patch e registrata in vCenter1. Tuttavia, poiché vCenter1 dispone ancora del plug-in memorizzato nella cache dal primo plug-in VMware di SnapCenter senza la patch, la cache deve essere cancellata.
+* L'appliance virtuale VMware di SnapCenter è stata implementata in vCenter 1. In seguito, questo plug-in SnapCenter per VMware vSphere è stato registrato al nuovo vCenter2. Viene creata una nuova istanza del plug-in SnapCenter per VMware vSphere con una patch e registrata su vCenter1. Tuttavia, poiché vCenter1 ha ancora il plug-in memorizzato nella cache del primo plug-in SnapCenter per VMware vSphere senza la patch, è necessario cancellare la cache.
 
 
 La cache si trova nelle seguenti posizioni, in base al tipo di sistema operativo del server:
@@ -40,13 +40,13 @@ La cache si trova nelle seguenti posizioni, in base al tipo di sistema operativo
 
 == Soluzione alternativa se è già stato eseguito l'aggiornamento prima di svuotare la cache
 
-. Accedere alla GUI di gestione del plug-in VMware di SnapCenter.
+. Accedere all'interfaccia grafica di gestione del plug-in SnapCenter per VMware vSphere.
 +
-L'IP viene visualizzato quando si implementa il plug-in VMware di SnapCenter.
+L'indirizzo IP viene visualizzato quando si implementa il plug-in SnapCenter per VMware vSphere.
 
 . Fare clic su *Configuration* nel riquadro di navigazione a sinistra, quindi fare clic sull'opzione Service (Servizio) nella sezione *Plug-in Details* (Dettagli plug-in) per disattivare il plug-in.
 +
-Il servizio plug-in VMware di SnapCenter è disattivato e l'estensione non è registrata in vCenter.
+Il plug-in SnapCenter per il servizio VMware vSphere è disattivato e l'estensione non è registrata in vCenter.
 
 . Individuare il `vsphere-client-serenity` quindi individuare `com.netapp.scv.client-<release-number>` ed eliminarla.
 +
@@ -56,6 +56,6 @@ Il nome della cartella cambia per ogni release.
 . Accedere al client VMware vSphere.
 . Fare clic su *Configuration* nel riquadro di navigazione a sinistra, quindi fare clic sull'opzione Service (Servizio) nella sezione *Plug-in Details* (Dettagli plug-in) per attivare il plug-in.
 +
-Il servizio plug-in VMware di SnapCenter è attivato e l'estensione è registrata in vCenter.
+Il plug-in SnapCenter per il servizio VMware vSphere è abilitato e l'estensione è registrata in vCenter.
 
 

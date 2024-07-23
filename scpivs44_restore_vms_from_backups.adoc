@@ -45,7 +45,7 @@ TIP: Per migliorare le performance delle operazioni di ripristino in ambienti NF
 .Prima di iniziare
 * Deve esistere un backup.
 +
-Prima di poter ripristinare la macchina virtuale, è necessario aver creato un backup della macchina virtuale utilizzando il plug-in VMware di SnapCenter.
+È necessario aver creato un backup della VM utilizzando il plug-in SnapCenter per VMware vSphere prima di poter ripristinare la VM.
 
 +
 
@@ -100,9 +100,9 @@ Anche in caso di errore di uno snapshot di coerenza VMware per una macchina virt
 . Nella GUI del client VMware vSphere, fare clic su *Menu* nella barra degli strumenti, quindi selezionare *VM e modelli* dall'elenco a discesa.
 +
 
-NOTE: Se si sta ripristinando una macchina virtuale eliminata, le credenziali della macchina virtuale di storage aggiunte al plug-in VMware di SnapCenter devono essere `vsadmin` oppure un account utente con gli stessi privilegi di `vsadmin`. L'host deve trovarsi su un sistema storage che esegue ONTAP 8.2.2 o versione successiva.
+NOTE: Se si ripristina una VM eliminata, le credenziali della VM di storage aggiunte al plug-in SnapCenter per VMware vSphere devono essere `vsadmin` o un account utente con tutti gli stessi privilegi di `vsadmin`. L'host deve trovarsi su un sistema storage che esegue ONTAP 8.2.2 o versione successiva.
 
-. Nel riquadro sinistro del Navigatore, fare clic con il pulsante destro del mouse su una macchina virtuale, quindi selezionare *NetApp SnapCenter* nell'elenco a discesa, quindi selezionare *Ripristina* nell'elenco a discesa secondario per avviare la procedura guidata.
+. Nel riquadro di sinistra del navigatore, fare clic con il pulsante destro del mouse su una macchina virtuale, quindi selezionare *Plug-in SnapCenter per VMware vSphere* nell'elenco a discesa, quindi selezionare *Ripristina* nell'elenco a discesa secondario per avviare la procedura guidata.
 . Nella procedura guidata *Restore*, nella pagina *Select Backup*, selezionare l'istantanea di backup che si desidera ripristinare.
 +
 È possibile cercare un nome di backup specifico o un nome di backup parziale oppure filtrare l'elenco di backup facendo clic sull'icona del filtro e selezionando una data e un intervallo di tempo, selezionando se si desidera che i backup contengano VMware Snapshots, se si desidera montare i backup e la posizione. Fare clic su *OK* per tornare alla procedura guidata.

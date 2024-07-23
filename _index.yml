@@ -15,12 +15,12 @@ indexpage:
     SnapCenter per supportare operazioni di backup e ripristino basate su applicazioni
     in ambienti VMware per plug-in specifici dell'applicazione SnapCenter. Questa
     libreria di documentazione descrive il plug-in SnapCenter per VMware vSphere versioni
-    5,0.
+    6,0.
   tiles:
   - title: Inizia subito
     links:
     - title: Note di rilascio
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886920
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3322664
     - title: Informazioni sul distributore idraulico
       url: "/scpivs44_concepts_overview.html"
     - title: Requisiti di implementazione
@@ -31,7 +31,7 @@ indexpage:
     links:
     - title: Proteggi i tuoi dati
       url: "/scpivs44_protect_data_overview.html"
-    - title: Ripristinare dai backup
+    - title: Ripristinare i backup
       url: "/scpivs44_restore_from_backups_overview.html"
     - title: Utilizzare API REST
       url: "/scpivs44_rest_apis_overview.html"

@@ -22,7 +22,8 @@ Se si verificano comportamenti imprevisti durante l'utilizzo del client VMware v
 NOTE: Il valore predefinito per la conservazione dei registri dei lavori è 30 giorni; il valore predefinito per la conservazione dei lavori è 90 giorni. I log dei lavori e i lavori più vecchi della conservazione configurata vengono eliminati ogni sei ore. È possibile utilizzare la configurazione `jobs/cleanup` API REST per modificare la durata di conservazione dei job e dei log dei job. Non è possibile modificare il programma di eliminazione.
 
 .Fasi
-. Nel riquadro sinistro di Navigator del client vSphere, fare clic su *Dashboard*, selezionare un server vCenter, quindi fare clic sulla scheda *Job Monitor* nel pannello Dashboard.
+. Dalla pagina di collegamento del client vCenter, selezionare Plug-in SnapCenter per VMware vSphere (SCV).
+. Nel riquadro di navigazione sinistro di SCV, selezionare *Dashboard* > *Job Monitor*.
 . Selezionare l'icona di download nella barra del titolo di Job Monitor.
 +
 Potrebbe essere necessario scorrere verso destra per visualizzare l'icona.
@@ -33,6 +34,6 @@ Potrebbe essere necessario scorrere verso destra per visualizzare l'icona.
 
 
 .Risultato
-I log dei processi si trovano sull'host VM Linux in cui viene implementato il plug-in VMware di SnapCenter. La posizione predefinita del registro lavori è `/var/log/netapp`.
+I log dei lavori si trovano sull'host Linux VM in cui viene distribuito il plug-in SnapCenter per VMware vSphere. La posizione predefinita del registro processi è `/var/log/netapp`.
 
 Se si è tentato di scaricare i log dei lavori ma il file di log indicato nel messaggio di errore è stato eliminato, potrebbe verificarsi il seguente errore: `HTTP ERROR 500 Problem accessing /export-scv-logs`. Per correggere questo errore, controllare lo stato di accesso al file e le autorizzazioni per il file indicato nel messaggio di errore e correggere il problema di accesso.

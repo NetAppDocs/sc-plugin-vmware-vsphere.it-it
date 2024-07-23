@@ -20,11 +20,11 @@ Quando si esegue il backup di un datastore, si esegue il backup di tutte le macc
 
 Le operazioni di backup e ripristino non possono essere eseguite contemporaneamente sullo stesso gruppo di risorse.
 
-Si consiglia di consultare le informazioni relative alle funzioni del plug-in VMware di SnapCenter e non supportato.link:scpivs44_deployment_planning_and_requirements.html["Pianificazione e requisiti dell'implementazione"]
+È necessario esaminare le informazioni sulle funzioni e le funzionalità del plug-in SnapCenter per VMware vSphere non supportate. link:scpivs44_deployment_planning_and_requirements.html["Pianificazione e requisiti dell'implementazione"]
 
 Nelle configurazioni MetroCluster:
 
-* Il plug-in VMware di SnapCenter potrebbe non essere in grado di rilevare una relazione di protezione dopo un failover. Vedere https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["Articolo della Knowledge base: Impossibile rilevare la relazione SnapMirror o SnapVault dopo il failover di MetroCluster"^].
+* Il plug-in SnapCenter per VMware vSphere potrebbe non essere in grado di rilevare una relazione di protezione in seguito a un failover. Per ulteriori informazioni, fare riferimento https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["Articolo della Knowledge base: Impossibile rilevare la relazione SnapMirror o SnapVault dopo il failover di MetroCluster"^] a.
 * Se i backup non vengono eseguiti correttamente, viene visualizzato l'errore `Unable to discover resources on SCV: <xxx>…` Per le macchine virtuali NFS e VMFS dopo lo switchover/lo switch, riavviare i servizi VMware di SnapCenter dalla console di manutenzione.
 
 

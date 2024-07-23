@@ -20,13 +20,13 @@ summary: È possibile creare, modificare, visualizzare, scollegare ed eliminare 
 
 == Scollegare le policy
 
-È possibile scollegare le policy da un gruppo di risorse del plug-in VMware SnapCenter quando non si desidera più che tali policy regolino la protezione dei dati per le risorse. È necessario scollegare una policy prima di poterla rimuovere o prima di modificarla.
+È possibile scollegare le policy da un gruppo di risorse SnapCenter Plug-in per VMware vSphere se non si desidera più che tali policy regolino la protezione dei dati per le risorse. È necessario scollegare una policy prima di poterla rimuovere o prima di modificarla.
 
 .A proposito di questa attività
-Le linee guida per la rimozione delle policy dai gruppi di risorse del plug-in VMware di SnapCenter differiscono dalle linee guida per i gruppi di risorse SnapCenter. Per un gruppo di risorse client VMware vSphere, è possibile scollegare tutte le policy, lasciando il gruppo di risorse privo di policy. Tuttavia, per eseguire operazioni di protezione dei dati su quel gruppo di risorse, è necessario allegare almeno un criterio.
+Le linee guida per la rimozione dei criteri dai gruppi di risorse del plug-in SnapCenter per VMware vSphere differiscono dalle linee guida per i gruppi di risorse SnapCenter. Per un gruppo di risorse client VMware vSphere, è possibile scollegare tutte le policy, lasciando il gruppo di risorse privo di policy. Tuttavia, per eseguire operazioni di protezione dei dati su quel gruppo di risorse, è necessario allegare almeno un criterio.
 
 .Fasi
-. Nel riquadro sinistro del Navigator del plug-in SCV, fare clic su *Resource Groups* (gruppi di risorse), quindi selezionare un gruppo di risorse e fare clic su *Edit* (Modifica).
+. Nel riquadro di navigazione sinistro del plug-in SCV, fare clic su *gruppi di risorse*, quindi selezionare un gruppo di risorse e fare clic su *Modifica*.
 . Nella pagina *Criteri* della procedura guidata *Modifica gruppo di risorse*, deselezionare il segno di spunta accanto ai criteri che si desidera scollegare.
 +
 È inoltre possibile aggiungere un criterio al gruppo di risorse controllando il criterio.
@@ -41,7 +41,7 @@ Le linee guida per la rimozione delle policy dai gruppi di risorse del plug-in V
 È possibile modificare i criteri per un plug-in SnapCenter per il gruppo di risorse VMware vSphere.  È possibile modificare la frequenza, le opzioni di replica, le impostazioni di conservazione di Snapshot o le informazioni degli script, mentre una policy è associata a un gruppo di risorse.
 
 .A proposito di questa attività
-La modifica dei criteri di backup dei plug-in di SnapCenter differisce dalla modifica dei criteri di backup per i plug-in basati sull'applicazione SnapCenter. Non è necessario scollegare i criteri dai gruppi di risorse quando si modificano i criteri del plug-in.
+La modifica del plug-in SnapCenter per backup VMware vSphere è diversa da quella delle policy di backup per i plug-in SnapCenter basati sulle applicazioni. Non è necessario scollegare i criteri dai gruppi di risorse quando si modificano i criteri del plug-in.
 
 Prima di modificare le impostazioni di replica o conservazione, è necessario prendere in considerazione le possibili conseguenze.
 
@@ -56,10 +56,10 @@ I backup in eccesso rispetto alla nuova impostazione vengono cancellati quando v
 
 
 
-NOTE: Per modificare una pianificazione dei criteri del plug-in SnapCenter, è necessario modificare la pianificazione nel gruppo di risorse del plug-in.
+NOTE: Per modificare la pianificazione di un plug-in SnapCenter per VMware vSphere, è necessario modificare la pianificazione nel gruppo di risorse del plug-in.
 
 .Fasi
-. Nel riquadro sinistro del Navigator del plug-in SCV, fare clic su *Policies*, quindi selezionare un criterio e fare clic su *Edit* (Modifica).
+. Nel riquadro di navigazione sinistro del plug-in SCV, fare clic su *Criteri*, quindi selezionare un criterio e fare clic su *Modifica*.
 . Modificare i campi dei criteri.
 . Al termine, fare clic su *Aggiorna*.
 
@@ -76,6 +76,6 @@ Se non si richiede più una policy di backup configurata per il plug-in SnapCent
 È necessario scollegare il criterio da tutti i gruppi di risorse nell'appliance virtuale per SnapCenter prima di poterlo eliminare.
 
 .Fasi
-. Nel riquadro sinistro del Navigator del plug-in SCV, fare clic su *Policies*, quindi selezionare un criterio e fare clic su *Remove* (Rimuovi).
+. Nel riquadro di navigazione sinistro del plug-in SCV, fare clic su *Criteri*, quindi selezionare un criterio e fare clic su *Rimuovi*.
 . Nella finestra di dialogo di conferma, fare clic su *OK*.
 

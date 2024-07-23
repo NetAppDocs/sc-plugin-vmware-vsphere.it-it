@@ -26,7 +26,7 @@ Se si utilizza SnapCenter e si esegue l'aggiornamento a SnapCenter 4.2 e si eseg
 .A proposito di questa attività
 * È possibile registrare il plug-in SnapCenter per VMware vSphere con il server SnapCenter utilizzando l'interfaccia grafica di SnapCenter per aggiungere un host di tipo "vsphere".
 +
-La porta 8144 è predefinita per la comunicazione all'interno del plug-in VMware di SnapCenter.
+La porta 8144 è predefinita per la comunicazione all'interno del plug-in SnapCenter per VMware vSphere.
 
 +
 È possibile registrare più istanze del plug-in SnapCenter per VMware vSphere sullo stesso server SnapCenter 4.2 per supportare le operazioni di protezione dei dati basate sull'applicazione sulle macchine virtuali. Non è possibile registrare lo stesso plug-in SnapCenter per VMware vSphere su più server SnapCenter.
@@ -50,7 +50,7 @@ La porta 8144 è predefinita per la comunicazione all'interno del plug-in VMware
 | Nome host | Verificare l'indirizzo IP dell'appliance virtuale. 
 
 
-| Credenziale | Immettere il nome utente e la password per il plug-in VMware SnapCenter fornito durante l'implementazione. 
+| Credenziale | Immettere il nome utente e la password per il plug-in SnapCenter per VMware vSphere fornito durante la distribuzione. 
 |===
 . Fare clic su *Invia*.
 +

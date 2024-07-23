@@ -67,7 +67,7 @@ Un'operazione di ripristino potrebbe non riuscire se il livello di storage di Fa
 +
 È possibile cercare un nome di backup specifico o un nome di backup parziale oppure filtrare l'elenco di backup facendo clic sull'icona del filtro e selezionando una data e un intervallo di tempo, selezionando se si desidera che i backup contengano VMware Snapshots, se si desidera montare i backup e la posizione. Fare clic su *OK* per tornare alla procedura guidata.
 
-. Nella pagina *Select scope* (Seleziona ambito), selezionare *entire virtual machine* (intera macchina virtuale) nel campo *Restore scope* (ambito ripristino), quindi selezionare la posizione di ripristino e immettere le informazioni ESXi di destinazione in cui deve essere montato il backup.
+. Nella pagina *Seleziona ambito*, selezionare *intera macchina virtuale* nel campo *Ripristina ambito*, quindi selezionare la posizione di ripristino, quindi immettere le informazioni sull'host ESXi di destinazione in cui deve essere montato il backup.
 +
 La destinazione di ripristino può essere qualsiasi host ESXi aggiunto a SnapCenter. Questa opzione ripristina il contenuto del backup selezionato in cui la VM risiedeva da uno snapshot con l'ora e la data specificate. La casella di controllo *Restart VM* (Riavvia macchina virtuale) viene selezionata se si seleziona questa opzione e la macchina virtuale viene accesa.
 

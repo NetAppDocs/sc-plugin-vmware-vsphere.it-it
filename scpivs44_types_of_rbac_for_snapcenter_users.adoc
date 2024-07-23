@@ -20,9 +20,9 @@ Se si utilizza il plug-in SnapCenter per VMware vSphere, il server vCenter forni
 
 == RBAC vCenter Server
 
-Questo meccanismo di sicurezza si applica a tutti i processi eseguiti dal plug-in VMware di SnapCenter, che include processi coerenti con le macchine virtuali, coerenti con il crash delle macchine virtuali e coerenti con le applicazioni del server SnapCenter (applicazione su VMDK). Questo livello di RBAC limita la capacità degli utenti di vSphere di eseguire task di plug-in SnapCenter su oggetti vSphere, come macchine virtuali (VM) e datastore.
+Questo meccanismo di sicurezza si applica a tutti i processi eseguiti dal plug-in SnapCenter per VMware vSphere, che include job coerenti con VM, coerenti con i crash delle VM e coerenti con le applicazioni di SnapCenter Server (applicazione su VMDK). Questo livello di RBAC limita la capacità degli utenti vSphere di eseguire il plug-in SnapCenter per task VMware vSphere su oggetti vSphere, come macchine virtuali e datastore.
 
-L'implementazione del plug-in VMware di SnapCenter crea i seguenti ruoli per le operazioni SnapCenter su vCenter:
+Il plug-in SnapCenter per l'implementazione di VMware vSphere crea i seguenti ruoli per le operazioni SnapCenter su vCenter:
 
 `SCV Administrator`
 `SCV Backup`

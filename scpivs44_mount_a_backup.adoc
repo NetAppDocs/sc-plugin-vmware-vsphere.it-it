@@ -21,15 +21,17 @@ Non è possibile montare un datastore vVol.
 .Prima di iniziare
 * Assicurarsi che un host ESXi alternativo possa connettersi allo storage
 +
-Se si desidera eseguire il montaggio su un host ESXi alternativo, assicurarsi che l'host ESXi alternativo possa connettersi allo storage e che disponga di quanto segue: ** Stesso UID e GID dell'host originale ** stessa appliance virtuale per il plug-in SnapCenter per la versione VMware vSphere di quella dell'host originale
+Se si desidera eseguire il montaggio su un host ESXi alternativo, assicurarsi che l'host ESXi alternativo possa connettersi allo storage e che disponga di quanto segue:
 
-* Mappare gli iniziatori dello storage su ESXi
 +
-Assicurarsi che gli iniziatori del sistema storage siano mappati a ESXi.
+** Stessi UID e GID dell'host originale
+** La stessa appliance virtuale per il plug-in SnapCenter per la versione VMware vSphere dell'host originale
 
-* Ripulire le LUN obsolete
+
+* Quando si utilizza il protocollo iSCSI, assicurarsi che gli iniziatori del sistema storage siano mappati all'host ESXi. Quando si utilizza il protocollo NVMe, aggiungere controller per mappare il sottosistema richiesto all'host ESXi.
+* Pulire LUN/namespace obsoleti
 +
-Poiché ESXi è in grado di rilevare solo un LUN univoco per datastore, l'operazione avrà esito negativo se ne trova più di uno. Questo può verificarsi se si avvia un'operazione di montaggio prima del termine di un'operazione di montaggio precedente, se si clonano manualmente le LUN o se i cloni non vengono cancellati dallo storage durante un'operazione di disinstallazione. Per evitare il rilevamento di più cloni, è necessario ripulire tutte le LUN obsolete sullo storage.
+Poiché l'host ESXi può rilevare solo un LUN/namespace univoco per datastore, l'operazione non riuscirà se ne rileva più di uno. Questo può verificarsi se si avvia un'operazione di montaggio prima del termine di un'operazione di montaggio precedente, se si clona manualmente LUN/namespace, o se i cloni non vengono eliminati dallo storage durante un'operazione di smontaggio. Per evitare il rilevamento di cloni multipli, è necessario ripulire tutte le LUN/namespace obsoleti nello storage.
 
 
 
@@ -37,13 +39,13 @@ Poiché ESXi è in grado di rilevare solo un LUN univoco per datastore, l'operaz
 Un'operazione di montaggio potrebbe non riuscire se il livello di storage di FabricPool in cui si trova il datastore non è disponibile.
 
 .Fasi
-. Nel client VMware vSphere, fare clic su *Menu* nella barra degli strumenti, quindi selezionare *Storage* dall'elenco a discesa.
-. Fare clic con il pulsante destro del mouse su un datastore e selezionare *NetApp SnapCenter* nell'elenco a discesa, quindi selezionare *Mount Backup* nell'elenco a discesa secondario.
+. Nella pagina dei collegamenti client VMware vSphere, selezionare *Storage*.
+. Fare clic con il pulsante destro del mouse su un datastore e selezionare *Plug-in SnapCenter per VMware vSphere* > *Mount Backup*.
 . Nella pagina *Mount Datastore*, selezionare un percorso di backup e un percorso di backup (primario o secondario), quindi fare clic su *Finish* (fine).
 . Facoltativo: Per verificare che il datastore sia montato, attenersi alla seguente procedura:
 +
 .. Fare clic su *Menu* nella barra degli strumenti, quindi selezionare *Storage* dall'elenco a discesa.
-.. Il riquadro sinistro del Navigator visualizza l'archivio dati montato nella parte superiore dell'elenco.
+.. Il riquadro di navigazione sinistro visualizza il datastore montato nella parte superiore dell'elenco.
 +
 Se si esegue un'operazione di collegamento o montaggio su un volume di destinazione SnapVault protetto dalle pianificazioni SnapVault e che esegue ONTAP 8,3, è possibile che venga visualizzata un'istantanea aggiuntiva nella finestra di dialogo collega o monta. Ciò si verifica perché l'operazione di collegamento o montaggio clona il volume di destinazione SnapVault e ONTAP aggiorna il volume creando un nuovo Snapshot.
 

@@ -20,7 +20,7 @@ Il plug-in SnapCenter per VMware vSphere è un plug-in standalone diverso dagli 
 
 Per proteggere macchine virtuali e datastore, si utilizza l'interfaccia client di VMware vSphere. La GUI del client web si integra con la tecnologia Snapshot di NetApp nel sistema storage. In questo modo è possibile eseguire il backup di macchine virtuali e datastore in pochi secondi e ripristinare le macchine virtuali senza interrompere la linea di un host ESXi.
 
-È inoltre disponibile una GUI di gestione per eseguire operazioni amministrative sul plug-in VMware di SnapCenter.
+È inoltre disponibile una GUI di gestione per eseguire operazioni amministrative sul plug-in di SnapCenter per VMware vSphere.
 
 Nella tabella seguente sono illustrate le operazioni eseguite dalla GUI di SnapCenter.
 

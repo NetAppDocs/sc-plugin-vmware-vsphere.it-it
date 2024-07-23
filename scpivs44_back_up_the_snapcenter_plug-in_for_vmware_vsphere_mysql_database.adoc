@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: scpivs44_back_up_the_snapcenter_plug-in_for_vmware_vsphere_mysql_database.html 
 keywords:  
-summary: 'Il plug-in VMware di SnapCenter include un database MySQL (chiamato anche database NSM) che contiene i metadati per tutti i processi eseguiti dal plug-in. Eseguire regolarmente il backup di questo repository.' 
+summary: 'Il plug-in SnapCenter per VMware vSphere include un database MySQL (chiamato anche database NSM) che contiene i metadati per tutti i job eseguiti dal plug-in. È necessario eseguire regolarmente il backup di questo archivio.' 
 ---
 = Eseguire il backup del plug-in SnapCenter per il database VMware vSphere MySQL
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 'Il plug-in VMware di SnapCenter include un database MySQL (chiamato an
 
 
 [role="lead"]
-Il plug-in VMware di SnapCenter include un database MySQL (chiamato anche database NSM) che contiene i metadati per tutti i processi eseguiti dal plug-in. Eseguire regolarmente il backup di questo repository.
+Il plug-in SnapCenter per VMware vSphere include un database MySQL (chiamato anche database NSM) che contiene i metadati per tutti i job eseguiti dal plug-in. È necessario eseguire regolarmente il backup di questo archivio.
 
 È inoltre necessario eseguire il backup del repository prima di eseguire migrazioni o aggiornamenti.
 
@@ -22,8 +22,8 @@ Il plug-in VMware di SnapCenter include un database MySQL (chiamato anche databa
 Non avviare un processo di backup del database MySQL quando è già in esecuzione un processo di backup on-demand.
 
 .Fasi
-. Dal client VMware vSphere, selezionare la macchina virtuale in cui si trova il plug-in SnapCenter.
-. Fare clic con il pulsante destro del mouse sulla macchina virtuale, quindi sulla scheda *Summary* dell'appliance virtuale fare clic su *Launch Remote Console* *o Launch Web Console* per aprire una finestra della console di manutenzione.
+. Dal client VMware vSphere, selezionare la VM in cui si trova il plug-in SnapCenter per VMware vSphere.
+. Nella scheda *Riepilogo* dell'appliance virtuale, fare clic su *Avvia console remota* *o Avvia console Web* per aprire una finestra della console di manutenzione.
 +
 image:scpivs44_image21.png["finestra della console di manutenzione"]
 

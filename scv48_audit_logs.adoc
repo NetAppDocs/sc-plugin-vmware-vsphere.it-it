@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: scv48_audit_logs.html 
 keywords:  
-summary: 'Il registro di audit fornisce la tracciabilità di chi ha fatto cosa e quando. Il registro di audit è una raccolta di eventi in ordine cronologico e viene scritto in un file all"interno dell"appliance.' 
+summary: 'Il registro di audit fornisce la tracciabilità di chi ha fatto cosa e quando. Un registro di controllo è una raccolta di eventi in ordine cronologico che viene scritta in un file all"interno del dispositivo.' 
 ---
 = Registri di audit
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 'Il registro di audit fornisce la tracciabilità di chi ha fatto cosa e
 
 
 [role="lead"]
-Il registro di audit è una raccolta di eventi in ordine cronologico, che viene scritta in un file all'interno dell'appliance. I file di log di audit vengono generati in `/var/log/netapp/audit` la posizione e i nomi dei file seguono una delle seguenti convenzioni di denominazione:
+Un registro di controllo è una raccolta di eventi in ordine cronologico, che viene scritta in un file all'interno del dispositivo. I file di log di controllo vengono generati in `/var/log/netapp/audit` una posizione e i nomi dei file seguono una delle seguenti convenzioni di denominazione:
 
 * Audit.log: File di log di audit attivo in uso.
 * Audit-%d{yyyy-MM-dd-HH-mm-ss}.log.gz: Eseguito il rollover del file di log di audit. La data e l'ora nel nome del file indicano quando è stato creato il file, ad esempio: Audit-2022-12-15-16-28-01.log.gz.
@@ -22,7 +22,7 @@ Il registro di audit è una raccolta di eventi in ordine cronologico, che viene 
 
 Nell'interfaccia utente del plug-in SCV, è possibile visualizzare ed esportare i dettagli del registro di controllo da *Dashboard* > *Settings* > *Audit Logs* Tab. È possibile visualizzare l'audit delle operazioni nei registri di controllo. I registri di controllo vengono scaricati con il pacchetto di supporto.
 
-Se sono configurate le impostazioni e-mail, SCV invia una notifica e-mail in caso di errore nella verifica dell'integrità del registro di controllo. Un errore di verifica dell'integrità del registro di controllo può verificarsi quando uno dei file viene manomesso o cancellato.
+Se sono configurate le impostazioni e-mail, SCV invia una notifica e-mail in caso di errore nella verifica dell'integrità del registro di controllo. Un errore di verifica dell'integrità del registro di controllo può verificarsi quando uno dei file viene manomesso o eliminato.
 
 Le configurazioni predefinite dei file di audit sono:
 
@@ -190,4 +190,6 @@ Questa attività consente di modificare le impostazioni predefinite del registro
 . Accedere al plug-in SnapCenter per VMware vSphere.
 . Nel riquadro di navigazione a sinistra, selezionare *Impostazioni* > *registri di controllo* > *Impostazioni*.
 . Nel riquadro *Impostazioni registro di controllo*, immettere il numero massimo di file di registro di controllo e il limite di dimensioni del file di registro di controllo.
+. Selezionare l'opzione *Invia registri di controllo al server Syslog* se si sceglie di inviare i registri al server syslog. Immettere i dettagli del server.
+. Salvare le impostazioni.
 

@@ -17,9 +17,9 @@ summary: 'ONTAP RBAC si applica solo ai processi coerenti con le applicazioni (a
 ONTAP RBAC si applica solo ai processi coerenti con le applicazioni (applicazione su VMDK) del server SnapCenter.
 
 
-NOTE: A partire dal plug-in SnapCenter per VMware (SCV) 5,0, è necessario aggiungere applicazioni di tipo HTTP e ONTAPI come metodi di accesso utente per qualsiasi utente ONTAP con accesso personalizzato basato sui ruoli al SCV. Senza l'accesso a queste applicazioni, i backup non avranno esito positivo. È necessario riavviare il servizio SCV per riconoscere le modifiche apportate ai metodi di accesso utente ONTAP. Per informazioni sulla creazione o la modifica degli account di accesso, vedere https://docs.netapp.com/us-en/ontap/authentication/config-worksheets-reference.html["Fogli di lavoro per l'autenticazione dell'amministratore e la configurazione RBAC"].
+NOTE: A partire dal plug-in SnapCenter per VMware (SCV) 5,0, è necessario aggiungere applicazioni di tipo HTTP e ONTAPI come metodi di accesso utente per qualsiasi utente ONTAP con accesso personalizzato basato sui ruoli al SCV. Senza l'accesso a queste applicazioni, i backup non avranno esito positivo. È necessario riavviare il servizio SCV per riconoscere le modifiche apportate ai metodi di accesso utente ONTAP. Per informazioni sulla creazione o la modifica degli account di accesso, fare riferimento alla sezione https://docs.netapp.com/us-en/ontap/authentication/config-worksheets-reference.html["Fogli di lavoro per l'autenticazione dell'amministratore e la configurazione RBAC"].
 
-Se si desidera utilizzare ONTAP con il plug-in SnapCenter, è necessario configurare RBAC sul sistema storage. Da ONTAP, è necessario eseguire le seguenti operazioni:
+Devi configurare RBAC ONTAP sul sistema storage se vuoi utilizzarlo con il plug-in SnapCenter per VMware vSphere. Da ONTAP, è necessario eseguire le seguenti operazioni:
 
 * Creare un singolo ruolo.
 +
@@ -27,10 +27,10 @@ https://docs.netapp.com/us-en/ontap/concepts/administrator-authentication-rbac-c
 
 * Creare un nome utente e una password (credenziali del sistema di storage) in ONTAP per il ruolo.
 +
-Questa credenziale del sistema di storage è necessaria per consentire la configurazione dei sistemi di storage per il plug-in VMware di SnapCenter. A tale scopo, immettere le credenziali nel plug-in. Ogni volta che si accede a un sistema di storage utilizzando queste credenziali, viene visualizzato il set di funzioni SnapCenter impostate in ONTAP al momento della creazione delle credenziali.
+Questa credenziale del sistema di archiviazione è necessaria per consentire la configurazione dei sistemi di archiviazione per il plug-in SnapCenter per VMware vSphere. A tale scopo, immettere le credenziali nel plug-in. Ogni volta che si accede a un sistema storage utilizzando queste credenziali, viene visualizzato il set di funzioni di SnapCenter impostato in ONTAP al momento della creazione delle credenziali.
 
 
 
 È possibile utilizzare l'accesso come amministratore o root per accedere a tutte le attività di SnapCenter; tuttavia, è consigliabile utilizzare la funzionalità RBAC fornita da ONTAP per creare uno o più account personalizzati con privilegi di accesso limitati.
 
-Per ulteriori informazioni, vedere link:scpivs44_minimum_ontap_privileges_required.html["Sono richiesti privilegi minimi per ONTAP"^].
+Per ulteriori informazioni, fare riferimento a link:scpivs44_minimum_ontap_privileges_required.html["Sono richiesti privilegi minimi per ONTAP"^].

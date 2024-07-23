@@ -20,7 +20,7 @@ Dopo aver implementato il plug-in SnapCenter per VMware vSphere, è necessario c
 
 == Operazioni richieste dopo l'implementazione
 
-Se sei un nuovo utente SnapCenter, devi aggiungere le VM di storage a SnapCenter prima di poter eseguire qualsiasi operazione di protezione dei dati. Quando si aggiungono VM di storage, specificare la LIF di gestione. È inoltre possibile aggiungere un cluster e specificare la LIF di gestione del cluster. Per informazioni sull'aggiunta dello storage, vedere link:scpivs44_add_storage_01.html["Aggiungere storage"^].
+Se sei un nuovo utente SnapCenter, devi aggiungere le VM di storage a SnapCenter prima di poter eseguire qualsiasi operazione di protezione dei dati. Quando si aggiungono VM di storage, specificare la LIF di gestione. È inoltre possibile aggiungere un cluster e specificare la LIF di gestione del cluster. Per informazioni sull'aggiunta di spazio di archiviazione, fare riferimento alla link:scpivs44_add_storage_01.html["Aggiungere storage"^].
 
 
 
@@ -30,7 +30,7 @@ Se sei un nuovo utente SnapCenter, devi aggiungere le VM di storage a SnapCenter
 +
 ** Si utilizza IPv4 e si dispone di due indirizzi IP per l'host VMware vSphere di SnapCenter. Di conseguenza, la richiesta di lavoro viene inviata a un indirizzo IP non riconosciuto dal server SnapCenter. Per evitare questo problema, aggiungere l'indirizzo IP che si desidera utilizzare, come indicato di seguito:
 +
-... Accedere alla posizione in cui viene implementato il plug-in VMware di SnapCenter: `/opt/netapp/scvservice/standalone_aegis/etc`
+... Accedere alla posizione in cui viene implementato il plug-in SnapCenter per VMware vSphere: `/opt/netapp/scvservice/standalone_aegis/etc`
 ... Aprire la file network- interface.properties.
 ... In `network.interface=10.10.10.10` Aggiungere l'indirizzo IP che si desidera utilizzare.
 
@@ -38,7 +38,7 @@ Se sei un nuovo utente SnapCenter, devi aggiungere le VM di storage a SnapCenter
 ** Hai due NIC.
 
 
-* Dopo aver implementato il plug-in VMware di SnapCenter, la voce MOB nel plug-in vCenter per SnapCenter per VMware vSphere potrebbe ancora mostrare il vecchio numero di versione. Questo può verificarsi quando altri lavori sono in esecuzione in vCenter. VCenter aggiornerà la voce.
+* Dopo aver implementato il plug-in SnapCenter per VMware vSphere, la voce MOB del plug-in vCenter per SnapCenter per VMware vSphere potrebbe ancora mostrare il numero di versione precedente. Ciò può verificarsi quando altri job sono in esecuzione in vCenter. VCenter alla fine aggiornerà la voce.
 
 
 Per correggere uno di questi problemi, procedere come segue:
@@ -54,10 +54,10 @@ Se il problema persiste, riavviare il servizio client VMware vSphere
 
 == Gestire gli errori di autenticazione
 
-Se non si utilizzano le credenziali di amministratore, potrebbe essere visualizzato un errore di autenticazione dopo l'implementazione del plug-in SnapCenter per VMware vSphere o dopo la migrazione. Se si verifica un errore di autenticazione, è necessario riavviare il servizio.
+Se non si utilizzano le credenziali di amministratore, potrebbe essere visualizzato un errore di autenticazione dopo la distribuzione del plug-in SnapCenter per VMware vSphere o dopo la migrazione. Se si verifica un errore di autenticazione, è necessario riavviare il servizio.
 
 .Fasi
-. Accedere alla GUI di gestione del plug-in VMware di SnapCenter utilizzando il formato `\https://<appliance-IP-address>:8080`. Utilizzare il nome utente admin, la password e i dettagli del token MFA per effettuare l'accesso. Il token MFA può essere generato dalla console di manutenzione.
+. Accedere alla GUI di gestione del plug-in SnapCenter per VMware vSphere utilizzando il formato `\https://<appliance-IP-address>:8080`. Utilizzare il nome utente admin, la password e i dettagli del token MFA per effettuare l'accesso. Il token MFA può essere generato dalla console di manutenzione.
 . Riavviare il servizio.
 
 
@@ -75,7 +75,7 @@ Se si desidera eseguire flussi di lavoro application-over-VMDK in SnapCenter (wo
 .A proposito di questa attività
 * È possibile registrare il plug-in SnapCenter per VMware vSphere con il server SnapCenter utilizzando l'interfaccia grafica di SnapCenter per aggiungere un host di tipo "vsphere".
 +
-La porta 8144 è predefinita per la comunicazione all'interno del plug-in VMware di SnapCenter.
+La porta 8144 è predefinita per la comunicazione all'interno del plug-in SnapCenter per VMware vSphere.
 
 +
 È possibile registrare più istanze del plug-in SnapCenter per VMware vSphere sullo stesso server SnapCenter per supportare le operazioni di protezione dei dati basate sull'applicazione sulle macchine virtuali. Non è possibile registrare lo stesso plug-in SnapCenter per VMware vSphere su più server SnapCenter.
@@ -99,7 +99,7 @@ La porta 8144 è predefinita per la comunicazione all'interno del plug-in VMware
 | Nome host | Verificare l'indirizzo IP dell'appliance virtuale. 
 
 
-| Credenziale | Immettere il nome utente e la password per il plug-in VMware SnapCenter fornito durante l'implementazione. 
+| Credenziale | Immettere il nome utente e la password per il plug-in SnapCenter per VMware vSphere fornito durante la distribuzione. 
 |===
 . Fare clic su *Invia*.
 +

@@ -27,22 +27,22 @@ summary: È necessario creare policy di backup prima di utilizzare il plug-in Sn
 Per correggere questo problema, configurare la policy di conservazione SnapMirror per lo storage secondario in modo da evitare di raggiungere il limite massimo di Snapshot.
 
 +
-Per informazioni sulle modalità di assegnazione delle risorse agli utenti da parte degli amministratori, vedere https://docs.netapp.com/us-en/snapcenter/concept/concept_types_of_role_based_access_control_in_snapcenter.html["Informazioni SnapCenter sull'utilizzo del controllo degli accessi basato sui ruoli"^].
+Per informazioni sulle modalità di assegnazione delle risorse agli utenti da parte degli amministratori, fare riferimento alla sezione https://docs.netapp.com/us-en/snapcenter/concept/concept_types_of_role_based_access_control_in_snapcenter.html["Informazioni SnapCenter sull'utilizzo del controllo degli accessi basato sui ruoli"^].
 
 
 
 * Se si desidera eseguire backup coerenti con le macchine virtuali, è necessario disporre dei tool VMware installati e in esecuzione. I tool VMware sono necessari per interrompere le macchine virtuali. I backup coerenti con le macchine virtuali non sono supportati per le macchine virtuali vVol.
-* SnapMirror Business Continuity (SM-BC) consente ai servizi di business di continuare a funzionare anche in caso di guasto completo del sito, supportando il failover delle applicazioni in modo trasparente utilizzando una copia secondaria.
+* SnapMirror Active Sync consente ai servizi di business di continuare a funzionare anche in caso di guasto completo del sito, supportando le applicazioni per il failover in modo trasparente con una copia secondaria.
 +
 
-NOTE: SM-BC è supportato solo per gli archivi dati VMFS.
+NOTE: La sincronizzazione attiva di SnapMirror è supportata solo per datastore VMFS.
 
 +
-Per proteggere un datastore VMFS in un'implementazione SM-BC, in qualità di amministratore SnapCenter devi:
+Per proteggere un datastore VMFS su un'implementazione con sincronizzazione attiva SnapMirror, come amministratore SnapCenter devi:
 
 +
-** Configurare cluster e mediatore come descritto nel report tecnico: https://www.netapp.com/pdf.html?item=/media/21888-tr-4878.pdf["TR-4878: Business continuity SnapMirror"].
-** Aggiungi il volume associato al datastore VMFS al gruppo di coerenza e crea una relazione di data Protection utilizzando la policy di protezione _AutomatedFailOver_ tra due sistemi storage ONTAP.
+** Configurare i cluster e il mediatore come descritto nel report tecnico: https://www.netapp.com/pdf.html?item=/media/21888-tr-4878.pdf["TR-4878: Sincronizzazione attiva SnapMirror (in precedenza SMBC)"].
+** Aggiungi il volume associato al datastore VMFS al gruppo di coerenza e crea una relazione di data Protection utilizzando la policy di protezione _AutomatedFailOver_ o _AutomatedFailOverDuplex_ tra due sistemi storage ONTAP. Il criterio _AutomatedFailOverDuplex_ è supportato a partire da ONTAP 9.15.1.
 
 
 
@@ -51,7 +51,7 @@ Per proteggere un datastore VMFS in un'implementazione SM-BC, in qualità di amm
 La maggior parte dei campi presenti in queste pagine della procedura guidata sono esplicativi. Le seguenti informazioni descrivono alcuni dei campi per i quali potrebbe essere necessaria una guida.
 
 .Fasi
-. Nel riquadro sinistro del Navigator del plug-in SCV, fare clic su *Policies* (Criteri).
+. Nel riquadro di navigazione sinistro del plug-in SCV, fare clic su *Criteri*.
 . Nella pagina *Criteri*, selezionare *Crea* per avviare la procedura guidata.
 . Nella pagina *New Backup Policy*, selezionare il server vCenter che utilizzerà il criterio, quindi immettere il nome del criterio e una descrizione.
 +
@@ -95,7 +95,7 @@ Selezionare questa opzione per creare copie mirror dei set di backup su un altro
 NOTE: Questa opzione è supportata per i datastore nei volumi FlexGroup nel plug-in SnapCenter per VMware vSphere 4.5 e versioni successive.
 
 
-NOTE: Per proteggere il datastore VMFS nella distribuzione di SM-BC, è necessario completare i prerequisiti indicati nella sezione _prima di iniziare_ e abilitare *Update SnapMirror after backup*.
+NOTE: Per proteggere il datastore VMFS sulla distribuzione Active Sync di SnapMirror, è necessario completare i prerequisiti indicati nella sezione _prima di iniziare_ e abilitare *Update SnapMirror after backup*.
 
 
 
@@ -130,7 +130,7 @@ Selezionare questa casella per interrompere le macchine virtuali e creare uno sn
 Questa opzione non è supportata per vVol. Per le VM vVol, vengono eseguiti solo backup coerenti con il crash.
 
 
-IMPORTANT: Per eseguire backup coerenti con le macchine virtuali, è necessario disporre degli strumenti VMware in esecuzione sulla macchina virtuale. Se VMware Tools non è in esecuzione, viene eseguito un backup coerente con il crash.
+IMPORTANT: Per eseguire backup coerenti con le macchine virtuali, è necessario disporre degli strumenti VMware in esecuzione sulla macchina virtuale. Se gli strumenti VMware non sono in esecuzione, viene eseguito un backup coerente con il crash.
 
 
 NOTE: Quando si seleziona la casella coerenza delle macchine virtuali, le operazioni di backup potrebbero richiedere più tempo e più spazio di storage. In questo scenario, le macchine virtuali vengono prima bloccate, quindi VMware esegue uno snapshot coerente delle macchine virtuali, quindi SnapCenter esegue l'operazione di backup e le operazioni delle macchine virtuali vengono ripristinati. La memoria guest delle macchine virtuali non è inclusa nelle istantanee della coerenza delle macchine virtuali.
@@ -141,7 +141,7 @@ NOTE: Quando si seleziona la casella coerenza delle macchine virtuali, le operaz
 
 
 | Script  a| 
-Immettere il percorso completo del prescrittt o del postscript che si desidera SnapCenter eseguire prima o dopo le operazioni di backup. Ad esempio, è possibile eseguire uno script per aggiornare i trap SNMP, automatizzare gli avvisi e inviare i registri. Il percorso dello script viene convalidato al momento dell'esecuzione dello script.
+Immettere il percorso completo del file postscript o del file richiesto che si desidera venga eseguito prima o dopo le operazioni di backup dal plug-in SnapCenter per VMware vSphere. Ad esempio, è possibile eseguire uno script per aggiornare i trap SNMP, automatizzare gli avvisi e inviare i registri. Il percorso dello script viene convalidato al momento dell'esecuzione dello script.
 
 
 NOTE: Le prescritture e i post-script devono essere posizionati sulla macchina virtuale dell'appliance. Per inserire più script, premere *Invio* dopo ogni percorso di script per elencare ciascuno script su una riga separata. Il carattere ";" non è consentito.

@@ -47,7 +47,7 @@ Tutti i vVol in una singola cartella vVol specificata. Se la cartella contiene u
 Per tutti i gruppi di risorse:
 
 
-IMPORTANT: Se si utilizza il servizio cluster VMware vSphere, non includere le macchine virtuali gestite da VCLS nei gruppi di risorse del plug-in SnapCenter.
+IMPORTANT: Se si utilizza VMware vSphere Cluster Service (VCLS), non includere le VM gestite da VCLS nel plug-in SnapCenter per i gruppi di risorse VMware vSphere.
 
 
 TIP: Il plug-in SnapCenter per VMware vSphere 4,5 e versioni successive supporta datastore su LUN di grandi dimensioni e file fino a 128 TB con volumi fino a 300 TB. Se si stanno proteggendo LUN di grandi dimensioni, utilizzare solo LUN con thick provisioning per evitare la latenza.
@@ -58,7 +58,7 @@ IMPORTANT: Non aggiungere macchine virtuali che si trovano in uno stato inaccess
 .Prima di iniziare
 I tool ONTAP per VMware devono essere implementati prima di creare un gruppo di risorse che contiene macchine virtuali vVol.
 
-Per ulteriori informazioni, vedere https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html["Strumenti ONTAP per VMware vSphere"^].
+Per ulteriori informazioni, fare riferimento a https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html["Strumenti ONTAP per VMware vSphere"^].
 
 .A proposito di questa attività
 È possibile aggiungere o rimuovere risorse da un gruppo di risorse in qualsiasi momento.
@@ -73,7 +73,7 @@ Per eseguire il backup di più risorse, è necessario creare un gruppo di risors
 
 * Gruppi di risorse che contengono volumi FlexGroup negli ambienti MetroCluster
 +
-Se si utilizza ONTAP 9.8 o ONTAP 9.9, dopo uno switchover o uno switchback, è necessario riavviare il servizio plug-in SnapCenter e risincronizzare le relazioni di SnapMirror prima di eseguire il backup dei gruppi di risorse negli ambienti MetroCluster.
+Se si utilizza ONTAP 9,8 o ONTAP 9,9, dopo uno switchover o uno switchback è necessario riavviare il servizio SnapCenter Plug-in per VMware vSphere e sincronizzare nuovamente le relazioni di SnapMirror prima di eseguire il backup dei gruppi di risorse negli ambienti MetroCluster.
 
 +
 In ONTAP 9.8, i backup si blocchano dopo lo switchback. Questo problema è stato risolto in ONTAP 9.9.
@@ -102,13 +102,13 @@ SnapCenter esegue controlli di compatibilità quando si crea un gruppo di risors
 
 
 .Fasi
-. Nel riquadro sinistro del Navigator del plug-in SCV, fare clic su *Resource Groups* (gruppi di risorse), quindi selezionare *Create* (Crea) per avviare la procedura guidata.
+. Nel riquadro di navigazione sinistro del plug-in SCV, fare clic su *gruppi di risorse*, quindi selezionare *Crea* per avviare la procedura guidata.
 
 
 Questo è il modo più semplice per creare un gruppo di risorse. Tuttavia, è anche possibile creare un gruppo di risorse con una risorsa eseguendo una delle seguenti operazioni:
 
-* Per creare un gruppo di risorse per una macchina virtuale, fare clic su *Menu* > *host e cluster*, quindi fare clic con il pulsante destro del mouse su una macchina virtuale, selezionare NetApp SnapCenter, quindi selezionare *Crea gruppo di risorse*.
-* Per creare un gruppo di risorse per un datastore, fare clic su *Menu* > *host e cluster*, quindi fare clic con il pulsante destro del mouse su un datastore, selezionare *NetApp SnapCenter*, quindi selezionare *Crea gruppo di risorse*.
+* Per creare un gruppo di risorse per una macchina virtuale, nella pagina dei collegamenti selezionare *host e cluster*, quindi fare clic con il pulsante destro del mouse su una macchina virtuale e selezionare *plug-in SnapCenter per VMware vSphere* > *Crea gruppo di risorse*.
+* Per creare un gruppo di risorse per un datastore, nella pagina Collegamenti, selezionare *host e cluster*, quindi fare clic con il pulsante destro del mouse su un datastore e selezionare *plug-in SnapCenter per VMware vSphere* > *Crea gruppo di risorse*.
 +
 .. Nella pagina *Info generali e notifica* della procedura guidata, eseguire le seguenti operazioni:
 +
@@ -119,7 +119,7 @@ Questo è il modo più semplice per creare un gruppo di risorse. Tuttavia, è an
 | Server vCenter | Selezionare un server vCenter. 
 
 
-| Nome | Immettere un nome per il gruppo di risorse. Non utilizzare i seguenti caratteri speciali nei nomi di macchine virtuali, datastore, policy, backup o gruppi di risorse: % & * N. @ ! / : * ? " < > - [barra verticale] ; ' , . È consentito un carattere di sottolineatura (_). I nomi delle macchine virtuali o degli archivi dati con caratteri speciali vengono troncati, rendendo difficile la ricerca di un backup specifico. In modalità Linked, ogni vCenter dispone di un repository di plug-in VMware SnapCenter separato. Pertanto, è possibile utilizzare nomi duplicati nei vCenter. 
+| Nome | Immettere un nome per il gruppo di risorse. Non utilizzare i seguenti caratteri speciali nei nomi di macchine virtuali, datastore, policy, backup o gruppi di risorse: % & * N. @ ! / : * ? " < > - [barra verticale] ; ' , . È consentito un carattere di sottolineatura (_). I nomi delle macchine virtuali o degli archivi dati con caratteri speciali vengono troncati, rendendo difficile la ricerca di un backup specifico. In modalità collegata, ogni vCenter dispone di un plug-in SnapCenter separato per il repository VMware vSphere. Pertanto, è possibile utilizzare nomi duplicati nei vCenter. 
 
 
 | Descrizione | Inserire una descrizione del gruppo di risorse. 
@@ -183,10 +183,10 @@ I nomi di VM e datastore in un gruppo di risorse devono essere univoci.
 Quando si fa clic su *Avanti*, il sistema verifica prima che SnapCenter gestisca e sia compatibile con lo storage su cui si trovano le risorse selezionate.
 
 +
-Se il messaggio `Selected <resource-name> is not SnapCenter compatible` Una risorsa selezionata non è compatibile con SnapCenter. Vedere <<Gestire gli errori del controllo di compatibilità>> per ulteriori informazioni.
+Se viene visualizzato il messaggio `Selected <resource-name> is not SnapCenter compatible` , una risorsa selezionata non è compatibile con SnapCenter.
 
 +
-Per escludere globalmente uno o più datastore dai backup, è necessario specificare i nomi dei datastore in `global.ds.exclusion.pattern` proprietà in `scbr.override` file di configurazione. Vedere <<scpivs44_properties_you_can_override.adoc#Properties you can override,Proprietà che è possibile eseguire l'override>>.
+Per escludere globalmente uno o più datastore dai backup, è necessario specificare i nomi del datastore nella `global.ds.exclusion.pattern` proprietà nel `scbr.override` file di configurazione. Fare riferimento alla link:scpivs44_properties_you_can_override.html["Proprietà che è possibile eseguire l'override"].
 
 .. Nella pagina *Spanning disks*, selezionare un'opzione per le macchine virtuali con più VMDK in più datastore:
 +
@@ -224,10 +224,10 @@ image:scpivs44_image18.png["Finestra di creazione del gruppo di risorse"]
 Nel campo Starting hour (ora di inizio), immettere una data e un'ora diverse da zero. La data deve essere nel formato `day/month/year`.
 
 +
-Quando si seleziona un numero di giorni nel campo *ogni*, i backup vengono eseguiti il giorno 1 del mese e successivamente a ogni intervallo specificato. Ad esempio, se si seleziona l'opzione *ogni 2 giorni*, i backup vengono eseguiti il giorno 1, 3, 5, 7 e così via per tutto il mese, indipendentemente dal fatto che la data di inizio sia pari o dispari.
+Quando si seleziona un numero di giorni in ogni campo, i backup vengono eseguiti il giorno 1 del mese e successivamente ad ogni intervallo specificato. Ad esempio, se si seleziona l'opzione *ogni 2 giorni*, i backup vengono eseguiti il giorno 1, 3, 5, 7 e così via per tutto il mese, indipendentemente dal fatto che la data di inizio sia pari o dispari.
 
 +
-È necessario compilare ciascun campo. Il plug-in VMware di SnapCenter crea pianificazioni nel fuso orario in cui viene implementato il plug-in VMware di SnapCenter. È possibile modificare il fuso orario utilizzando il plug-in SnapCenter per l'interfaccia grafica di VMware vSphere.
+È necessario compilare ciascun campo. Il plug-in SnapCenter per VMware vSphere crea pianificazioni con il fuso orario in cui viene implementato il plug-in SnapCenter per VMware vSphere. È possibile modificare il fuso orario utilizzando il plug-in SnapCenter per l'interfaccia grafica di VMware vSphere.
 
 +
 link:scpivs44_modify_the_time_zones.html["Modificare i fusi orari per i backup"].
@@ -261,18 +261,18 @@ I motivi dell'incompatibilità potrebbero essere:
 SnapCenter versione 4.x supporta ONTAP 8.3.1 e versioni successive.
 
 +
-Il plug-in SnapCenter per VMware vSphere non esegue controlli di compatibilità per tutte le versioni di ONTAP, ma solo per ONTAP 8.2.1 e versioni precedenti. Pertanto, vedere sempre https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp (IMT)"^] Per informazioni aggiornate sul supporto SnapCenter.
+Il plug-in SnapCenter per VMware vSphere non esegue controlli di compatibilità per tutte le versioni di ONTAP; solo per le versioni di ONTAP 8.2.1 e precedenti. Pertanto, fare sempre riferimento a https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp (IMT)"^] per le informazioni più aggiornate sull'assistenza SnapCenter.
 
 * Un dispositivo PCI condiviso è collegato a una macchina virtuale.
-* Un IP preferito non è configurato in SnapCenter.
-* Non è stato aggiunto l'IP di gestione delle macchine virtuali storage (SVM) a SnapCenter.
+* L'indirizzo IP preferito non è configurato in SnapCenter.
+* Non hai aggiunto l'indirizzo IP di gestione della Storage VM (SVM) a SnapCenter.
 * La VM di storage non è disponibile.
 
 
 Per correggere un errore di compatibilità, attenersi alla seguente procedura:
 
 . Assicurarsi che la VM di storage sia in esecuzione.
-. Assicurarsi che il sistema storage su cui si trovano le macchine virtuali sia stato aggiunto all'inventario del plug-in SnapCenter per VMware vSphere.
+. Verificare che il sistema storage sul quale sono collocate le VM sia stato aggiunto all'inventario SnapCenter Plug-in for VMware vSphere.
 . Assicurarsi che la VM di storage sia aggiunta a SnapCenter. Utilizzare l'opzione Add storage system (Aggiungi sistema di storage) nella GUI del client VMware vSphere.
 . Se sono presenti macchine virtuali di spanning che dispongono di VMDK su datastore NetApp e non NetApp, spostare le VMDK negli archivi dati NetApp.
 

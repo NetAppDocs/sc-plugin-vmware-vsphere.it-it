@@ -17,7 +17,9 @@ summary: 'Dopo aver eseguito un"operazione di protezione dei dati utilizzando il
 Dopo aver eseguito un'operazione di protezione dei dati utilizzando il client VMware vSphere, è possibile monitorare lo stato del lavoro dalla scheda Job Monitor nel dashboard e visualizzare i dettagli del lavoro.
 
 .Fasi
-. Nel riquadro sinistro di Navigator del client vSphere, fare clic su *Dashboard*. Quando due o più vCenter sono configurati in modalità Linked, selezionare un vCenter Server, quindi fare clic sulla scheda *Job Monitor* nel pannello Dashboard. La scheda Job Monitor elenca ogni lavoro, il relativo stato, l'ora di inizio e l'ora di fine. Se i nomi dei lavori sono lunghi, potrebbe essere necessario scorrere verso destra per visualizzare l'ora di inizio e di fine. Il display viene aggiornato ogni 30 secondi.
+. Dalla pagina di collegamento del client vCenter, selezionare Plug-in SnapCenter per VMware vSphere (SCV).
+. Nel riquadro di navigazione sinistro di SCV, selezionare *Dashboard*.
+. Quando due o più vCenter sono configurati in modalità collegata, selezionare l'istanza del plug-in SCV e selezionare la scheda *monitoraggio processi*. La scheda Job Monitor elenca ogni lavoro, il relativo stato, l'ora di inizio e l'ora di fine. Se i nomi dei lavori sono lunghi, potrebbe essere necessario scorrere verso destra per visualizzare l'ora di inizio e di fine. Il display viene aggiornato ogni 30 secondi.
 +
 ** Selezionare l'icona di refresh nella barra degli strumenti per aggiornare la visualizzazione su richiesta.
 ** Selezionare l'icona del filtro per scegliere l'intervallo di tempo, il tipo, il tag e lo stato dei processi che si desidera visualizzare. Il filtro fa distinzione tra maiuscole e minuscole.
@@ -26,4 +28,4 @@ Dopo aver eseguito un'operazione di protezione dei dati utilizzando il client VM
 
 
 
-Se la dashboard non visualizza le informazioni sul lavoro, consultare https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_vSphere_web_client_dashboard_does_not_display_jobs["Articolo della Knowledge base: Il dashboard del client SnapCenter vSphere non visualizza i processi"^].
+Se il Dashboard non visualizza le informazioni sul lavoro, fare riferimento alla https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_vSphere_web_client_dashboard_does_not_display_jobs["Articolo della Knowledge base: Il dashboard del client SnapCenter vSphere non visualizza i processi"^].

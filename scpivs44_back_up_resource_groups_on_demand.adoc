@@ -20,13 +20,13 @@ Le operazioni di backup vengono eseguite su tutte le risorse definite in un grup
 È necessario aver creato un gruppo di risorse con un criterio allegato.
 
 
-IMPORTANT: Non avviare un processo di backup on-demand quando è già in esecuzione un processo di backup del database MySQL del plug-in VMware di SnapCenter. Utilizza la console di manutenzione per visualizzare la pianificazione di backup configurata per il database MySQL.
+IMPORTANT: Non avviare un processo di backup on-demand quando è già in esecuzione un processo di backup del plug-in SnapCenter per il database MySQL VMware vSphere. Utilizza la console di manutenzione per visualizzare la pianificazione di backup configurata per il database MySQL.
 
 .A proposito di questa attività
-Nelle versioni precedenti di Virtual Storage Console (VSC), era possibile eseguire un backup on-demand senza configurare un processo di backup per una macchina virtuale o un datastore. Tuttavia, per il plug-in VMware di SnapCenter, le macchine virtuali e gli archivi dati devono essere in un gruppo di risorse prima di poter eseguire i backup.
+Nelle versioni precedenti di Virtual Storage Console (VSC), era possibile eseguire un backup on-demand senza configurare un processo di backup per una macchina virtuale o un datastore. Tuttavia, per il plug-in SnapCenter per VMware vSphere, macchine virtuali e datastore devono trovarsi in un gruppo di risorse prima di poter eseguire i backup.
 
 .Fasi
-. Nel riquadro di sinistra del Navigator del plug-in SCV, fare clic su *Resource Groups* (gruppi di risorse), quindi selezionare un gruppo di risorse e scegliere image:scpivs44_image38.png["Icona di riproduzione"] *Esegui ora* per avviare il backup.
+. Nel riquadro di navigazione sinistro del plug-in SCV, fare clic su *gruppi di risorse*, quindi selezionare un gruppo di risorse, quindi selezionare image:scpivs44_image38.png["Icona di riproduzione"] *Esegui ora* per avviare il backup.
 . Se il gruppo di risorse ha più criteri configurati, nella finestra di dialogo *Backup Now* selezionare il criterio da utilizzare per questa operazione di backup.
 . Fare clic su *OK* per avviare il backup.
 . Facoltativo: Monitorare l'avanzamento dell'operazione facendo clic su *Recent Tasks* (attività recenti) nella parte inferiore della finestra o sulla dashboard *Job Monitor* per ulteriori dettagli. Risultato

@@ -16,7 +16,7 @@ summary:
 [role="lead"]
 Per creare gruppi di risorse, attenersi alla procedura riportata di seguito.
 
-. Nel riquadro sinistro del Navigator del plug-in SCV, fare clic su *Resource Groups*, quindi selezionare *Create* (Crea).
+. Nel riquadro di navigazione sinistro del plug-in SCV, fare clic su *gruppi di risorse*, quindi selezionare *Crea*.
 . Inserire le informazioni richieste in ciascuna pagina della procedura guidata Crea gruppo di risorse, selezionare le macchine virtuali e gli archivi dati da includere nel gruppo di risorse, quindi selezionare i criteri di backup da applicare al gruppo di risorse e specificare la pianificazione del backup.
 
 

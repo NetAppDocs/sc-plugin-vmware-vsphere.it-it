@@ -28,8 +28,8 @@ IMPORTANT: È possibile eseguire una sola operazione di collegamento o ripristin
 IMPORTANT: La funzione di ripristino guest consente di visualizzare e ripristinare file di sistema e nascosti e di visualizzare file crittografati. Non tentare di sovrascrivere un file di sistema esistente o di ripristinare i file crittografati in una cartella crittografata. Durante l'operazione di ripristino, gli attributi nascosti, di sistema e crittografati dei file guest non vengono conservati nel file ripristinato. La visualizzazione o l'esplorazione delle partizioni riservate potrebbe causare un errore.
 
 .Fasi
-. Fare clic su *Menu* e selezionare l'opzione di menu *host e cluster*, quindi selezionare una macchina virtuale, quindi selezionare *NetApp SnapCenter* e fare clic su *Ripristino file guest*.
-. Nel client VMware vSphere, fare clic su *Guest file Restore* dall'elenco a discesa secondario per avviare la procedura guidata.
+. Dalla finestra dei collegamenti client vSphere, selezionare *host e cluster* e selezionare una VM.
+. Fare clic con il pulsante destro del mouse sulla macchina virtuale e selezionare *Plug-in SnapCenter per VMware vSphere* > *Ripristino file guest*.
 . Nella pagina *ambito ripristino*, specificare il backup che contiene il disco virtuale che si desidera collegare effettuando le seguenti operazioni:
 +
 .. Nella tabella *Backup Name*, selezionare il backup che contiene il disco virtuale che si desidera collegare.
@@ -81,7 +81,8 @@ Prima di fare clic su *fine*, è possibile tornare a qualsiasi pagina della proc
 +
 È possibile visualizzare lo stato di avanzamento dell'operazione nel monitor dei processi di Dashboard oppure attendere la notifica via email.
 
-. Per trovare i file da ripristinare dal disco virtuale collegato, fare clic su *Menu > Plug-in SnapCenter per VMware vSphere*, quindi nel riquadro sinistro del Navigatore fare clic su *Ripristino file guest* e selezionare la scheda *Configurazione guest*.
+. Per trovare i file che si desidera ripristinare dal disco virtuale collegato, selezionare *plug-in SnapCenter per VMware vSphere* dalla finestra dei collegamenti client vSphere.
+. Nel riquadro di sinistra del navigatore selezionare *Ripristino file guest* > *Configurazione guest*.
 +
 Nella tabella monitoraggio sessione ospite, è possibile visualizzare ulteriori informazioni su una sessione facendo clic su *... *nella colonna di destra.
 

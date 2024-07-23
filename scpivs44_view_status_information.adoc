@@ -17,7 +17,8 @@ summary: 'È possibile visualizzare le informazioni sullo stato nella dashboard 
 È possibile visualizzare le informazioni sullo stato nella dashboard del client vSphere. Le informazioni sullo stato vengono aggiornate una volta all'ora.
 
 .Fasi
-. Nel riquadro sinistro di Navigator del client vSphere, fare clic su *Dashboard*, selezionare un server vCenter, quindi fare clic sulla scheda *Status* nel pannello della dashboard.
+. Dalla pagina di collegamento del client vCenter, selezionare Plug-in SnapCenter per VMware vSphere (SCV).
+. Nel riquadro di navigazione sinistro di SCV, selezionare *Dashboard* > *Status*.
 . Visualizzare le informazioni sullo stato della panoramica o fare clic su un collegamento per ulteriori dettagli, come indicato nella tabella seguente.
 +
 |===
@@ -50,7 +51,7 @@ Riepiloghi dello stato di protezione dei dati delle macchine virtuali o degli ar
 ** Fare clic sul menu a discesa per selezionare *VM* o *Datastore*.
 ** Per lo storage secondario, selezionare *SnapVault* o *SnapMirror*.
 ** Spostare il cursore su una sezione di un grafico per visualizzare il numero di VM o datastore in tale categoria. Nella categoria Successful (riuscito), viene elencato il backup più recente per ciascuna risorsa.
-** È possibile modificare la finestra dell'ora modificando il file di configurazione. L'impostazione predefinita è 7 giorni. Per ulteriori informazioni, vedere link:scpivs44_customize_your_configuration.html["Personalizzare la configurazione"].
+** È possibile modificare la finestra dell'ora modificando il file di configurazione. L'impostazione predefinita è 7 giorni. Per ulteriori informazioni, fare riferimento a link:scpivs44_customize_your_configuration.html["Personalizzare la configurazione"].
 ** I contatori interni vengono aggiornati dopo ogni backup primario o secondario. Il riquadro del dashboard viene aggiornato ogni sei ore. Il tempo di refresh non può essere modificato. Nota: Se si utilizza un criterio di protezione del vault mirror, i contatori per il riepilogo della protezione vengono visualizzati nel grafico di riepilogo di SnapVault, non nel grafico di SnapMirror.
 
 

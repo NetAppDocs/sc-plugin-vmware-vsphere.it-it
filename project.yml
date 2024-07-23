@@ -1,14 +1,16 @@
 ---
 settings:
-  name: SnapCenter Plug-in for VMware vSphere 5.0
+  name: SnapCenter Plug-in for VMware vSphere 6.0
   internal:
     pdf_enabled: true
   prod:
     pdf_enabled: true
     harmony_enabled: false
   versions:
-  - version-number: '5.0'
+  - version-number: '6.0'
     url: "/sc-plugin-vmware-vsphere"
+  - version-number: '5.0'
+    url: "/sc-plugin-vmware-vsphere-50"
   - version-number: '4.9'
     url: "/sc-plugin-vmware-vsphere-49"
   - version-number: '4.8'
@@ -22,7 +24,7 @@ settings:
   langs: it-it,us-en,ja-jp,ko-kr,zh-cn,zh-tw,de-de,es-es,fr-fr
 sidebar:
   entries:
-  - title: Plug-in SnapCenter per documentazione VMware vSphere 5,0
+  - title: Plug-in SnapCenter per VMware vSphere 6,0
     url: "/index.html"
   - title: Note di rilascio
     url: "/scpivs44_release_notes.html"
@@ -90,8 +92,8 @@ sidebar:
       url: "/scpivs44_download_job_logs.html"
     - title: Accesso ai report
       url: "/scpivs44_access_reports.html"
-    - title: Generare un bundle di supporto dal plug-in SnapCenter per l'interfaccia
-        grafica di VMware vSphere
+    - title: Generare un bundle di supporto dal plug-in SnapCenter per la GUI VMware
+        vSphere
       url: "/scpivs44_generate_a_support_bundle_from_the_snapcenter_plug-in_for_vmware_vsphere_gui.html"
     - title: Generare un bundle di supporto dalla console di manutenzione
       url: "/scpivs44_generate_a_support_bundle_from_the_maintenance_console.html"
@@ -140,7 +142,7 @@ sidebar:
       url: "/scpivs44_mount_a_backup.html"
     - title: Smontare un backup
       url: "/scpivs44_unmount_a_backup.html"
-  - title: Ripristinare dai backup
+  - title: Ripristinare i backup
     entries:
     - title: Panoramica
       url: "/scpivs44_restore_from_backups_overview.html"
@@ -185,8 +187,8 @@ sidebar:
       url: "/scpivs44_restart_the_vmware_vsphere_web_client_service.html"
     - title: Accedere alla console di manutenzione
       url: "/scpivs44_access_the_maintenance_console.html"
-    - title: Modificare la password del plug-in VMware di SnapCenter dalla console
-        di manutenzione
+    - title: Modificare la password del plug-in SnapCenter per VMware vSphere dalla
+        console di manutenzione
       url: "/scpivs44_modify_plugin_password.html"
     - title: Creare e importare certificati
       url: "/scpivs44_create_and_import_certificates.html"

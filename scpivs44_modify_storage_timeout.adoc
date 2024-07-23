@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: scpivs44_modify_storage_timeout.html 
 keywords:  
-summary: Anche se i backup sono stati eseguiti correttamente in passato, potrebbero iniziare a non funzionare quando il plug-in SnapCenter per VMware vSphere deve attendere che il sistema storage superi il periodo di timeout configurato. Se si verifica questa condizione, è possibile aumentare il timeout configurato. 
+summary: Anche se in passato i backup sono stati eseguiti correttamente, potrebbero verificarsi degli errori durante il periodo in cui il plug-in di SnapCenter per VMware vSphere deve attendere che il sistema storage superi il periodo di timeout configurato. Se si verifica questa condizione, è possibile aumentare il timeout configurato. 
 ---
 = Modificare il timeout dello storage configurato
 :hardbreaks:
@@ -14,12 +14,12 @@ summary: Anche se i backup sono stati eseguiti correttamente in passato, potrebb
 
 
 [role="lead"]
-Anche se i backup sono stati eseguiti correttamente in passato, potrebbero iniziare a non funzionare quando il plug-in SnapCenter per VMware vSphere deve attendere che il sistema storage superi il periodo di timeout configurato. Se si verifica questa condizione, è possibile aumentare il timeout configurato.
+Anche se in passato i backup sono stati eseguiti correttamente, potrebbero verificarsi degli errori durante il periodo in cui il plug-in di SnapCenter per VMware vSphere deve attendere che il sistema storage superi il periodo di timeout configurato. Se si verifica questa condizione, è possibile aumentare il timeout configurato.
 
 L'errore potrebbe verificarsi `Unable to discover resources on SCV: Unable to get storage details for datastore <xxx>…`
 
 .Fasi
-. Nel client VMware vSphere, fare clic su *Storage Systems*.
+. Nel riquadro di navigazione sinistro del plug-in SCV, fare clic su *sistemi di memorizzazione*.
 . Nella pagina Storage Systems (sistemi storage), selezionare il sistema storage da modificare e fare clic su *Edit* (Modifica).
 . Nel campo Timeout, aumentare il numero di secondi.
 +

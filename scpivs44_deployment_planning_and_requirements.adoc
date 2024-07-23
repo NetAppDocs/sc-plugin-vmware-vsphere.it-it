@@ -22,32 +22,32 @@ Prima di implementare l'appliance virtuale, è necessario conoscere i requisiti 
 
 Prima di iniziare l'implementazione del plug-in SnapCenter per VMware vSphere (SCV), è necessario conoscere i requisiti dell'host.
 
-* Il plug-in VMware di SnapCenter viene implementato come macchina virtuale Linux indipendentemente dal fatto che si utilizzi il plug-in per proteggere i dati su sistemi Windows o Linux.
-* È necessario implementare il plug-in VMware di SnapCenter sul server vCenter.
+* Il plug-in SnapCenter per VMware vSphere viene implementato come VM Linux indipendentemente dall'utilizzo del plug-in per la protezione dei dati su sistemi Windows o Linux.
+* È necessario implementare il plug-in SnapCenter per VMware vSphere su vCenter Server.
 +
-Le pianificazioni di backup vengono eseguite nel fuso orario in cui viene implementato il plug-in VMware di SnapCenter. VCenter riporta i dati nel fuso orario in cui si trova vCenter. Pertanto, se SnapCenter il plug-in VMware e vCenter si trovano in fusi orari diversi, i dati nel dashboard del plug-in VMware di SnapCenter potrebbero non coincidere con quelli dei report.
+Le pianificazioni di backup vengono eseguite nel fuso orario in cui viene implementato il plug-in SnapCenter per VMware vSphere. VCenter riporta i dati nel fuso orario in cui si trova vCenter. Pertanto, se il plug-in SnapCenter per VMware vSphere e vCenter si trova in fusi orari diversi, i dati del plug-in SnapCenter per la dashboard di VMware vSphere potrebbero non essere gli stessi dei dati dei report.
 
-* Non è necessario implementare il plug-in VMware SnapCenter in una cartella con un nome con caratteri speciali.
+* Non è necessario distribuire il plug-in SnapCenter per VMware vSphere in una cartella con un nome con caratteri speciali.
 +
 Il nome della cartella non deve contenere i seguenti caratteri speciali:@ n.%^&()_+{}';.,*?"<>|
 
-* È necessario implementare e registrare un'istanza univoca separata del plug-in VMware di SnapCenter per ciascun server vCenter.
+* Devi implementare e registrare un'istanza separata e univoca del plug-in SnapCenter per VMware vSphere per ogni vCenter Server.
 +
-** Ciascun server vCenter, sia esso in modalità collegata, deve essere associato a un'istanza separata del plug-in VMware di SnapCenter.
-** Ogni istanza del plug-in VMware di SnapCenter deve essere implementata come macchina virtuale Linux separata.
+** Ogni vCenter Server, che sia o meno in modalità collegata, deve essere associato a un'istanza separata del plug-in SnapCenter per VMware vSphere.
+** Ogni istanza del plug-in SnapCenter per VMware vSphere deve essere implementata come una VM Linux separata.
 +
-Ad esempio, se si desidera eseguire backup da sei istanze diverse del server vCenter, è necessario implementare il plug-in VMware di SnapCenter su sei host e ciascun server vCenter deve essere associato a un'istanza univoca del plug-in VMware di SnapCenter.
+Ad esempio, se si desidera eseguire backup da sei istanze diverse di vCenter Server, è necessario implementare il plug-in SnapCenter per VMware vSphere su sei host e ciascun vCenter Server deve essere associato a un'istanza univoca del plug-in SnapCenter per VMware vSphere.
 
 
 
 * Per proteggere le macchine virtuali vVol (macchine virtuali su datastore VMware vVol), è necessario prima implementare i tool ONTAP per VMware vSphere. I tool ONTAP consentono di eseguire il provisioning e la configurazione dello storage per vVol su ONTAP e sul client Web VMware.
 +
-Per ulteriori informazioni, vedere https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html["Strumenti ONTAP per VMware vSphere"^]
+Per ulteriori informazioni, fare riferimento a. https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html["Strumenti ONTAP per VMware vSphere"^]
 
 +
 Per informazioni aggiornate sulle versioni supportate degli strumenti ONTAP, consultare https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^].
 
-* Il plug-in VMware di SnapCenter offre un supporto limitato per i dispositivi PCI o PCIe condivisi (ad esempio, NVIDIA Grid GPU) a causa di una limitazione delle macchine virtuali nel supporto dello storage vMotion. Per ulteriori informazioni, consultare il documento del vendor Deployment Guide for VMware.
+* Il plug-in SnapCenter per VMware vSphere offre un supporto limitato di dispositivi PCI o PCIe condivisi (ad esempio, NVIDIA Grid GPU) a causa di un limite delle macchine virtuali che supportano Storage vMotion. Per ulteriori informazioni, consultare il documento del vendor Deployment Guide for VMware.
 +
 ** Cosa è supportato:
 +
@@ -77,7 +77,7 @@ Ripristino di una macchina virtuale completa quando uno o più VMDK si trovano s
 
 
 
-* Per un elenco dettagliato delle limitazioni del plug-in VMware di SnapCenter, vedere link:scpivs44_release_notes.html["Note sulla versione del plug-in SnapCenter per VMware vSphere"^].
+* Per un elenco dettagliato dei limiti del plug-in SnapCenter per VMware vSphere, fare riferimento a link:scpivs44_release_notes.html["Note sulla versione del plug-in SnapCenter per VMware vSphere"^].
 
 
 
@@ -107,10 +107,10 @@ Ripristino di una macchina virtuale completa quando uno o più VMDK si trovano s
 | Elemento | Versioni supportate 
 
 
-| VCenter vSphere | 7.0U1 e superiori 
+| VCenter vSphere | 7.0U1 e versioni successive. 
 
 
-| ESXi | 7.0U1 e superiori 
+| Server ESXi | 7.0U1 e versioni successive. 
 
 
 | Indirizzi IP | IPv4, IPv6 
@@ -119,15 +119,26 @@ Ripristino di una macchina virtuale completa quando uno o più VMDK si trovano s
 | VMware TLS | 1.2, 1.3 
 
 
-| TLS sul server SnapCenter | 1.2, 1.3 il server SnapCenter utilizza questa funzione per comunicare con il plug-in VMware di SnapCenter per le operazioni di protezione dei dati VMDK. 
+| TLS sul server SnapCenter | 1,2 e 1,3 il server SnapCenter utilizza questo per comunicare con il plug-in SnapCenter per VMware vSphere per operazioni di protezione dei dati VMDK. 
 
 
 | Applicazione VMware vStorage API for Array Integration (VAAI) | Il plug-in SnapCenter per VMware vSphere utilizza questo metodo per migliorare le performance delle operazioni di ripristino. Inoltre, migliora le performance negli ambienti NFS. 
 
 
-| Strumenti ONTAP per VMware | Il plug-in SnapCenter per VMware vSphere utilizza questa funzione per gestire i datastore vVol (volumi virtuali VMware). Per le versioni supportate, vedere https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^]. 
+| Strumenti ONTAP per VMware | Il plug-in SnapCenter per VMware vSphere utilizza questa funzione per gestire i datastore vVol (volumi virtuali VMware). Per le versioni supportate, fare riferimento a https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^]. 
 |===
-Per informazioni aggiornate sulle versioni supportate, consultare https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^].
+Per informazioni aggiornate sulle versioni supportate, fare riferimento a https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^].
+
+
+
+==== Requisiti per il protocollo NVMe over TCP
+
+I requisiti software minimi per il supporto del protocollo NVMe over TCP sono:
+
+* VCenter vSphere 7.0U3
+* ESXi 7.0U3
+* ONTAP 9.10.1
+
 
 
 
@@ -160,7 +171,7 @@ Per informazioni aggiornate sulle versioni supportate, consultare https://imt.ne
 
 
 | Plug-in SnapCenter per porta VMware vSphere  a| 
-8144 (HTTPS), bidirezionale: La porta viene utilizzata per le comunicazioni dal client VMware vSphere e dal server SnapCenter. 8080 bidirezionale questa porta viene utilizzata per gestire l'appliance virtuale.
+8144 (HTTPS), bidirezionale: La porta viene utilizzata per le comunicazioni dal client VMware vSphere e dal server SnapCenter. 8080 bidirezionale questa porta viene utilizzata per gestire le appliance virtuali.
 
 Nota: È supportata la porta personalizzata per l'aggiunta dell'host distributore idraulico a SnapCenter.
 
@@ -210,4 +221,4 @@ Interno
 
 == AutoSupport
 
-Il plug-in SnapCenter per VMware vSphere fornisce un numero minimo di informazioni per il monitoraggio dell'utilizzo, incluso l'URL del plug-in. AutoSupport include una tabella dei plug-in installati che viene visualizzata dal visualizzatore AutoSupport.
+Il plug-in SnapCenter per VMware vSphere fornisce un minimo di informazioni per il monitoraggio del suo utilizzo, incluso l'URL del plug-in. AutoSupport include una tabella dei plug-in installati che viene visualizzata dal visualizzatore AutoSupport.

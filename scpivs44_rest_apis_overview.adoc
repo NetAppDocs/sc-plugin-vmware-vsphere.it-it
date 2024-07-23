@@ -32,7 +32,7 @@ summary: È possibile utilizzare il plug-in SnapCenter per le API REST di VMware
 * Operazioni non supportate dalle API REST per VMware vSphere
 +
 ** Ripristino del file guest
-** Installazione e configurazione del plug-in VMware di SnapCenter
+** Installazione e configurazione del plug-in SnapCenter per VMware vSphere
 ** Assegnare ruoli RBAC o l'accesso agli utenti
 
 

@@ -55,7 +55,7 @@ In *Register to existing vCenter* (Registra su vCenter esistente), immettere le 
 
 NOTE: Annotare il nome utente e la password specificati. È necessario utilizzare queste credenziali se si desidera modificare in un secondo momento la configurazione del plug-in SnapCenter per VMware vSphere.
 
-In *Setup Network Properties* (Impostazioni proprietà di rete), immettere le informazioni di rete. In *Setup Date and Time* (Data e ora di installazione), selezionare il fuso orario in cui si trova vCenter.
+Nella sezione *impostazione delle proprietà di rete*, immettere le informazioni di rete. Nella sezione *impostazione data e ora*, selezionare il fuso orario in cui si trova vCenter.
 
 
 
@@ -65,15 +65,15 @@ In *Setup Network Properties* (Impostazioni proprietà di rete), immettere le in
 
 NOTE: Tutti gli host devono essere configurati con indirizzi IP (i nomi host FQDN non sono supportati). L'operazione di implementazione non convalida l'input prima dell'implementazione.
 
-. Accedere alla VM in cui è stato implementato il plug-in SnapCenter per VMware vSphere, quindi fare clic sulla scheda *Riepilogo*, quindi fare clic sulla casella *accensione* per avviare il plug-in SnapCenter.
-. Mentre il plug-in VMware SnapCenter è in fase di accensione, fare clic con il pulsante destro del mouse sul plug-in VMware distribuito, selezionare *sistema operativo guest*, quindi fare clic su *Installa strumenti SnapCenter*.
+. Passare alla VM in cui è stato distribuito il plug-in SnapCenter per VMware vSphere, quindi fare clic sulla scheda *Riepilogo*, quindi fare clic sulla casella *accensione* per avviare il plug-in SnapCenter per VMware vSphere.
+. Durante l'accensione del plug-in SnapCenter per VMware vSphere, fare clic con il pulsante destro del mouse sul plug-in SnapCenter per VMware vSphere distribuito, selezionare *guest OS*, quindi fare clic su *Install VMware Tools*.
 +
-Il completamento dell'implementazione potrebbe richiedere alcuni minuti. Una corretta implementazione viene indicata quando il plug-in VMware SnapCenter viene acceso, i tool VMware installati e la schermata richiede di accedere al plug-in VMware SnapCenter.
+Il completamento dell'implementazione potrebbe richiedere alcuni minuti. La distribuzione corretta è indicata quando il plug-in SnapCenter per VMware vSphere viene acceso, quando vengono installati gli strumenti VMware e la schermata richiede di accedere al plug-in SnapCenter per VMware vSphere.
 
 +
-Viene visualizzato l'indirizzo IP in cui viene implementato il plug-in VMware di SnapCenter. Annotare l'indirizzo IP. Se si desidera modificare la configurazione del plug-in SnapCenter, è necessario accedere all'interfaccia grafica di gestione del plug-in VMware di SnapCenter.
+La schermata visualizza l'indirizzo IP in cui viene distribuito il plug-in SnapCenter per VMware vSphere. Annotare l'indirizzo IP. Se si desidera modificare la configurazione del plug-in SnapCenter per VMware vSphere, è necessario accedere alla GUI di gestione del plug-in SnapCenter per VMware vSphere.
 
-. Accedere alla GUI di gestione del plug-in VMware di SnapCenter utilizzando l'indirizzo IP visualizzato nella schermata di implementazione utilizzando le credenziali fornite nella procedura guidata di implementazione, quindi verificare sul pannello di controllo che il plug-in VMware di SnapCenter sia connesso correttamente a vCenter e sia attivato.
+. Accedere alla GUI di gestione del plug-in SnapCenter per VMware vSphere utilizzando l'indirizzo IP visualizzato nella schermata di distribuzione utilizzando le credenziali fornite nella procedura guidata di distribuzione, quindi verificare sulla dashboard che il plug-in SnapCenter per VMware vSphere sia connesso correttamente a vCenter e sia abilitato.
 +
 Utilizzare il formato `\https://<appliance-IP-address>:8080` Per accedere alla GUI di gestione.
 

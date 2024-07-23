@@ -14,7 +14,7 @@ summary: 'Se si utilizza il plug-in SnapCenter per l"appliance virtuale VMware v
 
 
 
-NOTE: L'aggiornamento a SCV 5,0 è supportato solo su VMware vCenter Server 7 update 1 e versioni successive; per VMware vCenter Server precedenti alla versione 7 update 1, dovresti continuare a utilizzare SCV 4,7. L'aggiornamento è un'interruzione sulle versioni non supportate del server VMware vCenter.
+NOTE: L'aggiornamento a SCV 6,0 è supportato solo su VMware vCenter Server 7 update 1 e versioni successive; per VMware vCenter Server precedenti alla versione 7 update 1, dovresti continuare a utilizzare SCV 4,7. L'aggiornamento è un'interruzione sulle versioni non supportate del server VMware vCenter.
 
 Se si utilizza il plug-in SnapCenter per l'appliance virtuale VMware vSphere, è possibile eseguire l'aggiornamento a una versione più recente. Il processo di aggiornamento disregistra il plug-in esistente e implementa un plug-in compatibile solo con vSphere 7.0U1 e versioni successive.
 
@@ -25,10 +25,13 @@ Se si utilizza il plug-in SnapCenter per l'appliance virtuale VMware vSphere, è
 |===
 
 
-| Se si è su SnapCenter Plugin per la versione VMware vSphere (SCV)... | È possibile aggiornare direttamente il plugin SnapCenter per VMware vSphere a... 
+| Se si utilizza il plug-in SnapCenter per la versione di VMware vSphere (SCV)... | È possibile aggiornare direttamente il plug-in di SnapCenter per VMware vSphere a... 
 
 
-| DISTRIBUTORE IDRAULICO 4,9 | Aggiornamento al distributore idraulico 5,0 
+| DISTRIBUTORE IDRAULICO 5,0 | Aggiornamento al distributore idraulico 6,0 
+
+
+| DISTRIBUTORE IDRAULICO 4,9 | Aggiornamento ai distributori idraulici 5,0 e 6,0 
 
 
 | DISTRIBUTORE IDRAULICO 4,8 | Aggiornamento ai distributori idraulici 4,9 e 5,0 
@@ -48,7 +51,7 @@ NOTE: Il passaggio dalla configurazione di rete statica a DHCP non è supportato
 .Fasi
 . Preparati per l'aggiornamento disattivando il plug-in SnapCenter per VMware vSphere.
 +
-.. Accedere all'interfaccia grafica di gestione del plug-in SnapCenter per VMware vSphere. L'IP viene visualizzato quando si implementa il plug-in VMware di SnapCenter.
+.. Accedere all'interfaccia grafica di gestione del plug-in SnapCenter per VMware vSphere. L'indirizzo IP viene visualizzato quando si implementa il plug-in SnapCenter per VMware vSphere.
 .. Fare clic su *Configuration* (Configurazione) nel riquadro di navigazione a sinistra, quindi fare clic sull'opzione *Service* (Servizio) nella sezione Plug-in Details (Dettagli plug-in) per disattivare il plug-in.
 
 
@@ -64,7 +67,7 @@ NOTE: Il passaggio dalla configurazione di rete statica a DHCP non è supportato
 .. Nel browser, accedere a VMware vSphere vCenter.
 .. Nella GUI di vCenter, fare clic su *vSphere client (HTML)*.
 .. Accedere alla pagina *VMware vCenter Single Sign-on*.
-.. Nel riquadro Navigator, fare clic sulla macchina virtuale che si desidera aggiornare, quindi fare clic sulla scheda *Summary* (Riepilogo).
+.. Nel riquadro del navigatore, fare clic sulla macchina virtuale che si desidera aggiornare, quindi fare clic sulla scheda *Riepilogo*.
 .. Nel riquadro *Related Objects* (oggetti correlati), fare clic su qualsiasi datastore nell'elenco, quindi sulla scheda *Summary* (Riepilogo).
 .. Nella scheda *Files* dell'archivio dati selezionato, fare clic su una cartella qualsiasi dell'elenco, quindi fare clic su *Upload Files* (carica file).
 .. Nella schermata a comparsa di caricamento, accedere alla posizione in cui è stato scaricato `.iso` quindi fare clic su `.iso` Immagine del file, quindi fare clic su *Apri*. Il file viene caricato nell'archivio dati.

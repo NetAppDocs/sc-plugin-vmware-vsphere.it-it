@@ -19,7 +19,8 @@ summary: È possibile richiedere report per uno o più lavori dalla dashboard.
 La scheda rapporti contiene informazioni sui lavori selezionati nella pagina lavori della dashboard. Se non viene selezionato alcun processo, la scheda Report è vuota.
 
 .Fasi
-. Nel riquadro sinistro di Navigator del client vSphere, fare clic su *Dashboard*, selezionare un server vCenter, quindi fare clic sulla scheda *Report*.
+. Dalla pagina di collegamento del client vCenter, selezionare Plug-in SnapCenter per VMware vSphere (SCV).
+. Nel riquadro di spostamento di sinistra di SCV, selezionare *Dashboard* > scheda *Reports*.
 . Per i report di backup, è possibile effettuare le seguenti operazioni:
 +
 .. Modificare il report
@@ -45,7 +46,7 @@ Fare doppio clic su un lavoro per generare un report dettagliato per tale lavoro
 Il client VMware vSphere per SnapCenter offre opzioni di report personalizzabili che forniscono dettagli sui processi di protezione dei dati e sullo stato delle risorse dei plug-in. È possibile generare report solo per la protezione primaria.
 
 
-NOTE: Le pianificazioni di backup vengono eseguite nel fuso orario in cui viene implementato il plug-in VMware di SnapCenter. VCenter riporta i dati nel fuso orario in cui si trova vCenter. Pertanto, se il plug-in VMware e vCenter si trovano in fusi orari diversi, i dati nel dashboard del client SnapCenter vSphere potrebbero non coincidere con quelli dei report.
+NOTE: Le pianificazioni di backup vengono eseguite nel fuso orario in cui viene implementato il plug-in SnapCenter per VMware vSphere. VCenter riporta i dati nel fuso orario in cui si trova vCenter. Pertanto, se il plug-in SnapCenter per VMware vSphere e vCenter si trovano in fusi orari diversi, i dati nella dashboard del client di VMware vSphere potrebbero non corrispondere ai dati dei report.
 
 La dashboard visualizza le informazioni sui backup migrati solo dopo l'esecuzione dei backup post-migrazione.
 
@@ -78,13 +79,5 @@ Per ogni lavoro, il report elenca l'ID del lavoro, lo stato del lavoro, il nome 
 È possibile scaricare la tabella dei report in formato HTML o CSV. È inoltre possibile scaricare i log dei lavori di Job Monitor per tutti i lavori (non solo per quelli contenuti nel report). 
 
 
-| Report Last Protection Status of VM or Datastores | Visualizza informazioni generali sullo stato della protezione, durante il numero di giorni configurato, per macchine virtuali e datastore gestiti dal plug-in VMware di SnapCenter. L'impostazione predefinita è 7 giorni. Per modificare il valore nel file di proprietà, vedere link:scpivs44_modify_configuration_default_values.html["Modificare i valori predefiniti della configurazione"].
-
-Fare clic su una sezione/stato del grafico di protezione principale per visualizzare un elenco di VM o datastore con tale stato nella scheda *Report*.
-
-Il report sullo stato della protezione dei datastore o delle macchine virtuali protette visualizza i nomi delle macchine virtuali o dei datastore di cui è stato eseguito il backup durante il numero di giorni configurato, il nome dell'ultimo Snapshot e gli orari di inizio e fine dell'ultima esecuzione di backup.
-
-Il report sullo stato di protezione di VM o datastore per VM o datastore non protetti visualizza i nomi delle macchine virtuali o datastore che non dispongono di backup riusciti durante il numero di giorni configurato.
-
-È possibile scaricare la tabella dei report in formato HTML o CSV. È inoltre possibile scaricare i log dei lavori di Job Monitor per tutti i lavori (non solo per quelli contenuti nel report). Questo report viene aggiornato ogni ora quando la cache del plug-in viene aggiornata. Pertanto, il report potrebbe non visualizzare le macchine virtuali o gli archivi dati di cui è stato eseguito il backup di recente. 
+| Report Last Protection Status of VM or Datastores | Visualizza informazioni generali sullo stato di protezione, durante il numero di giorni configurato, per macchine virtuali e datastore gestiti dal plug-in SnapCenter per VMware vSphere. L'impostazione predefinita è 7 giorni. Per modificare il valore nel file di proprietà, fare riferimento a link:scpivs44_modify_configuration_default_values.html["Modificare i valori predefiniti della configurazione"]. Fare clic su una sezione/stato del grafico di protezione principale per visualizzare un elenco di VM o datastore con tale stato nella scheda *Report*. Il report sullo stato della protezione dei datastore o delle macchine virtuali protette visualizza i nomi delle macchine virtuali o dei datastore di cui è stato eseguito il backup durante il numero di giorni configurato, il nome dell'ultimo Snapshot e gli orari di inizio e fine dell'ultima esecuzione di backup. Il report sullo stato di protezione di VM o datastore per VM o datastore non protetti visualizza i nomi delle macchine virtuali o datastore che non dispongono di backup riusciti durante il numero di giorni configurato. È possibile scaricare la tabella dei report in formato HTML o CSV. È inoltre possibile scaricare i log dei lavori di Job Monitor per tutti i lavori (non solo per quelli contenuti nel report). Questo report viene aggiornato ogni ora quando la cache del plug-in viene aggiornata. Pertanto, il report potrebbe non visualizzare le macchine virtuali o gli archivi dati di cui è stato eseguito il backup di recente. 
 |===

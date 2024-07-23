@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: scpivs44_predefined_roles_packaged_with_snapcenter.html 
 keywords:  
-summary: 'Per semplificare l"utilizzo di vCenter Server RBAC, il plug-in VMware di SnapCenter fornisce un insieme di ruoli predefiniti che consentono agli utenti di eseguire attività SnapCenter. Esiste anche un ruolo di sola lettura che consente agli utenti di visualizzare le informazioni SnapCenter, ma non di eseguire alcuna attività.' 
+summary: 'Per semplificare l"utilizzo con vCenter Server RBAC, il plug-in SnapCenter per VMware vSphere mette a disposizione un set di ruoli predefiniti che consentono agli utenti di eseguire task SnapCenter. Esiste anche un ruolo di sola lettura che consente agli utenti di visualizzare le informazioni SnapCenter, ma non di eseguire alcuna attività.' 
 ---
 = Ruoli predefiniti in pacchetto con il plug-in SnapCenter per VMware vSphere
 :hardbreaks:
@@ -14,13 +14,13 @@ summary: 'Per semplificare l"utilizzo di vCenter Server RBAC, il plug-in VMware 
 
 
 [role="lead"]
-Per semplificare l'utilizzo di vCenter Server RBAC, il plug-in VMware di SnapCenter fornisce un insieme di ruoli predefiniti che consentono agli utenti di eseguire attività SnapCenter. Esiste anche un ruolo di sola lettura che consente agli utenti di visualizzare le informazioni SnapCenter, ma non di eseguire alcuna attività.
+Per semplificare l'utilizzo con vCenter Server RBAC, il plug-in SnapCenter per VMware vSphere mette a disposizione un set di ruoli predefiniti che consentono agli utenti di eseguire task SnapCenter. Esiste anche un ruolo di sola lettura che consente agli utenti di visualizzare le informazioni SnapCenter, ma non di eseguire alcuna attività.
 
-I ruoli predefiniti dispongono sia dei privilegi specifici di SnapCenter che dei privilegi nativi di vCenter Server per garantire il corretto completamento delle attività. Inoltre, i ruoli sono configurati in modo da disporre dei privilegi necessari per tutte le versioni supportate di vCenter Server.
+I ruoli predefiniti dispongono sia dei privilegi richiesti specifici di SnapCenter sia dei privilegi nativi di vCenter Server per garantire che le attività vengano completate correttamente. Inoltre, i ruoli sono configurati in modo da disporre dei privilegi necessari per tutte le versioni supportate di vCenter Server.
 
 In qualità di amministratore, è possibile assegnare questi ruoli agli utenti appropriati.
 
-Il plug-in VMware di SnapCenter riporta questi ruoli ai valori predefiniti (set iniziale di privilegi) ogni volta che si riavvia il servizio client Web vCenter o si modifica l'installazione. Se si aggiorna il plug-in VMware di SnapCenter, i ruoli predefiniti vengono aggiornati automaticamente per funzionare con quella versione del plug-in.
+Il plug-in SnapCenter per VMware vSphere riporta questi ruoli ai valori predefiniti (set iniziale di privilegi) ogni volta che si riavvia il servizio client web vCenter o si modifica l'installazione. Se si aggiorna il plug-in SnapCenter per VMware vSphere, i ruoli predefiniti vengono aggiornati automaticamente per funzionare con quella versione del plug-in.
 
 È possibile visualizzare i ruoli predefiniti nella GUI di vCenter facendo clic su *Menu > Amministrazione > ruoli*, come mostrato nella tabella seguente.
 
@@ -31,14 +31,14 @@ Il plug-in VMware di SnapCenter riporta questi ruoli ai valori predefiniti (set 
 | Amministratore SCV | Fornisce tutti i privilegi nativi di vCenter Server e SnapCenter specifici necessari per eseguire tutte le attività di SnapCenter Plug-in per VMware vSphere. 
 
 
-| SCV di backup | Fornisce tutti i privilegi nativi di vCenter Server e SnapCenter specifici necessari per eseguire il backup degli oggetti vSphere (macchine virtuali e datastore). L'utente ha anche accesso al privilegio configure. L'utente non può eseguire il ripristino dai backup. 
+| SCV di backup | Fornisce tutti i privilegi nativi di vCenter Server e SnapCenter specifici necessari per eseguire il backup degli oggetti vSphere (macchine virtuali e datastore). L'utente ha anche accesso al privilegio configure. L'utente non può ripristinare i backup. 
 
 
 | Ripristino del file ospite SCV | Fornisce tutti i privilegi nativi di vCenter Server e SnapCenter specifici necessari per ripristinare file e cartelle guest. L'utente non può ripristinare macchine virtuali o VMDK. 
 
 
-| Ripristino dei distributori idraulici | Fornisce tutti i privilegi nativi di vCenter Server e SnapCenter specifici necessari per ripristinare gli oggetti vSphere di cui è stato eseguito il backup utilizzando il plug-in VMware di SnapCenter e per ripristinare file e cartelle guest. L'utente ha anche accesso al privilegio configure. L'utente non può eseguire il backup degli oggetti vSphere. 
+| Ripristino dei distributori idraulici | Offre tutti i privilegi vCenter Server nativi e specifici di SnapCenter necessari per ripristinare gli oggetti vSphere di cui è stato eseguito il backup utilizzando il plug-in SnapCenter per VMware vSphere e per ripristinare file e cartelle guest. L'utente ha anche accesso al privilegio configure. L'utente non può eseguire il backup degli oggetti vSphere. 
 
 
-| Vista dei distributori idraulici | Fornisce l'accesso in sola lettura a tutti i backup, gruppi di risorse e policy del plug-in VMware di SnapCenter. 
+| Vista dei distributori idraulici | Fornisce accesso in sola lettura a tutti i plug-in SnapCenter per backup, gruppi di risorse e policy di VMware vSphere. 
 |===

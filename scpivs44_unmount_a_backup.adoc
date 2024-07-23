@@ -21,8 +21,8 @@ Se un backup è elencato come montato nella GUI del client VMware vSphere, ma no
 Se si tenta di montare una copia di backup di un datastore NFS su una VM di storage (SVM) con il volume root in una relazione mirror di condivisione del carico, potrebbe verificarsi l'errore `You may have reached the maximum number of NFS volumes configured in the vCenter. Check the vSphere Client for any error messages.` Per evitare questo problema, modificare l'impostazione dei volumi massimi selezionando *ESX* > *Manage* > *Settings* > *Advance System Settings* e modificando il valore NFS.MaxVolumes. Il valore massimo è 256.
 
 .Fasi
-. Nel client VMware vSphere, fare clic su *Menu* nella barra degli strumenti, quindi selezionare *Storage* dall'elenco a discesa.
-. Nel riquadro sinistro del Navigatore, fare clic con il pulsante destro del mouse su un datastore, quindi selezionare *NetApp SnapCenter* nell'elenco a discesa, quindi selezionare Unmount (Disinstalla) nell'elenco a discesa secondario.
+. Nella pagina dei collegamenti client VMware vSphere, selezionare *Storage*.
+. Nel riquadro di navigazione sinistro, fare clic con il pulsante destro del mouse su un datastore, quindi selezionare *Plug-in SnapCenter per VMware vSphere* nell'elenco a discesa, quindi selezionare *Unmount* nell'elenco a discesa secondario.
 +
 
 IMPORTANT: Assicurarsi di selezionare l'archivio dati corretto da smontare. In caso contrario, si potrebbe avere un impatto sul lavoro di produzione.
