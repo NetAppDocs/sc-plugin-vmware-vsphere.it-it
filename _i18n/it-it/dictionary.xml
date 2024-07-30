@@ -520,7 +520,6 @@
   <block id="9511d611d059dad2cee26dd7b6fc4d5a" category="paragraph">Prima di rimuovere la VM di storage, è necessario smontare tutti gli archivi dati presenti nella VM di storage.</block>
   <block id="bbef84b0a53276c7c512270e3dbf2029" category="paragraph">Se un gruppo di risorse dispone di backup che risiedono su una macchina virtuale di storage che viene rimossa, i backup successivi di tale gruppo di risorse non vengono eseguiti correttamente.</block>
   <block id="a87f600185266e8baed2f9874a5a9772" category="list-text">Nella pagina *Storage Systems*, selezionare la VM di storage da rimuovere, quindi fare clic su *Delete* (Elimina).</block>
-  <block id="d1bcb651c16c1e49822b4f7c61910214" category="paragraph"><block ref="882f890d3418627cf43cd6225ef7eb22" category="inline-link-macro-rx"></block>.</block>
   <block id="e7683ab9f61fe80a16f3111a33febbda" category="summary">È possibile modificare le impostazioni di rete configurate nel plug-in SnapCenter per VMware vSphere. Queste impostazioni vengono utilizzate dal plug-in per accedere a vCenter.</block>
   <block id="d120dfcded58a5506ff23bf511e0f19f" category="doc">Modificare le impostazioni di rete</block>
   <block id="593612012c0fd1880ba8813c8d41d02c" category="list-text">Nella sezione *Impostazioni di rete* della pagina *Impostazioni*, fare clic su *IPv4* o *IPv6*, quindi su *Modifica*.</block>
@@ -1490,12 +1489,6 @@
   <block id="254f642527b45bc260048e30704edb39" category="list-text">Configurazione</block>
   <block id="4f4f4543ab03d05f7af5ae78d5aebe61" category="list-text">Modificare le credenziali vCenter</block>
   <block id="74696cef76e7f4a4ca8d4e46191e2843" category="list-text">Plug-in Enable/Disable (attiva/Disattiva plug-in</block>
-  <block id="15522b8dcb225880b816b8456110deaf" category="summary">Se il client VMware vSphere di SnapCenter inizia a comportarsi in modo errato, potrebbe essere necessario cancellare la cache del browser. Se il problema persiste, riavviare il servizio client VMware vSphere.</block>
-  <block id="fc5672573975422a722953bf5496e5ad" category="section-title">Riavviare il servizio client Web in un vCenter Linux</block>
-  <block id="bbbb4a3d88d4a0dafc319898d6206ae7" category="paragraph">Se vCenter si trova su un'appliance Linux, è necessario utilizzare i comandi Linux per riavviare il servizio client VMware vSphere di SnapCenter.</block>
-  <block id="df005eed1212d84ddce99431a04fc779" category="paragraph">È necessario eseguire vCenter 6.5 o versione successiva.</block>
-  <block id="4c09019cb803ffc62d7d0666df0def34" category="list-text">Eliminare tutti i pacchetti scvm obsoleti su vCenter utilizzando il seguente comando HTML5:</block>
-  <block id="7f52ae2d13fc881eab436a11ad6556a4" category="paragraph"><block ref="ca3710e05c94c666b5609593ee562322" prefix="" category="inline-code"></block></block>
   <block id="824107dbad8e3882e5944fdc7db863f5" category="doc">Aggiungere una singola VM o un datastore a un gruppo di risorse</block>
   <block id="975652e8f125ca81c2e1b1c65ac8b2c9" category="paragraph">È possibile aggiungere datastore SAN e NAS ma non datastore VSAN o VVOL.</block>
   <block id="637c74025d9d0e63eef84433b19400e3" category="paragraph">Il sistema verifica prima che SnapCenter gestisca e sia compatibile con il sistema di storage su cui si trova la macchina virtuale selezionata, quindi visualizza la pagina *Aggiungi a gruppo di risorse*. Se il messaggio<block ref="2705c3ab141552502239d9b3af1d11b6" prefix=" " category="inline-code"></block> Quindi la macchina virtuale selezionata non è compatibile con SnapCenter ed è necessario prima aggiungere la macchina virtuale di storage appropriata a SnapCenter.</block>
@@ -2223,4 +2216,5 @@ Per ogni lavoro, il report elenca l'ID del lavoro, lo stato del lavoro, il nome 
   <block id="c0407ba9e12515280efc0fea9f89e131" category="sidebar">Ripristinare i backup</block>
   <block id="1fe3b3d815ea6fb48fb7d036907904e3" category="sidebar">Plug-in SnapCenter per VMware vSphere 6,0</block>
   <block id="fd03aeb9f7de3aae10e07664eb1cd6c6" category="sidebar">Generare un bundle di supporto dal plug-in SnapCenter per la GUI VMware vSphere</block>
+  <block id="b02541bab3f320c7517f41f638f6ef31" category="paragraph"><block ref="6f48ea8f284b5f5f2ad46612a3e37eec" category="inline-link-macro-rx"></block>.</block>
 </blocks>

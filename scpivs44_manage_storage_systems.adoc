@@ -53,6 +53,6 @@ Se un gruppo di risorse dispone di backup che risiedono su una macchina virtuale
 . Nella pagina *Storage Systems*, selezionare la VM di storage da rimuovere, quindi fare clic su *Delete* (Elimina).
 . Nella casella di conferma *Remove Storage System* (Rimuovi sistema di storage), selezionare la casella *Delete storage system(s)* (Elimina sistema di storage*), quindi fare clic su *Yes* (Sì) per confermare. *Nota:* sono supportate solo le versioni host ESXi 7.0U1 e successive.
 +
-link:scpivs44_manage_the_vmware_vsphere_web_client_service.html["Riavviare il servizio client VMware vSphere"].
+link:scpivs44_restart_the_vmware_vsphere_web_client_service.html["Riavviare il servizio client VMware vSphere"].
 
 
