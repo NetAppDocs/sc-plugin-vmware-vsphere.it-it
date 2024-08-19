@@ -58,7 +58,7 @@ SnapCenter utilizza le informazioni fornite dagli strumenti VMware per stabilire
 
 * Il sistema operativo Windows Guest deve eseguire Windows Server 2008 R2 o versione successiva.
 +
-Per informazioni aggiornate sulle versioni supportate, fare riferimento a https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp (IMT)"^].
+Per informazioni aggiornate sulle versioni supportate, fare riferimento a https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp (IMT)"^].
 
 * Le credenziali per la macchina virtuale di destinazione devono specificare l'account amministratore di dominio incorporato o l'account amministratore locale incorporato. Il nome utente deve essere "Administrator". Prima di iniziare l'operazione di ripristino, è necessario configurare le credenziali per la macchina virtuale alla quale si desidera collegare il disco virtuale. Le credenziali sono necessarie sia per l'operazione di collegamento che per la successiva operazione di ripristino. Gli utenti di Workgroup possono utilizzare l'account di amministratore locale integrato.
 +
@@ -83,7 +83,7 @@ Se si desidera collegare un disco virtuale a una macchina virtuale proxy, è nec
 
 * Il ripristino da un sistema operativo guest Linux non è supportato
 +
-Non è possibile ripristinare file e cartelle da una macchina virtuale che esegue il sistema operativo guest Linux. Tuttavia, è possibile collegare un VMDK e ripristinare manualmente i file e le cartelle. Per informazioni aggiornate sul sistema operativo guest supportato, consultare https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp (IMT)"^].
+Non è possibile ripristinare file e cartelle da una macchina virtuale che esegue il sistema operativo guest Linux. Tuttavia, è possibile collegare un VMDK e ripristinare manualmente i file e le cartelle. Per informazioni aggiornate sul sistema operativo guest supportato, consultare https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp (IMT)"^].
 
 
 
@@ -98,7 +98,7 @@ Prima di ripristinare un file o una cartella da un sistema operativo guest, è n
 * La pagina Guest file Browse (Sfoglia file guest) visualizza i file e la cartella nascosti che non è possibile filtrare.
 * Non è possibile eseguire il ripristino da un sistema operativo guest Linux.
 +
-Non è possibile ripristinare file e cartelle da una macchina virtuale che esegue il sistema operativo guest Linux. Tuttavia, è possibile collegare un VMDK e ripristinare manualmente i file e le cartelle. Per informazioni aggiornate sul sistema operativo guest supportato, consultare https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp (IMT)"^].
+Non è possibile ripristinare file e cartelle da una macchina virtuale che esegue il sistema operativo guest Linux. Tuttavia, è possibile collegare un VMDK e ripristinare manualmente i file e le cartelle. Per informazioni aggiornate sul sistema operativo guest supportato, consultare https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp (IMT)"^].
 
 * Non è possibile eseguire il ripristino da un file system NTFS a un file system FAT.
 +

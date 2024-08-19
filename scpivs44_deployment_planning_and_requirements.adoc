@@ -45,7 +45,7 @@ Ad esempio, se si desidera eseguire backup da sei istanze diverse di vCenter Ser
 Per ulteriori informazioni, fare riferimento a. https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html["Strumenti ONTAP per VMware vSphere"^]
 
 +
-Per informazioni aggiornate sulle versioni supportate degli strumenti ONTAP, consultare https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^].
+Per informazioni aggiornate sulle versioni supportate degli strumenti ONTAP, consultare https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^].
 
 * Il plug-in SnapCenter per VMware vSphere offre un supporto limitato di dispositivi PCI o PCIe condivisi (ad esempio, NVIDIA Grid GPU) a causa di un limite delle macchine virtuali che supportano Storage vMotion. Per ulteriori informazioni, consultare il documento del vendor Deployment Guide for VMware.
 +
@@ -125,9 +125,9 @@ Ripristino di una macchina virtuale completa quando uno o più VMDK si trovano s
 | Applicazione VMware vStorage API for Array Integration (VAAI) | Il plug-in SnapCenter per VMware vSphere utilizza questo metodo per migliorare le performance delle operazioni di ripristino. Inoltre, migliora le performance negli ambienti NFS. 
 
 
-| Strumenti ONTAP per VMware | Il plug-in SnapCenter per VMware vSphere utilizza questa funzione per gestire i datastore vVol (volumi virtuali VMware). Per le versioni supportate, fare riferimento a https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^]. 
+| Strumenti ONTAP per VMware | Il plug-in SnapCenter per VMware vSphere utilizza questa funzione per gestire i datastore vVol (volumi virtuali VMware). Per le versioni supportate, fare riferimento a https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^]. 
 |===
-Per informazioni aggiornate sulle versioni supportate, fare riferimento a https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^].
+Per informazioni aggiornate sulle versioni supportate, fare riferimento a https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^].
 
 
 

@@ -261,7 +261,7 @@ I motivi dell'incompatibilità potrebbero essere:
 SnapCenter versione 4.x supporta ONTAP 8.3.1 e versioni successive.
 
 +
-Il plug-in SnapCenter per VMware vSphere non esegue controlli di compatibilità per tutte le versioni di ONTAP; solo per le versioni di ONTAP 8.2.1 e precedenti. Pertanto, fare sempre riferimento a https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp (IMT)"^] per le informazioni più aggiornate sull'assistenza SnapCenter.
+Il plug-in SnapCenter per VMware vSphere non esegue controlli di compatibilità per tutte le versioni di ONTAP; solo per le versioni di ONTAP 8.2.1 e precedenti. Pertanto, fare sempre riferimento a https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp (IMT)"^] per le informazioni più aggiornate sull'assistenza SnapCenter.
 
 * Un dispositivo PCI condiviso è collegato a una macchina virtuale.
 * L'indirizzo IP preferito non è configurato in SnapCenter.
