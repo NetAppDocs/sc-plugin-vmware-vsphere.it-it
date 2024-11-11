@@ -84,6 +84,8 @@ smontare il volume
 
 | l'identità del cluster mostra l'interfaccia di rete mostra il vserver vserver peer vserver show 
 |===
+È possibile ignorare il comando _cluster Identity show_ a livello di cluster quando si crea un ruolo da associare al Vserver dati.
+
 
 NOTE: È possibile ignorare i messaggi di avviso relativi ai comandi Vserver non supportati.
 

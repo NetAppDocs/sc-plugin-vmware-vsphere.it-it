@@ -42,10 +42,7 @@ Ad esempio, se si desidera eseguire backup da sei istanze diverse di vCenter Ser
 
 * Per proteggere le macchine virtuali vVol (macchine virtuali su datastore VMware vVol), è necessario prima implementare i tool ONTAP per VMware vSphere. I tool ONTAP consentono di eseguire il provisioning e la configurazione dello storage per vVol su ONTAP e sul client Web VMware.
 +
-Per ulteriori informazioni, fare riferimento a. https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html["Strumenti ONTAP per VMware vSphere"^]
-
-+
-Per informazioni aggiornate sulle versioni supportate degli strumenti ONTAP, consultare https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^].
+Per ulteriori informazioni, consulta la documentazione sui tool ONTAP per VMware vSphere. Inoltre, fare riferimento a https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^] per le informazioni più recenti sulle versioni supportate sugli strumenti ONTAP.
 
 * Il plug-in SnapCenter per VMware vSphere offre un supporto limitato di dispositivi PCI o PCIe condivisi (ad esempio, NVIDIA Grid GPU) a causa di un limite delle macchine virtuali che supportano Storage vMotion. Per ulteriori informazioni, consultare il documento del vendor Deployment Guide for VMware.
 +
