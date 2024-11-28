@@ -109,7 +109,7 @@ Devi effettuare l'accesso come `vsadmin` o con un ruolo che ha i privilegi minim
 ** Per NFS sono necessarie ONTAP 9.12.1 e versioni successive
 
 
-* Per il protocollo NVMe su TCP è necessario ONTAP 9.10.1 e versioni successive.
+* Per i protocolli NVMe su TCP e NVMe over FC è necessario ONTAP 9.10,1 e versioni successive.
 
 
 

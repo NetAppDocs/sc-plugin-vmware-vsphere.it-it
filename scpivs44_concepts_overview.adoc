@@ -67,7 +67,7 @@ Anche se l'appliance virtuale deve essere installata come macchina virtuale Linu
 
 
 
-Oltre a queste principali funzioni, il plug-in SnapCenter per VMware vSphere supporta anche iSCSI, Fiber Channel, FCoE, NFS 3,0/4,1, VMFS 5,0/6,0, e NVMe over TCP.
+Oltre a queste principali funzionalità, il plug-in SnapCenter per VMware vSphere supporta anche iSCSI, Fiber Channel, FCoE, NFS 3,0/4,1, VMFS 5,0/6,0, NVMe over FC e NVMe over TCP.
 
 Per informazioni aggiornate sulle versioni supportate, fare riferimento a https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^] (IMT).
 
