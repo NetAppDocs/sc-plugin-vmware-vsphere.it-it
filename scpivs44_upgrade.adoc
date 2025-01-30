@@ -14,7 +14,7 @@ summary: 'Se si utilizza il plug-in SnapCenter per l"appliance virtuale VMware v
 
 
 
-NOTE: L'aggiornamento a SCV 6,0 è supportato solo su VMware vCenter Server 7 update 1 e versioni successive; per VMware vCenter Server precedenti alla versione 7 update 1, dovresti continuare a utilizzare SCV 4,7. L'aggiornamento è un'interruzione sulle versioni non supportate del server VMware vCenter.
+NOTE: L'aggiornamento a SCV 6,1 è supportato solo su VMware vCenter Server 7 update 1 e versioni successive; per VMware vCenter Server precedenti alla versione 7 update 1, dovresti continuare a utilizzare SCV 4,7. L'aggiornamento è un'interruzione sulle versioni non supportate del server VMware vCenter.
 
 Se si utilizza il plug-in SnapCenter per l'appliance virtuale VMware vSphere, è possibile eseguire l'aggiornamento a una versione più recente. Il processo di aggiornamento disregistra il plug-in esistente e implementa un plug-in compatibile solo con vSphere 7.0U1 e versioni successive.
 
@@ -28,7 +28,10 @@ Se si utilizza il plug-in SnapCenter per l'appliance virtuale VMware vSphere, è
 | Se si utilizza il plug-in SnapCenter per la versione di VMware vSphere (SCV)... | È possibile aggiornare direttamente il plug-in di SnapCenter per VMware vSphere a... 
 
 
-| DISTRIBUTORE IDRAULICO 5,0 | Aggiornamento al distributore idraulico 6,0 
+| DISTRIBUTORE IDRAULICO 6,0 | Aggiornamento al distributore idraulico 6,1 
+
+
+| DISTRIBUTORE IDRAULICO 5,0 | Aggiornamento ai distributori idraulici 6,0 e 6,1 
 
 
 | DISTRIBUTORE IDRAULICO 4,9 | Aggiornamento ai distributori idraulici 5,0 e 6,0 
@@ -47,6 +50,8 @@ TIP: Eseguire il backup del plug-in SnapCenter per VMware vSphere OVA prima di a
 
 
 NOTE: Il passaggio dalla configurazione di rete statica a DHCP non è supportato.
+
+Per informazioni aggiornate sulle versioni supportate, fare riferimento a https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^] (IMT).
 
 .Fasi
 . Preparati per l'aggiornamento disattivando il plug-in SnapCenter per VMware vSphere.

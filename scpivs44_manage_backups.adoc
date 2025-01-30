@@ -22,6 +22,9 @@ summary: È possibile rinominare ed eliminare i backup eseguiti dal plug-in Snap
 
 È possibile rinominare il plug-in SnapCenter per i backup di VMware vSphere se si desidera fornire un nome migliore per migliorare la ricerca.
 
+
+NOTE: Il sistema di archiviazione ASA R2 non supporta la ridenominazione dei backup.
+
 .Fasi
 . Fare clic su *Menu* e selezionare l'opzione di menu *host e cluster*, quindi selezionare una macchina virtuale, selezionare la scheda *Configura*, quindi fare clic su *Backup* nella sezione *plug-in SnapCenter per VMware vSphere*.
 +

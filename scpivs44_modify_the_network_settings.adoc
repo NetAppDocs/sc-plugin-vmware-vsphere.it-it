@@ -33,7 +33,7 @@ Utilizzare il formato `\https://<appliance-IP-address>:8080`
 +
 image:scpivs44_image31.png["Plug-in SnapCenter per l'interfaccia grafica di gestione di VMware vSphere"]
 
-. Nella sezione *Impostazioni di rete* della pagina *Impostazioni*, fare clic su *IPv4* o *IPv6*, quindi su *Modifica*.
+. Nella pagina *Impostazioni*, nella sezione *Impostazioni di rete*, fare clic su *IPv4* o *IPv6* indirizzo, quindi fare clic su *Modifica*.
 +
 Inserire le nuove informazioni e fare clic su *Save* (Salva).
 
@@ -46,4 +46,4 @@ Inserire le nuove informazioni e fare clic su *Save* (Salva).
 
 
 
-NOTE: Se si utilizzano sia IPv4 che IPv6, non è possibile rimuovere entrambe le impostazioni di rete. La rete rimanente deve specificare i campi Server DNS e domini di ricerca.
+NOTE: Se si utilizzano entrambi gli indirizzi IPv4 e IPv6, non è possibile rimuovere entrambe le impostazioni di rete. La rete rimanente deve specificare i campi Server DNS e domini di ricerca.

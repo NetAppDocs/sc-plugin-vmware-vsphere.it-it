@@ -16,6 +16,9 @@ summary: Le operazioni di backup vengono eseguite su tutte le risorse definite i
 [role="lead"]
 Le operazioni di backup vengono eseguite su tutte le risorse definite in un gruppo di risorse. Se un gruppo di risorse dispone di un criterio associato e di una pianificazione configurata, i backup vengono eseguiti automaticamente in base alla pianificazione.
 
+
+NOTE: Il backup di ASA R2 crea snapshot di gruppo di coerenza e esegue il provisioning del gruppo di coerenza primario se la risorsa specificata non è già in possesso.
+
 .Prima di iniziare
 È necessario aver creato un gruppo di risorse con un criterio allegato.
 

@@ -42,7 +42,7 @@ Implementa il plug-in SnapCenter per VMware vSphere nello stesso fuso orario di 
 . Nel browser, accedere a VMware vSphere vCenter.
 +
 
-NOTE: Per i client Web IPv6 HTML, è necessario utilizzare Chrome o Firefox.
+NOTE: Per i client Web HTML con indirizzo IPv6, è necessario utilizzare Chrome o Firefox.
 
 . Accedere alla pagina *VMware vCenter Single Sign-on*.
 . Nel riquadro del navigatore, fare clic con il pulsante destro del mouse su qualsiasi oggetto di inventario che sia un oggetto padre valido di una macchina virtuale, ad esempio un data center, un cluster o un host, e selezionare *Deploy OVF Template* per avviare la procedura guidata di distribuzione di VMware.
@@ -106,7 +106,7 @@ IMPORTANT: Annotare il nome utente e la password specificati. È necessario util
 ... Nella sezione *Setup IPv4 Network Properties*, immettere le informazioni di rete quali indirizzo IPv4, maschera di rete IPv4, gateway IPv4, DNS primario IPv4, DNS secondario IPv4, e IPv4 Cerca domini.
 ... Nella sezione *Setup IPv6 Network Properties* (Proprietà rete *), immettere le informazioni di rete quali l'indirizzo IPv6, la maschera di rete IPv6, il gateway IPv6, il DNS primario IPv6, il DNS secondario IPv6, e IPv6 Cerca domini.
 +
-Selezionare i campi IPv4 o IPv6, o entrambi, se appropriato. Se si utilizzano sia IPv4 che IPv6, è necessario specificare il DNS primario per uno solo di essi.
+Selezionare i campi indirizzo IPv4 o IPv6, o entrambi, se appropriato. Se si utilizzano entrambi gli indirizzi IPv4 e IPv6, specificare il DNS primario per uno solo di essi.
 
 +
 

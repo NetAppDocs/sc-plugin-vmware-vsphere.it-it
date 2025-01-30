@@ -73,7 +73,7 @@ Questa opzione utilizza le impostazioni e-mail configurate durante la configuraz
 
 
 
-. Esaminare il riepilogo, quindi fare clic su *fine*.
+. Rivedere il riepilogo, quindi fare clic su *fine*.
 +
 Prima di fare clic su *fine*, è possibile tornare a qualsiasi pagina della procedura guidata e modificare le informazioni.
 
@@ -150,7 +150,7 @@ I file e le cartelle da ripristinare sono elencati nella tabella file selezionat
 | Opzione | Descrizione 
 
 
-| Ripristinare il percorso | Immettere il percorso di condivisione UNC per il guest in cui verranno ripristinati i file selezionati. Esempio IPv4: `\\10.60.136.65\c$`Esempio IPv6: `\\fd20-8b1e-b255-832e--61.ipv6-literal.net\C\restore` 
+| Ripristinare il percorso | Immettere il percorso di condivisione UNC per il guest in cui verranno ripristinati i file selezionati. Esempio indirizzo IPv4: `\\10.60.136.65\c$` Indirizzo IPv6 esempio: `\\fd20-8b1e-b255-832e--61.ipv6-literal.net\C\restore` 
 
 
 | Se esistono file originali  a| 

@@ -28,10 +28,10 @@ Il plug-in SnapCenter per VMware vSphere riporta questi ruoli ai valori predefin
 | Ruolo | Descrizione 
 
 
-| Amministratore SCV | Fornisce tutti i privilegi nativi di vCenter Server e SnapCenter specifici necessari per eseguire tutte le attività di SnapCenter Plug-in per VMware vSphere. 
+| Amministratore SCV | Fornisce tutti i privilegi nativi di vCenter Server e SnapCenter specifici necessari per eseguire tutte le attività di SnapCenter Plug-in per VMware vSphere. A partire dalla versione SCV 6,1, a questo ruolo viene aggiunto un nuovo privilegio per creare una protezione secondaria. 
 
 
-| SCV di backup | Fornisce tutti i privilegi nativi di vCenter Server e SnapCenter specifici necessari per eseguire il backup degli oggetti vSphere (macchine virtuali e datastore). L'utente ha anche accesso al privilegio configure. L'utente non può ripristinare i backup. 
+| SCV di backup | Fornisce tutti i privilegi nativi di vCenter Server e SnapCenter specifici necessari per eseguire il backup degli oggetti vSphere (macchine virtuali e datastore). L'utente ha anche accesso al privilegio configure. L'utente non può ripristinare i backup. A partire dalla versione SCV 6,1, a questo ruolo viene aggiunto un nuovo privilegio per creare una protezione secondaria. 
 
 
 | Ripristino del file ospite SCV | Fornisce tutti i privilegi nativi di vCenter Server e SnapCenter specifici necessari per ripristinare file e cartelle guest. L'utente non può ripristinare macchine virtuali o VMDK. 

@@ -1,0 +1,25 @@
+---
+permalink: scv_releasenotes_whats_new.html 
+sidebar: sidebar 
+keywords: 'what"s new, release notes, scv, 6.1' 
+summary: Scopri le nuove funzionalità disponibili nel plug-in SnapCenter per VMware vSphere 6,1. 
+---
+= Novità del plug-in SnapCenter per VMware vSphere 6,1
+:allow-uri-read: 
+
+
+[role="lead"]
+*Supporto per VM e datastore VMFS su sistemi ASA R2*
+
+Il plug-in SnapCenter per VMware vSphere 6,1 supporta ora il provisioning di macchine virtuali (VM) e il datastore VMFS sui sistemi ASA R2. I sistemi ASA R2 forniscono una soluzione hardware e software unificata che crea un'esperienza semplificata specifica delle esigenze dei clienti SAN. Il plug-in SnapCenter per VMware vSphere 6,1 le funzionalità supportate per macchine virtuali, datastore e VMDK (formato disco macchina virtuale) su sistemi ASA R2 includono:
+
+* Provisioning di gruppo di coerenza per la protezione primaria
+* Backup basato su gruppo di coerenza
+* Clonazione dei flussi di lavoro
+* Ripristinare i flussi di lavoro
+* Provisioning di protezione secondario durante la creazione o la modifica del gruppo di risorse.
++
+
+NOTE: La protezione secondaria è supportata solo su ONTAP 9.16.1 e versioni successive
+
+

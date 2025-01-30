@@ -28,7 +28,7 @@ Se sei un nuovo utente SnapCenter, devi aggiungere le VM di storage a SnapCenter
 
 * Dopo aver implementato l'appliance virtuale, la scheda *Backup Jobs* nella dashboard potrebbe non essere caricata nei seguenti scenari:
 +
-** Si utilizza IPv4 e si dispone di due indirizzi IP per l'host VMware vSphere di SnapCenter. Di conseguenza, la richiesta di lavoro viene inviata a un indirizzo IP non riconosciuto dal server SnapCenter. Per evitare questo problema, aggiungere l'indirizzo IP che si desidera utilizzare, come indicato di seguito:
+** Si sta utilizzando l'indirizzo IPv4 e si dispone di due indirizzi IP per l'host VMware vSphere di SnapCenter. Di conseguenza, la richiesta di lavoro viene inviata a un indirizzo IP non riconosciuto dal server SnapCenter. Per evitare questo problema, aggiungere l'indirizzo IP che si desidera utilizzare, come indicato di seguito:
 +
 ... Accedere alla posizione in cui viene implementato il plug-in SnapCenter per VMware vSphere: `/opt/netapp/scvservice/standalone_aegis/etc`
 ... Aprire la file network- interface.properties.

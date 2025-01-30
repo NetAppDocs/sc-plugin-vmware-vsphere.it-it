@@ -136,7 +136,7 @@ Vengono controllate le seguenti operazioni nell'interfaccia utente della Admin C
 ** Modificare le credenziali di amministratore
 ** Modificare il fuso orario
 ** Modificare il server NTP
-** Modificare le impostazioni IPv4 / IPv6
+** Modificare le impostazioni degli indirizzi IPv4/IPv6
 
 
 * Configurazione

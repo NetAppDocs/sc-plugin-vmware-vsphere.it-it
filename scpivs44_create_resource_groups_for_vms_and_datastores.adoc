@@ -42,6 +42,10 @@ Tutte le macchine virtuali e i datastore, esclusi i datastore vVol, che hanno il
 +
 Tutti i vVol in una singola cartella vVol specificata. Se la cartella contiene una combinazione di macchine virtuali vVol e macchine virtuali tradizionali, il plug-in SnapCenter per VMware vSphere esegue il backup delle macchine virtuali vVol e ignora le macchine virtuali tradizionali.
 
+* Macchine virtuali e datastore su ASA R2
++
+Non è possibile combinare macchine virtuali e datastore ASA R2 con altre macchine virtuali e datastore.
+
 
 
 Per tutti i gruppi di risorse:
@@ -92,8 +96,6 @@ Sebbene sia possibile creare un gruppo di risorse senza un criterio di backup, l
 
 NOTE: Se si seleziona un criterio di backup con periodo di blocco snapshot, è necessario selezionare ONTAP 9.12.1 o versione successiva.
 
-
-
 * Controlli di compatibilità
 +
 SnapCenter esegue controlli di compatibilità quando si crea un gruppo di risorse.
@@ -101,7 +103,13 @@ SnapCenter esegue controlli di compatibilità quando si crea un gruppo di risors
 +
 <<Gestire gli errori del controllo di compatibilità>>
 
+* Creare una protezione secondaria per un gruppo di risorse
++
+La protezione secondaria consente di creare una relazione di replica per le risorse aggiunte al gruppo di risorse. Devi creare una relazione di SnapMirror basata su un gruppo di coerenza nel cluster preferito e nella SVM, utilizzando una policy specificata dal sistema primario. La protezione secondaria è supportata solo per datastore e macchine virtuali basati sul sistema ASA R2. Il peering dei cluster e il peering delle SVM devono essere preconfigurati. La protezione secondaria consente solo policy SnapMirror asincrone. È necessario fornire il suffisso del gruppo di coerenza quando si crea la protezione secondaria.
 
+
+
+La protezione secondaria consente di creare una relazione di replica per le risorse aggiunte al gruppo di risorse.
 
 .Fasi
 . Nel riquadro di navigazione sinistro del plug-in SCV, fare clic su *gruppi di risorse*, quindi selezionare *Crea* per avviare la procedura guidata.
@@ -144,6 +152,9 @@ Se si desidera aggiungere il suffisso "_Recent" all'ultima istantanea, seleziona
 
 
 NOTE: R `_recent` il backup viene creato per ogni policy associata a un gruppo di risorse. Pertanto, un gruppo di risorse con più policy avrà più policy `_recent` backup. Non rinominare manualmente `_recent` backup.
+
+
+NOTE: Il sistema di archiviazione ASA R2 non supporta la ridenominazione delle istantanee e di conseguenza le funzioni di ridenominazione delle istantanee recenti non sono supportate.
 
 
 
@@ -206,7 +217,7 @@ Le macchine virtuali di spanning non sono supportate per gli archivi dati FlexGr
 | Per utilizzare… | Eseguire questa operazione… 
 
 
-| Una policy esistente | Selezionare uno o più criteri dall'elenco. 
+| Una policy esistente | Selezionare uno o più criteri dall'elenco. La protezione secondaria è applicabile alle policy nuove ed esistenti in cui sono stati selezionati sia gli aggiornamenti SnapMirror che SnapVault. 
 
 
 | Una nuova policy  a| 
@@ -218,10 +229,32 @@ Le macchine virtuali di spanning non sono supportate per gli archivi dati FlexGr
 +
 In Linked Mode, l'elenco include i criteri in tutti i vCenter collegati. È necessario selezionare un criterio che si trova sullo stesso vCenter del gruppo di risorse.
 
-.. Nella pagina *programmi*, configurare la pianificazione del backup per ogni policy selezionata.
-+
-image:scpivs44_image18.png["Finestra di creazione del gruppo di risorse"]
+.. Nella pagina *protezione secondaria*, viene visualizzato l'elenco delle risorse selezionate con il relativo stato di protezione. Per proteggere le risorse non protette, selezionare dal menu a discesa il tipo di policy di replica, il suffisso del gruppo di coerenza, il cluster di destinazione e la SVM di destinazione. Alla creazione del gruppo di risorse viene creato un lavoro separato per la protezione secondaria, che può essere visualizzato nella finestra di monitoraggio dei lavori.
 
+
+
+
+|===
+| Campi | Descrizione 
+
+
+| Nome del criterio di replica | Nome del criterio SnapMirror. Sono supportati solo i criteri secondari *Asynchronous* e *Mirror e Vault*. 
+
+
+| Suffisso del gruppo di coerenza | Impostazione di destinazione utilizzata per aggiungere al gruppo di coerenza primario il nome del gruppo di coerenza di destinazione. Ad esempio: Se il nome del gruppo di coerenza primario è sccg_2024-11-28_120918 e si immette _dest come suffisso, il gruppo di coerenza secondario verrà creato come sccg_2024-11-28_120918_dest. Il suffisso è applicabile solo ai gruppi di coerenza non protetti. 
+
+
+| Cluster di destinazione | Per tutte le unità di stoccaggio non protette, il distributore idraulico visualizza i nomi dei cluster sottoposti a peering nel menu a discesa. Se lo storage aggiunto a SCV rientra nell'ambito della SVM, a causa del limite ONTAP viene visualizzato l'ID del cluster invece del nome. 
+
+
+| SVM di destinazione | Per tutte le unità di storage non protette, SCV visualizza i nomi delle SVM sottoposte a peering. Cluster e SVM vengono scelti automaticamente quando viene selezionata una delle unità storage che fanno parte del gruppo di coerenza. Lo stesso vale per tutte le altre unità di archiviazione dello stesso gruppo di coerenza. 
+
+
+| Risorse secondarie protette | Per tutte le unità storage protette delle risorse aggiunte nella pagina delle risorse, vengono visualizzati dettagli delle relazioni secondarie come cluster, SVM e tipo di replica. 
+|===
+image:secondary_protection.png["Finestra di creazione del gruppo di risorse"]
+
+. Nella pagina *programmi*, configurare la pianificazione del backup per ogni policy selezionata.
 +
 Nel campo Starting hour (ora di inizio), immettere una data e un'ora diverse da zero. La data deve essere nel formato `day/month/year`.
 
@@ -234,7 +267,7 @@ Quando si seleziona un numero di giorni in ogni campo, i backup vengono eseguiti
 +
 link:scpivs44_modify_the_time_zones.html["Modificare i fusi orari per i backup"].
 
-.. Esaminare il riepilogo, quindi fare clic su *fine*.
+. Rivedere il riepilogo, quindi fare clic su *fine*. A partire dalla protezione secondaria del distributore idraulico n°6,1 per i sistemi ASA R2, le risorse sono visibili nella pagina di riepilogo.
 +
 Prima di fare clic su *fine*, è possibile tornare a qualsiasi pagina della procedura guidata e modificare le informazioni.
 
@@ -244,8 +277,6 @@ Dopo aver fatto clic su *fine*, il nuovo gruppo di risorse viene aggiunto all'el
 +
 
 NOTE: Se l'operazione di quiesce non riesce per una qualsiasi delle macchine virtuali nel backup, il backup viene contrassegnato come non coerente con la macchina virtuale anche se la policy selezionata ha la coerenza della macchina virtuale selezionata. In questo caso, è possibile che alcune macchine virtuali siano state correttamente rinunciate.
-
-
 
 
 

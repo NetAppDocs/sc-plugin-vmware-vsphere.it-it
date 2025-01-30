@@ -21,7 +21,7 @@ Il link:scpivs44_download_the_ova_open_virtual_appliance.html["Scarica Open Virt
 . Nel browser, accedere a VMware vSphere vCenter.
 +
 
-NOTE: Per i client Web IPv6 HTML, è necessario utilizzare Chrome o Firefox.
+NOTE: Per i client Web HTML con indirizzo IPv6, è necessario utilizzare Chrome o Firefox.
 
 . Accedere alla pagina *VMware vCenter Single Sign-on*.
 . Nel riquadro di navigazione, fare clic con il pulsante destro del mouse su qualsiasi oggetto di inventario che sia un oggetto padre valido di una macchina virtuale, ad esempio un data center, una cartella, un cluster o un host, quindi selezionare *Deploy OVF Template* (implementa modello OVF) per avviare la procedura guidata di implementazione di VMware.

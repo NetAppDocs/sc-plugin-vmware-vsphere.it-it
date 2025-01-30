@@ -52,7 +52,7 @@ Se si desidera modificare il nome di un gruppo di risorse, non utilizzare i segu
 . Nel riquadro di navigazione sinistro del plug-in SCV, fare clic su *gruppi di risorse*, quindi selezionare un gruppo di risorse e fare clic su *Modifica*.
 . Nell'elenco a sinistra della procedura guidata *Modifica gruppo di risorse*, fare clic sulla categoria che si desidera modificare e immettere le modifiche.
 +
-È possibile apportare modifiche a più categorie.
+È possibile apportare modifiche a più categorie. In questa opzione è anche possibile modificare le risorse secondarie protette.
 
 . Fare clic su *Avanti* fino a visualizzare la pagina Riepilogo, quindi fare clic su *fine*.
 
