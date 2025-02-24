@@ -14,7 +14,7 @@ summary: 'Prima di implementare l"appliance virtuale, è necessario conoscere i 
 
 
 [role="lead"]
-Prima di implementare l'appliance virtuale, è necessario conoscere i requisiti di implementazione. I requisiti di distribuzione sono elencati nelle tabelle seguenti.
+Prima di iniziare a implementare il plug-in SnapCenter per VMware vSphere (SCV), è necessario conoscere i seguenti requisiti.
 
 
 
@@ -22,21 +22,21 @@ Prima di implementare l'appliance virtuale, è necessario conoscere i requisiti 
 
 Prima di iniziare l'implementazione del plug-in SnapCenter per VMware vSphere (SCV), è necessario conoscere i requisiti dell'host.
 
-* Il plug-in SnapCenter per VMware vSphere viene implementato come VM Linux indipendentemente dall'utilizzo del plug-in per la protezione dei dati su sistemi Windows o Linux.
+* Il plug-in SnapCenter per VMware vSphere viene implementato come macchina virtuale Linux indipendentemente dal fatto che venga utilizzato per proteggere i dati sui sistemi Windows o Linux.
 * È necessario implementare il plug-in SnapCenter per VMware vSphere su vCenter Server.
 +
-Le pianificazioni di backup vengono eseguite nel fuso orario in cui viene implementato il plug-in SnapCenter per VMware vSphere. VCenter riporta i dati nel fuso orario in cui si trova vCenter. Pertanto, se il plug-in SnapCenter per VMware vSphere e vCenter si trova in fusi orari diversi, i dati del plug-in SnapCenter per la dashboard di VMware vSphere potrebbero non essere gli stessi dei dati dei report.
+Le pianificazioni di backup vengono eseguite nel fuso orario in cui viene implementato il plug-in SnapCenter per VMware vSphere e vCenter riporta i dati nel fuso orario in cui si trova. Pertanto, se il plug-in SnapCenter per VMware vSphere e vCenter si trova in fusi orari diversi, i dati del plug-in SnapCenter per la dashboard di VMware vSphere potrebbero non essere gli stessi dei dati dei report.
 
-* Non è necessario distribuire il plug-in SnapCenter per VMware vSphere in una cartella con un nome con caratteri speciali.
+* Non è necessario distribuire il plug-in SnapCenter per VMware vSphere in una cartella con un nome che contiene caratteri speciali.
 +
 Il nome della cartella non deve contenere i seguenti caratteri speciali:@ n.%^&()_+{}';.,*?"<>|
 
 * Devi implementare e registrare un'istanza separata e univoca del plug-in SnapCenter per VMware vSphere per ogni vCenter Server.
 +
-** Ogni vCenter Server, che sia o meno in modalità collegata, deve essere associato a un'istanza separata del plug-in SnapCenter per VMware vSphere.
+** Ogni vCenter Server, in modalità collegata o meno, deve essere abbinato a un'istanza separata del plug-in SnapCenter per VMware vSphere.
 ** Ogni istanza del plug-in SnapCenter per VMware vSphere deve essere implementata come una VM Linux separata.
 +
-Ad esempio, se si desidera eseguire backup da sei istanze diverse di vCenter Server, è necessario implementare il plug-in SnapCenter per VMware vSphere su sei host e ciascun vCenter Server deve essere associato a un'istanza univoca del plug-in SnapCenter per VMware vSphere.
+Ad esempio, si supponga di voler eseguire backup da sei istanze diverse di vCenter Server. In tal caso, è necessario implementare il plug-in SnapCenter per VMware vSphere su sei host e associare ciascun vCenter Server a un'istanza univoca del plug-in SnapCenter per VMware vSphere.
 
 
 
@@ -88,7 +88,7 @@ Ripristino di una macchina virtuale completa quando uno o più VMDK si trovano s
 | ONTAP | Uno di questi: SnapMirror o SnapVault (per la protezione dei dati secondari indipendentemente dal tipo di relazione) 
 
 
-| Prodotti aggiuntivi | VSphere Standard, Enterprise o Enterprise Plus È necessaria Una licenza vSphere per eseguire operazioni di ripristino che utilizzano Storage vMotion. Le licenze vSphere Essentials o Essentials Plus non includono Storage vMotion. 
+| Prodotti aggiuntivi | VSphere Standard, Enterprise o Enterprise Plus per eseguire operazioni di ripristino con Storage vMotion è necessaria Una licenza vSphere. Le licenze vSphere Essentials o Essentials Plus non includono Storage vMotion. 
 
 
 | Destinazioni principali | Standard SnapCenter: Necessario per eseguire la protezione basata sulle applicazioni su VMware SnapRestore: Necessario per eseguire operazioni di ripristino solo per macchine virtuali e datastore VMware: Utilizzato solo per operazioni di montaggio e collegamento su macchine virtuali e datastore VMware 
@@ -145,9 +145,6 @@ I requisiti software minimi per il supporto del protocollo NVMe over TCP e NVMe 
 | Elemento | Requisiti 
 
 
-| Sistema operativo | Linux 
-
-
 | Conteggio CPU consigliato | 8 core 
 
 
@@ -171,7 +168,7 @@ I requisiti software minimi per il supporto del protocollo NVMe over TCP e NVMe 
 
 
 | Plug-in SnapCenter per porta VMware vSphere  a| 
-8144 (HTTPS), bidirezionale: La porta viene utilizzata per le comunicazioni dal client VMware vSphere e dal server SnapCenter. 8080 bidirezionale questa porta viene utilizzata per gestire le appliance virtuali.
+8144 (HTTPS), la porta bidirezionale viene utilizzata per le comunicazioni dal client VMware vSphere e dal server SnapCenter. 8080 bidirezionale questa porta viene utilizzata per gestire le appliance virtuali.
 
 Nota: È supportata la porta personalizzata per l'aggiunta dell'host distributore idraulico a SnapCenter.
 
@@ -180,13 +177,13 @@ Nota: È supportata la porta personalizzata per l'aggiunta dell'host distributor
 | Porta di VMware vSphere vCenter Server | Se si proteggono le macchine virtuali vVol, è necessario utilizzare la porta 443. 
 
 
-| Porta del cluster di storage o della VM di storage | 443 (HTTPS), bidirezionale 80 (HTTP), bidirezionale la porta viene utilizzata per la comunicazione tra l'appliance virtuale e la VM di storage o il cluster che contiene la VM di storage. 
+| Porta del cluster di storage o della VM di storage | 443 (HTTPS), 80 bidirezionale (HTTP), la porta viene utilizzata per comunicare tra l'appliance virtuale e la macchina virtuale di storage o il cluster contenente la macchina virtuale di storage. 
 |===
 
 
 == Configurazioni supportate
 
-Ogni istanza del plug-in supporta un solo vCenter Server. Sono supportati vCenter in modalità Linked. Più istanze di plug-in possono supportare lo stesso server SnapCenter, come illustrato nella figura seguente.
+Ogni istanza del plug-in supporta un solo vCenter Server, che è in modalità collegata. Tuttavia, più istanze plug-in possono supportare lo stesso server SnapCenter, come illustrato nella figura seguente.
 
 image:scpivs44_image4.png["Rappresentazione grafica della configurazione supportata"]
 
@@ -194,7 +191,7 @@ image:scpivs44_image4.png["Rappresentazione grafica della configurazione support
 
 == Privilegi RBAC richiesti
 
-L'account amministratore di vCenter deve disporre dei privilegi vCenter richiesti, come indicato nella tabella seguente.
+L'account amministratore di vCenter deve avere il vCenter Privileges richiesto elencato nella tabella seguente.
 
 |===
 | Per eseguire questa operazione… | È necessario disporre di questi privilegi vCenter… 
