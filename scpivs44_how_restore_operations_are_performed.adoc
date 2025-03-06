@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: scpivs44_how_restore_operations_are_performed.html 
 keywords:  
-summary: 'Per gli ambienti VMFS, il plug-in SnapCenter per VMware vSphere utilizza operazioni di cloning e montaggio con Storage VMotion per eseguire operazioni di ripristino. Per gli ambienti NFS, il plug-in utilizza SFSR (Single file SnapRestore) ONTAP nativo per fornire una maggiore efficienza per la maggior parte delle operazioni di ripristino. Per le macchine virtuali vVol, il plug-in utilizza il ripristino snapshot a file singolo di ONTAP e il ripristino SnapMirror per le operazioni di ripristino.' 
+summary: 'Per gli ambienti VMFS, il plug-in SnapCenter per VMware vSphere utilizza operazioni di cloning e montaggio con Storage VMotion per eseguire operazioni di ripristino. Per gli ambienti NFS, il plug-in utilizza SFSR (Single file SnapRestore) ONTAP nativo per fornire una maggiore efficienza per la maggior parte delle operazioni di ripristino. Per le macchine virtuali vVol, il plug-in utilizza il ripristino delle snapshot dei singoli file di ONTAP e il ripristino di SnapMirror per le operazioni di ripristino.' 
 ---
 = Come vengono eseguite le operazioni di ripristino
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 'Per gli ambienti VMFS, il plug-in SnapCenter per VMware vSphere utiliz
 
 
 [role="lead"]
-Per gli ambienti VMFS, il plug-in SnapCenter per VMware vSphere utilizza operazioni di cloning e montaggio con Storage VMotion per eseguire operazioni di ripristino. Per gli ambienti NFS, il plug-in utilizza SFSR (Single file SnapRestore) ONTAP nativo per fornire una maggiore efficienza per la maggior parte delle operazioni di ripristino. Per le macchine virtuali vVol, il plug-in utilizza il ripristino snapshot di file singolo (SFSR ONTAP) e il ripristino SnapMirror di ONTAP per le operazioni di ripristino. La seguente tabella elenca le modalità di esecuzione delle operazioni di ripristino.
+Per gli ambienti VMFS, il plug-in SnapCenter per VMware vSphere utilizza operazioni di cloning e montaggio con Storage VMotion per eseguire operazioni di ripristino. Per gli ambienti NFS, il plug-in utilizza SFSR (Single file SnapRestore) ONTAP nativo per fornire una maggiore efficienza per la maggior parte delle operazioni di ripristino. Per le macchine virtuali vVol, il plug-in utilizza il ripristino delle snapshot dei file singoli di ONTAP (ONTAP SFSR) e il ripristino di SnapMirror per le operazioni di ripristino. La seguente tabella elenca le modalità di esecuzione delle operazioni di ripristino.
 
 |===
 | Operazioni di ripristino | Da | Eseguito con 

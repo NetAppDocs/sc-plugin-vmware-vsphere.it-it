@@ -84,9 +84,9 @@ Se si utilizza ONTAP 9,8 o ONTAP 9,9, dopo uno switchover o uno switchback è ne
 +
 In ONTAP 9.8, i backup si blocchano dopo lo switchback. Questo problema è stato risolto in ONTAP 9.9.
 
-* Ottimizzazione delle istantanee
+* Ottimizzazione delle snapshot
 +
-Per ottimizzare le snapshot, è necessario raggruppare le macchine virtuali e i datastore associati allo stesso volume in un gruppo di risorse.
+Per ottimizzare le snapshot, è necessario raggruppare le macchine virtuali e gli archivi dati associati allo stesso volume in un unico gruppo di risorse.
 
 * Policy di backup
 +
@@ -147,7 +147,7 @@ Questo è il modo più semplice per creare un gruppo di risorse. Tuttavia, è an
 | Oggetto dell'e-mail | Inserire l'oggetto desiderato per le e-mail di notifica. 
 
 
-| Nome Snapshot più recente  a| 
+| Nome istantanea più recente  a| 
 Se si desidera aggiungere il suffisso "_Recent" all'ultima istantanea, selezionare questa casella. Il suffisso "_Recent" sostituisce la data e l'ora.
 
 
@@ -158,15 +158,11 @@ NOTE: Il sistema di archiviazione ASA R2 non supporta la ridenominazione delle i
 
 
 
-| Formato Snapshot personalizzato  a| 
+| Formato snapshot personalizzato  a| 
 Se si desidera utilizzare un formato personalizzato per i nomi delle istantanee, selezionare questa casella e immettere il formato del nome.
 
 *** Per impostazione predefinita, questa funzione è disattivata.
-*** I nomi predefiniti delle istantanee utilizzano il formato `<ResourceGroup>_<Date-TimeStamp>`
-Tuttavia, è possibile specificare un formato personalizzato utilizzando le variabili: €ResourceGroup, €Policy, €HostName, €ScheduleType e €CustomText. Utilizzare l'elenco a discesa nel campo Custom name (Nome personalizzato) per selezionare le variabili da utilizzare e l'ordine di utilizzo.
-Se si seleziona CustomText, il formato del nome è `<CustomName>_<Date-TimeStamp>`. Inserire il testo personalizzato nella casella aggiuntiva fornita.
-[NOTA]:
-Se si seleziona anche il suffisso "_Recent", è necessario assicurarsi che i nomi delle istantanee personalizzate siano univoci nell'archivio dati, pertanto è necessario aggiungere al nome le variabili $ResourceGroup e $Policy.
+*** I nomi predefiniti delle snapshot utilizzano il formato `<ResourceGroup>_<Date-TimeStamp>`, tuttavia è possibile specificare un formato personalizzato utilizzando le variabili $ResourceGroup, $Policy, $hostname, $ScheduleType e $CustomText. Utilizzare l'elenco a discesa nel campo Custom name (Nome personalizzato) per selezionare le variabili da utilizzare e l'ordine di utilizzo. Se si seleziona $CustomText, il formato del nome è `<CustomName>_<Date-TimeStamp>`. Inserire il testo personalizzato nella casella aggiuntiva fornita. [NOTA]: Se si seleziona anche il suffisso "_Recent", è necessario assicurarsi che i nomi personalizzati degli snapshot siano univoci nell'archivio dati, pertanto è necessario aggiungere al nome le variabili $ResourceGroup e $Policy.
 *** Caratteri speciali per i caratteri speciali nei nomi, seguire le stesse linee guida fornite per il campo Nome.
 
 

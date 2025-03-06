@@ -41,11 +41,11 @@ Il plug-in SnapCenter per VMware vSphere include un database MySQL con i metadat
 SnapCenter sfrutta in maniera nativa il plug-in SnapCenter per VMware vSphere per tutte le operazioni di protezione dei dati su VMDK, mapping dei dispositivi raw (RDM) e datastore NFS. Una volta implementata l'appliance virtuale, il plug-in gestisce tutte le interazioni con vCenter. Il plug-in SnapCenter per VMware vSphere supporta tutti i plug-in SnapCenter basati sulle applicazioni.
 
 +
-SnapCenter non supporta snapshot singole di database e VM insieme. I backup di VM e database devono essere pianificati ed eseguiti in maniera indipendente, creando Snapshot separate, anche se i database e le VM sono ospitati nello stesso volume. Pianifica i backup dell'applicazione di database utilizzando l'interfaccia grafica di SnapCenter; pianifica i backup di macchine virtuali e datastore utilizzando l'interfaccia grafica del client VMware vSphere.
+SnapCenter non supporta snapshot singole di database e macchine virtuali insieme. I backup di VM e database devono essere pianificati ed eseguiti in maniera indipendente, creando snapshot separate, anche se i database e le VM sono ospitati nello stesso volume. Pianifica i backup dell'applicazione di database utilizzando l'interfaccia grafica di SnapCenter; pianifica i backup di macchine virtuali e datastore utilizzando l'interfaccia grafica del client VMware vSphere.
 
 * Per snapshot coerenti con le macchine virtuali sono necessari tool VMware
 +
-Se i tool VMware non sono installati e in esecuzione, il file system non viene dismesso e viene creata un'istantanea coerente con il crash.
+Se gli strumenti VMware non sono installati e in esecuzione, il file system non viene disattivato e viene creato uno snapshot coerente con il crash.
 
 * VMware Storage vMotion è necessario per le operazioni di ripristino in ambienti SAN (VMFS)
 +

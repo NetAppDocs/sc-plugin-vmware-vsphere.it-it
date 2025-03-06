@@ -21,10 +21,10 @@ summary: È necessario creare policy di backup prima di utilizzare il plug-in Sn
 * È necessario configurare le relazioni di storage secondario.
 +
 ** Se si stanno replicando snapshot in uno storage secondario mirror o vault, è necessario configurare le relazioni e assegnare le VM di storage all'amministratore SnapCenter sia per i volumi di origine che di destinazione.
-** Per trasferire correttamente le Snapshot sullo storage secondario per le relazioni Version-FlexibleMirror in un datastore NFS o VMFS, verificare che il tipo di policy SnapMirror sia Asynchronous Mirror e che l'opzione "All_source_Snapshots" sia selezionata.
-** Quando il numero di istantanee sullo storage secondario (mirror-vault) raggiunge il limite massimo, l'attività di registrazione del backup e di applicazione della conservazione nell'operazione di backup non riesce e viene visualizzato il seguente errore: `This Snapshot is currently used as a reference Snapshot by one or more SnapMirror relationships. Deleting the Snapshot can cause future SnapMirror operations to fail.`
+** Per trasferire correttamente le snapshot nello storage secondario per le relazioni Version-FlexibleMirror in un datastore NFS o VMFS, verificare che il tipo di policy SnapMirror sia Asynchronous Mirror e che l'opzione "All_source_Snapshots" sia selezionata.
+** Quando il numero di snapshot sullo storage secondario (mirror-vault) raggiunge il limite massimo, l'attività di registrazione del backup e di applicazione della conservazione nell'operazione di backup non riesce e viene visualizzato il seguente errore: `This snapshot is currently used as a reference snapshot by one or more SnapMirror relationships. Deleting the snapshot can cause future SnapMirror operations to fail.`
 +
-Per correggere questo problema, configurare la policy di conservazione SnapMirror per lo storage secondario in modo da evitare di raggiungere il limite massimo di Snapshot.
+Per correggere questo problema, configurare il criterio di conservazione SnapMirror per lo storage secondario in modo da evitare di raggiungere il limite massimo di snapshot.
 
 +
 Per informazioni sulle modalità di assegnazione delle risorse agli utenti da parte degli amministratori, fare riferimento alla sezione https://docs.netapp.com/us-en/snapcenter/concept/concept_types_of_role_based_access_control_in_snapcenter.html["Informazioni SnapCenter sull'utilizzo del controllo degli accessi basato sui ruoli"^].
@@ -56,7 +56,7 @@ La maggior parte dei campi presenti in queste pagine della procedura guidata son
 .Fasi
 . Nel riquadro di navigazione sinistro del plug-in SCV, fare clic su *Criteri*.
 . Nella pagina *Criteri*, selezionare *Crea* per avviare la procedura guidata.
-. Nella pagina *New Backup Policy*, selezionare il server vCenter che utilizzerà il criterio, quindi immettere il nome del criterio e una descrizione.
+. Nella pagina *New Backup Policy* (nuovo criterio di backup), immettere il nome del criterio e una descrizione.
 +
 ** Linked mode (modalità collegata
 +
@@ -75,11 +75,15 @@ Non utilizzare i seguenti caratteri speciali in VM, datastore, cluster, policy, 
 +
 Il criterio specifica solo la frequenza di backup. La pianificazione di protezione specifica per il backup viene definita nel gruppo di risorse. Pertanto, due o più gruppi di risorse possono condividere la stessa policy e la stessa frequenza di backup, ma hanno diverse pianificazioni di backup.
 
-. Selezionare la casella di controllo *periodo di blocco* per attivare il blocco delle istantanee. È possibile selezionare il periodo di blocco dell'istantanea come giorni/mesi/anni.
+. Selezionare la casella di controllo *periodo di blocco* per attivare il blocco delle istantanee. È possibile selezionare i periodi di blocco dello snapshot primario e secondario come giorni/mesi/anni.
++
+
+NOTE: Indipendentemente dal valore di conservazione impostato nel criterio ONTAP SnapMirror, la copia dello snapshot secondario non viene eliminata prima del periodo di blocco dello snapshot secondario specificato.
+
 . Specificare le impostazioni di conservazione.
 +
 
-IMPORTANT: Se si prevede di attivare la replica SnapVault, è necessario impostare il numero di conservazione su 2 backup o su un valore superiore. Se si imposta il conteggio di conservazione su 1 backup da mantenere, l'operazione di conservazione potrebbe non riuscire. Questo perché il primo Snapshot è lo Snapshot di riferimento per la relazione di SnapVault fino a quando il più recente Snapshot non viene replicato sulla destinazione.
+IMPORTANT: Se si prevede di attivare la replica SnapVault, è necessario impostare il numero di conservazione su 2 backup o su un valore superiore. Se si imposta il conteggio di conservazione su 1 backup da mantenere, l'operazione di conservazione potrebbe non riuscire. Questo perché il primo snapshot è lo snapshot di riferimento per la relazione SnapVault fino a quando lo snapshot più recente non viene replicato sulla destinazione.
 
 +
 
@@ -114,8 +118,7 @@ NOTE: Questa opzione è supportata per i datastore nei volumi FlexGroup nel plug
 
 
 | Etichetta Snapshot  a| 
-Immettere un'etichetta opzionale personalizzata da aggiungere alle Snapshot SnapVault e SnapMirror create con questa policy.
-L'etichetta Snapshot consente di distinguere le istantanee create con questa policy da altre istantanee sul sistema di storage secondario.
+Immettere un'etichetta opzionale personalizzata da aggiungere agli snapshot SnapVault e SnapMirror creati con questo criterio. L'etichetta consente di distinguere le snapshot create con questa policy da quelle presenti nel sistema di storage secondario.
 
 
 NOTE: È consentito un massimo di 31 caratteri per le etichette delle istantanee.
@@ -136,7 +139,7 @@ Questa opzione non è supportata per vVol. Per le VM vVol, vengono eseguiti solo
 IMPORTANT: Per eseguire backup coerenti con le macchine virtuali, è necessario disporre degli strumenti VMware in esecuzione sulla macchina virtuale. Se gli strumenti VMware non sono in esecuzione, viene eseguito un backup coerente con il crash.
 
 
-NOTE: Quando si seleziona la casella coerenza delle macchine virtuali, le operazioni di backup potrebbero richiedere più tempo e più spazio di storage. In questo scenario, le macchine virtuali vengono prima bloccate, quindi VMware esegue uno snapshot coerente delle macchine virtuali, quindi SnapCenter esegue l'operazione di backup e le operazioni delle macchine virtuali vengono ripristinati. La memoria guest delle macchine virtuali non è inclusa nelle istantanee della coerenza delle macchine virtuali.
+NOTE: Quando si seleziona la casella coerenza delle macchine virtuali, le operazioni di backup potrebbero richiedere più tempo e più spazio di storage. In questo scenario, le macchine virtuali vengono prima bloccate, quindi VMware esegue uno snapshot coerente delle macchine virtuali, quindi SnapCenter esegue l'operazione di backup e le operazioni delle macchine virtuali vengono ripristinati. La memoria guest delle VM non è inclusa negli snapshot di coerenza delle VM.
 
 
 

@@ -65,7 +65,7 @@ Un'operazione di ripristino potrebbe non riuscire se il livello di storage di Fa
 . Selezionare la VM eliminata dall'elenco di backup e fare clic su *Restore* (Ripristina).
 . Nella procedura guidata *Restore*, nella pagina *Select Backup* (Seleziona backup), selezionare la copia di backup da cui si desidera eseguire il ripristino.
 +
-È possibile cercare un nome di backup specifico o un nome di backup parziale oppure filtrare l'elenco di backup facendo clic sull'icona del filtro e selezionando una data e un intervallo di tempo, selezionando se si desidera che i backup contengano VMware Snapshots, se si desidera montare i backup e la posizione. Fare clic su *OK* per tornare alla procedura guidata.
+È possibile cercare un nome di backup specifico o un nome di backup parziale oppure filtrare l'elenco di backup facendo clic sull'icona del filtro e selezionando una data e un intervallo di tempo, selezionando se si desidera eseguire i backup che contengono snapshot VMware, se si desidera eseguire i backup montati e la posizione. Fare clic su *OK* per tornare alla procedura guidata.
 
 . Nella pagina *Seleziona ambito*, selezionare *intera macchina virtuale* nel campo *Ripristina ambito*, quindi selezionare la posizione di ripristino, quindi immettere le informazioni sull'host ESXi di destinazione in cui deve essere montato il backup.
 +

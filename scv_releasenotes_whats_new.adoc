@@ -23,3 +23,7 @@ Il plug-in SnapCenter per VMware vSphere 6,1 supporta ora il provisioning di mac
 NOTE: La protezione secondaria è supportata solo su ONTAP 9.16.1 e versioni successive
 
 
+
+*Supporto per le istantanee antimanomissione secondarie (TPS)*
+
+Il plug-in SnapCenter per VMware vSphere introduce il supporto per il TPS secondario, garantendo che le copie snapshot secondarie vengano protette dalla cancellazione o dall'alterazione da parte di hacker o amministratori fuori controllo e rendendole disponibili anche dopo un attacco.

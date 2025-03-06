@@ -14,15 +14,20 @@ summary: Quando si prepara il backup o il ripristino di una macchina virtuale o 
 
 
 [role="lead"]
-Quando si prepara il backup o il ripristino di una macchina virtuale o di un datastore, potrebbe essere necessario visualizzare tutti i backup disponibili per tale risorsa e i relativi dettagli.
+Durante la preparazione al backup o al ripristino di una VM o di un datastore, potrebbe essere necessario visualizzare tutti i backup disponibili per tale risorsa e visualizzare i dettagli di tali backup.
 
 .A proposito di questa attività
-L'esplorazione di grandi cartelle di file, ad esempio 10.000 cartelle di file, potrebbe richiedere uno o più minuti la prima volta. Le sessioni di navigazione successive richiedono meno tempo.
+La ricerca di cartelle di file di grandi dimensioni, ad esempio 10k cartelle di file, potrebbe richiedere uno o più minuti la prima volta. Le sessioni di navigazione successive richiedono meno tempo.
 
 .Fasi
-. Fare clic su *Menu* e selezionare l'opzione di menu *host e cluster*, quindi selezionare una macchina virtuale, selezionare la scheda *Configura*, quindi fare clic su *Backup* nella sezione *plug-in SnapCenter per VMware vSphere*.
+. Accedere a vCenter Server.
+. Accedere alla pagina *inventario* e selezionare un archivio dati o una macchina virtuale.
+. Nel riquadro di destra, selezionare *Configura* > *Plug-in SnapCenter per VMware vSphere* > *Backup*.
 +
-image:scv50_image1.png["Interfaccia utente del client vSphere"]
+image:backup-view.png["Vista Backup"]
 
-. Fare clic sul backup che si desidera visualizzare.
++
+Se l'opzione *Enable Secondary Snapshot locking* (Abilita blocco snapshot secondario) non è selezionata durante la fase di creazione dei criteri, per impostazione predefinita viene utilizzato il valore impostato per l'opzione *Enable Primary Snapshot locking* (Abilita blocco snapshot primario). Nell'elenco Backup, il trattino nel campo *scadenza blocco istantanea secondaria* indica che i periodi di blocco primario e secondario sono identici.
+
+. Selezionare il backup che si desidera visualizzare.
 

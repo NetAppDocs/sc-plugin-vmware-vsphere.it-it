@@ -67,7 +67,7 @@ IMPORTANT: Se è necessario utilizzare un account che non sia l'account amminist
 
 * È necessario conoscere la snapshot di backup e VMDK da cui eseguire il ripristino.
 +
-Il plug-in SnapCenter per VMware vSphere non supporta la ricerca di file o cartelle da ripristinare. Pertanto, prima di iniziare è necessario conoscere la posizione dei file o delle cartelle rispetto all'istantanea e al VMDK corrispondente.
+Il plug-in SnapCenter per VMware vSphere non supporta la ricerca di file o cartelle da ripristinare. Pertanto, prima di iniziare è necessario conoscere la posizione dei file o delle cartelle rispetto allo snapshot e al VMDK corrispondente.
 
 * Il disco virtuale da collegare deve trovarsi in un backup SnapCenter.
 +
