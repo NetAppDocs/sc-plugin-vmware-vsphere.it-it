@@ -43,7 +43,7 @@ La macchina virtuale che si desidera ripristinare non deve trovarsi in uno stato
 . Nel riquadro sinistro del navigatore, fare clic con il pulsante destro del mouse su una macchina virtuale, quindi selezionare *Plug-in SnapCenter per VMware vSphere* nell'elenco a discesa, quindi selezionare *Ripristina* nell'elenco a discesa secondario.
 . Nella procedura guidata *Restore*, nella pagina Select Backup (Seleziona backup), selezionare la copia di backup da cui si desidera eseguire il ripristino.
 +
-È possibile cercare un nome di backup specifico o un nome di backup parziale oppure filtrare l'elenco di backup facendo clic sull'icona del filtro e selezionando una data e un intervallo di tempo, selezionando se si desidera eseguire i backup che contengono snapshot VMware, se si desidera eseguire i backup montati e la posizione principale o secondaria. Selezionare *OK* per tornare alla procedura guidata.
+È possibile cercare un nome di backup specifico o un nome di backup parziale oppure filtrare l'elenco di backup selezionando l'icona del filtro e selezionando una data e un intervallo di tempo, selezionando se si desidera eseguire i backup che contengono snapshot VMware, se si desidera eseguire i backup montati e la posizione principale o secondaria. Selezionare *OK* per tornare alla procedura guidata.
 
 . Nella pagina *Select scope* (Seleziona ambito), selezionare la destinazione di ripristino.
 +
@@ -58,6 +58,6 @@ La macchina virtuale che si desidera ripristinare non deve trovarsi in uno stato
 |===
 . Nella pagina *Seleziona posizione*, selezionare lo snapshot che si desidera ripristinare (primario o secondario).
 . Esaminare la pagina Riepilogo e selezionare *fine*.
-. Facoltativo: Monitorare l'avanzamento dell'operazione facendo clic su *Recent Tasks* (attività recenti) nella parte inferiore della schermata.
+. Opzionale: Monitorare l'avanzamento dell'operazione selezionando *attività recenti* nella parte inferiore dello schermo.
 . Aggiornare la schermata per visualizzare le informazioni aggiornate.
 

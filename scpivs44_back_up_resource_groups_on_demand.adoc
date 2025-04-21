@@ -32,7 +32,7 @@ Nelle versioni precedenti di Virtual Storage Console (VSC), era possibile esegui
 . Nel riquadro di navigazione sinistro del plug-in SCV, selezionare *gruppi di risorse*, quindi selezionare un gruppo di risorse, quindi selezionare image:scpivs44_image38.png["Icona di riproduzione"] *Esegui ora* per avviare il backup.
 . Se il gruppo di risorse ha più criteri configurati, nella finestra di dialogo *Backup Now* selezionare il criterio da utilizzare per questa operazione di backup.
 . Selezionare *OK* per avviare il backup.
-. Facoltativo: Monitorare l'avanzamento dell'operazione facendo clic su *Recent Tasks* (attività recenti) nella parte inferiore della finestra o sulla dashboard *Job Monitor* per ulteriori dettagli. Risultato
+. Opzionale: Monitorare l'avanzamento dell'operazione selezionando *attività recenti* nella parte inferiore della finestra o sul dashboard *monitoraggio processi* per ulteriori dettagli. Risultato
 
 
 Se l'operazione di quiesce non riesce per una delle macchine virtuali del backup, il backup viene completato con un avviso e contrassegnato come non coerente con le macchine virtuali anche se il criterio selezionato ha la coerenza delle macchine virtuali selezionata. In questo caso, è possibile che alcune macchine virtuali siano state correttamente rinunciate. Nel job monitor, i dettagli della macchina virtuale guasta mostrano la richiesta come non riuscita.

@@ -105,7 +105,7 @@ NOTE: Se si ripristina una VM eliminata, le credenziali della VM di storage aggi
 . Nel riquadro di sinistra del navigatore, fare clic con il pulsante destro del mouse su una macchina virtuale, quindi selezionare *Plug-in SnapCenter per VMware vSphere* nell'elenco a discesa, quindi selezionare *Ripristina* nell'elenco a discesa secondario per avviare la procedura guidata.
 . Nella procedura guidata *Restore*, nella pagina *Select Backup*, selezionare l'istantanea di backup che si desidera ripristinare.
 +
-È possibile cercare un nome di backup specifico o un nome di backup parziale oppure filtrare l'elenco di backup facendo clic sull'icona del filtro e selezionando una data e un intervallo di tempo, selezionando se si desidera eseguire i backup che contengono snapshot VMware, se si desidera eseguire i backup montati e la posizione. Selezionare *OK* per tornare alla procedura guidata.
+È possibile cercare un nome di backup specifico o un nome di backup parziale oppure filtrare l'elenco di backup selezionando l'icona del filtro e selezionando una data e un intervallo di tempo, selezionando se si desidera eseguire i backup che contengono snapshot VMware, se si desidera eseguire i backup montati e la posizione. Selezionare *OK* per tornare alla procedura guidata.
 
 . Nella pagina *Select scope* (Seleziona ambito), selezionare *entire virtual machine* (intera macchina virtuale) nel campo *Restore scope* (ambito ripristino), quindi selezionare la posizione di ripristino e immettere le informazioni di destinazione in cui deve essere montato il backup.
 +
@@ -119,7 +119,7 @@ Quando si ripristinano backup parziali, l'operazione di ripristino ignora la pag
 Nel plug-in SnapCenter per VMware vSphere 4.5 e versioni successive, è possibile selezionare lo storage secondario per i volumi FlexGroup.
 
 . Esaminare la pagina Riepilogo e selezionare *fine*.
-. Facoltativo: Monitorare l'avanzamento dell'operazione facendo clic su *Recent Tasks* (attività recenti) nella parte inferiore della schermata.
+. Opzionale: Monitorare l'avanzamento dell'operazione selezionando *attività recenti* nella parte inferiore dello schermo.
 +
 Aggiornare la schermata per visualizzare le informazioni aggiornate.
 

@@ -58,5 +58,5 @@ image:scv50_image1.png["Finestra del client vSphere"]
 È possibile selezionare un massimo di 40 backup da eliminare.
 
 . Selezionare *OK* per confermare l'operazione di eliminazione.
-. Aggiornare l'elenco di backup facendo clic sull'icona di aggiornamento sulla barra dei menu di vSphere a sinistra.
+. Aggiornare l'elenco di backup selezionando l'icona di aggiornamento sulla barra dei menu di vSphere a sinistra.
 
