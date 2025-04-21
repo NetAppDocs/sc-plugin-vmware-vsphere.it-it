@@ -28,9 +28,9 @@ Se si modifica una VM di storage aggiunta automaticamente come parte di un clust
 IMPORTANT: Se sono state aggiunte VM di storage per le operazioni di protezione dei dati basate sull'applicazione utilizzando l'interfaccia grafica utente di SnapCenter, è necessario utilizzare la stessa interfaccia grafica per modificare tali VM di storage.
 
 .Fasi
-. Nel riquadro di navigazione sinistro del plug-in SCV, fare clic su *sistemi di memorizzazione*.
+. Nel riquadro di navigazione sinistro del plug-in SCV, selezionare *sistemi di memorizzazione*.
 . Nella pagina *Storage Systems*, selezionare la VM di storage da modificare, quindi selezionare *Edit* (Modifica).
-. Nella finestra *Edit Storage System* (Modifica sistema di storage), immettere i nuovi valori, quindi fare clic su *Update* (Aggiorna) per applicare le modifiche.
+. Nella finestra *Modifica sistema di archiviazione*, immettere i nuovi valori, quindi selezionare *Aggiorna* per applicare le modifiche.
 
 
 
@@ -49,9 +49,9 @@ Prima di rimuovere la VM di storage, è necessario smontare tutti gli archivi da
 Se un gruppo di risorse dispone di backup che risiedono su una macchina virtuale di storage che viene rimossa, i backup successivi di tale gruppo di risorse non vengono eseguiti correttamente.
 
 .Fasi
-. Nel riquadro di navigazione sinistro del plug-in SCV, fare clic su *sistemi di memorizzazione*.
-. Nella pagina *Storage Systems*, selezionare la VM di storage da rimuovere, quindi fare clic su *Delete* (Elimina).
-. Nella casella di conferma *Remove Storage System* (Rimuovi sistema di storage), selezionare la casella *Delete storage system(s)* (Elimina sistema di storage*), quindi fare clic su *Yes* (Sì) per confermare. *Nota:* sono supportate solo le versioni host ESXi 7.0U1 e successive.
+. Nel riquadro di navigazione sinistro del plug-in SCV, selezionare *sistemi di memorizzazione*.
+. Nella pagina *sistemi di archiviazione*, selezionare la VM di archiviazione da rimuovere, quindi selezionare *Elimina*.
+. Nella casella di conferma *Rimuovi sistema di archiviazione*, selezionare la casella *Elimina sistemi di archiviazione*, quindi selezionare *Sì* per confermare. *Nota:* sono supportate solo le versioni host ESXi 7.0U1 e successive.
 +
 link:scpivs44_restart_the_vmware_vsphere_web_client_service.html["Riavviare il servizio client VMware vSphere"].
 

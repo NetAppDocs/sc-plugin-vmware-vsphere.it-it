@@ -16,7 +16,7 @@ summary: È possibile generare un bundle di supporto dalla console di manutenzio
 .Fasi
 [role="lead"]
 . Dal client VMware vSphere, selezionare la VM in cui si trova il plug-in SnapCenter per VMware vSphere.
-. Nella scheda *Riepilogo* dell'appliance virtuale, fare clic su *Avvia console remota o Avvia console Web* per aprire una finestra della console di manutenzione, quindi accedere.
+. Nella scheda *Riepilogo* dell'appliance virtuale, selezionare *Avvia console remota o Avvia console Web* per aprire una finestra della console di manutenzione, quindi accedere.
 +
 Per informazioni sull'accesso e l'accesso alla console di manutenzione, fare riferimento alla link:scpivs44_access_the_maintenance_console.html["Accedere alla console di manutenzione"^].
 

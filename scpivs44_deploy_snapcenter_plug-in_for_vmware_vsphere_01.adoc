@@ -25,7 +25,7 @@ NOTE: Per i client Web HTML con indirizzo IPv6, è necessario utilizzare Chrome 
 
 . Accedere alla pagina *VMware vCenter Single Sign-on*.
 . Nel riquadro di navigazione, fare clic con il pulsante destro del mouse su qualsiasi oggetto di inventario che sia un oggetto padre valido di una macchina virtuale, ad esempio un data center, una cartella, un cluster o un host, quindi selezionare *Deploy OVF Template* (implementa modello OVF) per avviare la procedura guidata di implementazione di VMware.
-. Nella pagina *Select an OVF template* (Seleziona un modello OVF), specificare la posizione di `.ova` (Come elencato nella tabella seguente) e fare clic su *Avanti*.
+. Nella pagina *selezionare un modello OVF*, specificare la posizione del `.ova` file (come elencato nella tabella seguente) e selezionare *Avanti*.
 +
 |===
 | In questa pagina della procedura guidata… | Eseguire questa operazione… 
@@ -59,14 +59,14 @@ Nella sezione *impostazione delle proprietà di rete*, immettere le informazioni
 
 
 
-| Pronto per essere completato | Esaminare la pagina e fare clic su *fine*. 
+| Pronto per essere completato | Rivedere la pagina e selezionare *fine*. 
 |===
 +
 
 NOTE: Tutti gli host devono essere configurati con indirizzi IP (i nomi host FQDN non sono supportati). L'operazione di implementazione non convalida l'input prima dell'implementazione.
 
-. Passare alla VM in cui è stato distribuito il plug-in SnapCenter per VMware vSphere, quindi fare clic sulla scheda *Riepilogo*, quindi fare clic sulla casella *accensione* per avviare il plug-in SnapCenter per VMware vSphere.
-. Durante l'accensione del plug-in SnapCenter per VMware vSphere, fare clic con il pulsante destro del mouse sul plug-in SnapCenter per VMware vSphere distribuito, selezionare *guest OS*, quindi fare clic su *Install VMware Tools*.
+. Passare alla VM in cui è stato distribuito il plug-in SnapCenter per VMware vSphere, quindi selezionare la scheda *Riepilogo*, quindi selezionare la casella *accensione* per avviare il plug-in SnapCenter per VMware vSphere.
+. Durante l'accensione del plug-in SnapCenter per VMware vSphere, fare clic con il pulsante destro del mouse sul plug-in SnapCenter per VMware vSphere, selezionare *guest OS*, quindi selezionare *Install VMware Tools*.
 +
 Il completamento dell'implementazione potrebbe richiedere alcuni minuti. La distribuzione corretta è indicata quando il plug-in SnapCenter per VMware vSphere viene acceso, quando vengono installati gli strumenti VMware e la schermata richiede di accedere al plug-in SnapCenter per VMware vSphere.
 
@@ -80,5 +80,5 @@ Utilizzare il formato `\https://<appliance-IP-address>:8080` Per accedere alla G
 +
 Accedere con il nome utente e la password dell'amministratore impostati al momento dell'implementazione e il token MFA generato dalla console di manutenzione.
 
-. Accedere al client vCenter HTML5, fare clic su *Menu* nella barra degli strumenti, quindi selezionare *plug-in SnapCenter per VMware vSphere*
+. Accedere al client vCenter HTML5, quindi selezionare *Menu* nella barra degli strumenti, quindi selezionare *Plug-in SnapCenter per VMware vSphere*
 

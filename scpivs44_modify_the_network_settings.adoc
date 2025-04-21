@@ -29,18 +29,18 @@ summary: È possibile modificare le impostazioni di rete configurate nel plug-in
 +
 Utilizzare il formato `\https://<appliance-IP-address>:8080`
 
-. Fare clic sull'icona Impostazioni nella barra degli strumenti superiore.
+. Selezionare l'icona Impostazioni nella barra degli strumenti superiore.
 +
 image:scpivs44_image31.png["Plug-in SnapCenter per l'interfaccia grafica di gestione di VMware vSphere"]
 
-. Nella pagina *Impostazioni*, nella sezione *Impostazioni di rete*, fare clic su *IPv4* o *IPv6* indirizzo, quindi fare clic su *Modifica*.
+. Nella pagina *Impostazioni*, nella sezione *Impostazioni di rete*, selezionare *IPv4* o *IPv6* indirizzo, quindi selezionare *Modifica*.
 +
-Inserire le nuove informazioni e fare clic su *Save* (Salva).
+Immettere le nuove informazioni e selezionare *Salva*.
 
 . Se si sta rimuovendo un'impostazione di rete, procedere come segue:
 +
-** IPv4: Nel campo *IP Address*, immettere `0.0.0.0` Quindi fare clic su *Salva*.
-** IPv6: Nel campo *IP Address*: Immettere `: :0` Quindi fare clic su *Salva*.
+** IPv4: Nel campo *Indirizzo IP*, immettere `0.0.0.0` e selezionare *Salva*.
+** IPv6: Nel campo *Indirizzo IP*: Immettere `: :0` e selezionare *Salva*.
 
 
 

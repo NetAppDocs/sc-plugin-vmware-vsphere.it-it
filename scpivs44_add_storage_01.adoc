@@ -29,7 +29,7 @@ Il plug-in SnapCenter per VMware vSphere 4.5 e versioni successive supporta data
 È necessario aggiungere cluster di storage al plug-in SnapCenter per i tool VMware vSphere e ONTAP per VMware vSphere per vVol DataProtection per funzionare.
 
 +
-Per ulteriori informazioni, consulta la documentazione sui tool ONTAP per VMware vSphere. Inoltre, fare riferimento a https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^] per le informazioni più recenti sulle versioni supportate sugli strumenti ONTAP.
+Per ulteriori informazioni, consulta la documentazione sui tool ONTAP per VMware vSphere. Inoltre, fare riferimento a https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^] per le informazioni più recenti sulle versioni supportate sugli strumenti ONTAP.
 
 
 
@@ -103,7 +103,7 @@ Se si aggiunge una VM di storage con un nome che non è in grado di risolvere ne
 
 | Invia notifica AutoSupport per operazione non riuscita al sistema di storage | Selezionare questa casella se si desidera che venga inviata una notifica AutoSupport per i processi di protezione dei dati non riusciti. È inoltre necessario attivare AutoSupport sulla VM di storage e configurare le impostazioni e-mail di AutoSupport. 
 |===
-. Fare clic su *Aggiungi*.
+. Selezionare *Aggiungi*.
 +
 Se è stato aggiunto un cluster di storage, tutte le VM di storage in tale cluster vengono aggiunte automaticamente. Le VM di storage aggiunte automaticamente (a volte chiamate VM di storage "implicite") vengono visualizzate nella pagina di riepilogo del cluster con un trattino (-) invece di un nome utente. I nomi utente vengono visualizzati solo per le entità di storage esplicite.
 

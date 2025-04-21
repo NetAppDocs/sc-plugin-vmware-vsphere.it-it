@@ -60,12 +60,12 @@ Non è possibile ripristinare un datastore, ma è possibile ripristinare qualsia
 Un'operazione di ripristino potrebbe non riuscire se il livello di storage di FabricPool in cui si trova la macchina virtuale non è disponibile.
 
 .Fasi
-. Fare clic su *Menu* e selezionare l'opzione di menu *Storage*, quindi selezionare un datastore, selezionare la scheda *Configura*, quindi fare clic su *Backup* nella sezione *plug-in SnapCenter per VMware vSphere*.
+. Selezionare *Menu* e selezionare l'opzione di menu *archiviazione*, quindi selezionare un datastore, quindi selezionare la scheda *Configura*, quindi selezionare *Backup* nella sezione *Plug-in SnapCenter per VMware vSphere*.
 . Fare doppio clic su un backup per visualizzare un elenco di tutte le macchine virtuali incluse nel backup.
-. Selezionare la VM eliminata dall'elenco di backup e fare clic su *Restore* (Ripristina).
+. Selezionare la macchina virtuale eliminata dall'elenco di backup e selezionare *Ripristina*.
 . Nella procedura guidata *Restore*, nella pagina *Select Backup* (Seleziona backup), selezionare la copia di backup da cui si desidera eseguire il ripristino.
 +
-È possibile cercare un nome di backup specifico o un nome di backup parziale oppure filtrare l'elenco di backup facendo clic sull'icona del filtro e selezionando una data e un intervallo di tempo, selezionando se si desidera eseguire i backup che contengono snapshot VMware, se si desidera eseguire i backup montati e la posizione. Fare clic su *OK* per tornare alla procedura guidata.
+È possibile cercare un nome di backup specifico o un nome di backup parziale oppure filtrare l'elenco di backup facendo clic sull'icona del filtro e selezionando una data e un intervallo di tempo, selezionando se si desidera eseguire i backup che contengono snapshot VMware, se si desidera eseguire i backup montati e la posizione. Selezionare *OK* per tornare alla procedura guidata.
 
 . Nella pagina *Seleziona ambito*, selezionare *intera macchina virtuale* nel campo *Ripristina ambito*, quindi selezionare la posizione di ripristino, quindi immettere le informazioni sull'host ESXi di destinazione in cui deve essere montato il backup.
 +
@@ -75,5 +75,5 @@ La destinazione di ripristino può essere qualsiasi host ESXi aggiunto a SnapCen
 Se si sta ripristinando una macchina virtuale in un datastore NFS su un host ESXi alternativo che si trova in un cluster ESXi, dopo il ripristino la macchina virtuale viene registrata sull'host alternativo.
 
 . Nella pagina *Select Location* (Seleziona percorso), selezionare la posizione del backup da cui si desidera eseguire il ripristino (primario o secondario).
-. Esaminare la pagina Summary (Riepilogo) e fare clic su *Finish* (fine).
+. Esaminare la pagina Riepilogo e selezionare *fine*.
 

@@ -29,7 +29,7 @@ Per ottenere l'autorizzazione dell'utente root per eseguire il comando, utilizza
 
 .Fasi
 . Dal client VMware vSphere, selezionare la VM in cui si trova il plug-in SnapCenter per VMware vSphere.
-. Nella scheda *Riepilogo* dell'appliance virtuale, fare clic su *Avvia console remota* per aprire una finestra della console di manutenzione.
+. Nella scheda *Riepilogo* dell'appliance virtuale, selezionare *Avvia console remota* per aprire una finestra della console di manutenzione.
 +
 Accedere utilizzando il nome utente predefinito della console di manutenzione `maint` e la password impostata al momento dell'installazione.
 

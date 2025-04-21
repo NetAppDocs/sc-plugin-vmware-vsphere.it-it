@@ -27,10 +27,10 @@ Per accedere all'interfaccia grafica di gestione del plug-in SnapCenter per VMwa
 +
 Utilizzare il formato `\https://<OVA-IP-address>:8080`.
 
-. Fare clic sull'icona Impostazioni nella barra degli strumenti superiore.
+. Selezionare l'icona Impostazioni nella barra degli strumenti superiore.
 +
 image:scpivs44_image10.png["Plug-in SnapCenter per l'interfaccia VMware vSphere"]
 
-. Nella sezione *supporto* della pagina *Impostazioni*, fare clic su *genera bundle di supporto*.
-. Una volta generato il bundle di supporto, fare clic sul link fornito per scaricare il bundle su NetApp.
+. Nella pagina *Impostazioni*, nella sezione *supporto*, selezionare *genera supporto* Bundle.
+. Una volta generato il bundle di supporto, seleziona il link fornito per scaricare il bundle in NetApp.
 

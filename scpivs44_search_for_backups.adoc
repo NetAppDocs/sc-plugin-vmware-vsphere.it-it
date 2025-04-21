@@ -17,21 +17,21 @@ summary: È possibile cercare e trovare un backup specifico di una macchina virt
 È possibile cercare e trovare un backup specifico di una macchina virtuale o di un datastore utilizzando la procedura guidata di ripristino. Una volta individuato un backup, è possibile ripristinarlo.
 
 .Fasi
-. Nella GUI del client VMware vSphere, fare clic su *Menu* nella barra degli strumenti, quindi eseguire una delle seguenti operazioni:
+. Nella GUI del client VMware vSphere, selezionare *Menu* nella barra degli strumenti, quindi eseguire una delle seguenti operazioni:
 +
 |===
 | Per visualizzare i backup di… | Eseguire le seguenti operazioni… 
 
 
-| Macchine virtuali | Fare clic sull'opzione di menu *host e cluster*, quindi selezionare una macchina virtuale, fare clic sulla scheda *Configura*, quindi fare clic su *Backup* nella sezione *plug-in SnapCenter per VMware vSphere*. 
+| Macchine virtuali | Selezionare l'opzione di menu *host e cluster*, quindi selezionare una macchina virtuale, quindi la scheda *Configura*, quindi selezionare *backup* nella sezione *Plug-in SnapCenter per VMware vSphere*. 
 
 
-| Datastore | Fare clic sull'opzione di menu *Storage*, quindi selezionare un datastore, quindi fare clic sulla scheda *Configura*, quindi fare clic su *Backup* nella sezione *plug-in SnapCenter per VMware vSphere*. 
+| Datastore | Selezionare l'opzione di menu *archiviazione*, quindi selezionare un datastore, quindi selezionare la scheda *Configura*, quindi selezionare *backup* nella sezione *Plug-in SnapCenter per VMware vSphere*. 
 |===
 . Nel riquadro di navigazione sinistro, espandere il data center che contiene la macchina virtuale o il datastore.
 . Facoltativo: Fare clic con il pulsante destro del mouse su una macchina virtuale o su un datastore, quindi selezionare *SnapCenter Plug-in for VMware vSphere* nell'elenco a discesa, quindi selezionare *Ripristina* nell'elenco a discesa secondario.
-. Nella procedura guidata *Restore* inserire un nome di ricerca e fare clic su *Search* (Ricerca).
+. Nella procedura guidata *Ripristina* immettere un nome di ricerca e selezionare *Cerca*.
 +
-È possibile filtrare l'elenco di backup selezionando l'icona del filtro e selezionando una data e un intervallo di tempo, selezionando se si desidera eseguire i backup che contengono snapshot VMware, se si desidera eseguire i backup montati e la posizione. Fare clic su *OK*.
+È possibile filtrare l'elenco di backup selezionando l'icona del filtro e selezionando una data e un intervallo di tempo, selezionando se si desidera eseguire i backup che contengono snapshot VMware, se si desidera eseguire i backup montati e la posizione. Selezionare *OK*.
 
 

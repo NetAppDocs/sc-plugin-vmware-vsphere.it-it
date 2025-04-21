@@ -51,43 +51,43 @@ TIP: Eseguire il backup del plug-in SnapCenter per VMware vSphere OVA prima di a
 
 NOTE: Il passaggio dalla configurazione di rete statica a DHCP non è supportato.
 
-Per informazioni aggiornate sulle versioni supportate, fare riferimento a https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^] (IMT).
+Per informazioni aggiornate sulle versioni supportate, fare riferimento a https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^] (IMT).
 
 .Fasi
 . Preparati per l'aggiornamento disattivando il plug-in SnapCenter per VMware vSphere.
 +
 .. Accedere all'interfaccia grafica di gestione del plug-in SnapCenter per VMware vSphere. L'indirizzo IP viene visualizzato quando si implementa il plug-in SnapCenter per VMware vSphere.
-.. Fare clic su *Configuration* (Configurazione) nel riquadro di navigazione a sinistra, quindi fare clic sull'opzione *Service* (Servizio) nella sezione Plug-in Details (Dettagli plug-in) per disattivare il plug-in.
+.. Selezionare *Configurazione* nel riquadro di spostamento di sinistra, quindi selezionare l'opzione *Servizio* nella sezione Dettagli plug-in per disattivare il plug-in.
 
 
 . Scarica l'aggiornamento `.iso` file.
 +
 .. Accedere al sito di supporto NetApp (https://mysupport.netapp.com/products/index.html[]).
-.. Dall'elenco dei prodotti, selezionare *plug-in SnapCenter per VMware vSphere*, quindi fare clic sul pulsante *DOWNLOAD LATEST RELEASE*.
+.. Dall'elenco dei prodotti, selezionare *plug-in SnapCenter per VMware vSphere*, quindi selezionare il pulsante *SCARICA ULTIMA VERSIONE*.
 .. Scarica il plug-in SnapCenter per l'aggiornamento di VMware vSphere `.iso` file in qualsiasi posizione.
 
 
 . Installare l'aggiornamento.
 +
 .. Nel browser, accedere a VMware vSphere vCenter.
-.. Nella GUI di vCenter, fare clic su *vSphere client (HTML)*.
+.. Nella GUI di vCenter, selezionare *client vSphere (HTML)*.
 .. Accedere alla pagina *VMware vCenter Single Sign-on*.
-.. Nel riquadro del navigatore, fare clic sulla macchina virtuale che si desidera aggiornare, quindi fare clic sulla scheda *Riepilogo*.
-.. Nel riquadro *Related Objects* (oggetti correlati), fare clic su qualsiasi datastore nell'elenco, quindi sulla scheda *Summary* (Riepilogo).
-.. Nella scheda *Files* dell'archivio dati selezionato, fare clic su una cartella qualsiasi dell'elenco, quindi fare clic su *Upload Files* (carica file).
-.. Nella schermata a comparsa di caricamento, accedere alla posizione in cui è stato scaricato `.iso` quindi fare clic su `.iso` Immagine del file, quindi fare clic su *Apri*. Il file viene caricato nell'archivio dati.
-.. Tornare alla macchina virtuale che si desidera aggiornare e fare clic sulla scheda *Summary* (Riepilogo). Nel riquadro *VM hardware*, nel campo CD/DVD, il valore deve essere "disconnesso".
-.. Fare clic sull'icona di connessione nel campo CD/DVD e selezionare *Connect to CD/DVD image on a datastore*.
+.. Nel riquadro del navigatore, selezionare la macchina virtuale che si desidera aggiornare, quindi selezionare la scheda *Riepilogo*.
+.. Nel riquadro *oggetti correlati*, selezionare su qualsiasi datastore nell'elenco, quindi selezionare la scheda *Riepilogo*.
+.. Nella scheda *file* per il datastore selezionato, selezionare su qualsiasi cartella nell'elenco, quindi selezionare *carica file*.
+.. Nella schermata a comparsa di caricamento, individuare la posizione in cui è stato scaricato il `.iso` file, quindi selezionare sull'immagine del file, quindi selezionare `.iso` *Apri*. Il file viene caricato nell'archivio dati.
+.. Tornare alla macchina virtuale che si desidera aggiornare e selezionare la scheda *Riepilogo*. Nel riquadro *VM hardware*, nel campo CD/DVD, il valore deve essere "disconnesso".
+.. Selezionare l'icona di connessione nel campo CD/DVD e selezionare *collega a immagine CD/DVD su un archivio dati*.
 +
 image:scpivs44_image42.png["Interfaccia utente di vCenter"]
 
 .. Nella procedura guidata, eseguire le seguenti operazioni:
 +
 ... Nella colonna Datastore, selezionare l'archivio dati in cui è stato caricato `.iso` file.
-... Nella colonna Sommario, accedere a. `.iso` File caricato, assicurarsi che nel campo tipo di file sia selezionata l'opzione "immagine ISO", quindi fare clic su *OK*. Attendere che il campo indichi lo stato "connesso".
+... Nella colonna Contents (contenuto), individuare il `.iso` file caricato, assicurarsi che nel campo file Type (tipo file) sia selezionata l'opzione “ISO image” (immagine ISO), quindi selezionare *OK*. Attendere che il campo indichi lo stato "connesso".
 
 
-.. Accedere alla console di manutenzione accedendo alla scheda *Summary* dell'appliance virtuale, quindi fare clic sulla freccia verde di esecuzione per avviare la console di manutenzione.
+.. Accedere alla console di manutenzione accedendo alla scheda *Riepilogo* dell'appliance virtuale, quindi selezionare la freccia verde di esecuzione per avviare la console di manutenzione.
 .. Immettere *2* per Configurazione di sistema, quindi inserire *8* per l'aggiornamento.
 .. Immettere *y* per continuare e avviare l'aggiornamento.
 

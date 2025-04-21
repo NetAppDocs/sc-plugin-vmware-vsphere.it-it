@@ -30,19 +30,19 @@ Un gruppo di risorse può contenere uno dei seguenti elementi:
 NOTE: Le VM vVol che si estendono su più datastore vVol non sono supportate perché SnapCenter esegue il backup solo dei vVol nel datastore vVol primario, selezionato.
 
 .Fasi
-. Nel riquadro di navigazione sinistro del plug-in SCV, fare clic su *gruppi di risorse*, quindi selezionare un gruppo di risorse e fare clic su image:scpivs44_image39.png["icona edit (modifica)"] *Modifica gruppo di risorse* per avviare la procedura guidata.
+. Nel riquadro di navigazione a sinistra del plug-in SCV, selezionare *gruppi di risorse*, quindi selezionare un gruppo di risorse, quindi selezionare image:scpivs44_image39.png["icona edit (modifica)"] *Modifica gruppo di risorse* per avviare la procedura guidata.
 . Nella pagina *Resource*, effettuare le seguenti operazioni:
 +
 .. Nel campo Datastores (archivi dati), accedere alle macchine virtuali o agli archivi dati che si desidera aggiungere.
-.. Nell'elenco Available entities (entità disponibili), selezionare una o più macchine virtuali o datastore da aggiungere al gruppo di risorse, quindi fare clic su *>* per spostare la selezione nell'elenco Selected entities (entità selezionate). Fare clic su *>>* per spostare tutte le entità disponibili.
+.. Nell'elenco entità disponibili, selezionare una o più macchine virtuali o archivi dati da aggiungere al gruppo di risorse, quindi selezionare *>* per spostare la selezione nell'elenco entità selezionate. Selezionare *>>* per spostare tutte le entità disponibili.
 +
-Per impostazione predefinita, l'elenco Available Entities (entità disponibili) visualizza l'oggetto Datacenter. È possibile fare clic su un datastore per visualizzare le macchine virtuali all'interno del datastore e aggiungerle al gruppo di risorse.
+Per impostazione predefinita, l'elenco Available Entities (entità disponibili) visualizza l'oggetto Datacenter. È possibile selezionare un datastore per visualizzare le macchine virtuali all'interno dell'archivio dati e aggiungerle al gruppo di risorse.
 
 +
-Facendo clic su *Avanti*, il sistema verifica innanzitutto che SnapCenter gestisca e sia compatibile con lo storage su cui si trovano le macchine virtuali o gli archivi dati selezionati. Se viene visualizzato il messaggio `Some entities are not SnapCenter compatible` , una macchina virtuale o un archivio dati selezionati non è compatibile con SnapCenter. Per ulteriori informazioni, fare riferimento link:scpivs44_create_resource_groups_for_vms_and_datastores.html#manage-compatibility-check-failures["Gestire gli errori del controllo di compatibilità"] a.
+Quando si seleziona *Avanti*, il sistema controlla innanzitutto che SnapCenter gestisce ed è compatibile con lo storage in cui si trovano le macchine virtuali o gli archivi dati selezionati. Se viene visualizzato il messaggio `Some entities are not SnapCenter compatible` , una macchina virtuale o un archivio dati selezionati non è compatibile con SnapCenter. Per ulteriori informazioni, fare riferimento link:scpivs44_create_resource_groups_for_vms_and_datastores.html#manage-compatibility-check-failures["Gestire gli errori del controllo di compatibilità"] a.
 
 
 
 . Ripetere il passaggio 2 per ogni VM o datastore che si desidera aggiungere.
-. Fare clic su *Avanti* fino a visualizzare la pagina *Riepilogo*, quindi rivedere il riepilogo e fare clic su *fine*.
+. Selezionare *Avanti* fino a visualizzare la pagina *Riepilogo*, quindi rivedere il riepilogo e selezionare *fine*.
 

@@ -106,4 +106,4 @@ DISTRIBUTORE IDRAULICO 4,7
 DISTRIBUTORE IDRAULICO 4,8
 
 |===
-Per informazioni aggiornate sulle versioni supportate, fare riferimento a https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^] (IMT).
+Per informazioni aggiornate sulle versioni supportate, fare riferimento a https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^] (IMT).

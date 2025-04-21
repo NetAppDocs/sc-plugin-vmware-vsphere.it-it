@@ -73,9 +73,9 @@ Questa opzione utilizza le impostazioni e-mail configurate durante la configuraz
 
 
 
-. Rivedere il riepilogo, quindi fare clic su *fine*.
+. Rivedere il riepilogo, quindi selezionare *fine*.
 +
-Prima di fare clic su *fine*, è possibile tornare a qualsiasi pagina della procedura guidata e modificare le informazioni.
+Prima di selezionare *fine*, è possibile tornare a qualsiasi pagina della procedura guidata e modificare le informazioni.
 
 . Attendere il completamento dell'operazione di collegamento.
 +
@@ -90,9 +90,9 @@ Nella tabella monitoraggio sessione ospite, è possibile visualizzare ulteriori 
 +
 A tutte le partizioni viene assegnata una lettera di unità, incluse le partizioni riservate al sistema. Se un VMDK dispone di più partizioni, è possibile selezionare un disco specifico selezionandolo dall'elenco a discesa nel campo Drive (disco) nella parte superiore della pagina Guest file Browse (Sfoglia file guest).
 
-. Fare clic sull'icona *Sfoglia file* per visualizzare un elenco di file e cartelle sul disco virtuale.
+. Selezionare l'icona *Sfoglia file* per visualizzare un elenco di file e cartelle sul disco virtuale.
 +
-Quando si fa doppio clic su una cartella per sfogliare e selezionare singoli file, potrebbe esserci una latenza di tempo durante il recupero dell'elenco di file, perché l'operazione di recupero viene eseguita in fase di esecuzione.
+Quando si seleziona due volte una cartella per sfogliare e selezionare singoli file, potrebbe esserci una latenza temporale durante il recupero dell'elenco dei file perché l'operazione di recupero viene eseguita in fase di esecuzione.
 
 +
 Per una navigazione più semplice, è possibile utilizzare i filtri nella stringa di ricerca. I filtri sono sensibili al maiuscolo/minuscolo, espressioni Perl senza spazi. La stringa di ricerca predefinita è `.`*. La tabella seguente mostra alcune espressioni di ricerca Perl di esempio.
@@ -140,7 +140,7 @@ Per una navigazione più semplice, è possibile utilizzare i filtri nella string
 +
 La pagina Guest file Browse (Sfoglia file guest) visualizza tutti i file e le cartelle nascosti oltre a tutti gli altri file e cartelle.
 
-. Selezionare uno o più file o cartelle da ripristinare, quindi fare clic su *Select Restore Location* (Seleziona percorso ripristino).
+. Selezionare uno o più file o cartelle che si desidera ripristinare, quindi selezionare *Seleziona percorso di ripristino*.
 +
 I file e le cartelle da ripristinare sono elencati nella tabella file selezionati.
 
@@ -163,7 +163,7 @@ NOTE: Se la cartella esiste già, il contenuto della cartella viene Unito alla c
 
 | Disconnetti sessione ospite dopo il ripristino | Selezionare questa opzione se si desidera che la sessione di ripristino del file guest venga eliminata al termine dell'operazione di ripristino. 
 |===
-. Fare clic su *Restore* (Ripristina).
+. Selezionare *Restore* (Ripristina).
 +
 È possibile visualizzare lo stato di avanzamento dell'operazione di ripristino nel monitor dei processi di Dashboard oppure attendere la notifica via email. Il tempo necessario per l'invio della notifica via email dipende dal tempo necessario per il completamento dell'operazione di ripristino.
 

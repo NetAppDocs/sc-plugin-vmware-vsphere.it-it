@@ -46,25 +46,25 @@ Per aggiungere un controller NVMe al disco, segui la procedura riportata di segu
 
 
 .Fasi
-. Nella GUI del client VMware vSphere, fare clic su *Menu* nella barra degli strumenti, quindi selezionare *host e cluster* dall'elenco a discesa.
+. Nella GUI del client VMware vSphere, selezionare *Menu* nella barra degli strumenti, quindi selezionare *host e cluster* dall'elenco a discesa.
 . Nel riquadro di spostamento di sinistra, fare clic con il pulsante destro del mouse su una macchina virtuale, quindi selezionare *Plug-in SnapCenter per VMware vSphere* > *Allega dischi virtuali*.
 . Nella sezione *Backup* della finestra *Allega disco virtuale*, selezionare un backup.
 +
-È possibile filtrare l'elenco di backup selezionando l'icona del filtro e scegliendo un intervallo di data e ora, selezionando se si desidera eseguire i backup che contengono snapshot VMware, se si desidera eseguire i backup montati e la posizione. Fare clic su *OK*.
+È possibile filtrare l'elenco di backup selezionando l'icona del filtro e scegliendo un intervallo di data e ora, selezionando se si desidera eseguire i backup che contengono snapshot VMware, se si desidera eseguire i backup montati e la posizione. Selezionare *OK*.
 
 . Nella sezione *Select Disks* (Seleziona dischi), selezionare uno o più dischi da collegare e la posizione da cui si desidera collegare (primario o secondario).
 +
 È possibile modificare il filtro per visualizzare le posizioni principale e secondaria.
 
 . Per impostazione predefinita, i dischi virtuali selezionati sono collegati alla macchina virtuale padre. Per collegare i dischi virtuali selezionati a una VM alternativa nello stesso host ESXi, selezionare *fare clic qui per collegare una VM alternativa* e specificare la VM alternativa.
-. Fare clic su *Allega*.
+. Selezionare *Allega*.
 . Facoltativo: Monitorare l'avanzamento dell'operazione nella sezione *attività recenti*.
 +
 Aggiornare la schermata per visualizzare le informazioni aggiornate.
 
 . Verificare che il disco virtuale sia collegato effettuando le seguenti operazioni:
 +
-.. Fare clic su *Menu* nella barra degli strumenti, quindi selezionare *VM e modelli* dall'elenco a discesa.
+.. Selezionare *Menu* nella barra degli strumenti, quindi selezionare *VM e modelli* dall'elenco a discesa.
 .. Nel riquadro di sinistra del navigatore, fare clic con il pulsante destro del mouse su una macchina virtuale, quindi selezionare *Modifica impostazioni* nell'elenco a discesa.
 .. Nella finestra *Edit Settings* (Modifica impostazioni), espandere l'elenco di ciascun disco rigido per visualizzare l'elenco dei file su disco.
 +

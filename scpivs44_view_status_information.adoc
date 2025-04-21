@@ -19,7 +19,7 @@ summary: 'È possibile visualizzare le informazioni sullo stato nella dashboard 
 .Fasi
 . Dalla pagina di collegamento del client vCenter, selezionare Plug-in SnapCenter per VMware vSphere (SCV).
 . Nel riquadro di navigazione sinistro di SCV, selezionare *Dashboard* > *Status*.
-. Visualizzare le informazioni sullo stato della panoramica o fare clic su un collegamento per ulteriori dettagli, come indicato nella tabella seguente.
+. Visualizzare le informazioni sullo stato della panoramica o selezionare un collegamento per ulteriori dettagli, come indicato nella tabella seguente.
 +
 |===
 | Questo riquadro del dashboard… | Visualizza le seguenti informazioni… 
@@ -30,8 +30,8 @@ Attività lavorative recenti
  a| 
 I processi di backup, ripristino e montaggio più recenti sono da tre a cinque.
 
-** Fare clic su un ID lavoro per visualizzare ulteriori dettagli sul lavoro.
-** Fare clic su *Vedi tutto* per accedere alla scheda Job Monitor per ulteriori dettagli su tutti i lavori.
+** Selezionare su un ID lavoro per visualizzare ulteriori dettagli sul lavoro.
+** Selezionare *Visualizza tutto* per andare alla scheda Job Monitor per ulteriori dettagli su tutti i lavori.
 
 
 
@@ -48,7 +48,7 @@ Riepilogo della protezione più recente
  a| 
 Riepiloghi dello stato di protezione dei dati delle macchine virtuali o degli archivi dati primari e secondari all'interno della finestra temporale selezionata.
 
-** Fare clic sul menu a discesa per selezionare *VM* o *Datastore*.
+** Selezionare il menu a discesa per selezionare *VM* o *Datastores*.
 ** Per lo storage secondario, selezionare *SnapVault* o *SnapMirror*.
 ** Spostare il cursore su una sezione di un grafico per visualizzare il numero di VM o datastore in tale categoria. Nella categoria Successful (riuscito), viene elencato il backup più recente per ciascuna risorsa.
 ** È possibile modificare la finestra dell'ora modificando il file di configurazione. L'impostazione predefinita è 7 giorni. Per ulteriori informazioni, fare riferimento a link:scpivs44_customize_your_configuration.html["Personalizzare la configurazione"].

@@ -20,8 +20,8 @@ Per impostazione predefinita, un VMDK di Ripristino file guest allegato è dispo
 È possibile estendere una sessione di ripristino dei file guest se si desidera ripristinare file o cartelle aggiuntivi dal VMDK allegato in un secondo momento. Tuttavia, poiché le sessioni di ripristino dei file guest utilizzano molte risorse, l'estensione del tempo di sessione deve essere eseguita solo occasionalmente.
 
 .Fasi
-. Nel client VMware vSphere, fare clic su *Guest file Restore*.
-. Selezionare una sessione di ripristino del file guest, quindi fare clic sull'icona Extend Selected Guest Session (Estendi sessione ospite selezionata) nella barra del titolo di Guest Session Monitor.
+. Nel client VMware vSphere, selezionare *Ripristino file guest*.
+. Selezionare una sessione di ripristino del file guest, quindi selezionare l'icona Extend Selected Guest Session (Estendi sessione ospite selezionata) nella barra del titolo di Guest Session Monitor (monitoraggio sessione ospite).
 +
 La sessione viene estesa per altre 24 ore.
 

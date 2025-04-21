@@ -64,7 +64,7 @@ IMPORTANT: Non aggiungere macchine virtuali che si trovano in uno stato inaccess
 .Prima di iniziare
 I tool ONTAP per VMware devono essere implementati prima di creare un gruppo di risorse che contiene macchine virtuali vVol.
 
-Per ulteriori informazioni, consulta la documentazione sui tool ONTAP per VMware vSphere. Inoltre, fare riferimento a https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^] per le informazioni più recenti sulle versioni supportate sugli strumenti ONTAP.
+Per ulteriori informazioni, consulta la documentazione sui tool ONTAP per VMware vSphere. Inoltre, fare riferimento a https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^] per le informazioni più recenti sulle versioni supportate sugli strumenti ONTAP.
 
 .A proposito di questa attività
 È possibile aggiungere o rimuovere risorse da un gruppo di risorse in qualsiasi momento.
@@ -112,7 +112,7 @@ La protezione secondaria consente di creare una relazione di replica per le riso
 La protezione secondaria consente di creare una relazione di replica per le risorse aggiunte al gruppo di risorse.
 
 .Fasi
-. Nel riquadro di navigazione sinistro del plug-in SCV, fare clic su *gruppi di risorse*, quindi selezionare *Crea* per avviare la procedura guidata.
+. Nel riquadro di navigazione sinistro del plug-in SCV, selezionare *gruppi di risorse*, quindi selezionare *Crea* per avviare la procedura guidata.
 
 
 Questo è il modo più semplice per creare un gruppo di risorse. Tuttavia, è anche possibile creare un gruppo di risorse con una risorsa eseguendo una delle seguenti operazioni:
@@ -186,10 +186,10 @@ La protezione del datastore basata su tag è supportata solo per i datastore NFS
 I nomi di VM e datastore in un gruppo di risorse devono essere univoci. 
 
 
-| Entità disponibili | Selezionare le risorse da proteggere, quindi fare clic su *>* per spostare le selezioni nell'elenco delle entità selezionate. 
+| Entità disponibili | Selezionare le risorse che si desidera proteggere, quindi selezionare *>* per spostare le selezioni nell'elenco entità selezionate. 
 |===
 +
-Quando si fa clic su *Avanti*, il sistema verifica prima che SnapCenter gestisca e sia compatibile con lo storage su cui si trovano le risorse selezionate.
+Quando si seleziona *Avanti*, il sistema controlla innanzitutto che SnapCenter gestisca ed è compatibile con lo storage in cui si trovano le risorse selezionate.
 
 +
 Se viene visualizzato il messaggio `Selected <resource-name> is not SnapCenter compatible` , una risorsa selezionata non è compatibile con SnapCenter.
@@ -263,12 +263,12 @@ Quando si seleziona un numero di giorni in ogni campo, i backup vengono eseguiti
 +
 link:scpivs44_modify_the_time_zones.html["Modificare i fusi orari per i backup"].
 
-. Rivedere il riepilogo, quindi fare clic su *fine*. A partire dalla protezione secondaria del distributore idraulico n°6,1 per i sistemi ASA R2, le risorse sono visibili nella pagina di riepilogo.
+. Rivedere il riepilogo, quindi selezionare *fine*. A partire dalla protezione secondaria del distributore idraulico n°6,1 per i sistemi ASA R2, le risorse sono visibili nella pagina di riepilogo.
 +
-Prima di fare clic su *fine*, è possibile tornare a qualsiasi pagina della procedura guidata e modificare le informazioni.
+Prima di selezionare *fine*, è possibile tornare a qualsiasi pagina della procedura guidata e modificare le informazioni.
 
 +
-Dopo aver fatto clic su *fine*, il nuovo gruppo di risorse viene aggiunto all'elenco dei gruppi di risorse.
+Dopo aver selezionato *fine*, il nuovo gruppo di risorse viene aggiunto all'elenco dei gruppi di risorse.
 
 +
 
@@ -290,7 +290,7 @@ I motivi dell'incompatibilità potrebbero essere:
 SnapCenter versione 4.x supporta ONTAP 8.3.1 e versioni successive.
 
 +
-Il plug-in SnapCenter per VMware vSphere non esegue controlli di compatibilità per tutte le versioni di ONTAP; solo per le versioni di ONTAP 8.2.1 e precedenti. Pertanto, fare sempre riferimento a https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp (IMT)"^] per le informazioni più aggiornate sull'assistenza SnapCenter.
+Il plug-in SnapCenter per VMware vSphere non esegue controlli di compatibilità per tutte le versioni di ONTAP; solo per le versioni di ONTAP 8.2.1 e precedenti. Pertanto, fare sempre riferimento a https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp (IMT)"^] per le informazioni più aggiornate sull'assistenza SnapCenter.
 
 * Un dispositivo PCI condiviso è collegato a una macchina virtuale.
 * L'indirizzo IP preferito non è configurato in SnapCenter.

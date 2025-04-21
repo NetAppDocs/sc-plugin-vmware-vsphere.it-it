@@ -32,12 +32,12 @@ summary: Quando si configura una pianificazione di backup per un gruppo di risor
 +
 Utilizzare il formato `\https://<appliance-IP-address>:8080`
 
-. Fare clic sull'icona Impostazioni nella barra degli strumenti superiore.
+. Selezionare l'icona Impostazioni nella barra degli strumenti superiore.
 +
 image:scpivs44_image28.jpg["Plug-in SnapCenter per VMware vSphere"]
 
-. Nella pagina *Impostazioni*, nella sezione *Data e ora*, fare clic su *Modifica*.
-. Selezionare il nuovo fuso orario e fare clic su *Salva*.
+. Nella pagina *Impostazioni*, nella sezione *Data e ora*, selezionare *Modifica*.
+. Selezionare il nuovo fuso orario e selezionare *Salva*.
 +
 Il nuovo fuso orario verrà utilizzato per tutti i backup eseguiti dal plug-in SnapCenter per VMware vSphere.
 

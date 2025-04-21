@@ -54,7 +54,7 @@ NOTE: Nella configurazione fan-out, il gruppo di coerenza non è supportato per 
 La maggior parte dei campi presenti in queste pagine della procedura guidata sono esplicativi. Le seguenti informazioni descrivono alcuni dei campi per i quali potrebbe essere necessaria una guida.
 
 .Fasi
-. Nel riquadro di navigazione sinistro del plug-in SCV, fare clic su *Criteri*.
+. Nel riquadro di navigazione sinistro del plug-in SCV, selezionare *Criteri*.
 . Nella pagina *Criteri*, selezionare *Crea* per avviare la procedura guidata.
 . Nella pagina *New Backup Policy* (nuovo criterio di backup), immettere il nome del criterio e una descrizione.
 +
@@ -153,7 +153,7 @@ Immettere il percorso completo del file postscript o del file richiesto che si d
 NOTE: Le prescritture e i post-script devono essere posizionati sulla macchina virtuale dell'appliance. Per inserire più script, premere *Invio* dopo ogni percorso di script per elencare ciascuno script su una riga separata. Il carattere ";" non è consentito.
 
 |===
-. Fare clic su *Aggiungi.*
+. Selezionare *Aggiungi.*
 +
 È possibile verificare che il criterio sia stato creato e rivedere la configurazione del criterio selezionando il criterio nella pagina Criteri.
 

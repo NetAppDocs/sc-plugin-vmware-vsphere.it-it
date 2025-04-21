@@ -29,7 +29,7 @@ NOTE: Il valore predefinito per la conservazione dei registri dei lavori è 30 g
 Potrebbe essere necessario scorrere verso destra per visualizzare l'icona.
 
 +
-È inoltre possibile fare doppio clic su un lavoro per accedere alla finestra Dettagli lavoro, quindi fare clic su *Download Job Logs*.
+È inoltre possibile fare doppio clic su un lavoro per accedere alla finestra Dettagli lavoro e selezionare *Scarica registri processi*.
 
 
 

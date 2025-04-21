@@ -27,5 +27,5 @@ Se si tenta di montare una copia di backup di un datastore NFS su una VM di stor
 
 IMPORTANT: Assicurarsi di selezionare l'archivio dati corretto da smontare. In caso contrario, si potrebbe avere un impatto sul lavoro di produzione.
 
-. Nella finestra di dialogo *Unmount cloned Datastore*, selezionare un datastore, selezionare la casella di controllo *Unmount the cloned datastore*, quindi fare clic su *Unmount*.
+. Nella finestra di dialogo *Smonta datastore clonato*, selezionare un datastore, selezionare la casella di controllo *Smonta archivio dati clonato*, quindi selezionare *Smonta*.
 

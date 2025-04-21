@@ -35,9 +35,9 @@ La porta 8144 è predefinita per la comunicazione all'interno del plug-in SnapCe
 
 
 .Fasi
-. Nel riquadro di navigazione sinistro della GUI di SnapCenter, fare clic su *hosts*.
+. Nel riquadro di navigazione sinistro della GUI di SnapCenter, selezionare *host*.
 . Verificare che la scheda *host gestiti* sia selezionata nella parte superiore, quindi individuare il nome host dell'appliance virtuale e verificare che venga risolto dal server SnapCenter.
-. Fare clic su *Aggiungi* per avviare la procedura guidata.
+. Selezionare *Aggiungi* per avviare la procedura guidata.
 . Nella finestra di dialogo *Aggiungi host*, specificare l'host che si desidera aggiungere al server SnapCenter come indicato nella seguente tabella:
 +
 |===
@@ -52,11 +52,11 @@ La porta 8144 è predefinita per la comunicazione all'interno del plug-in SnapCe
 
 | Credenziale | Immettere il nome utente e la password per il plug-in SnapCenter per VMware vSphere fornito durante la distribuzione. 
 |===
-. Fare clic su *Invia*.
+. Selezionare *Invia*.
 +
 Una volta aggiunto correttamente l'host VM, questo viene visualizzato nella scheda Managed hosts (host gestiti).
 
-. Nel riquadro di spostamento di sinistra, fare clic su *Impostazioni*, quindi sulla scheda *credenziale* e selezionare *Aggiungi* per aggiungere le credenziali per l'appliance virtuale.
+. Nel riquadro di spostamento di sinistra, selezionare *Impostazioni*, quindi selezionare la scheda *credenziale*, quindi selezionare *Aggiungi* per aggiungere le credenziali per il dispositivo virtuale.
 . Fornire le informazioni sulle credenziali specificate durante l'implementazione del plug-in SnapCenter per VMware vSphere.
 +
 

@@ -23,7 +23,7 @@ Non avviare un processo di backup del database MySQL quando è già in esecuzion
 
 .Fasi
 . Dal client VMware vSphere, selezionare la VM in cui si trova il plug-in SnapCenter per VMware vSphere.
-. Nella scheda *Riepilogo* dell'appliance virtuale, fare clic su *Avvia console remota* *o Avvia console Web* per aprire una finestra della console di manutenzione.
+. Nella scheda *Riepilogo* dell'appliance virtuale, selezionare *Avvia console remota* *o Avvia console Web* per aprire una finestra della console di manutenzione.
 +
 image:scpivs44_image21.png["finestra della console di manutenzione"]
 
