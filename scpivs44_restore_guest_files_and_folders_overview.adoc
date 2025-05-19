@@ -105,7 +105,6 @@ Non è possibile ripristinare file e cartelle da una macchina virtuale che esegu
 Quando si tenta di eseguire il ripristino dal formato NTFS al formato FAT, il descrittore di protezione NTFS non viene copiato perché il file system FAT non supporta gli attributi di protezione di Windows.
 
 * Non è possibile ripristinare i file guest da un VMDK clonato o da un VMDK non inizializzato.
-* Non è possibile eseguire il ripristino da backup secondari se il backup è stato eseguito su un sistema con ONTAP 9.2 o versione successiva e se l'opzione di coerenza VMware era attiva.
 * Non è possibile ripristinare la struttura di directory per un file.
 +
 Se si seleziona il ripristino di un file in una directory nidificata, il file non viene ripristinato con la stessa struttura di directory. La struttura delle directory non viene ripristinata, ma solo il file. Se si desidera ripristinare una struttura di directory, è possibile copiare la directory stessa nella parte superiore della struttura.

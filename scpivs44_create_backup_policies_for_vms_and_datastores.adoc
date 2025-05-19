@@ -41,7 +41,7 @@ NOTE: La sincronizzazione attiva di SnapMirror è supportata solo per datastore 
 Per proteggere un datastore VMFS su un'implementazione con sincronizzazione attiva SnapMirror, come amministratore SnapCenter devi:
 
 +
-** Configurare i cluster e il mediatore come descritto nel report tecnico: https://www.netapp.com/pdf.html?item=/media/21888-tr-4878.pdf["TR-4878: Sincronizzazione attiva SnapMirror (in precedenza SMBC)"].
+** Configurare i cluster e il mediatore come descritto nel report tecnico: https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/mediator-install-task.html["Configurare ONTAP Mediator e i cluster per la sincronizzazione attiva di SnapMirror"].
 ** Aggiungi il volume associato al datastore VMFS al gruppo di coerenza e crea una relazione di data Protection utilizzando la policy di protezione _AutomatedFailOver_ o _AutomatedFailOverDuplex_ tra due sistemi storage ONTAP. Il criterio _AutomatedFailOverDuplex_ è supportato a partire da ONTAP 9.15.1.
 
 
@@ -87,7 +87,9 @@ IMPORTANT: Se si prevede di attivare la replica SnapVault, è necessario imposta
 
 +
 
-NOTE: Il valore massimo di conservazione è 1018 backup per le risorse su ONTAP 9.4 o versioni successive e 254 backup per le risorse su ONTAP 9.3 o versioni precedenti. I backup non avranno esito positivo se la conservazione viene impostata su un valore superiore a quello supportato dalla versione di ONTAP sottostante. Ciò vale anche per gli archivi dati di spanning. Se un datastore di spanning include risorse su ONTAP 9.3 e versioni precedenti e su ONTAP 9.4 e versioni successive, assicurarsi di impostare il valore di conservazione al di sotto di 254.
+NOTE: Il valore massimo di conservazione è 1018 backup. I backup non avranno esito positivo se la conservazione viene impostata su un valore superiore a quello supportato dalla versione di ONTAP sottostante. Ciò vale anche per gli archivi dati di spanning.
+
+
 
 . Nei campi *Replication*, specificare il tipo di replica sullo storage secondario, come mostrato nella tabella seguente:
 +

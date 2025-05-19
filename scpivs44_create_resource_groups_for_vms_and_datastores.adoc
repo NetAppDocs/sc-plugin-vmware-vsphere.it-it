@@ -280,17 +280,7 @@ NOTE: Se l'operazione di quiesce non riesce per una qualsiasi delle macchine vir
 
 == Gestire gli errori del controllo di compatibilità
 
-SnapCenter esegue controlli di compatibilità quando si tenta di creare un gruppo di risorse.
-
-I motivi dell'incompatibilità potrebbero essere:
-
-* I VMDK si trovano sullo storage non supportato, ad esempio su un sistema ONTAP in esecuzione in 7-Mode o su un dispositivo non ONTAP.
-* Un datastore si trova sullo storage NetApp con Clustered Data ONTAP 8.2.1 o versione precedente.
-+
-SnapCenter versione 4.x supporta ONTAP 8.3.1 e versioni successive.
-
-+
-Il plug-in SnapCenter per VMware vSphere non esegue controlli di compatibilità per tutte le versioni di ONTAP; solo per le versioni di ONTAP 8.2.1 e precedenti. Pertanto, fare sempre riferimento a https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp (IMT)"^] per le informazioni più aggiornate sull'assistenza SnapCenter.
+SnapCenter esegue controlli di compatibilità quando si tenta di creare un gruppo di risorse. Fare sempre riferimento a https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp (IMT)"^] per le informazioni più aggiornate sull'assistenza SnapCenter. I motivi dell'incompatibilità potrebbero essere:
 
 * Un dispositivo PCI condiviso è collegato a una macchina virtuale.
 * L'indirizzo IP preferito non è configurato in SnapCenter.

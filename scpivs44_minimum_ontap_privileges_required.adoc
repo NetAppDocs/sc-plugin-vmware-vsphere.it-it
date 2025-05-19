@@ -28,7 +28,7 @@ Tutti i plug-in di SnapCenter richiedono i seguenti privilegi minimi.
 |===
 
 
-| Comandi per tutti gli accessi: Sono richiesti privilegi minimi per ONTAP 8,3 e versioni successive. 
+| Comandi per tutti gli accessi: ONTAP Privileges minimo. 
 
 
 | event generate-autosupport-log 
@@ -54,13 +54,13 @@ interruzione del lavoro
 | vserver vserver cifs share create vserver cifs share delete vserver cifs shadowcopy show vserver cifs share show vserver cifs show vserver cifs show vserver export-policy vserver export vserver policy export policy create vserver nvme 
 |===
 |===
-| Comandi di sola lettura: Privilegi minimi richiesti per ONTAP 8.3 e versioni successive 
+| Comandi di sola lettura: ONTAP Privileges minimo 
 
 
 | l'identità del cluster mostra l'interfaccia di rete mostra il vserver vserver peer vserver show 
 |===
 |===
-| Comandi per tutti gli accessi: Sono richiesti privilegi minimi per ONTAP 9 e versioni successive. 
+| Comandi per tutti gli accessi: ONTAP Privileges minimo 
 
 
 | presentazione delle unità di archiviazione del gruppo di coerenza 
@@ -74,15 +74,6 @@ NOTE: È possibile ignorare i messaggi di avviso relativi ai comandi Vserver non
 
 == Ulteriori informazioni su ONTAP
 
-* Se si utilizza ONTAP 8.2.x:
-+
-Devi effettuare l'accesso come `vsadmin` Sulla VM di storage per disporre dei privilegi appropriati per il plug-in SnapCenter per le operazioni di VMware vSphere.
-
-* Se si utilizza ONTAP 8.3 e versioni successive:
-+
-Devi effettuare l'accesso come `vsadmin` o con un ruolo che ha i privilegi minimi elencati nelle tabelle precedenti.
-
-* Per creare e gestire i ruoli utente, è necessario essere l'amministratore del cluster. È possibile associare gli utenti a una macchina virtuale per lo storage in cluster o a una macchina virtuale per lo storage.
 * Per utilizzare la funzionalità di sincronizzazione attiva di SnapMirror sono necessarie ONTAP 9.12.1 o versioni successive.
 * Per utilizzare la funzione di istantanea antimanomissione (TPS):
 +

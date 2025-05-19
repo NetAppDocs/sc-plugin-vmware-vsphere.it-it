@@ -67,7 +67,7 @@ Se si desidera modificare il nome di un gruppo di risorse, non utilizzare i segu
 Tutte le operazioni di eliminazione dei gruppi di risorse vengono eseguite come eliminazione forzata. L'operazione di eliminazione scollega tutte le policy dal gruppo di risorse vCenter, rimuove il gruppo di risorse dal plug-in SnapCenter per VMware vSphere ed elimina tutti i backup e gli snapshot del gruppo di risorse.
 
 
-NOTE: In una relazione SnapVault, non è possibile eliminare l'ultimo snapshot, pertanto non è possibile eliminare il gruppo di risorse. Prima di eliminare un gruppo di risorse che fa parte di una relazione SnapVault, è necessario utilizzare OnCommand System Manager o l'interfaccia a riga di comando di ONTAP per rimuovere la relazione SnapVault, quindi è necessario eliminare l'ultimo snapshot.
+NOTE: In una relazione SnapVault, non è possibile eliminare l'ultimo snapshot, pertanto non è possibile eliminare il gruppo di risorse. Prima di eliminare un gruppo di risorse che fa parte di una relazione SnapVault, è necessario utilizzare Gestione di sistema o l'interfaccia a riga di comando di ONTAP per rimuovere la relazione SnapVault, quindi è necessario eliminare l'ultimo snapshot.
 
 .Fasi
 . Nel riquadro di navigazione sinistro del plug-in SCV, selezionare *gruppi di risorse*, quindi selezionare un gruppo di risorse e selezionare *Elimina*.
