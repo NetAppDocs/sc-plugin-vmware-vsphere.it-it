@@ -33,7 +33,7 @@ image:scv50_image1.png["Schermata del client vSphere"]
 . Nella scheda Configura, selezionare un backup e scegliere *Rinomina*.
 . Nella finestra di dialogo *Rinomina backup*, immettere il nuovo nome e selezionare *OK*.
 +
-Non utilizzare i seguenti caratteri speciali nei nomi di macchine virtuali, datastore, policy, backup o gruppi di risorse: & * N. @ ! / : * ? " < > - | ; ' , . È consentito un carattere di sottolineatura (_).
+Non utilizzare i seguenti caratteri speciali nei nomi di macchine virtuali, datastore, policy, backup o gruppi di risorse: & * N. @ ! / : * ? " < > - | ; ' e spazio. È consentito un carattere di sottolineatura (_).
 
 
 

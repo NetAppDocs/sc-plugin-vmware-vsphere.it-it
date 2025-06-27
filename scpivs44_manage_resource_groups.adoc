@@ -44,9 +44,7 @@ Una volta ripristinati i backup, lo stato del processo diventa `Production`.
 .A proposito di questa attività
 Se si desidera modificare il nome di un gruppo di risorse, non utilizzare i seguenti caratteri speciali nei nomi di macchine virtuali, datastore, policy, backup o gruppi di risorse:
 
-% E * N. @! / : * ? " < > - | ; ' , .
-
-È consentito un carattere di sottolineatura (_).
+% E * N. @! / : * ? " < > - | ; ' e spazio. È consentito un carattere di sottolineatura (_).
 
 .Fasi
 . Nel riquadro di navigazione sinistro del plug-in SCV, selezionare *gruppi di risorse*, quindi selezionare un gruppo di risorse e selezionare *Modifica*.

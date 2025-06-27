@@ -64,7 +64,7 @@ In modalità Linked, ogni vCenter dispone di un'appliance virtuale separata. Per
 
 ** Caratteri non supportati
 +
-Non utilizzare i seguenti caratteri speciali in VM, datastore, cluster, policy, backup, o nomi di gruppi di risorse: % e * n. @ ! / : * ? " < > - | ; ' , .
+Non utilizzare i seguenti caratteri speciali in VM, datastore, cluster, policy, backup, o nomi di gruppi di risorse: % e * n. @ ! / : * ? " < > - | ; ' e spazio.
 
 +
 È consentito un carattere di sottolineatura (_).

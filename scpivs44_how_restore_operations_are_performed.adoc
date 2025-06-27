@@ -35,7 +35,7 @@ Per gli ambienti VMFS, il plug-in SnapCenter per VMware vSphere utilizza operazi
 | VM e VMDK | Backup primari coerenti con le macchine virtuali | Ambienti NFS: Ambienti VMFS di ONTAP Single file SnapRestore: Clonare e montare con Storage VMotion 
 
 
-| VM e VMDK | Backup secondari coerenti con le macchine virtuali | Ambienti NFS: Clonare e montare con ambienti Storage VMotion VMFS: Clonare e montare con Storage VMotion 
+| VM e VMDK | Backup secondari coerenti con le macchine virtuali | Ambienti NFS: ONTAP SnapMirror Ripristina ambienti VMFS: clona e monta con Storage VMotion 
 
 
 | VM vVol | Backup primari coerenti con il crash | ONTAP Single file SnapRestore per tutti i protocolli 
