@@ -27,7 +27,7 @@ summary: È necessario creare policy di backup prima di utilizzare il plug-in Sn
 Per correggere questo problema, configurare il criterio di conservazione SnapMirror per lo storage secondario in modo da evitare di raggiungere il limite massimo di snapshot.
 
 +
-Per informazioni sulle modalità di assegnazione delle risorse agli utenti da parte degli amministratori, fare riferimento alla sezione https://docs.netapp.com/us-en/snapcenter/concept/concept_types_of_role_based_access_control_in_snapcenter.html["Informazioni SnapCenter sull'utilizzo del controllo degli accessi basato sui ruoli"^].
+Per informazioni su come gli amministratori assegnano le risorse agli utenti, fare riferimento a https://docs.netapp.com/us-en/snapcenter/get-started/rbac-snapcenter.html["Informazioni SnapCenter sull'utilizzo del controllo degli accessi basato sui ruoli"^] .
 
 
 
