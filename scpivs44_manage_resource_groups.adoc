@@ -23,7 +23,7 @@ NOTE: I gruppi di risorse sono denominati processi di backup in Virtual Storage 
 
 == Sospendere e riprendere le operazioni sui gruppi di risorse
 
-È possibile disattivare temporaneamente l'avvio delle operazioni pianificate su un gruppo di risorse. In un secondo momento, è possibile attivare tali operazioni.
+Sospendi le operazioni pianificate su un gruppo di risorse.  Riattivarli quando necessario.
 
 .Fasi
 . Nel riquadro di navigazione sinistro del plug-in SCV, selezionare *gruppi di risorse*, selezionare un gruppo di risorse e selezionare *Sospendi* (oppure selezionare *Riprendi*).
@@ -59,15 +59,15 @@ Se si desidera modificare il nome di un gruppo di risorse, non utilizzare i segu
 
 == Eliminare i gruppi di risorse
 
-È possibile eliminare un gruppo di risorse in vCenter se non è più necessario proteggere le risorse del gruppo di risorse. Prima di rimuovere il plug-in SnapCenter per VMware vSphere da vCenter, è necessario assicurarsi che tutti i gruppi di risorse siano stati eliminati.
+Eliminare un gruppo di risorse in vCenter se non è necessario proteggere le risorse.  Eliminare tutti i gruppi di risorse prima di rimuovere il SnapCenter Plug-in for VMware vSphere.
 
 .A proposito di questa attività
-Tutte le operazioni di eliminazione dei gruppi di risorse vengono eseguite come eliminazione forzata. L'operazione di eliminazione scollega tutte le policy dal gruppo di risorse vCenter, rimuove il gruppo di risorse dal plug-in SnapCenter per VMware vSphere ed elimina tutti i backup e gli snapshot del gruppo di risorse.
+Tutte le operazioni di eliminazione dei gruppi di risorse vengono eseguite come eliminazioni forzate.  Quando si elimina un gruppo di risorse, il sistema scollega tutti i criteri dal gruppo di risorse vCenter, rimuove il gruppo di risorse dal SnapCenter Plug-in for VMware vSphere ed elimina tutti i backup e gli snapshot del gruppo di risorse.
 
 
-NOTE: In una relazione SnapVault, non è possibile eliminare l'ultimo snapshot, pertanto non è possibile eliminare il gruppo di risorse. Prima di eliminare un gruppo di risorse che fa parte di una relazione SnapVault, è necessario utilizzare Gestione di sistema o l'interfaccia a riga di comando di ONTAP per rimuovere la relazione SnapVault, quindi è necessario eliminare l'ultimo snapshot.
+NOTE: In una relazione SnapVault , non è possibile eliminare l'ultimo snapshot, pertanto non è possibile eliminare il gruppo di risorse.  Prima di eliminare un gruppo di risorse in una relazione SnapVault , utilizzare System Manager o ONTAP CLI per rimuovere la relazione, quindi eliminare l'ultimo snapshot.
 
 .Fasi
 . Nel riquadro di navigazione sinistro del plug-in SCV, selezionare *gruppi di risorse*, quindi selezionare un gruppo di risorse e selezionare *Elimina*.
-. Nella casella di conferma *Elimina gruppo di risorse*, selezionare *OK* per confermare.
+. Nella finestra di dialogo di conferma *Elimina gruppo di risorse*, seleziona *OK* per confermare.  L'eliminazione di un gruppo di risorse non rimuove la protezione secondaria.  Se necessario, utilizzare Gestione sistema per eliminare la protezione secondaria.  I gruppi di coerenza creati per il gruppo di risorse non vengono rimossi automaticamente; è necessario eliminarli manualmente da ONTAP utilizzando System Manager o un'altra interfaccia supportata.
 

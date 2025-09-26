@@ -22,7 +22,7 @@ In qualità di amministratore, è possibile assegnare questi ruoli agli utenti a
 
 Il plug-in SnapCenter per VMware vSphere riporta questi ruoli ai valori predefiniti (set iniziale di privilegi) ogni volta che si riavvia il servizio client web vCenter o si modifica l'installazione. Se si aggiorna il plug-in SnapCenter per VMware vSphere, i ruoli predefiniti vengono aggiornati automaticamente per funzionare con quella versione del plug-in.
 
-È possibile visualizzare i ruoli predefiniti nella GUI di vCenter selezionando *Menu > Amministrazione > ruoli* come illustrato nella tabella seguente.
+È possibile visualizzare i ruoli predefiniti nell'interfaccia utente di vCenter selezionando *Menu > Amministrazione > Ruoli* come mostrato nella tabella seguente.
 
 |===
 | Ruolo | Descrizione 

@@ -46,7 +46,7 @@ Per aggiungere un controller NVMe al disco, segui la procedura riportata di segu
 
 
 .Fasi
-. Nella GUI del client VMware vSphere, selezionare *Menu* nella barra degli strumenti, quindi selezionare *host e cluster* dall'elenco a discesa.
+. Nell'interfaccia utente del client VMware vSphere, selezionare *Menu* nella barra degli strumenti, quindi selezionare *Host e cluster* dall'elenco a discesa.
 . Nel riquadro di spostamento di sinistra, fare clic con il pulsante destro del mouse su una macchina virtuale, quindi selezionare *Plug-in SnapCenter per VMware vSphere* > *Allega dischi virtuali*.
 . Nella sezione *Backup* della finestra *Allega disco virtuale*, selezionare un backup.
 +

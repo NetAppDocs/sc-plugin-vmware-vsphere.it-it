@@ -14,7 +14,7 @@ summary: 'Se si utilizza il plug-in SnapCenter per l"appliance virtuale VMware v
 
 
 
-NOTE: L'aggiornamento a SCV 6,1 è supportato solo su VMware vCenter Server 7 update 1 e versioni successive; per VMware vCenter Server precedenti alla versione 7 update 1, dovresti continuare a utilizzare SCV 4,7. L'aggiornamento è un'interruzione sulle versioni non supportate del server VMware vCenter.
+NOTE: L'aggiornamento a SCV 6.2 è supportato solo su VMware vCenter Server 7 Update 1 e versioni successive; per VMware vCenter Server precedenti alla versione 7 Update 1, è necessario continuare a utilizzare SCV 4.7.  L'aggiornamento è dirompente sulle versioni non supportate del server VMware vCenter.
 
 Se si utilizza il plug-in SnapCenter per l'appliance virtuale VMware vSphere, è possibile eseguire l'aggiornamento a una versione più recente. Il processo di aggiornamento disregistra il plug-in esistente e implementa un plug-in compatibile solo con vSphere 7.0U1 e versioni successive.
 
@@ -28,7 +28,10 @@ Se si utilizza il plug-in SnapCenter per l'appliance virtuale VMware vSphere, è
 | Se si utilizza il plug-in SnapCenter per la versione di VMware vSphere (SCV)... | È possibile aggiornare direttamente il plug-in di SnapCenter per VMware vSphere a... 
 
 
-| DISTRIBUTORE IDRAULICO 6,0 | Aggiornamento al distributore idraulico 6,1 
+| SCV 6,1 | Aggiorna a SCV 6.2 
+
+
+| DISTRIBUTORE IDRAULICO 6,0 | Aggiorna a SCV 6.1 e SCV 6.2 
 
 
 | DISTRIBUTORE IDRAULICO 5,0 | Aggiornamento ai distributori idraulici 6,0 e 6,1 
@@ -56,7 +59,7 @@ Per informazioni aggiornate sulle versioni supportate, fare riferimento a https:
 .Fasi
 . Preparati per l'aggiornamento disattivando il plug-in SnapCenter per VMware vSphere.
 +
-.. Accedere all'interfaccia grafica di gestione del plug-in SnapCenter per VMware vSphere. L'indirizzo IP viene visualizzato quando si implementa il plug-in SnapCenter per VMware vSphere.
+.. Accedi all'interfaccia utente di gestione SnapCenter Plug-in for VMware vSphere .  L'indirizzo IP viene visualizzato quando si distribuisce il SnapCenter Plug-in for VMware vSphere.
 .. Selezionare *Configurazione* nel riquadro di spostamento di sinistra, quindi selezionare l'opzione *Servizio* nella sezione Dettagli plug-in per disattivare il plug-in.
 
 
@@ -70,7 +73,7 @@ Per informazioni aggiornate sulle versioni supportate, fare riferimento a https:
 . Installare l'aggiornamento.
 +
 .. Nel browser, accedere a VMware vSphere vCenter.
-.. Nella GUI di vCenter, selezionare *client vSphere (HTML)*.
+.. Nell'interfaccia utente di vCenter, selezionare *vSphere Client (HTML)*.
 .. Accedere alla pagina *VMware vCenter Single Sign-on*.
 .. Nel riquadro del navigatore, selezionare la macchina virtuale che si desidera aggiornare, quindi selezionare la scheda *Riepilogo*.
 .. Nel riquadro *oggetti correlati*, selezionare su qualsiasi datastore nell'elenco, quindi selezionare la scheda *Riepilogo*.

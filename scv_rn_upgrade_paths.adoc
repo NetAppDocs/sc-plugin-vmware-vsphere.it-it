@@ -22,9 +22,16 @@ L'aggiornamento al plug-in SnapCenter per VMware vSphere (SCV) 4,8 e versioni su
 
 
  a| 
+SCV 6,1
+ a| 
+SCV 6.2
+
+
+
+ a| 
 DISTRIBUTORE IDRAULICO 6,0
  a| 
-SCV 6,1
+SCV 6.1 e SCV 6.2
 
 
 
@@ -40,26 +47,21 @@ DISTRIBUTORE IDRAULICO 4,9
  a| 
 Distributori idraulici 5,0 e 6,0
 
-
-
- a| 
-DISTRIBUTORE IDRAULICO 4,8
- a| 
-Distributori idraulici 4,9 e 5,0
-
-
-
- a| 
-DISTRIBUTORE IDRAULICO 4,7
- a| 
-Distributori idraulici 4,8 e 4,9
-
 |===
 Per i database virtualizzati e i file system integrati con SnapCenter, questo è il percorso di aggiornamento:
 
 [cols="30%,30%,40%"]
 |===
 | Se si utilizza | Se il plug-in VMware è... | È possibile eseguire direttamente l'aggiornamento a... 
+
+
+ a| 
+SnapCenter 6.2
+ a| 
+SCV 6,1
+ a| 
+SCV 6.2
+
 
 
  a| 

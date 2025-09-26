@@ -22,7 +22,7 @@ Se non hai più bisogno di utilizzare le funzionalità di data Protection di Sna
 
 
 .Fasi
-. Accedere alla GUI di gestione del plug-in SnapCenter per VMware vSphere utilizzando il formato `\https://<OVA-IP-address>:8080`.
+. Accedi all'interfaccia utente di gestione SnapCenter Plug-in for VMware vSphere utilizzando il formato `\https://<OVA-IP-address>:8080` .
 +
 Quando si implementa il plug-in, viene visualizzato l'indirizzo IP del plug-in SnapCenter per VMware vSphere.
 

@@ -35,7 +35,7 @@ L'amministratore di vSphere imposta vCenter Server RBAC effettuando le seguenti 
 * Impostazione delle autorizzazioni vCenter Server sull'oggetto root (nota anche come cartella root). È quindi possibile perfezionare la protezione limitando le entità figlio che non necessitano di tali autorizzazioni.
 * Assegnazione dei ruoli SCV agli utenti di Active Directory.
 +
-Come minimo, tutti gli utenti devono essere in grado di visualizzare gli oggetti vCenter. Senza questo privilegio, gli utenti non possono accedere alla GUI del client VMware vSphere.
+Come minimo, tutti gli utenti devono essere in grado di visualizzare gli oggetti vCenter.  Senza questo privilegio, gli utenti non possono accedere all'interfaccia utente del client VMware vSphere.
 
 
 

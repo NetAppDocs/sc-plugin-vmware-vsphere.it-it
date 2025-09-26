@@ -1,14 +1,16 @@
 ---
 settings:
-  name: SnapCenter Plug-in for VMware vSphere
+  name: SnapCenter Plug-in for VMware vSphere 6.2
   internal:
     pdf_enabled: true
   prod:
     pdf_enabled: true
     harmony_enabled: false
   versions:
-  - version-number: '6.1'
+  - version-number: '6.2'
     url: "/sc-plugin-vmware-vsphere"
+  - version-number: '6.1'
+    url: "/sc-plugin-vmware-vsphere-61"
   - version-number: '6.0'
     url: "/sc-plugin-vmware-vsphere-60"
   - version-number: '5.0'
@@ -26,13 +28,13 @@ settings:
   langs: it-it,us-en,de-de,es-es,fr-fr,pt-br,ja-jp,ko-kr,zh-cn,zh-tw
 sidebar:
   entries:
-  - title: Plug-in SnapCenter per VMware vSphere 6,1
+  - title: SnapCenter Plug-in for VMware vSphere 6.2
     url: "/index.html"
   - title: Note di rilascio
     entries:
     - title: Note sulla versione del plug-in SnapCenter per VMware vSphere
       url: "/scpivs44_release_notes.html"
-    - title: Novità del plug-in SnapCenter per VMware vSphere 6,1
+    - title: Novità del SnapCenter Plug-in for VMware vSphere 6.2
       url: "/scv_releasenotes_whats_new.html"
     - title: Percorsi di aggiornamento
       url: "/scv_rn_upgrade_paths.html"
@@ -40,7 +42,7 @@ sidebar:
     entries:
     - title: Panoramica del prodotto
       url: "/scpivs44_concepts_overview.html"
-    - title: Panoramica delle diverse GUI di SnapCenter
+    - title: Panoramica delle diverse interfacce utente SnapCenter
       url: "/scpivs44_overview_of_different_snapcenter_guis.html"
     - title: Licensing
       url: "/scpivs44_licensing.html"
@@ -100,8 +102,8 @@ sidebar:
       url: "/scpivs44_download_job_logs.html"
     - title: Accesso ai report
       url: "/scpivs44_access_reports.html"
-    - title: Generare un bundle di supporto dal plug-in SnapCenter per la GUI VMware
-        vSphere
+    - title: Genera un pacchetto di supporto dall'interfaccia utente SnapCenter Plug-in
+        for VMware vSphere
       url: "/scpivs44_generate_a_support_bundle_from_the_snapcenter_plug-in_for_vmware_vsphere_gui.html"
     - title: Generare un bundle di supporto dalla console di manutenzione
       url: "/scpivs44_generate_a_support_bundle_from_the_maintenance_console.html"

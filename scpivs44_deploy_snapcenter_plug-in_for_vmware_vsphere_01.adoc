@@ -71,11 +71,11 @@ NOTE: Tutti gli host devono essere configurati con indirizzi IP (i nomi host FQD
 Il completamento dell'implementazione potrebbe richiedere alcuni minuti. La distribuzione corretta è indicata quando il plug-in SnapCenter per VMware vSphere viene acceso, quando vengono installati gli strumenti VMware e la schermata richiede di accedere al plug-in SnapCenter per VMware vSphere.
 
 +
-La schermata visualizza l'indirizzo IP in cui viene distribuito il plug-in SnapCenter per VMware vSphere. Annotare l'indirizzo IP. Se si desidera modificare la configurazione del plug-in SnapCenter per VMware vSphere, è necessario accedere alla GUI di gestione del plug-in SnapCenter per VMware vSphere.
+Nella schermata viene visualizzato l'indirizzo IP in cui è distribuito il SnapCenter Plug-in for VMware vSphere .  Prendi nota dell'indirizzo IP.  Per apportare modifiche alla SnapCenter Plug-in for VMware vSphere SnapCenter Plug-in for VMware vSphere , è necessario accedere all'interfaccia utente di gestione.
 
-. Accedere alla GUI di gestione del plug-in SnapCenter per VMware vSphere utilizzando l'indirizzo IP visualizzato nella schermata di distribuzione utilizzando le credenziali fornite nella procedura guidata di distribuzione, quindi verificare sulla dashboard che il plug-in SnapCenter per VMware vSphere sia connesso correttamente a vCenter e sia abilitato.
+. Accedere all'interfaccia utente di gestione SnapCenter Plug-in for VMware vSphere utilizzando l'indirizzo IP visualizzato nella schermata di distribuzione utilizzando le credenziali fornite nella procedura guidata di distribuzione, quindi verificare nella Dashboard che il SnapCenter Plug-in for VMware vSphere sia connesso correttamente a vCenter e sia abilitato.
 +
-Utilizzare il formato `\https://<appliance-IP-address>:8080` Per accedere alla GUI di gestione.
+Utilizzare il formato `\https://<appliance-IP-address>:8080` per accedere all'interfaccia utente di gestione.
 
 +
 Accedere con il nome utente e la password dell'amministratore impostati al momento dell'implementazione e il token MFA generato dalla console di manutenzione.

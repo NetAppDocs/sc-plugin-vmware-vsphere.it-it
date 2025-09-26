@@ -8,19 +8,18 @@ indexpage:
     il server SnapCenter per supportare operazioni di backup e ripristino basate su
     applicazioni in ambienti VMware per plug-in specifici dell'applicazione SnapCenter.
   keywords: SnapCenter Plug-in for VMware vSphere, SCV
-  lead: Il plug-in SnapCenter per VMware vSphere (SCV) è un'appliance virtuale basata
-    su Linux. In quanto standalone, offre operazioni di backup e ripristino rapide,
-    efficienti in termini di spazio, coerenti con i crash e coerenti con le macchine
-    virtuali per macchine virtuali, archivi dati e VMDK. Funziona anche con il server
-    SnapCenter per supportare operazioni di backup e ripristino basate su applicazioni
-    in ambienti VMware per plug-in specifici dell'applicazione SnapCenter. Questa
-    libreria di documentazione descrive il plug-in SnapCenter per VMware vSphere versioni
-    6,1.
+  lead: SnapCenter Plug-in for VMware vSphere (SCV) è un'appliance virtuale basata
+    su Linux.  Come soluzione autonoma, fornisce operazioni di backup e ripristino
+    rapide, efficienti in termini di spazio, coerenti con gli arresti anomali e con
+    le VM per VM, datastore e VMDK.  Funziona anche con SnapCenter Server per supportare
+    operazioni di backup e ripristino basate su applicazioni in ambienti VMware per
+    plug-in specifici delle applicazioni SnapCenter .  Questa libreria di documentazione
+    descrive il SnapCenter Plug-in for VMware vSphere versioni 6.2.
   tiles:
   - title: Inizia subito
     links:
     - title: Note di rilascio
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3337464
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3359464
     - title: Informazioni sul distributore idraulico
       url: "/scpivs44_concepts_overview.html"
     - title: Requisiti di implementazione

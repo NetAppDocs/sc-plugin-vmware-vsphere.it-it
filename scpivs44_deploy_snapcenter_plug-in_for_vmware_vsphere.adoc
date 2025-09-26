@@ -22,17 +22,17 @@ Questa sezione elenca tutte le azioni necessarie da eseguire prima di iniziare l
 
 NOTE:  L'implementazione di OVA è supportata in VMware vCenter 7u1 e versioni successive.
 
-* È necessario aver letto i requisiti di implementazione.
-* È necessario eseguire una versione supportata di vCenter Server.
-* È necessario aver configurato e configurato l'ambiente vCenter Server.
-* È necessario aver configurato un host ESXi per il plug-in SnapCenter per VMware vSphere VM.
-* È necessario aver scaricato il plug-in SnapCenter per il file .tar di VMware vSphere.
-* È necessario disporre dei dettagli di autenticazione dell'accesso per l'istanza di vCenter Server.
-* È necessario disporre di un certificato con file di chiavi pubbliche e private validi. Per ulteriori informazioni, fare riferimento agli articoli nella https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_Certificate_Resolution_Guide["Gestione dei certificati di storage"] sezione.
-* È necessario aver disconnesso e chiuso tutte le sessioni del browser del client vSphere ed eliminato la cache del browser per evitare qualsiasi problema relativo alla cache del browser durante la distribuzione del plug-in SnapCenter per VMware vSphere.
-* È necessario aver attivato TLS (Transport Layer Security) in vCenter. Consultare la documentazione VMware.
-* Se si prevede di eseguire backup in vCenter diversi da quello in cui viene implementato il plug-in SnapCenter per VMware vSphere, il server ESXi, il plug-in SnapCenter per VMware vSphere e ogni vCenter devono essere sincronizzati allo stesso tempo.
-* Per proteggere le macchine virtuali su datastore vVol, è necessario prima implementare i tool ONTAP per VMware vSphere. Per informazioni aggiornate sulle versioni supportate degli strumenti ONTAP, consultare https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^]. I tool ONTAP consentono di eseguire il provisioning e la configurazione dello storage su ONTAP e sul client Web VMware.
+* Assicurati di aver esaminato i requisiti di distribuzione.
+* Verificare di utilizzare una versione supportata di vCenter Server.
+* Verificare che l'ambiente vCenter Server sia configurato e impostato.
+* Preparare un host ESXi per il SnapCenter Plug-in for VMware vSphere VM.
+* Scarica il file .tar SnapCenter Plug-in for VMware vSphere .
+* Ottieni le credenziali di accesso per la tua istanza di vCenter Server.
+* Ottieni un certificato con file di chiave pubblica e privata validi.  Per i dettagli, vedere gli articoli nel https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_Certificate_Resolution_Guide["Gestione dei certificati di storage"] sezione.
+* Disconnettersi e chiudere tutte le sessioni del browser del client vSphere e cancellare la cache del browser per evitare problemi durante la distribuzione.
+* Abilita Transport Layer Security (TLS) in vCenter.  Fare riferimento alla documentazione VMware.
+* Se si prevede di eseguire backup in vCenter diversi da quello in cui è distribuito il SnapCenter Plug-in for VMware vSphere , assicurarsi che il server ESXi, il SnapCenter Plug-in for VMware vSphere e ciascun vCenter siano sincronizzati con la stessa ora.
+* Per proteggere le VM sui datastore vVol, distribuire prima gli ONTAP tools for VMware vSphere .  Per le versioni degli strumenti ONTAP supportati, vedere https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^] .  Gli strumenti ONTAP forniscono e configurano l'archiviazione su ONTAP e sul client Web VMware.
 
 
 Implementa il plug-in SnapCenter per VMware vSphere nello stesso fuso orario di vCenter. Le pianificazioni di backup vengono eseguite nel fuso orario in cui viene implementato il plug-in SnapCenter per VMware vSphere. VCenter riporta i dati nel fuso orario in cui si trova vCenter. Pertanto, se il plug-in SnapCenter per VMware vSphere e vCenter si trova in fusi orari diversi, i dati del plug-in SnapCenter per la dashboard di VMware vSphere potrebbero non essere gli stessi dei dati dei report.
@@ -136,11 +136,11 @@ I tool VMware sono installati sulla macchina virtuale in cui viene implementato 
 Il completamento dell'implementazione potrebbe richiedere alcuni minuti. La distribuzione corretta è indicata quando il plug-in SnapCenter per VMware vSphere viene acceso, quando vengono installati gli strumenti VMware e la schermata richiede di accedere al plug-in SnapCenter per VMware vSphere. Durante il primo riavvio, è possibile impostare la configurazione di rete da DHCP a static. Tuttavia, il passaggio da statico a DHCP non è supportato.
 
 +
-La schermata visualizza l'indirizzo IP in cui viene distribuito il plug-in SnapCenter per VMware vSphere. Annotare l'indirizzo IP. Se si desidera modificare la configurazione del plug-in SnapCenter per VMware vSphere, è necessario accedere alla GUI di gestione del plug-in SnapCenter per VMware vSphere.
+Nella schermata viene visualizzato l'indirizzo IP in cui è distribuito il SnapCenter Plug-in for VMware vSphere .  Prendi nota dell'indirizzo IP.  Per apportare modifiche alla SnapCenter Plug-in for VMware vSphere SnapCenter Plug-in for VMware vSphere , è necessario accedere all'interfaccia utente di gestione.
 
-. Accedere alla GUI di gestione del plug-in SnapCenter per VMware vSphere utilizzando l'indirizzo IP visualizzato nella schermata di distribuzione e utilizzando le credenziali fornite nella procedura guidata di distribuzione, quindi verificare sulla dashboard che il plug-in SnapCenter per VMware vSphere sia connesso correttamente a vCenter e sia abilitato.
+. Accedere all'interfaccia utente di gestione SnapCenter Plug-in for VMware vSphere utilizzando l'indirizzo IP visualizzato nella schermata di distribuzione e le credenziali fornite nella procedura guidata di distribuzione, quindi verificare nella Dashboard che il SnapCenter Plug-in for VMware vSphere sia connesso correttamente a vCenter e sia abilitato.
 +
-Utilizzare il formato `\https://<appliance-IP-address>:8080` Per accedere alla GUI di gestione.
+Utilizzare il formato `\https://<appliance-IP-address>:8080` per accedere all'interfaccia utente di gestione.
 
 +
 Accedere con il nome utente e la password dell'amministratore impostati al momento dell'implementazione e il token MFA generato dalla console di manutenzione.

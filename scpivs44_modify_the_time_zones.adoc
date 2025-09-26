@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: scpivs44_modify_the_time_zones.html 
 keywords:  
-summary: Quando si configura una pianificazione di backup per un gruppo di risorse di plug-in SnapCenter per VMware vSphere, la pianificazione viene impostata automaticamente in base al fuso orario in cui viene distribuito il plug-in SnapCenter per VMware vSphere. È possibile modificare tale fuso orario utilizzando la GUI di gestione o la console di manutenzione del plug-in SnapCenter per VMware vSphere. 
+summary: 'Quando si configura una pianificazione di backup per un gruppo di risorse SnapCenter Plug-in for VMware vSphere , la pianificazione viene impostata automaticamente in base al fuso orario in cui viene distribuito il SnapCenter Plug-in for VMware vSphere .  È possibile modificare tale fuso orario utilizzando l"interfaccia utente di gestione o la console di manutenzione SnapCenter Plug-in for VMware vSphere .' 
 ---
 = Modificare i fusi orari per i backup
 :hardbreaks:
@@ -16,11 +16,11 @@ summary: Quando si configura una pianificazione di backup per un gruppo di risor
 :authorinitials: [
 :authors: [.lead]
 :revnumber: 
-:revdate: the schedule is automatically set for the time zone in which SnapCenter Plug-in for VMware vSphere is deployed. You can modify that time zone by using the SnapCenter Plug-in for VMware vSphere management GUI or maintenance console.
+:revdate: the schedule is automatically set for the time zone in which SnapCenter Plug-in for VMware vSphere is deployed. You can modify that time zone by using the SnapCenter Plug-in for VMware vSphere management user interface or maintenance console.
 
 
 .Prima di iniziare
-È necessario conoscere l'indirizzo IP e le credenziali di accesso per l'interfaccia grafica di gestione del plug-in SnapCenter per VMware vSphere. È inoltre necessario annotare il token MFA generato dalla console di manutenzione.
+È necessario conoscere l'indirizzo IP e le credenziali di accesso per l'interfaccia utente di gestione SnapCenter Plug-in for VMware vSphere .  È inoltre necessario annotare il token MFA generato dalla console di manutenzione.
 
 * L'indirizzo IP è stato visualizzato al momento della distribuzione del plug-in SnapCenter per VMware vSphere.
 * Utilizzare le credenziali di accesso fornite durante la distribuzione del plug-in SnapCenter per VMware vSphere o come successivamente modificato.
@@ -28,7 +28,7 @@ summary: Quando si configura una pianificazione di backup per un gruppo di risor
 
 
 .Fasi
-. Accedere all'interfaccia grafica di gestione del plug-in SnapCenter per VMware vSphere.
+. Accedi all'interfaccia utente di gestione SnapCenter Plug-in for VMware vSphere .
 +
 Utilizzare il formato `\https://<appliance-IP-address>:8080`
 

@@ -16,9 +16,9 @@ summary: È possibile smontare un backup quando non è più necessario accedere 
 [role="lead"]
 È possibile smontare un backup quando non è più necessario accedere ai file nel datastore.
 
-Se un backup è elencato come montato nella GUI del client VMware vSphere, ma non è elencato nella schermata di disinstallazione del backup, è necessario utilizzare l'API REST `/backup/{backup-Id}/cleanup` per pulire gli archivi dati fuori associazione e provare nuovamente a eseguire la procedura di disinstallazione.
+Se un backup è elencato come montato nell'interfaccia utente del client VMware vSphere, ma non è elencato nella schermata di smontaggio del backup, è necessario utilizzare l'API REST `/backup/{backup-Id}/cleanup` per ripulire i datastore fuori limite e quindi provare nuovamente la procedura di smontaggio.
 
-Se si tenta di montare una copia di backup di un datastore NFS su una VM di storage (SVM) con il volume root in una relazione mirror di condivisione del carico, potrebbe verificarsi l'errore `You may have reached the maximum number of NFS volumes configured in the vCenter. Check the vSphere Client for any error messages.` Per evitare questo problema, modificare l'impostazione dei volumi massimi selezionando *ESX* > *Manage* > *Settings* > *Advance System Settings* e modificando il valore NFS.MaxVolumes. Il valore massimo è 256.
+Se si tenta di montare una copia di backup di un datastore NFS su una VM di archiviazione (SVM) con il volume radice in una relazione mirror di condivisione del carico e si potrebbe verificare l'errore `You might have reached the maximum number of NFS volumes configured in the vCenter. Check the vSphere Client for any error messages.` Per evitare questo problema, modificare l'impostazione dei volumi massimi andando su *ESX* > *Gestisci* > *Impostazioni* > *Impostazioni di sistema avanzate* e modificando il valore NFS.MaxVolumes.  Il valore massimo è 256.
 
 .Fasi
 . Nella pagina dei collegamenti client VMware vSphere, selezionare *Storage*.

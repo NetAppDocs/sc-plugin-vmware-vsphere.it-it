@@ -43,7 +43,7 @@ Se sei un nuovo utente SnapCenter, devi aggiungere le VM di storage a SnapCenter
 
 Per correggere uno di questi problemi, procedere come segue:
 
-. Cancellare la cache del browser e verificare che la GUI funzioni correttamente.
+. Svuota la cache del browser e controlla se l'interfaccia utente funziona correttamente.
 +
 Se il problema persiste, riavviare il servizio client VMware vSphere
 
@@ -57,7 +57,7 @@ Se il problema persiste, riavviare il servizio client VMware vSphere
 Se non si utilizzano le credenziali di amministratore, potrebbe essere visualizzato un errore di autenticazione dopo la distribuzione del plug-in SnapCenter per VMware vSphere o dopo la migrazione. Se si verifica un errore di autenticazione, è necessario riavviare il servizio.
 
 .Fasi
-. Accedere alla GUI di gestione del plug-in SnapCenter per VMware vSphere utilizzando il formato `\https://<appliance-IP-address>:8080`. Utilizzare il nome utente admin, la password e i dettagli del token MFA per effettuare l'accesso. Il token MFA può essere generato dalla console di manutenzione.
+. Accedere all'interfaccia utente di gestione SnapCenter Plug-in for VMware vSphere utilizzando il formato `\https://<appliance-IP-address>:8080` .  Per effettuare l'accesso, utilizzare il nome utente amministratore, la password e i dettagli del token MFA.  Il token MFA può essere generato dalla console di manutenzione.
 . Riavviare il servizio.
 
 
@@ -73,7 +73,7 @@ Se si desidera eseguire flussi di lavoro application-over-VMDK in SnapCenter (wo
 
 
 .A proposito di questa attività
-* È possibile registrare il plug-in SnapCenter per VMware vSphere con il server SnapCenter utilizzando l'interfaccia grafica di SnapCenter per aggiungere un host di tipo "vsphere".
+* È possibile registrare il SnapCenter Plug-in for VMware vSphere con SnapCenter Server utilizzando l'interfaccia utente SnapCenter per aggiungere un host di tipo "vsphere".
 +
 La porta 8144 è predefinita per la comunicazione all'interno del plug-in SnapCenter per VMware vSphere.
 
@@ -84,7 +84,7 @@ La porta 8144 è predefinita per la comunicazione all'interno del plug-in SnapCe
 
 
 .Fasi
-. Nel riquadro di navigazione sinistro della GUI di SnapCenter, selezionare *host*.
+. Nel riquadro di navigazione sinistro dell'interfaccia utente SnapCenter , selezionare *Host*.
 . Verificare che la scheda *host gestiti* sia selezionata nella parte superiore, quindi individuare il nome host dell'appliance virtuale e verificare che venga risolto dal server SnapCenter.
 . Selezionare *Aggiungi* per avviare la procedura guidata.
 . Nella finestra di dialogo *Aggiungi host*, specificare l'host che si desidera aggiungere al server SnapCenter come indicato nella seguente tabella:

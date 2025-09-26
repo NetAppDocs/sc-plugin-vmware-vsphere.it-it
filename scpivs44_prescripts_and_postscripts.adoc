@@ -28,7 +28,11 @@ Sono supportati gli script Perl e shell. Gli script della shell devono iniziare 
 
 Le prescritture e i postscript vengono eseguiti dal plug-in SnapCenter per VMware vSphere. Pertanto, gli script devono trovarsi nel plug-in SnapCenter per VMware vSphere OVA, con autorizzazioni per l'esecuzione.
 
-Ad esempio: * Potrebbe essere Un percorso di script PERL `/support/support/script.pl`* Potrebbe essere Un percorso di script della shell `/support/support/script.sh`
+Per esempio:
+
+* Un percorso di script PERL potrebbe essere `/support/support/script.pl`
+* Un percorso di script shell potrebbe essere `/support/support/script.sh`
+
 
 Il percorso dello script viene convalidato al momento dell'esecuzione dello script.
 
@@ -64,7 +68,11 @@ Gli script Postscript vengono eseguiti nella fase POST_BACKUP dell'operazione do
 
 NOTE: Se un postscript non riesce, il backup viene completato correttamente e viene inviato un messaggio di avviso.
 
-Controllare quanto segue per verificare che i valori dello script siano popolati: * Per gli script PERL: `/support/support/log_env.log`* Per gli script shell: `/support/support/log_file.log`
+Per verificare che i valori dello script siano compilati, controllare quanto segue:
+
+* Per gli script PERL: `/support/support/log_env.log`
+* Per gli script shell: `/support/support/log_file.log`
+
 
 
 

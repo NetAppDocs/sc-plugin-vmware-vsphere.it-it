@@ -17,7 +17,7 @@ summary: È possibile cercare e trovare un backup specifico di una macchina virt
 È possibile cercare e trovare un backup specifico di una macchina virtuale o di un datastore utilizzando la procedura guidata di ripristino. Una volta individuato un backup, è possibile ripristinarlo.
 
 .Fasi
-. Nella GUI del client VMware vSphere, selezionare *Menu* nella barra degli strumenti, quindi eseguire una delle seguenti operazioni:
+. Nell'interfaccia utente del client VMware vSphere, seleziona *Menu* nella barra degli strumenti, quindi esegui una delle seguenti operazioni:
 +
 |===
 | Per visualizzare i backup di… | Eseguire le seguenti operazioni… 

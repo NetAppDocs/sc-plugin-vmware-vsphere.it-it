@@ -24,5 +24,5 @@ Utilizzare la seguente API REST nella sezione lavori per modificare i lavori blo
 | API REST | Commenti 
 
 
-| `/4.1/jobs/{id}/failJobs` | Quando si passano gli ID dei lavori bloccati in uno stato di esecuzione, `failJobs` contrassegna tali lavori come non riusciti. Per identificare i lavori bloccati in uno stato di esecuzione, utilizzare la GUI di monitoraggio dei lavori per visualizzare lo stato di ogni lavoro e l'ID del lavoro. 
+| `/4.1/jobs/{id}/failJobs` | Quando si passano gli ID dei lavori bloccati in uno stato di esecuzione, `failJobs` contrassegna quei lavori come falliti.  Per identificare i lavori bloccati in esecuzione, utilizzare l'interfaccia utente del monitor dei lavori per visualizzare lo stato di ogni lavoro e l'ID del lavoro. 
 |===

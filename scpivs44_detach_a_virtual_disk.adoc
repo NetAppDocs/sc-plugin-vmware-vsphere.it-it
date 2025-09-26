@@ -17,7 +17,7 @@ summary: Dopo aver collegato un disco virtuale per ripristinare i singoli file, 
 Dopo aver collegato un disco virtuale per ripristinare i singoli file, è possibile scollegare il disco virtuale dalla macchina virtuale padre.
 
 .Fasi
-. Nella GUI del client VMware vSphere, selezionare *Menu* nella barra degli strumenti, quindi selezionare *VM e modelli* dall'elenco a discesa.
+. Nell'interfaccia utente del client VMware vSphere, selezionare *Menu* nella barra degli strumenti, quindi selezionare *VM e modelli* dall'elenco a discesa.
 . Nel riquadro di sinistra del navigatore, selezionare una VM.
 . Nel riquadro di spostamento di sinistra, fare clic con il pulsante destro del mouse sulla macchina virtuale, quindi selezionare *Plug-in SnapCenter per VMware vSphere* nell'elenco a discesa, quindi selezionare *Disconnetti disco virtuale* nell'elenco a discesa secondario.
 . Nella schermata *Disconnetti disco virtuale*, selezionare uno o più dischi da scollegare, quindi selezionare la casella di controllo *Scollega i dischi selezionati* e selezionare *Scollega*.

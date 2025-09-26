@@ -97,7 +97,7 @@ Anche in caso di errore di uno snapshot di coerenza VMware per una macchina virt
 
 
 .Fasi
-. Nella GUI del client VMware vSphere, selezionare *Menu* nella barra degli strumenti, quindi selezionare *VM e modelli* dall'elenco a discesa.
+. Nell'interfaccia utente del client VMware vSphere, selezionare *Menu* nella barra degli strumenti, quindi selezionare *VM e modelli* dall'elenco a discesa.
 +
 
 NOTE: Se si ripristina una VM eliminata, le credenziali della VM di storage aggiunte al plug-in SnapCenter per VMware vSphere devono essere `vsadmin` o un account utente con tutti gli stessi privilegi di `vsadmin`.

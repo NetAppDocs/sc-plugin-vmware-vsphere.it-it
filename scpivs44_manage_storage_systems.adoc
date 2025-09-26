@@ -25,7 +25,7 @@ Prima di eseguire il backup o il ripristino di macchine virtuali o datastore uti
 Se si modifica una VM di storage aggiunta automaticamente come parte di un cluster (a volte chiamata VM di storage implicita), tale VM di storage passa a una VM di storage esplicita e può essere eliminata separatamente senza modificare il resto delle VM di storage in quel cluster. Nella pagina Storage Systems (sistemi storage), il nome utente viene visualizzato come N/A quando il metodo di autenticazione viene effettuato tramite il certificato; i nomi utente vengono visualizzati solo per le macchine virtuali di storage esplicite nell'elenco dei cluster e il flag ExplicitSVM è impostato su true. Tutte le VM di storage sono sempre elencate nel cluster associato.
 
 
-IMPORTANT: Se sono state aggiunte VM di storage per le operazioni di protezione dei dati basate sull'applicazione utilizzando l'interfaccia grafica utente di SnapCenter, è necessario utilizzare la stessa interfaccia grafica per modificare tali VM di storage.
+IMPORTANT: Se hai aggiunto VM di archiviazione per operazioni di protezione dei dati basate su applicazioni tramite l'interfaccia utente SnapCenter , devi utilizzare la stessa interfaccia utente per modificare tali VM di archiviazione.
 
 .Fasi
 . Nel riquadro di navigazione sinistro del plug-in SCV, selezionare *sistemi di memorizzazione*.
@@ -40,7 +40,7 @@ IMPORTANT: Se sono state aggiunte VM di storage per le operazioni di protezione 
 È possibile utilizzare il client VMware vSphere per rimuovere le VM di storage dall'inventario in vCenter.
 
 
-NOTE: Se sono state aggiunte VM di storage per le operazioni di protezione dei dati basate sull'applicazione utilizzando l'interfaccia grafica utente di SnapCenter, è necessario utilizzare la stessa interfaccia grafica per modificare tali VM di storage.
+NOTE: Se hai aggiunto VM di archiviazione per operazioni di protezione dei dati basate su applicazioni tramite l'interfaccia utente SnapCenter , devi utilizzare la stessa interfaccia utente per modificare tali VM di archiviazione.
 
 .Prima di iniziare
 Prima di rimuovere la VM di storage, è necessario smontare tutti gli archivi dati presenti nella VM di storage.

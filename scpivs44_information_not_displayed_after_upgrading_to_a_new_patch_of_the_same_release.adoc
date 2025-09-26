@@ -40,7 +40,7 @@ La cache si trova nelle seguenti posizioni, in base al tipo di sistema operativo
 
 == Soluzione alternativa se è già stato eseguito l'aggiornamento prima di svuotare la cache
 
-. Accedere all'interfaccia grafica di gestione del plug-in SnapCenter per VMware vSphere.
+. Accedi all'interfaccia utente di gestione SnapCenter Plug-in for VMware vSphere .
 +
 L'indirizzo IP viene visualizzato quando si implementa il plug-in SnapCenter per VMware vSphere.
 
