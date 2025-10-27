@@ -32,6 +32,7 @@ Il plug-in SnapCenter per l'implementazione di VMware vSphere crea i seguenti ru
 
 L'amministratore di vSphere imposta vCenter Server RBAC effettuando le seguenti operazioni:
 
+* È possibile associare l'utente a ruoli predefiniti nelle autorizzazioni globali.
 * Impostazione delle autorizzazioni vCenter Server sull'oggetto root (nota anche come cartella root). È quindi possibile perfezionare la protezione limitando le entità figlio che non necessitano di tali autorizzazioni.
 * Assegnazione dei ruoli SCV agli utenti di Active Directory.
 +
