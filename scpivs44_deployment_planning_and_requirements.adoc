@@ -42,7 +42,7 @@ Ad esempio, si supponga di voler eseguire backup da sei istanze diverse di vCent
 
 * Per proteggere le macchine virtuali vVol (macchine virtuali su datastore VMware vVol), è necessario prima implementare i tool ONTAP per VMware vSphere. I tool ONTAP consentono di eseguire il provisioning e la configurazione dello storage per vVol su ONTAP e sul client Web VMware.
 +
-Per ulteriori informazioni, consulta la documentazione sui tool ONTAP per VMware vSphere. Inoltre, fare riferimento a https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^] per le informazioni più recenti sulle versioni supportate sugli strumenti ONTAP.
+Per ulteriori informazioni, fare riferimento alla documentazione degli ONTAP tools for VMware vSphere . Inoltre, fare riferimento a https://imt.netapp.com/imt/imt.jsp?components=180121;&solution=1517&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^] per informazioni aggiornate sulle versioni supportate dagli strumenti ONTAP .
 
 * Il plug-in SnapCenter per VMware vSphere offre un supporto limitato di dispositivi PCI o PCIe condivisi (ad esempio, NVIDIA Grid GPU) a causa di un limite delle macchine virtuali che supportano Storage vMotion. Per ulteriori informazioni, consultare il documento del vendor Deployment Guide for VMware.
 +
@@ -122,9 +122,9 @@ Ripristino di una macchina virtuale completa quando uno o più VMDK si trovano s
 | Applicazione VMware vStorage API for Array Integration (VAAI) | Il plug-in SnapCenter per VMware vSphere utilizza questo metodo per migliorare le performance delle operazioni di ripristino. Inoltre, migliora le performance negli ambienti NFS. 
 
 
-| Strumenti ONTAP per VMware | Il plug-in SnapCenter per VMware vSphere utilizza questa funzione per gestire i datastore vVol (volumi virtuali VMware). Per le versioni supportate, fare riferimento a https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^]. 
+| Strumenti ONTAP per VMware | Il SnapCenter Plug-in for VMware vSphere lo utilizza per gestire i datastore vVol (volumi virtuali VMware). Per le versioni supportate, fare riferimento a https://imt.netapp.com/imt/imt.jsp?components=180121;&solution=1517&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^] . 
 |===
-Per informazioni aggiornate sulle versioni supportate, fare riferimento a https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^].
+Per le informazioni più recenti sulle versioni supportate, fare riferimento a https://imt.netapp.com/imt/imt.jsp?components=180121;&solution=1517&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^] .
 
 
 

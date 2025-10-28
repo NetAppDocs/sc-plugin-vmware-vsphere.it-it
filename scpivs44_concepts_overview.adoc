@@ -59,7 +59,7 @@ La maggior parte delle operazioni di ripristino in ambienti NFS utilizza la funz
 I tool ONTAP consentono di eseguire il provisioning e la configurazione dello storage per vVol in ONTAP e nel client Web VMware.
 
 +
-Per ulteriori informazioni, consulta la documentazione sui tool ONTAP per VMware vSphere. Inoltre, fare riferimento a https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^] per le informazioni più recenti sulle versioni supportate sugli strumenti ONTAP.
+Per ulteriori informazioni, fare riferimento alla documentazione degli ONTAP tools for VMware vSphere . Inoltre, fare riferimento a https://imt.netapp.com/imt/imt.jsp?components=180121;&solution=1517&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^] per informazioni aggiornate sulle versioni supportate dagli strumenti ONTAP .
 
 * Il plug-in SnapCenter per VMware vSphere viene implementato come appliance virtuale in una VM Linux
 +
@@ -69,7 +69,7 @@ Anche se l'appliance virtuale deve essere installata come macchina virtuale Linu
 
 Oltre a queste principali funzionalità, il plug-in SnapCenter per VMware vSphere supporta anche iSCSI, Fiber Channel, FCoE, NFS 3,0/4,1, VMFS 5,0/6,0, NVMe over FC e NVMe over TCP.
 
-Per informazioni aggiornate sulle versioni supportate, fare riferimento a https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^] (IMT).
+Per le informazioni più recenti sulle versioni supportate, fare riferimento a https://imt.netapp.com/imt/imt.jsp?components=180121;&solution=1517&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^] (IMT).
 
 Per informazioni sui protocolli NFS e sull'host ESXi, fare riferimento alla documentazione relativa allo storage vSphere fornita da VMware.
 
