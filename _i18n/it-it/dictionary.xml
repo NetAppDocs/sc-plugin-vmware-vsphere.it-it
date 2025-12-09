@@ -1831,8 +1831,6 @@ Il <block ref="205a43536d4d7a501f66e7fd657c91ca" category="inline-link-macro-rx"
   <block id="856e1714b1d49f0d567463f553ef9120" category="cell">8 core</block>
   <block id="2a9f9ccc193010032b655ecfc76e40c8" category="cell">RAM consigliata</block>
   <block id="dde8b54fa4a91beedb7b736869c08569" category="cell">24 GB</block>
-  <block id="f8bce6aa95f5621d608c29e258b620d2" category="cell">Dimensione massima dell'heap del servizio vmcontrol nell'apparecchio</block>
-  <block id="af5700014f646d2567efa6288d85ab2b" category="cell">8 GB</block>
   <block id="4fa7e925220267d7b768f4b3a78c6148" category="admonition">Il sistema di archiviazione ASA R2 non supporta la ridenominazione dei backup.</block>
   <block id="d106abcc28b08528e977427482cfc257" category="paragraph">È possibile apportare modifiche a più categorie. In questa opzione è anche possibile modificare le risorse secondarie protette.</block>
   <block id="875b0302744a0f026125fde0002031ee" category="cell">Volume clone create volume clone show volume clone split start volume clone split status volume clone split volume clone split stop volume create volume delete volume delete volume distruggi volume clone create volume file show disk-use volume offline volume online volume gestito-Feature volume Modify volume qtree create volume volume create volume snapshot delete volume volume delete volume volume volume volume show volume volume show volume SnapLock-expiry-time snapshot volume snapshot restore volume snapshot restore volume show delta volume show</block>
@@ -2202,4 +2200,7 @@ Il <block ref="205a43536d4d7a501f66e7fd657c91ca" category="inline-link-macro-rx"
   <block id="95477275bd206a7fb98bf4a8ec799a0b" category="paragraph">Per le informazioni più recenti sulle versioni supportate, fare riferimento a<block ref="dd731ea0dfaa7ba4b5325a39b353b5a2" category="inline-link-rx"></block> .</block>
   <block id="65d35124c2bde72fba0fccdd4037d284" category="paragraph">Non è possibile ripristinare file e cartelle da una macchina virtuale che esegue il sistema operativo guest Linux. Tuttavia, è possibile allegare un VMDK e quindi ripristinare manualmente i file e le cartelle. Per le informazioni più recenti sui sistemi operativi guest supportati, fare riferimento a<block ref="dd731ea0dfaa7ba4b5325a39b353b5a2" category="inline-link-rx"></block> .</block>
   <block id="eccd74f81ec87affcad9c90ed7e1c714" category="paragraph">Non è possibile ripristinare file e cartelle da una macchina virtuale che esegue il sistema operativo guest Linux. Tuttavia, è possibile allegare un VMDK e quindi ripristinare manualmente i file e le cartelle. Per le informazioni più recenti sui sistemi operativi guest supportati, fare riferimento a<block ref="dd731ea0dfaa7ba4b5325a39b353b5a2" category="inline-link-rx"></block> .</block>
+  <block id="dcd97a739116b3e37a21b24d1b1d508d" category="cell">Amazon FSxN per l'archiviazione NetApp ONTAP</block>
+  <block id="b6e6ac3bc87c50849332d71bd687f2ee" category="cell">9.10 e oltre</block>
+  <block id="af6ccd5ef578462110c3f8bfdb7d3622" category="paragraph">A partire da questa versione, il SnapCenter Plug-in for VMware vSphere supporta Amazon FSxN per i sistemi di storage NetApp ONTAP che eseguono la versione 9.10 o successiva.</block>
 </blocks>

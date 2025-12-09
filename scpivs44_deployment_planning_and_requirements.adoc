@@ -123,6 +123,9 @@ Ripristino di una macchina virtuale completa quando uno o più VMDK si trovano s
 
 
 | Strumenti ONTAP per VMware | Il SnapCenter Plug-in for VMware vSphere lo utilizza per gestire i datastore vVol (volumi virtuali VMware). Per le versioni supportate, fare riferimento a https://imt.netapp.com/imt/imt.jsp?components=180121;&solution=1517&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^] . 
+
+
+| Amazon FSxN per l'archiviazione NetApp ONTAP | 9.10 e oltre 
 |===
 Per le informazioni più recenti sulle versioni supportate, fare riferimento a https://imt.netapp.com/imt/imt.jsp?components=180121;&solution=1517&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^] .
 
@@ -152,9 +155,6 @@ I requisiti software minimi per il supporto del protocollo NVMe over TCP e NVMe 
 
 
 | Spazio minimo su disco rigido per il plug-in SnapCenter per VMware vSphere, log e database MySQL | 100 GB 
-
-
-| Dimensione massima dell'heap del servizio vmcontrol nell'apparecchio | 8 GB 
 |===
 
 
