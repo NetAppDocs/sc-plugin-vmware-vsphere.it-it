@@ -4,7 +4,7 @@ permalink: scpivs44_restore_vms_from_backups.html
 keywords:  
 summary: Quando si ripristina una macchina virtuale, è possibile sovrascrivere il contenuto esistente con la copia di backup selezionata oppure eseguire una copia della macchina virtuale. 
 ---
-= Ripristinare le macchine virtuali dai backup
+= Ripristina le VM dai backup utilizzando SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

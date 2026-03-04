@@ -4,7 +4,7 @@ permalink: scpivs44_upgrade_to_a_new_patch.html
 keywords:  
 summary: 'Se si esegue l"aggiornamento a una nuova patch della stessa release, è necessario cancellare la cache del plug-in SnapCenter per VMware vSphere sul server Web vCenter e riavviare il server prima dell"aggiornamento o della registrazione.' 
 ---
-= Eseguire l'aggiornamento a una nuova patch della stessa release del plug-in SnapCenter per VMware vSphere
+= Aggiorna a una nuova patch della stessa release di SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

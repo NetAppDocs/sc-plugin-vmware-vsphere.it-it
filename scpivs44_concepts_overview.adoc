@@ -4,7 +4,7 @@ permalink: scpivs44_concepts_overview.html
 keywords:  
 summary: 'Il plug-in SnapCenter per VMware vSphere è un"appliance virtuale standalone (formato di appliance virtuale aperta) che fornisce servizi di protezione dei dati per macchine virtuali e datastore e supporta servizi di protezione dei dati per plug-in basati sull"applicazione SnapCenter. Questo documento descrive come implementare e utilizzare il plug-in SnapCenter per VMware vSphere e include informazioni di avvio rapido.' 
 ---
-= Panoramica del prodotto
+= Scopri il SnapCenter Plug-in per VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

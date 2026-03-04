@@ -4,7 +4,7 @@ permalink: scpivs44_download_the_ova_open_virtual_appliance.html
 keywords:  
 summary: Il file .tar include OVA, un insieme di microservizi per la protezione dei dati di macchine virtuali e datastore e il file di certificato. 
 ---
-= Scarica Open Virtual Appliance (OVA)
+= Scarica il SnapCenter Plug-in per VMware vSphere OVA
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

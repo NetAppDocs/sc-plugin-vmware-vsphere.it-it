@@ -4,7 +4,7 @@ permalink: scpivs44_unmount_a_backup.html
 keywords:  
 summary: È possibile smontare un backup quando non è più necessario accedere ai file nel datastore. 
 ---
-= Smontare un backup
+= Smonta un backup utilizzando il SnapCenter Plug-in per VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

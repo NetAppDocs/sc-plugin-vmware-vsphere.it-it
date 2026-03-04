@@ -4,7 +4,7 @@ permalink: scv48_audit_logs.html
 keywords:  
 summary: 'Il registro di audit fornisce la tracciabilità di chi ha fatto cosa e quando. Un registro di controllo è una raccolta di eventi in ordine cronologico che viene scritta in un file all"interno del dispositivo.' 
 ---
-= Registri di audit
+= Registri di controllo per il SnapCenter Plug-in per VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

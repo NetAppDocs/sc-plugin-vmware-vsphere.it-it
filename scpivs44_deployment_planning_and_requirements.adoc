@@ -4,7 +4,7 @@ permalink: scpivs44_deployment_planning_and_requirements.html
 keywords:  
 summary: 'Prima di implementare l"appliance virtuale, è necessario conoscere i requisiti di implementazione.' 
 ---
-= Pianificazione e requisiti dell'implementazione
+= Pianificazione della distribuzione e requisiti per SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

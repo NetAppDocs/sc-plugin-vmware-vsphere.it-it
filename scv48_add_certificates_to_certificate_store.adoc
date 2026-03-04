@@ -4,7 +4,7 @@ permalink: scv48_add_certificates_to_certificate_store.html
 keywords:  
 summary: Aggiungere i certificati Root e Intermediate di Certificate Authority a VMware vCenter per considerare attendibili il certificato e gli elementi firmati con esso. 
 ---
-= Aggiungere certificati all'archivio certificati VMware
+= Aggiungere certificati all'archivio certificati VMware per SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

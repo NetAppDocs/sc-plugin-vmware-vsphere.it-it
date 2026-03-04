@@ -4,7 +4,7 @@ permalink: scpivs44_restore_deleted_vms_from_backups.html
 keywords:  
 summary: È possibile ripristinare una macchina virtuale eliminata da un backup primario o secondario di un datastore su un host ESXi selezionato. 
 ---
-= Ripristinare le macchine virtuali eliminate dai backup
+= Ripristina le VM eliminate dai backup utilizzando lo SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

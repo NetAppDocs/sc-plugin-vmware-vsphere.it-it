@@ -4,7 +4,7 @@ permalink: scpivs48_rest_apis_audit_logs.html
 keywords:  
 summary: API REST per generare log di audit 
 ---
-= API REST per generare log di audit
+= API REST per generare registri di controllo per lo SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

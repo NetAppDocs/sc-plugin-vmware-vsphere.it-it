@@ -4,7 +4,7 @@ permalink: scpivs44_access_the_maintenance_console.html
 keywords:  
 summary: 'È possibile gestire le configurazioni di applicazioni, sistemi e reti utilizzando la console di manutenzione per il plug-in SnapCenter per VMware vSphere. È possibile modificare la password dell"amministratore, la password di manutenzione, generare pacchetti di supporto e avviare la diagnostica remota.' 
 ---
-= Accedere alla console di manutenzione
+= Accedi alla console di manutenzione del SnapCenter Plug-in per VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

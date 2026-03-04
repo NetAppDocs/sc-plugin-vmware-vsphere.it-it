@@ -4,7 +4,7 @@ permalink: scpivs44_modify_the_network_settings.html
 keywords:  
 summary: È possibile modificare le impostazioni di rete configurate nel plug-in SnapCenter per VMware vSphere. Queste impostazioni vengono utilizzate dal plug-in per accedere a vCenter. 
 ---
-= Modificare le impostazioni di rete
+= Modificare le impostazioni di rete per l'SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

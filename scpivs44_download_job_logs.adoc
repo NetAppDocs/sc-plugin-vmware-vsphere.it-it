@@ -4,7 +4,7 @@ permalink: scpivs44_download_job_logs.html
 keywords:  
 summary: È possibile scaricare i registri dei processi dalla scheda monitoraggio processi del dashboard del client VMware vSphere di SnapCenter. 
 ---
-= Scaricare i log dei lavori
+= Scarica i registri dei lavori dal SnapCenter Plug-in per VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

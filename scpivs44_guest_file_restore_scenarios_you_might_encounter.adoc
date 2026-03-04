@@ -4,7 +4,7 @@ permalink: scpivs44_guest_file_restore_scenarios_you_might_encounter.html
 keywords:  
 summary: 'Quando si tenta di ripristinare un file guest, si potrebbero verificare scenari in cui la sessione di ripristino del file guest è vuota, l"operazione di ripristino del file guest non riesce o i backup non vengono scollegati dopo l"interruzione della sessione di ripristino del file guest.' 
 ---
-= Scenari di ripristino dei file guest che potrebbero verificarsi
+= Scenari di ripristino dei file guest in the SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: scpivs44_access_reports.html
 keywords:  
 summary: È possibile richiedere report per uno o più lavori dalla dashboard. 
 ---
-= Accesso ai report
+= Accedi ai report nel SnapCenter Plug-in per VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

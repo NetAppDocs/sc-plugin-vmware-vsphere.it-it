@@ -4,7 +4,7 @@ permalink: scpivs44_restore_the_most_recent_backup_of_the_mysql_database.html
 keywords:  
 summary: 'È possibile utilizzare la console di manutenzione per ripristinare il backup più recente del database MySQL (chiamato anche database NSM) per il plug-in SnapCenter per VMware vSphere.' 
 ---
-= Ripristinare il backup più recente del database MySQL
+= Ripristina il backup più recente del database MySQL SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: scpivs44_minimum_vcenter_privileges_required.html
 keywords:  
 summary: 'Prima di iniziare l"implementazione del plug-in SnapCenter per VMware vSphere, assicurarsi di disporre dei privilegi minimi richiesti per vCenter.' 
 ---
-= Sono richiesti privilegi minimi per vCenter
+= Privilegi minimi vCenter richiesti per l'SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

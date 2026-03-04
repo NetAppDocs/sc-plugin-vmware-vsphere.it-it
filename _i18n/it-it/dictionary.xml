@@ -186,7 +186,6 @@
   <block id="bc1f2aa0bb18523f69b75ac5eadcc6df" category="section-title">Workflow di validazione per i privilegi RBAC</block>
   <block id="7bcb9fdbb264d6685b834885e7cac88a" category="paragraph">La figura seguente fornisce una panoramica del flusso di lavoro di convalida per i privilegi RBAC (sia vCenter che ONTAP):</block>
   <block id="f3a07562dfcba402848f7481f951cabf" category="summary">È necessario creare policy di backup prima di utilizzare il plug-in SnapCenter per VMware vSphere per eseguire il backup di macchine virtuali e datastore.</block>
-  <block id="8e76505b54822d8003db9695ebc8dded" category="doc">Creare policy di backup per macchine virtuali e datastore</block>
   <block id="271beae8f11b01c3f45767fc1bd5c1a9" category="list-text">È necessario aver letto i prerequisiti.</block>
   <block id="020c68712d58d0c6ae79d6422851ae45" category="list-text">È necessario configurare le relazioni di storage secondario.</block>
   <block id="585f74b2337dcf50d5f84248087dbc7a" category="inline-link">Informazioni SnapCenter sull'utilizzo del controllo degli accessi basato sui ruoli</block>
@@ -438,7 +437,6 @@
   <block id="386fa36a68315fc02c7ac2bf9e955caa" category="doc">Gestire gli errori di autenticazione</block>
   <block id="679d7a71de914eeb2ace02116cab18d2" category="list-text">Riavviare il servizio.</block>
   <block id="b6bb7bbf9c57892b88c536fe12569417" category="summary">Se si esegue l'aggiornamento a una nuova patch della stessa release, è necessario cancellare la cache del plug-in SnapCenter per VMware vSphere sul server Web vCenter e riavviare il server prima dell'aggiornamento o della registrazione.</block>
-  <block id="1249a334c3011b4680fc228dafe02845" category="doc">Eseguire l'aggiornamento a una nuova patch della stessa release del plug-in SnapCenter per VMware vSphere</block>
   <block id="f110cd23dd201ad68954adbde0937a9d" category="paragraph">Se la cache del plug-in non viene cancellata, i job recenti non vengono visualizzati nella dashboard e nel monitor dei job nei seguenti scenari:</block>
   <block id="877bf3ccc261e049bb2abf77efdaea47" category="list-text">Il plug-in SnapCenter per VMware vSphere è stato implementato utilizzando vCenter e successivamente aggiornato a una patch nella stessa release.</block>
   <block id="fd05cf455bb6088fd7c60023a5136d85" category="section-title">Procedura per la cancellazione della cache</block>
@@ -446,7 +444,6 @@
   <block id="460ff760e9b03fdc18067743660e6d4c" category="paragraph">Il nome della cartella cambia per ogni release.</block>
   <block id="bb8f6c3966fa63b12f984ba70acb97a5" category="list-text">Riavviare vCenter Server.</block>
   <block id="8c37da7815ca25f5e4e2da4009856294" category="summary">Prima di eseguire il backup o il ripristino di macchine virtuali o datastore utilizzando il client VMware vSphere, è necessario aggiungere lo storage.</block>
-  <block id="09b43df06bca0a261e4635991d6c8575" category="doc">Gestire i sistemi storage</block>
   <block id="8ed7e92fcf2560d9482aad3d9ec78236" category="section-title">Modificare le VM di storage</block>
   <block id="6654ee40a5d0ff269a7b0870ae9879d3" category="paragraph">È possibile utilizzare il client VMware vSphere per modificare le configurazioni di cluster e storage VM registrate nel plug-in SnapCenter per VMware vSphere e utilizzate per le operazioni di protezione dei dati delle macchine virtuali.</block>
   <block id="ca1e84c5fdfae2e245ce6dbdbd1c628f" category="paragraph">Se si modifica una VM di storage aggiunta automaticamente come parte di un cluster (a volte chiamata VM di storage implicita), tale VM di storage passa a una VM di storage esplicita e può essere eliminata separatamente senza modificare il resto delle VM di storage in quel cluster. Nella pagina Storage Systems (sistemi storage), il nome utente viene visualizzato come N/A quando il metodo di autenticazione viene effettuato tramite il certificato; i nomi utente vengono visualizzati solo per le macchine virtuali di storage esplicite nell'elenco dei cluster e il flag ExplicitSVM è impostato su true. Tutte le VM di storage sono sempre elencate nel cluster associato.</block>
@@ -455,7 +452,6 @@
   <block id="9511d611d059dad2cee26dd7b6fc4d5a" category="paragraph">Prima di rimuovere la VM di storage, è necessario smontare tutti gli archivi dati presenti nella VM di storage.</block>
   <block id="bbef84b0a53276c7c512270e3dbf2029" category="paragraph">Se un gruppo di risorse dispone di backup che risiedono su una macchina virtuale di storage che viene rimossa, i backup successivi di tale gruppo di risorse non vengono eseguiti correttamente.</block>
   <block id="e7683ab9f61fe80a16f3111a33febbda" category="summary">È possibile modificare le impostazioni di rete configurate nel plug-in SnapCenter per VMware vSphere. Queste impostazioni vengono utilizzate dal plug-in per accedere a vCenter.</block>
-  <block id="d120dfcded58a5506ff23bf511e0f19f" category="doc">Modificare le impostazioni di rete</block>
   <block id="3c1620dc3cd833488e7cde6109b6d1bb" category="list-text">Se si sta rimuovendo un'impostazione di rete, procedere come segue:</block>
   <block id="ad9f0ab39477422bbfaba6b4d195bb7d" category="summary">Questa sezione fornisce informazioni sulla licenza per il plug-in SnapCenter per VMware vSphere.</block>
   <block id="0b9c6eef4e3d3a222eb04e910d252339" category="doc">Licensing</block>
@@ -484,7 +480,6 @@
   <block id="dfd7201f70160c2abb8f315e6accbc7f" category="paragraph"><block ref="42deac4908a17efb438eb8235d8b5154" prefix="" category="inline-code"></block> ripristina il backup specificato. Passare le informazioni dei passaggi 3 e 4 nell'attributo *restoreLocations*.</block>
   <block id="29072e9b641395b0e238ad95879b1d68" category="admonition">Se il backup della macchina virtuale è un backup parziale, impostare<block ref="0736c145ca7c004b573fcb3b6242d260" prefix=" " category="inline-code"></block> parametro su "false".</block>
   <block id="bfe57af1784e630138f3c0e735f228c4" category="admonition">Non è possibile ripristinare una macchina virtuale che è un modello.</block>
-  <block id="8592777bb1993d06e4c0038edb7ffd2c" category="doc">Modificare le credenziali di accesso</block>
   <block id="00913a1f5999892e9e7489ab80e13c40" category="paragraph">Il backup di tutti i servizi potrebbe richiedere alcuni minuti.</block>
   <block id="b148e71859cffdb60779d0fd79307d95" category="summary">Prima di iniziare l'implementazione del plug-in SnapCenter per VMware vSphere, assicurarsi di disporre dei privilegi minimi richiesti per vCenter.</block>
   <block id="e49b2704cb3fef8c492858dfc3f6dbce" category="doc">Sono richiesti privilegi minimi per vCenter</block>
@@ -541,7 +536,6 @@
   <block id="6ad0f7acf9ee8321077924b25436fe63" category="list-text">Fornire le informazioni sulle credenziali specificate durante l'implementazione del plug-in SnapCenter per VMware vSphere.</block>
   <block id="4716d63e659e56ce16a2f7359955e0e2" category="admonition">Selezionare Linux per il campo Authentication (autenticazione).</block>
   <block id="7e90f659fd64bec3d6994e11d8ef02f2" category="paragraph">Se le credenziali del plug-in SnapCenter per VMware vSphere vengono modificate, è necessario aggiornare la registrazione nel server SnapCenter utilizzando la pagina host gestiti da SnapCenter.</block>
-  <block id="ab42b9e9b4193a75fa82be2377e494fa" category="doc">Abilitare il plug-in SSH per SnapCenter per VMware vSphere</block>
   <block id="b329e2e83d7c43c4abeb71f840b08f73" category="inline-link-macro">Accedere alla console di manutenzione</block>
   <block id="fb8c4c80c42556fa8dabc6cab29bc009" category="list-text">Dal menu principale, selezionare l'opzione di menu *2) Configurazione di sistema*.</block>
   <block id="4ed299908114215d69a50f34f8a3cc73" category="list-text">Dal menu System Configuration (Configurazione di sistema), selezionare l'opzione di menu *6) Enable SSH access* (attiva accesso SSH), quindi digitare "*y*" al prompt di conferma.</block>
@@ -595,7 +589,6 @@
   <block id="1917b3cb33196b41c9c0f973ac50e07f" category="paragraph">Utilizzare la seguente API REST nella sezione lavori per modificare i lavori bloccati in uno stato di esecuzione in uno stato di errore:</block>
   <block id="9e6f1aff5ce486ed6b50a3d2858dd9dd" category="cell"><block ref="e28c635f4a83235f4868a56087349f76" prefix="" category="inline-code"></block></block>
   <block id="57ece9f7f3b3d9621593aeee1cb35996" category="summary">Aggiungere i certificati Root e Intermediate di Certificate Authority a VMware vCenter per considerare attendibili il certificato e gli elementi firmati con esso.</block>
-  <block id="ee28a4160e701596abbbfdd58c421736" category="doc">Aggiungere certificati all'archivio certificati VMware</block>
   <block id="45acb704a6a1087cac77b7194c8c0ca5" category="summary">Dopo aver aggiornato il plug-in SnapCenter per VMware vSphere a una nuova patch della stessa release, i job recenti o altre informazioni potrebbero non essere visualizzati nella dashboard e nel monitor dei processi.</block>
   <block id="d8fe65da592bff35b531fb4d34b22a35" category="doc">Informazioni non visualizzate dopo l'aggiornamento a una nuova patch della stessa release</block>
   <block id="b12bd8292f06a26b5f70b83e1f52ef32" category="paragraph">La cache si trova nelle seguenti posizioni, in base al tipo di sistema operativo del server:</block>
@@ -606,7 +599,6 @@
   <block id="de710b6ccc72b5f1a8613565f846ddac" category="section-title">Soluzione alternativa se è già stato eseguito l'aggiornamento prima di svuotare la cache</block>
   <block id="bb61ce9732135b170d9459970083b29f" category="list-text">Accedere al client VMware vSphere.</block>
   <block id="c9424bce718e9e3deaedf0943d2692ad" category="summary">Per modificare le pianificazioni incorporate per i processi del client VMware vSphere utilizzando il plug-in SnapCenter per le API REST di VMware vSphere, è necessario seguire la sequenza prescritta di chiamate API REST.</block>
-  <block id="1086d683c23fd8a04a9c002dde8d7ad3" category="doc">Workflow API REST per modificare le pianificazioni integrate</block>
   <block id="13a93f90c76da80a37b018acb990a35d" category="paragraph">Le pianificazioni integrate sono le pianificazioni fornite come parte del prodotto; ad esempio, la pianificazione di dump del database MySQL. È possibile modificare le seguenti pianificazioni:<block ref="cae9338c8e8616fcd1177806ca65a888" prefix=" " category="inline-code"></block><block ref="22adea46fe55fd47d1f0bb2386440795" prefix=" " category="inline-code"></block><block ref="64fbaf41d6d7838d7b02642f6cf00aaf" prefix=" " category="inline-code"></block><block ref="66c99934937656e8ab5f736e5f1722f9" prefix=" " category="inline-code"></block><block ref="61e9de7d62b874270dcf5de348e4f83a" prefix=" " category="inline-code"></block></block>
   <block id="ffedd74115b7c9889faf836e15982909" category="cell"><block ref="1437292742b9cd079e17495b6bf1fecb" prefix="" category="inline-code"></block></block>
   <block id="f3974033ad747b4d9909ec595f6da5e0" category="cell"><block ref="a0f3e3cfe96231a3503bde6beb1e01aa" prefix="" category="inline-code"></block> pianificazioni ottiene un elenco delle pianificazioni dei lavori originariamente fornite nel prodotto. Prendere nota del nome del programma che si desidera modificare e dell'espressione cron associata.</block>
@@ -718,7 +710,6 @@
   <block id="b64ee0fdf90244f79181f1afb007c08b" category="cell">Ripristino dei distributori idraulici</block>
   <block id="68296ccb11b96c0cb3577e08d79079a8" category="cell">Vista dei distributori idraulici</block>
   <block id="fe5a15ae670c4a446e877ef3f375fe1f" category="summary">Quando si prepara il backup o il ripristino di una macchina virtuale o di un datastore, potrebbe essere necessario visualizzare tutti i backup disponibili per tale risorsa e i relativi dettagli.</block>
-  <block id="d076807af778318099a7f649b1a2425a" category="doc">Visualizzare i backup di macchine virtuali e datastore</block>
   <block id="421829fbd339504809d87be62b8dd3b1" category="summary">Le note sulla versione forniscono informazioni importanti su questa versione del plug-in SnapCenter per VMware vSphere, inclusi requisiti di licenza, problemi noti, precauzioni, limitazioni, e qualsiasi aggiornamento o correzione della documentazione.</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="doc">Note di rilascio</block>
   <block id="e36d05bda5912440690ef51e7379f3eb" category="summary">La documentazione di avvio rapido fornisce una serie di istruzioni per l'implementazione del plug-in SnapCenter per l'appliance virtuale VMware vSphere e l'abilitazione del plug-in SnapCenter per VMware vSphere. Queste istruzioni sono destinate ai clienti che non hanno già installato SnapCenter e che desiderano proteggere solo macchine virtuali e datastore.</block>
@@ -733,7 +724,6 @@
   <block id="70cb87c6754343f91541c5c34271ad1a" category="list-text">Se i backup non vengono eseguiti correttamente, viene visualizzato l'errore<block ref="41e99ceddfd3c08cd2b2c98681a28240" prefix=" " category="inline-code"></block> Per le macchine virtuali NFS e VMFS dopo lo switchover/lo switch, riavviare i servizi VMware di SnapCenter dalla console di manutenzione.</block>
   <block id="49faef39fd8cc416975b581514fff5a9" category="paragraph">La seguente figura del flusso di lavoro mostra la sequenza in cui è necessario eseguire le operazioni di backup:</block>
   <block id="f212abe7cfae07ea38b183845166b927" category="summary">È possibile ripristinare macchine virtuali, VMDK, file e cartelle da backup primari o secondari.</block>
-  <block id="cee41b55e417d2c681bd345802b719fd" category="doc">Panoramica del ripristino</block>
   <block id="5f3bd8ec46e56c5e0238eee2273ef39f" category="list-text">Destinazioni di ripristino delle macchine virtuali</block>
   <block id="83cd4af85c0a253d77f0a1f740716cce" category="paragraph">È possibile ripristinare le macchine virtuali tradizionali sull'host originale o su un host alternativo nello stesso vCenter Server o su un host ESXi alternativo gestito dallo stesso vCenter o da qualsiasi vCenter in modalità Linked.</block>
   <block id="e63580f64111a3b3b0f5a06e51edefb7" category="paragraph">È possibile ripristinare le VM vVol nell'host originale.</block>
@@ -788,7 +778,6 @@
   <block id="0a52730597fb4ffa01fc117d9e71e3a9" category="paragraph-title">Esempio</block>
   <block id="a23affc3c3582aef164dcc126289abc5" category="paragraph">Accedere utilizzare il meccanismo di autenticazione vCenter per generare il token.</block>
   <block id="2833997454e257549c1ee754caa5789a" category="summary">È possibile creare, modificare, visualizzare, scollegare ed eliminare i criteri di backup per il plug-in SnapCenter per VMware vSphere. Per eseguire le operazioni di protezione dei dati sono necessarie policy.</block>
-  <block id="e7326f303b8abf78625da7d8f22fa0b4" category="doc">Gestire le policy</block>
   <block id="78f1e90e675a66cb2a884cded1ec1e11" category="section-title">Scollegare le policy</block>
   <block id="b215e4d6682eae092d0edbb35a888ab7" category="list-text">Nella pagina *Criteri* della procedura guidata *Modifica gruppo di risorse*, deselezionare il segno di spunta accanto ai criteri che si desidera scollegare.</block>
   <block id="a3123051c7309d8a5b39a7de4e9f9ba8" category="paragraph">È inoltre possibile aggiungere un criterio al gruppo di risorse controllando il criterio.</block>
@@ -841,7 +830,6 @@
   <block id="44a653640174f79e4b82debb5535a7ce" category="cell">Individuare il moref delle macchine virtuali dall'URL VMware Managed Objects. Notare il *moref* della macchina virtuale su cui si desidera scollegare un VMDK.</block>
   <block id="b728ba1903cb3c84a3635726df4a99a0" category="cell"><block ref="63d15e71855994975c28722adc922aa2" prefix="" category="inline-code"></block></block>
   <block id="04b18e199acb683e46cab62b7ed3b8ff" category="cell"><block ref="a3023a4a41c15f7a22e4bbdb781e57c6" prefix="" category="inline-code"></block> Disconnette il VMDK specificato. Passare il *moref* del passaggio 1. Passare i dettagli VMDK *vmdkLocationsList* dal passaggio 3 all'attributo *vmdksToDetach*.</block>
-  <block id="023f24f55850eacb351f762db9b50e81" category="doc">Panoramica sulla migrazione</block>
   <block id="8a4139ea0786f41cc68aee2d93ca450a" category="paragraph">Il comando di migrazione migra i metadati solo da SnapCenter 4.0 e versioni successive. Se si utilizza una versione precedente di SnapCenter, è necessario prima eseguire l'aggiornamento prima di poter eseguire la migrazione.</block>
   <block id="ec3d3431008e42a4c37055a78db7f12e" category="list-text">Ciò che è stato migrato include</block>
   <block id="2feaeb2408c183d076a33a4219e1d2f9" category="list-text">Che cosa viene migrato</block>
@@ -1075,7 +1063,6 @@
   <block id="d1ec8236730ab9b589b7970195fa6f9d" category="paragraph">È possibile visualizzare lo stato di avanzamento dell'operazione di ripristino nel monitor dei processi di Dashboard oppure attendere la notifica via email. Il tempo necessario per l'invio della notifica via email dipende dal tempo necessario per il completamento dell'operazione di ripristino.</block>
   <block id="5a866c580c4e14dac516488f53fd671b" category="paragraph">L'e-mail di notifica contiene un allegato con l'output dell'operazione di ripristino. Se l'operazione di ripristino non riesce, aprire l'allegato per ulteriori informazioni.</block>
   <block id="e10df4c314c4c935099e8c940a5cdf02" category="summary">È possibile rinominare ed eliminare i backup eseguiti dal plug-in SnapCenter per VMware vSphere. È inoltre possibile eliminare più backup contemporaneamente.</block>
-  <block id="65d964d49665477bbec39032d9f3ca8a" category="doc">Gestire i backup</block>
   <block id="b6821d00a7bc4a6fcfe3d073cec911ab" category="section-title">Rinominare i backup</block>
   <block id="b069e722ad8d29f7eec823ae5a4a95a6" category="paragraph">È possibile rinominare il plug-in SnapCenter per i backup di VMware vSphere se si desidera fornire un nome migliore per migliorare la ricerca.</block>
   <block id="de00c1e27be1485dd099e4cd2aaa554d" category="section-title">Eliminare i backup</block>
@@ -1088,7 +1075,6 @@
   <block id="d3f4b118b6fda39f8c977a35b6fbc3e7" category="list-text">Immettere le credenziali. Per Nome utente, immettere "Amministratore".</block>
   <block id="32db052b8c292805cf874ce498dbc022" category="paragraph">Le credenziali Esegui come devono essere l'amministratore di dominio predefinito fornito da Windows o dall'amministratore locale incorporato. Gli utenti di Workgroup possono utilizzare l'account di amministratore locale integrato.</block>
   <block id="5c6e1d830c6aa20cbea2393e562369b7" category="summary">È possibile creare, modificare ed eliminare gruppi di risorse di backup ed eseguire operazioni di backup su gruppi di risorse.</block>
-  <block id="ec972bce7640d5d440d3549702031815" category="doc">Gestire i gruppi di risorse</block>
   <block id="55410cc294634878d1b4f9650ea5f30c" category="admonition">I gruppi di risorse sono denominati processi di backup in Virtual Storage Console (VSC).</block>
   <block id="5f7ed1f226c86386e9dacf795c70c408" category="section-title">Sospendere e riprendere le operazioni sui gruppi di risorse</block>
   <block id="ebc6fd207253a9937a91421caf66ef04" category="paragraph">Nella pagina gruppi di risorse, lo stato del lavoro per la risorsa sospesa è<block ref="a1e7129612dd7d6a4f0984e7b4239c16" prefix=" " category="inline-code"></block>. Potrebbe essere necessario scorrere a destra della tabella per visualizzare la colonna Stato lavoro.</block>
@@ -1193,7 +1179,6 @@
   <block id="3c34af798ae440e90c491108b4d82309" category="section-title">Script shell di esempio</block>
   <block id="9eea8ad743a2ed0dc453ae3c80f5ae6b" category="paragraph"><block ref="d50617397c316b1299782cf8968d5e5d" prefix="" category="inline-code"></block><block ref="f46e2d3f5f3ed2f93bae1ee4cdd4ea68" prefix=" " category="inline-code"></block><block ref="d8426d39852b74512db4db591dbfc209" prefix=" " category="inline-code"></block><block ref="b13b5d9a1405f145cbc88238be67d553" prefix=" " category="inline-code"></block><block ref="d50617397c316b1299782cf8968d5e5d" prefix=" " category="inline-code"></block></block>
   <block id="58a095d28f14349299e54bd7a6d4ee7f" category="summary">È possibile modificare le credenziali di accesso di vCenter configurate nel plug-in SnapCenter per VMware vSphere. Queste impostazioni vengono utilizzate dal plug-in per accedere a vCenter.</block>
-  <block id="d82c01fa5382768b8cbd7e452412b872" category="doc">Modificare le credenziali di accesso di vCenter</block>
   <block id="d9a651242a5b8ae831d8957f135ebd64" category="paragraph">Non modificare il numero di porta.</block>
   <block id="74f0253fb549a1650817c97e7a1e9ce5" category="summary">È possibile utilizzare la console di manutenzione per ripristinare un backup specifico del database MySQL (chiamato anche database NSM) per il plug-in SnapCenter per l'appliance virtuale VMware vSphere.</block>
   <block id="94ce11ecee2dab10a211c235e2e5f500" category="doc">Ripristinare un backup specifico del database MySQL</block>
@@ -1480,7 +1465,6 @@ La protezione del datastore basata su tag è supportata solo per i datastore NFS
   <block id="ec6b0202082dc6ee78a9636f86e0717d" category="list-text">Tutte le macchine virtuali vVol con un tag vSphere specifico.</block>
   <block id="2260cf040531c2852db89dceca3fdeb9" category="list-text">Per configurare le macchine virtuali VMware vVol sono necessari i tool ONTAP per VMware vSphere.</block>
   <block id="d3f72758cf0a8156e66fa0d7b643122f" category="summary">È possibile rinominare lo storage utilizzando l'API REST.</block>
-  <block id="16ceb93d669340dd2ab2325671f71daf" category="doc">Ripristinare il backup dello spazio di archiviazione rinominato</block>
   <block id="a52fd082737b9604d73b0ea5362cc5bd" category="paragraph">Quando lo storage viene rinominato, i flussi di lavoro che utilizzano i backup eseguiti prima della ridenominazione utilizzata non riescono. Con l'introduzione della funzione di ridenominazione del backup, accessibile esclusivamente tramite l'API REST, è ora possibile utilizzare i backup eseguiti prima della ridenominazione dello storage. Il flusso di lavoro e l'utilizzo dell'API REST sono descritti di seguito.</block>
   <block id="c886be9c6f9349123af1949e3b8746ff" category="list-text">Aggiungere o aggiornare la nuova connessione storage, assicurandosi che il nuovo nome del cluster o della SVM venga riflesso in SCV.</block>
   <block id="96fa213e8fbb74cfd99aee91cdbe7198" category="inline-link">I backup dei distributori idraulici non riescono dopo la ridenominazione della SVM</block>
@@ -2110,7 +2094,6 @@ Il <block ref="205a43536d4d7a501f66e7fd657c91ca" category="inline-link-macro-rx"
   <block id="c7731009688c7502a64776f0642b30f0" category="list-text">Nell'interfaccia utente del client VMware vSphere, selezionare *Menu* nella barra degli strumenti, quindi selezionare *VM e modelli* dall'elenco a discesa.</block>
   <block id="161c4361676fbbb0685a50473b91d746" category="list-text">Accedi all'interfaccia utente di gestione SnapCenter Plug-in for VMware vSphere utilizzando il formato<block ref="3dfacd84c996ac983963942e2712a0bf" prefix=" " category="inline-code"></block> .  Accedi con il nome utente e la password di amministratore impostati al momento della distribuzione e con il token MFA generato tramite la console di manutenzione.</block>
   <block id="d6d09f4e8001697611f27d93e952567a" category="summary">È possibile generare un pacchetto di supporto dall'interfaccia utente del SnapCenter Plug-in for VMware vSphere .</block>
-  <block id="6bbb8536e7b020e3b65c7d07c227fbae" category="doc">Genera un pacchetto di supporto dall'interfaccia utente del SnapCenter Plug-in for VMware vSphere</block>
   <block id="89e62d58f554cdf1af46f77cd4469ff3" category="paragraph">Per accedere all'interfaccia utente di gestione SnapCenter Plug-in for VMware vSphere , è necessario conoscere l'indirizzo IP e le credenziali di accesso.  È inoltre necessario annotare il token MFA generato dalla console di manutenzione.</block>
   <block id="bbd2f455c5c5873181c618f18305c874" category="list-text">Accedi all'interfaccia utente SnapCenter Plug-in for VMware vSphere .</block>
   <block id="3a72135a7c33f6823b48b6473e9d8b35" category="list-text">Accedi all'interfaccia utente di gestione SnapCenter Plug-in for VMware vSphere .</block>
@@ -2173,7 +2156,6 @@ Il <block ref="205a43536d4d7a501f66e7fd657c91ca" category="inline-link-macro-rx"
   <block id="8be9482100b17d6c7657ad094600bdb4" category="list-text">Accedi all'interfaccia utente di gestione SnapCenter Plug-in for VMware vSphere .  L'indirizzo IP viene visualizzato quando si distribuisce il SnapCenter Plug-in for VMware vSphere.</block>
   <block id="684c61575b45828a675c729bf5d6e7e4" category="list-text">Nell'interfaccia utente di vCenter, selezionare *vSphere Client (HTML)*.</block>
   <block id="5a8b9254fd35acc02c10e9b586040f37" category="summary">Scopri le nuove funzionalità disponibili nel SnapCenter Plug-in for VMware vSphere 6.2.</block>
-  <block id="439af3f6e6882fe57e6791ec29b62825" category="doc">Novità del SnapCenter Plug-in for VMware vSphere 6.2</block>
   <block id="c3a0a3a80f1167e6d71999ae5d4595e5" category="paragraph">Il SnapCenter Plug-in for VMware vSphere 6.2 aggiunge il supporto per il backup e il ripristino di macchine virtuali (VM) su datastore VMFS per sistemi ASA r2 che eseguono ONTAP 9.17.1 o versioni successive.  Con questa versione, è possibile eseguire le seguenti operazioni per VM, datastore e formato Virtual Machine Disk (VMDK) sui sistemi ASA r2:</block>
   <block id="44b753b5a3d5303dd8249c2d474706fb" category="list-text">Fornire gruppi di coerenza per la protezione primaria</block>
   <block id="cca43ee5e57548c01a62909b1359e262" category="list-text">Eseguire backup basati su gruppi di coerenza</block>
@@ -2203,4 +2185,102 @@ Il <block ref="205a43536d4d7a501f66e7fd657c91ca" category="inline-link-macro-rx"
   <block id="dcd97a739116b3e37a21b24d1b1d508d" category="cell">Amazon FSxN per l'archiviazione NetApp ONTAP</block>
   <block id="b6e6ac3bc87c50849332d71bd687f2ee" category="cell">9.10 e oltre</block>
   <block id="af6ccd5ef578462110c3f8bfdb7d3622" category="paragraph">A partire da questa versione, il SnapCenter Plug-in for VMware vSphere supporta Amazon FSxN per i sistemi di storage NetApp ONTAP che eseguono la versione 9.10 o successiva.</block>
+  <block id="1e3fd82cbb8869ac01b6d992075b1439" category="doc">Ripristina i backup dallo storage rinominato utilizzando lo SCV</block>
+  <block id="1d18339da97d5ee283ae84c2d57287e4" category="doc">Accedi ai report nel SnapCenter Plug-in per VMware vSphere</block>
+  <block id="304d46884b4911953e338827bb67eaca" category="doc">Accedi alle API REST utilizzando la pagina web dell'API Swagger per l'SCV</block>
+  <block id="c41332952b7e8ef4d11a47de5c7c4805" category="doc">Accedi alla console di manutenzione del SnapCenter Plug-in per VMware vSphere</block>
+  <block id="6feae0e4fb07fe8683680c0db941d5a5" category="doc">Aggiungi una singola VM o un datastore a un gruppo di risorse in SCV</block>
+  <block id="a91f18a946a53bc0b0fe43284a8c985b" category="doc">Aggiungi più VM e datastore a un gruppo di risorse in SCV</block>
+  <block id="a7f9f497de573041d545730120444a34" category="doc">Aggiungere sistemi di storage al SnapCenter Plug-in for VMware vSphere</block>
+  <block id="9b4fc3d2bcf13cae01e886e3a1d8dea7" category="doc">Collega i VMDK a una VM utilizzando il SnapCenter Plug-in per VMware vSphere</block>
+  <block id="fc385c5723d9216ab829fbe28a964188" category="doc">Eseguire il backup dei gruppi di risorse su richiesta in SCV</block>
+  <block id="a6d5286ed33e7bfe05faab5d02b0d721" category="doc">Scopri il SnapCenter Plug-in per VMware vSphere</block>
+  <block id="db6a7ee55ad98c7b5c0bd0a119d5e601" category="doc">Configura le credenziali per il ripristino dei file guest della VM in SCV</block>
+  <block id="d62a4ae1c0a9e208fc4252642401de27" category="doc">Creare e importare certificati per lo SCV</block>
+  <block id="2524d530507c197026f73a3dc6a2637f" category="doc">Crea criteri di backup nel SnapCenter Plug-in per VMware vSphere</block>
+  <block id="9ce41e46e791cbfc0487f86bc88c05a0" category="doc">Crea policy di backup per VM e datastore nello SCV</block>
+  <block id="91811a6de0e07861a63cdd4db3fef2e2" category="doc">Crea gruppi di risorse nel SnapCenter Plug-in for VMware vSphere</block>
+  <block id="33146d426278a64a1d3aa020c9001962" category="doc">Crea gruppi di risorse per VM e datastore in SCV</block>
+  <block id="ceada2fd6b0dada57a2c40eafc29fd50" category="doc">Creare il file di configurazione scbr.override per SCV</block>
+  <block id="84103f97b11961c33c89c781b62ee178" category="doc">Personalizza la configurazione del SnapCenter Plug-in per VMware vSphere</block>
+  <block id="82fa2366904e0a4b71704adee28f4e90" category="doc">Distribuisci il SnapCenter Plug-in per VMware vSphere</block>
+  <block id="7b7ba567a6247c8fc2cf0ea4ceeb3a30" category="doc">Pianificazione della distribuzione e requisiti per SCV</block>
+  <block id="99a8365b0e962050af127c69194a2828" category="doc">Flusso di lavoro di distribuzione per gli utenti esistenti di SnapCenter</block>
+  <block id="1138df7074c6e301d057e9847b94158d" category="doc">Flusso di lavoro di distribuzione per i nuovi utenti SnapCenter</block>
+  <block id="e7d12cb0277e28d980ce12ce7b5fac6c" category="doc">Scollega un disco virtuale nel SnapCenter Plug-in per VMware vSphere</block>
+  <block id="e81027495bfaeedc083f075f6b584882" category="doc">Disabilitare e abilitare il SnapCenter Plug-in per VMware vSphere</block>
+  <block id="8358d5bc96782834d019f36277c20d7f" category="doc">Scarica i registri dei lavori dal SnapCenter Plug-in per VMware vSphere</block>
+  <block id="c95d12b16f7a41c013e250ec373dcf4e" category="doc">Scarica il SnapCenter Plug-in per VMware vSphere OVA</block>
+  <block id="602d6d05e5bbcfb68750770a74e22772" category="doc">Abilita SSH per il SnapCenter Plug-in per VMware vSphere</block>
+  <block id="d906bda308092252f44dd399b523cc4e" category="doc">Estendi il tempo di una sessione di ripristino dei file guest in SCV</block>
+  <block id="19e1c1b70ebdf6d38b1697df15bfc49b" category="doc">Generare un pacchetto di supporto dalla console di manutenzione SCV</block>
+  <block id="d7568d9dfe3cb38e92189ea6b17a1445" category="doc">Genera un pacchetto di supporto dall'interfaccia utente SCV</block>
+  <block id="06e3a2f90ba7fbe69866c8f4a8928611" category="doc">Flusso di lavoro di distribuzione per il SnapCenter Plug-in per VMware vSphere</block>
+  <block id="b7b8f6b1819db0f110d159a8db1ae50f" category="doc">Scenari di ripristino dei file guest in the SCV</block>
+  <block id="a5b5bbaab0477105f54c80657a42858f" category="doc">Come SCV esegue le operazioni di ripristino</block>
+  <block id="4b941a49c8c4f2361abf530aa6d23a53" category="doc">Configura ONTAP RBAC per il SnapCenter Plug-in per VMware vSphere</block>
+  <block id="f09becdfd77a0c14076f6312e72a5fbe" category="doc">Informazioni non visualizzate dopo l'aggiornamento a una nuova patch di SCV</block>
+  <block id="12f70185f36225d9e785483fa5adec93" category="doc">Licenza per il SnapCenter Plug-in per VMware vSphere</block>
+  <block id="c60c8305c7704e2a6b481202a87d34a4" category="doc">Gestisci i backup nel SnapCenter Plug-in per VMware vSphere</block>
+  <block id="7806a0fcfddb17a7ef5ffbc6f69a5d84" category="doc">Gestisci le policy nel SnapCenter Plug-in per VMware vSphere</block>
+  <block id="a9cf02408b537b32836b3b5e779b0f56" category="doc">Gestire i gruppi di risorse nel SnapCenter Plug-in per VMware vSphere</block>
+  <block id="8ec10186a814e49a8603f7758664c43b" category="doc">Gestisci i sistemi di archiviazione nel SnapCenter Plug-in per VMware vSphere</block>
+  <block id="b3f0168240889017e1bf32ba930c88f9" category="doc">Migra i metadati da SnapCenter per VMware vSphere basato su Windows</block>
+  <block id="53e2ff616a1db867b9b0647caed4ea4e" category="doc">Privilegi ONTAP minimi richiesti per SCV</block>
+  <block id="c468fa820a55a1c100c86b2078a91c63" category="doc">Privilegi minimi vCenter richiesti per l'SCV</block>
+  <block id="c27d4740b5308a914185b9a6ec4534ba" category="doc">Modificare i valori predefiniti di configurazione per lo SCV</block>
+  <block id="b7925ef612bf9a149f57ee37926bbf3c" category="doc">Modificare la password SCV dalla console di manutenzione</block>
+  <block id="07cd33842dd5813768efab26172200d1" category="doc">Modificare il timeout dello storage nello SCV</block>
+  <block id="e285884386e2062ad98e8deecfd04560" category="doc">Modificare le credenziali di accesso del plug-in SnapCenter per VMware vSphere</block>
+  <block id="4dc305a364ab194377cea35093fafc91" category="doc">Modificare le impostazioni di rete per l'SCV</block>
+  <block id="5db02314d963fe8a8fa75d43311a04f3" category="doc">Modificare i fusi orari per i backup in SCV</block>
+  <block id="3cefaebf21784290ec70bd0954b54ab9" category="doc">Modificare le credenziali di accesso vCenter per SCV</block>
+  <block id="34895ac2b07a353b62fe3587b973f9aa" category="doc">Monitorare i lavori nel SnapCenter Plug-in for VMware vSphere</block>
+  <block id="b03c3bad2790d92ae4869f34a2b1b13c" category="doc">Montare un backup utilizzando il SnapCenter Plug-in per VMware vSphere</block>
+  <block id="cc66b31e4a27a920d55087e0b904f14e" category="doc">Funzionalità ONTAP RBAC nel SnapCenter Plug-in per VMware vSphere</block>
+  <block id="17bf0e7a5b475473de0d16d49d700a45" category="doc">SnapCenter Plug-in per VMware vSphere interfacce utente</block>
+  <block id="d48e3280b8dddce9321cc94238fa2533" category="doc">Operazioni e problemi richiesti dopo la distribuzione per SCV</block>
+  <block id="4a94805a53197428f6d95f928df06543" category="doc">Ruoli predefiniti inclusi nel pacchetto SCV</block>
+  <block id="8a1bcc3f4cdef04f061602806542ee4b" category="doc">Prescritti e postscript per la SCV</block>
+  <block id="3bdcc4410ae886a7bdb95ba9d7c210ee" category="doc">Proprietà che puoi sovrascrivere in SCV</block>
+  <block id="6803040d0deefc5c64d293411d2eae3c" category="doc">Flusso di lavoro di protezione dei dati per il SnapCenter Plug-in per VMware vSphere</block>
+  <block id="2c20cf3dbe62e059162072efca505843" category="doc">Avvio rapido per il SnapCenter Plug-in per VMware vSphere</block>
+  <block id="706c1ecc5e0dfbf5d0b578709966a41b" category="doc">Registrare lo SCV con SnapCenter Server</block>
+  <block id="946449a09a5e8fe514190b45b1239172" category="doc">Note di rilascio per il SnapCenter Plug-in per VMware vSphere</block>
+  <block id="e6613d4a408bd1c5af7c93c35fd5c766" category="doc">Rimuovere il SnapCenter Plug-in per VMware vSphere</block>
+  <block id="9dc439c0b26590060b9baae9a11cef15" category="doc">Flusso di lavoro REST API per eseguire il backup su richiesta utilizzando SCV</block>
+  <block id="10a69d330fd1bd443bb763f537b74f8c" category="doc">Flusso di lavoro REST API per ripristinare le VM eliminate utilizzando lo SCV</block>
+  <block id="b053865866a67da5f0dd0221e2d43990" category="doc">Flusso di lavoro REST API per ripristinare i VMDK utilizzando SCV</block>
+  <block id="1cbbce04a6663b39d8a63ab90c5f332f" category="doc">Flusso di lavoro REST API per ripristinare le VM utilizzando l'SCV</block>
+  <block id="7481f8e35d6a465d37d3c520632923e4" category="doc">Flussi di lavoro REST API per aggiungere e modificare storage VM nello SCV</block>
+  <block id="05549cf00329cf098a758b58728feb4a" category="doc">Flussi di lavoro REST API per collegare e scollegare VMDK nello SCV</block>
+  <block id="47387c889c096923b76add23b299a9db" category="doc">Flussi di lavoro REST API per creare e modificare gruppi di risorse in SCV</block>
+  <block id="a78e138b777bd9b17098fbb8bee31a72" category="doc">Flusso di lavoro REST API per modificare le pianificazioni integrate nello SCV</block>
+  <block id="e01d2deaa3a9b8da7ed18a0423a240d2" category="doc">Flussi di lavoro REST API per montare e smontare i datastore in SCV</block>
+  <block id="0ab92c1e3d210a1078c8bcb60c815cda" category="doc">API REST per scaricare lavori e generare report in SCV</block>
+  <block id="251106474aba3c73dfbbf781349c0420" category="doc">REST API per contrassegnare i processi bloccati come non riusciti nello SCV</block>
+  <block id="a74666d3669e18922af35742c6e64a2a" category="doc">Scopri le API REST nel SnapCenter Plug-in per VMware vSphere</block>
+  <block id="ea4aaf388f103ba4af0328e2438f506c" category="doc">Riavviare il servizio client VMware vSphere per SCV</block>
+  <block id="b97006b94b5abbef2e4cab535709f798" category="doc">Ripristina un backup specifico del database SCV MySQL</block>
+  <block id="62bb165014392b3ca2d868cae754a575" category="doc">Ripristina le VM eliminate dai backup utilizzando lo SCV</block>
+  <block id="1c1d699bb8ba3233d50c545bbd1fae6d" category="doc">Opzioni di ripristino per il SnapCenter Plug-in per VMware vSphere</block>
+  <block id="d537acd00dd3c27290078e423c835ef5" category="doc">Ripristina file e cartelle guest da VMDK utilizzando SCV</block>
+  <block id="26c55d24b1e98dfc0abb17486fa64729" category="doc">Flusso di lavoro, prerequisiti e limitazioni del ripristino dei file guest in SCV</block>
+  <block id="9fd1425d563e70975dbff208034dfa99" category="doc">Ripristina il backup più recente del database MySQL SCV</block>
+  <block id="8092cfbde9cd8cf3324b5adcbf7237e2" category="doc">Ripristina i VMDK dai backup utilizzando SCV</block>
+  <block id="5e711cf8e194d973e01259462c98c155" category="doc">Ripristina le VM dai backup utilizzando SCV</block>
+  <block id="7eeaf1ff9a1a88a06fd90ffa46601773" category="doc">Controllo degli accessi basato sui ruoli per il SCV</block>
+  <block id="6a3153bea60485d6333715e37962e5ff" category="doc">Cerca i backup nel SnapCenter Plug-in for VMware vSphere</block>
+  <block id="99c9272ada00d9eec7d7db9620e8a67c" category="doc">Configura le VM proxy per le operazioni di ripristino nello SCV</block>
+  <block id="c376420999ea2ad401e54e8dfa48f79d" category="doc">Smonta un backup utilizzando il SnapCenter Plug-in per VMware vSphere</block>
+  <block id="26c6acbb6f352b4ec03673dfd3a8b7bb" category="doc">Annulla la registrazione del SnapCenter Plug-in per VMware vSphere da vCenter</block>
+  <block id="b703ae65aed392d494ec29f4a2480082" category="doc">Aggiornamento da una versione precedente di SCV</block>
+  <block id="4d170c3c41acaa60e75a4a3a7ee7660b" category="doc">Aggiorna a una nuova patch della stessa release di SCV</block>
+  <block id="83f7f62b68c11e5253d2f3ec375f39c6" category="doc">Visualizza le informazioni sullo stato nel SnapCenter Plug-in for VMware vSphere</block>
+  <block id="5facd3291fe1c44a7daacb4106473013" category="doc">Visualizza i backup delle VM e dei datastore in SCV</block>
+  <block id="97d4527b4b57e2ded154f700e1788fb0" category="doc">API REST per generare registri di controllo per lo SCV</block>
+  <block id="aed8d7649db335c623b5e28cb06a3058" category="doc">Aggiungere certificati all'archivio certificati VMware per SCV</block>
+  <block id="14d41fc6e0457940b61268ea99ba5c3d" category="doc">Registri di controllo per il SnapCenter Plug-in per VMware vSphere</block>
+  <block id="7a6363fb7129589beeb8e33959c94905" category="doc">Novità del SnapCenter Plug-in per VMware vSphere 6.2</block>
+  <block id="c095219d8aef8343cd2a9685ddd0dda3" category="doc">Percorsi di aggiornamento per il SnapCenter Plug-in per VMware vSphere</block>
 </blocks>

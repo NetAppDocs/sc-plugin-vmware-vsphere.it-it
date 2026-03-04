@@ -4,7 +4,7 @@ permalink: scpivs44_set_up_proxy_vms_for_restore_operations.html
 keywords:  
 summary: 'Se si desidera utilizzare una macchina virtuale proxy per collegare un disco virtuale per le operazioni di ripristino dei file guest, è necessario configurare la macchina virtuale proxy prima di iniziare l"operazione di ripristino. Sebbene sia possibile configurare una macchina virtuale proxy in qualsiasi momento, potrebbe essere più conveniente configurarla subito dopo il completamento dell"implementazione del plug-in.' 
 ---
-= Configurare le macchine virtuali proxy per le operazioni di ripristino
+= Configura le VM proxy per le operazioni di ripristino nello SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

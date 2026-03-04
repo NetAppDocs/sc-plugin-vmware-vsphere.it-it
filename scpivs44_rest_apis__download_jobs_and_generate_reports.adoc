@@ -4,7 +4,7 @@ permalink: scpivs44_rest_apis__download_jobs_and_generate_reports.html
 keywords:  
 summary: Per generare report e scaricare log per i processi del client VMware vSphere utilizzando il plug-in SnapCenter per le API REST di VMware vSphere, è necessario utilizzare le chiamate API REST per VMware vSphere. 
 ---
-= API REST per scaricare i lavori e generare report
+= API REST per scaricare lavori e generare report in SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

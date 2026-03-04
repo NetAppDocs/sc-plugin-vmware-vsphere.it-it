@@ -4,7 +4,7 @@ permalink: scpivs44_restore_from_backups_overview.html
 keywords:  
 summary: È possibile ripristinare macchine virtuali, VMDK, file e cartelle da backup primari o secondari. 
 ---
-= Panoramica del ripristino
+= Opzioni di ripristino per il SnapCenter Plug-in per VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

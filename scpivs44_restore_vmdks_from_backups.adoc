@@ -4,7 +4,7 @@ permalink: scpivs44_restore_vmdks_from_backups.html
 keywords:  
 summary: È possibile ripristinare i VMDK esistenti, o i VMDK cancellati o scollegati, da un backup primario o secondario di macchine virtuali tradizionali o vVol. 
 ---
-= Ripristinare i VMDK dai backup
+= Ripristina i VMDK dai backup utilizzando SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

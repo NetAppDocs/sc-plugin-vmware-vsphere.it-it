@@ -4,7 +4,7 @@ permalink: scpivs44_manage_storage_systems.html
 keywords:  
 summary: Prima di eseguire il backup o il ripristino di macchine virtuali o datastore utilizzando il client VMware vSphere, è necessario aggiungere lo storage. 
 ---
-= Gestire i sistemi storage
+= Gestisci i sistemi di archiviazione nel SnapCenter Plug-in per VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

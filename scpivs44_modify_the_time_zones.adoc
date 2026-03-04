@@ -4,7 +4,7 @@ permalink: scpivs44_modify_the_time_zones.html
 keywords:  
 summary: 'Quando si configura una pianificazione di backup per un gruppo di risorse SnapCenter Plug-in for VMware vSphere , la pianificazione viene impostata automaticamente in base al fuso orario in cui viene distribuito il SnapCenter Plug-in for VMware vSphere .  È possibile modificare tale fuso orario utilizzando l"interfaccia utente di gestione o la console di manutenzione SnapCenter Plug-in for VMware vSphere .' 
 ---
-= Modificare i fusi orari per i backup
+= Modificare i fusi orari per i backup in SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

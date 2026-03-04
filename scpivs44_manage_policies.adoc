@@ -4,7 +4,7 @@ permalink: scpivs44_manage_policies.html
 keywords:  
 summary: È possibile creare, modificare, visualizzare, scollegare ed eliminare i criteri di backup per il plug-in SnapCenter per VMware vSphere. Per eseguire le operazioni di protezione dei dati sono necessarie policy. 
 ---
-= Gestire le policy
+= Gestisci le policy nel SnapCenter Plug-in per VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

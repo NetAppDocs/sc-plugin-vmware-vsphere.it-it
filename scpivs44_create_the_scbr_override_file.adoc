@@ -4,7 +4,7 @@ permalink: scpivs44_create_the_scbr_override_file.html
 keywords:  
 summary: 'Il `scbr.override` Il file di configurazione viene utilizzato dal plug-in SnapCenter per VMware vSphere in ambienti che supportano le operazioni di protezione dei dati basate sull"applicazione SnapCenter.' 
 ---
-= Creare il file di configurazione scbr.override
+= Creare il file di configurazione scbr.override per SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

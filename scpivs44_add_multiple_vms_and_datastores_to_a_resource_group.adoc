@@ -4,7 +4,7 @@ permalink: scpivs44_add_multiple_vms_and_datastores_to_a_resource_group.html
 keywords:  
 summary: È possibile aggiungere più risorse a un gruppo di risorse esistente utilizzando la procedura guidata Modifica gruppo di risorse del client VMware vSphere di SnapCenter. 
 ---
-= Aggiungere più macchine virtuali e datastore a un gruppo di risorse
+= Aggiungi più VM e datastore a un gruppo di risorse in SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

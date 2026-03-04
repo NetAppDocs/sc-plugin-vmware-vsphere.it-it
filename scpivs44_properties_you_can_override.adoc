@@ -4,7 +4,7 @@ permalink: scpivs44_properties_you_can_override.html
 keywords:  
 summary: 'È possibile utilizzare le proprietà elencate in `scbr.override` file di configurazione per modificare i valori predefiniti.' 
 ---
-= Proprietà che è possibile eseguire l'override
+= Proprietà che puoi sovrascrivere in SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

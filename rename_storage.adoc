@@ -4,7 +4,7 @@ permalink: rename_storage.html
 keywords:  
 summary: 'È possibile rinominare lo storage utilizzando l"API REST.' 
 ---
-= Ripristinare il backup dello spazio di archiviazione rinominato
+= Ripristina i backup dallo storage rinominato utilizzando lo SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

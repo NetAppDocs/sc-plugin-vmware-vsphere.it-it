@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: upgrade paths, scv, 6.1 
 summary: Scopri le nuove funzionalità disponibili nel plug-in SnapCenter per VMware vSphere 6,1. 
 ---
-= Percorsi di aggiornamento
+= Percorsi di aggiornamento per il SnapCenter Plug-in per VMware vSphere
 :allow-uri-read: 
 
 

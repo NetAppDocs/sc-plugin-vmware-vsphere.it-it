@@ -4,7 +4,7 @@ permalink: scpivs44_ontap_rbac_features_in_snapcenter.html
 keywords:  
 summary: 'Il plug-in SnapCenter per VMware vSphere funziona con vCenter Server RBAC, SnapCenter RBAC (quando necessario per supportare le operazioni basate sulle applicazioni) e ONTAP RBAC per determinare quali task SnapCenter un utente specifico può eseguire sugli oggetti su un sistema storage specifico.' 
 ---
-= Funzionalità RBAC di ONTAP nel plug-in SnapCenter per VMware vSphere
+= Funzionalità ONTAP RBAC nel SnapCenter Plug-in per VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

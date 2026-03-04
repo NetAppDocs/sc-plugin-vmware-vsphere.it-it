@@ -4,7 +4,7 @@ permalink: scpivs44_monitor_jobs.html
 keywords:  
 summary: 'Dopo aver eseguito un"operazione di protezione dei dati utilizzando il client VMware vSphere, è possibile monitorare lo stato del lavoro dalla scheda Job Monitor nel dashboard e visualizzare i dettagli del lavoro.' 
 ---
-= Monitorare i lavori
+= Monitorare i lavori nel SnapCenter Plug-in for VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

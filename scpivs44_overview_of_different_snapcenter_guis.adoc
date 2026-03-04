@@ -4,7 +4,7 @@ permalink: scpivs44_overview_of_different_snapcenter_guis.html
 keywords:  
 summary: 'SnapCenter Plug-in for VMware vSphere è un plug-in autonomo, diverso dagli altri plug-in SnapCenter .  È necessario utilizzare l"interfaccia utente del client VMware vSphere in vCenter per tutte le operazioni di backup e ripristino per VM, VMDK e datastore.' 
 ---
-= Panoramica delle diverse interfacce utente SnapCenter
+= SnapCenter Plug-in per VMware vSphere interfacce utente
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

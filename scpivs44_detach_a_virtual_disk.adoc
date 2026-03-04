@@ -4,7 +4,7 @@ permalink: scpivs44_detach_a_virtual_disk.html
 keywords:  
 summary: Dopo aver collegato un disco virtuale per ripristinare i singoli file, è possibile scollegare il disco virtuale dalla macchina virtuale padre. 
 ---
-= Scollegare un disco virtuale
+= Scollega un disco virtuale nel SnapCenter Plug-in per VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

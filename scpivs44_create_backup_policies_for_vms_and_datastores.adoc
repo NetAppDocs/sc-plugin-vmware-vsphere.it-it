@@ -4,7 +4,7 @@ permalink: scpivs44_create_backup_policies_for_vms_and_datastores.html
 keywords:  
 summary: È necessario creare policy di backup prima di utilizzare il plug-in SnapCenter per VMware vSphere per eseguire il backup di macchine virtuali e datastore. 
 ---
-= Creare policy di backup per macchine virtuali e datastore
+= Crea policy di backup per VM e datastore nello SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

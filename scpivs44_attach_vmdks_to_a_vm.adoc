@@ -4,7 +4,7 @@ permalink: scpivs44_attach_vmdks_to_a_vm.html
 keywords:  
 summary: È possibile collegare uno o più VMDK da un backup alla macchina virtuale padre o a una macchina virtuale alternativa sullo stesso host ESXi oppure a una macchina virtuale alternativa su un host ESXi alternativo gestito dallo stesso vCenter o da un vCenter diverso in modalità collegata. Sono supportate le VM negli archivi dati tradizionali e negli archivi dati vVol. 
 ---
-= Collegare i VMDK a una VM o a una VM vVol
+= Collega i VMDK a una VM utilizzando il SnapCenter Plug-in per VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: scpivs44_modify_storage_timeout.html
 keywords:  
 summary: Anche se in passato i backup sono stati eseguiti correttamente, potrebbero verificarsi degli errori durante il periodo in cui il plug-in di SnapCenter per VMware vSphere deve attendere che il sistema storage superi il periodo di timeout configurato. Se si verifica questa condizione, è possibile aumentare il timeout configurato. 
 ---
-= Modificare il timeout dello storage configurato
+= Modificare il timeout dello storage nello SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

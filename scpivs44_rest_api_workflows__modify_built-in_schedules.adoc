@@ -4,7 +4,7 @@ permalink: scpivs44_rest_api_workflows__modify_built-in_schedules.html
 keywords:  
 summary: Per modificare le pianificazioni incorporate per i processi del client VMware vSphere utilizzando il plug-in SnapCenter per le API REST di VMware vSphere, è necessario seguire la sequenza prescritta di chiamate API REST. 
 ---
-= Workflow API REST per modificare le pianificazioni integrate
+= Flusso di lavoro REST API per modificare le pianificazioni integrate nello SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

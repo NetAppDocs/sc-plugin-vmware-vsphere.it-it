@@ -4,7 +4,7 @@ permalink: scpivs44_modify_configuration_default_values.html
 keywords:  
 summary: 'Per migliorare l"efficienza operativa, è possibile modificare `scbr.override` file di configurazione per modificare i valori predefiniti.' 
 ---
-= Modificare i valori predefiniti della configurazione
+= Modificare i valori predefiniti di configurazione per lo SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

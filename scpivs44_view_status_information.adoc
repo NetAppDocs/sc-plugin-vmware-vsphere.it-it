@@ -4,7 +4,7 @@ permalink: scpivs44_view_status_information.html
 keywords:  
 summary: 'È possibile visualizzare le informazioni sullo stato nella dashboard del client vSphere. Le informazioni sullo stato vengono aggiornate una volta all"ora.' 
 ---
-= Visualizzare le informazioni di stato
+= Visualizza le informazioni sullo stato nel SnapCenter Plug-in for VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: scpivs44_restore_guest_files_and_folders_from_vmdks.html
 keywords:  
 summary: È possibile ripristinare uno o più file o cartelle da un VMDK su un sistema operativo guest Windows. 
 ---
-= Ripristinare file e cartelle guest da VMDK
+= Ripristina file e cartelle guest da VMDK utilizzando SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

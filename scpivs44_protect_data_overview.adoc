@@ -4,7 +4,7 @@ permalink: scpivs44_protect_data_overview.html
 keywords:  
 summary: Tutte le operazioni di backup vengono eseguite su gruppi di risorse, che possono contenere qualsiasi combinazione di una o più macchine virtuali e datastore. È possibile eseguire il backup on-demand o in base a un programma di protezione definito. 
 ---
-= Workflow di data Protection
+= Flusso di lavoro di protezione dei dati per il SnapCenter Plug-in per VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
