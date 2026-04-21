@@ -22,3 +22,32 @@ Il SnapCenter Plug-in for VMware vSphere 6.2 aggiunge il supporto per il backup 
 
 
 A partire da questa versione, il SnapCenter Plug-in for VMware vSphere supporta Amazon FSxN per i sistemi di storage NetApp ONTAP che eseguono la versione 9.10 o successiva.
+
+[NOTE]
+====
+Ora è possibile eseguire una migrazione senza interruzioni, con un solo clic e senza interruzioni, dal SnapCenter Plug-in for VMware a NetApp Backup and Recovery. NetApp Backup and Recovery offre funzionalità avanzate di protezione e gestione dei dati, tra cui:
+
+* Supporto per la strategia di backup e archiviazione 3-2-1
+* Protezione contro i ransomware con SnapLock e backup logici isolati tramite blocco degli oggetti
+* Correzione automatizzata durante le scansioni anti-ransomware
+* Creazione automatizzata di relazioni di SnapMirror per destinazioni di storage secondarie e storage a oggetti, gestione semplificata della conservazione dei backup e flussi di lavoro semplificati per il backup di applicazioni e macchine virtuali
+* Scalabilità e prestazioni migliorate per gestire volumi di dati in continua crescita
+* Riduzione dei costi generali e del costo totale di proprietà con un servizio di backup completamente gestito
+* Gestione centralizzata del backup di datastore e macchine virtuali su più vCenter istanze da un'unica interfaccia
+* Ripristino rapido di file e cartelle da sistemi operativi guest Windows e Linux
+
+
+====
+Per ulteriori informazioni, consultare i seguenti link:
+
+* https://docs.netapp.com/us-en/data-services-backup-recovery/["NetApp Backup and Recovery documentazione"].
+* https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-vmware-discovery.html["Scopri i carichi di lavoro VMware con NetApp Backup and Recovery"]
+* https://docs.netapp.com/us-en/data-services-backup-recovery/br-start-login.html["Accedi a NetApp Backup and Recovery"]
+* https://console.netapp.com/unified-backup-restore["Accedi al servizio NetApp Backup and Recovery"]
+
+
+
+
+== Proteggi il tuo ambiente VMware utilizzando NetApp Backup and Recovery
+
+video::UeT9yFssTug[youtube,width=848,height=480]
