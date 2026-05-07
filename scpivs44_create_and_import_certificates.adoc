@@ -16,4 +16,4 @@ summary: 'Il plug-in SnapCenter per VMware vSphere utilizza la crittografia SSL 
 [role="lead"]
 Il plug-in SnapCenter per VMware vSphere utilizza la crittografia SSL per comunicazioni sicure con il browser client. Anche se ciò consente di abilitare i dati crittografati attraverso il cavo, creando un nuovo certificato autofirmato o utilizzando la propria infrastruttura di autorità di certificazione (CA) o una CA di terze parti, garantisce che il certificato sia unico per l'ambiente in uso.
 
-Per ulteriori informazioni, fare riferimento https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_create_and_or_import_an_SSL_certificate_to_SnapCenter_Plug-in_for_VMware_vSphere_(SCV)["Articolo della Knowledge base: Come creare e/o importare un certificato SSL nel plug-in SnapCenter per VMware vSphere"] a.
+Consultare  https://kb.netapp.com/data-mgmt/SnapCenter/SC_KBs/How_to_create_and_or_import_an_SSL_certificate_to_SnapCenter_Plug-in_for_VMware_vSphere["Articolo della Knowledge base: Come creare e/o importare un certificato SSL nel plug-in SnapCenter per VMware vSphere"] per ulteriori informazioni.
