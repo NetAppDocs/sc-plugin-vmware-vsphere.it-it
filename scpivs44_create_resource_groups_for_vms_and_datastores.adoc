@@ -47,7 +47,7 @@ Per ulteriori informazioni, fare riferimento alla documentazione degli ONTAP too
 * È possibile aggiungere o rimuovere risorse da un gruppo di risorse in qualsiasi momento.
 * Per eseguire il backup di una singola risorsa, ad esempio una macchina virtuale, creare un gruppo di risorse che contenga solo quella risorsa.
 * Per eseguire il backup di più risorse, crea un gruppo di risorse che includa tutte le risorse che desideri proteggere.
-* Per i volumi FlexGroup in ambienti MetroCluster , se si utilizza ONTAP 9.8 o 9.9, riavviare il SnapCenter Plug-in for VMware vSphere e risincronizzare le relazioni SnapMirror dopo uno switchover o uno switchback prima di eseguire il backup dei gruppi di risorse.  In ONTAP 9.8, i backup potrebbero bloccarsi dopo uno switchback; questo problema è stato risolto in ONTAP 9.9.
+* Per i volumi FlexGroup negli ambienti NetApp MetroCluster, se si utilizza ONTAP 9.8 o 9.9, riavviare il servizio SnapCenter Plug-in per VMware vSphere e risincronizzare le relazioni SnapMirror dopo uno switchover o uno switchback prima di eseguire il backup dei gruppi di risorse. In ONTAP 9.8, i backup potrebbero bloccarsi dopo uno switchback; questo problema è stato risolto in ONTAP 9.9.
 * Per prestazioni ottimali degli snapshot, raggruppa le VM e gli archivi dati sullo stesso volume in un unico gruppo di risorse.
 * È possibile creare un gruppo di risorse senza un criterio di backup, ma la protezione dei dati richiede almeno un criterio.  Selezionare una policy esistente o crearne una nuova durante la creazione del gruppo di risorse.
 +
