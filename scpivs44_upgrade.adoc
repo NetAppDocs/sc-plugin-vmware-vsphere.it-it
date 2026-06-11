@@ -14,7 +14,7 @@ summary: 'Se si utilizza il plug-in SnapCenter per l"appliance virtuale VMware v
 
 
 
-NOTE: L'aggiornamento a SCV 6.2 è supportato solo su VMware vCenter Server 7 Update 1 e versioni successive; per VMware vCenter Server precedenti alla versione 7 Update 1, è necessario continuare a utilizzare SCV 4.7.  L'aggiornamento è dirompente sulle versioni non supportate del server VMware vCenter.
+NOTE: L'aggiornamento a SCV 6.2 è supportato solo su VMware vCenter Server 7 update 1 e versioni successive, per VMware vCenter Server precedenti alla versione 7 update 1, è necessario continuare a utilizzare SCV 4.7. L'aggiornamento è dirompente sulle versioni non supportate di VMware vCenter Server.
 
 Se si utilizza il plug-in SnapCenter per l'appliance virtuale VMware vSphere, è possibile eseguire l'aggiornamento a una versione più recente. Il processo di aggiornamento disregistra il plug-in esistente e implementa un plug-in compatibile solo con vSphere 7.0U1 e versioni successive.
 
