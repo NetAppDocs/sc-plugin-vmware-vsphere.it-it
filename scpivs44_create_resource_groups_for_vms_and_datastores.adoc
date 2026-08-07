@@ -227,6 +227,7 @@ NOTE: Se l'operazione di quiesce non riesce per una qualsiasi delle VM nel backu
 
 
 
+[[manage-compatibility-check-failures]]
 == Gestire gli errori del controllo di compatibilità
 
 SnapCenter esegue controlli di compatibilità quando si tenta di creare un gruppo di risorse. Fare sempre riferimento a https://imt.netapp.com/imt/imt.jsp?components=180121;&solution=1517&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp (IMT)"^] per le informazioni più recenti sul supporto SnapCenter . I motivi di incompatibilità potrebbero essere:

@@ -38,6 +38,7 @@ La cache si trova nelle seguenti posizioni, in base al tipo di sistema operativo
 
 
 
+[[workaround-if-you-already-upgraded-before-clearing-the-cache]]
 == Soluzione alternativa se è già stato eseguito l'aggiornamento prima di svuotare la cache
 
 . Accedi all'interfaccia utente di gestione SnapCenter Plug-in for VMware vSphere .

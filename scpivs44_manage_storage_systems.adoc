@@ -18,6 +18,7 @@ Prima di eseguire il backup o il ripristino di macchine virtuali o datastore uti
 
 
 
+[[modify-storage-vms]]
 == Modificare le VM di storage
 
 È possibile utilizzare il client VMware vSphere per modificare le configurazioni di cluster e storage VM registrate nel plug-in SnapCenter per VMware vSphere e utilizzate per le operazioni di protezione dei dati delle macchine virtuali.
@@ -35,6 +36,7 @@ IMPORTANT: Se hai aggiunto VM di archiviazione per operazioni di protezione dei 
 
 
 
+[[remove-storage-vms]]
 == Rimuovere le VM di storage
 
 È possibile utilizzare il client VMware vSphere per rimuovere le VM di storage dall'inventario in vCenter.

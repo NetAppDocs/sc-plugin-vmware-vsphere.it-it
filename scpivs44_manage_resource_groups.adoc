@@ -21,6 +21,7 @@ NOTE: I gruppi di risorse sono denominati processi di backup in Virtual Storage 
 
 
 
+[[suspend-and-resume-operations-on-resource-groups]]
 == Sospendere e riprendere le operazioni sui gruppi di risorse
 
 Sospendi le operazioni pianificate su un gruppo di risorse.  Riattivarli quando necessario.
@@ -37,6 +38,7 @@ Una volta ripristinati i backup, lo stato del processo diventa `Production`.
 
 
 
+[[modify-resource-groups]]
 == Modificare i gruppi di risorse
 
 È possibile rimuovere o aggiungere risorse in gruppi di risorse in vCenter, scollegare o allegare policy, modificare pianificazioni o modificare qualsiasi altra opzione di gruppo di risorse.
@@ -57,6 +59,7 @@ Se si desidera modificare il nome di un gruppo di risorse, non utilizzare i segu
 
 
 
+[[delete-resource-groups]]
 == Eliminare i gruppi di risorse
 
 Eliminare un gruppo di risorse in vCenter se non è necessario proteggere le risorse.  Eliminare tutti i gruppi di risorse prima di rimuovere il SnapCenter Plug-in for VMware vSphere.

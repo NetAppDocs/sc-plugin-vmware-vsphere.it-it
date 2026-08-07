@@ -41,6 +41,7 @@ Fare doppio clic su un lavoro per generare un report dettagliato per tale lavoro
 
 
 
+[[types-of-reports-from-the-vmware-vsphere-client]]
 == Tipi di report dal client VMware vSphere
 
 Il client VMware vSphere per SnapCenter offre opzioni di report personalizzabili che forniscono dettagli sui processi di protezione dei dati e sullo stato delle risorse dei plug-in. È possibile generare report solo per la protezione primaria.

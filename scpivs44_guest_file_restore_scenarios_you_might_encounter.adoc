@@ -18,6 +18,7 @@ Quando si tenta di ripristinare un file guest, potrebbe verificarsi uno dei segu
 
 
 
+[[guest-file-restore-session-is-blank]]
 == La sessione di ripristino del file guest è vuota
 
 Questo problema si verifica quando si crea una sessione di ripristino del file guest e mentre tale sessione era attiva, il sistema operativo guest viene riavviato. In questo caso, i VMDK nel sistema operativo guest potrebbero rimanere offline. Pertanto, quando si tenta di sfogliare la sessione di ripristino del file guest, l'elenco è vuoto.
@@ -26,6 +27,7 @@ Per risolvere il problema, riportare manualmente i VMDK online nel sistema opera
 
 
 
+[[guest-file-restore-attach-disk-operation-fails]]
 == L'operazione di collegamento del disco di ripristino del file guest non riesce
 
 Questo problema si verifica quando si avvia un'operazione di ripristino dei file guest, ma l'operazione di collegamento del disco non riesce anche se gli strumenti VMware sono in esecuzione e le credenziali del sistema operativo guest sono corrette. In questo caso, viene visualizzato il seguente errore:
@@ -36,12 +38,14 @@ Per risolvere il problema, riavviare il servizio Windows di VMware Tools sul sis
 
 
 
+[[guest-email-shows-for-the-file-name]]
 == L'e-mail dell'ospite mostra ??????? per il nome del file
 
 Questo problema si verifica quando si utilizza la funzione di ripristino dei file guest per ripristinare file o cartelle con caratteri non inglesi nei nomi e la notifica e-mail visualizza "??????? " per i nomi dei file ripristinati. L'allegato di posta elettronica elenca correttamente i nomi dei file e delle cartelle ripristinati.
 
 
 
+[[backups-are-not-detached-after-guest-file-restore-session-is-discontinued]]
 == I backup non vengono scollegati dopo l'interruzione della sessione di ripristino del file guest
 
 Questo problema si verifica quando si esegue un'operazione di ripristino del file guest da un backup coerente con la macchina virtuale. Mentre la sessione di ripristino del file guest è attiva, viene eseguito un altro backup coerente con la macchina virtuale per la stessa macchina virtuale. Quando la sessione di ripristino del file guest viene disconnessa, manualmente o automaticamente dopo 24 ore, i backup della sessione non vengono disconnessi.

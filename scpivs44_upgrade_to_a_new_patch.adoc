@@ -24,6 +24,7 @@ Se la cache del plug-in non viene cancellata, i job recenti non vengono visualiz
 
 
 
+[[steps-for-clearing-the-cache]]
 == Procedura per la cancellazione della cache
 
 . Individuare il `vsphere-client-serenity` quindi individuare `com.netapp.scv.client-<release-number>` ed eliminarla.

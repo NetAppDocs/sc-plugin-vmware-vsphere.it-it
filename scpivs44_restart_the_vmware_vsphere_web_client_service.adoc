@@ -18,6 +18,7 @@ Se il client VMware vSphere di SnapCenter inizia a comportarsi in modo errato, p
 
 
 
+[[restart-the-vmware-vsphere-client-service-in-a-linux-vcenter]]
 == Riavviare il servizio client VMware vSphere in un vCenter Linux
 
 .Prima di iniziare

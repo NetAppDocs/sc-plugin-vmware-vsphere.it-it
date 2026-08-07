@@ -20,6 +20,7 @@ Per ogni API REST, aggiungere `\https://<server>:<port>` All'inizio dell'API RES
 
 
 
+[[to-mount-datastores-follow-this-workflow]]
 == Per montare gli archivi dati, seguire questo flusso di lavoro:
 
 |===
@@ -46,6 +47,7 @@ availableEsxHosts` | `Get the list of Available Esxi Hosts` Ottiene l'elenco deg
 |===
 
 
+[[to-unmount-datastores-follow-this-workflow]]
 == Per smontare gli archivi dati, seguire questo flusso di lavoro:
 
 |===

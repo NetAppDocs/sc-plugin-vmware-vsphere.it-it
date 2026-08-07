@@ -48,6 +48,7 @@ Per ulteriori informazioni, consultare i seguenti link:
 
 
 
+[[protect-your-vmware-estate-using-netapp-backup-and-recovery]]
 == Proteggi il tuo ambiente VMware utilizzando NetApp Backup and Recovery
 
 video::UeT9yFssTug[youtube,width=848,height=480]

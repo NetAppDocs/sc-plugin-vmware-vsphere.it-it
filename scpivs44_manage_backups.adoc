@@ -18,6 +18,7 @@ summary: È possibile rinominare ed eliminare i backup eseguiti dal plug-in Snap
 
 
 
+[[rename-backups]]
 == Rinominare i backup
 
 È possibile rinominare il plug-in SnapCenter per i backup di VMware vSphere se si desidera fornire un nome migliore per migliorare la ricerca.
@@ -39,6 +40,7 @@ Non utilizzare i seguenti caratteri speciali nei nomi di macchine virtuali, data
 
 
 
+[[delete-backups]]
 == Eliminare i backup
 
 È possibile eliminare il plug-in di SnapCenter per i backup di VMware vSphere se non è più necessario eseguire il backup per altre operazioni di protezione dei dati. È possibile eliminare un backup o più backup contemporaneamente.

@@ -20,6 +20,7 @@ Il `scbr.override` Il file di configurazione viene utilizzato dal plug-in SnapCe
 
 
 
+[[create-the-scbr-override-configuration-file]]
 == Creare il file di configurazione scbr.override
 
 . Passare a. `/opt/netapp/scvservice/standalone_aegis/etc/scbr/scbr.override-template`.
@@ -28,6 +29,7 @@ Il `scbr.override` Il file di configurazione viene utilizzato dal plug-in SnapCe
 
 
 
+[[properties-you-can-override]]
 == Proprietà che è possibile eseguire l'override
 
 * Per impostazione predefinita, il modello utilizza il simbolo hash per commentare le proprietà di configurazione. Per utilizzare una proprietà per modificare un valore di configurazione, è necessario rimuovere `#` caratteri.

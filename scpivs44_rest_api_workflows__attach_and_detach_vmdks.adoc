@@ -20,6 +20,7 @@ Per ogni API REST, aggiungere `\https://<server>:<port>` All'inizio dell'API RES
 
 
 
+[[to-attach-vmdks-follow-this-workflow]]
 == Per collegare i VMDK, seguire questo flusso di lavoro:
 
 |===
@@ -45,6 +46,7 @@ NOTE: Per collegare un VMDK a una macchina virtuale diversa, passare il moref de
 |===
 
 
+[[to-detach-vmdks-follow-this-workflow]]
 == Per scollegare i VMDK, seguire questo flusso di lavoro:
 
 |===

@@ -18,6 +18,7 @@ summary: 'È possibile ripristinare file o cartelle da un disco di macchine virt
 
 
 
+[[guest-restore-workflow]]
 == Workflow di ripristino guest
 
 Le operazioni di ripristino del sistema operativo guest includono i seguenti passaggi:
@@ -48,6 +49,7 @@ Ripristina i file o le cartelle selezionati in una posizione specifica.
 
 
 
+[[prerequisites-for-restoring-guest-files-and-folders]]
 == Prerequisiti per il ripristino di file e cartelle guest
 
 Prima di ripristinare uno o più file o cartelle da un VMDK su un sistema operativo guest Windows, è necessario conoscere tutti i requisiti.
@@ -89,6 +91,7 @@ Non è possibile ripristinare file e cartelle da una macchina virtuale che esegu
 
 
 
+[[guest-file-restore-limitations]]
 == Limitazioni per il ripristino dei file guest
 
 Prima di ripristinare un file o una cartella da un sistema operativo guest, è necessario conoscere le funzionalità non supportate.
