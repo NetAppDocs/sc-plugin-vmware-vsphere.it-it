@@ -4,7 +4,7 @@ permalink: scpivs44_restore_guest_files_and_folders_overview.html
 keywords:  
 summary: 'È possibile ripristinare file o cartelle da un disco di macchine virtuali (VMDK) su un sistema operativo guest Windows.' 
 ---
-= Flusso di lavoro, prerequisiti e limitazioni del ripristino dei file guest in SCV
+= Scopri come ripristinare i file guest in SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

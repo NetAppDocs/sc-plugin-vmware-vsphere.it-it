@@ -2204,13 +2204,11 @@ Il <block ref="205a43536d4d7a501f66e7fd657c91ca" category="inline-link-macro-rx"
   <block id="b7b8f6b1819db0f110d159a8db1ae50f" category="doc">Scenari di ripristino dei file guest in the SCV</block>
   <block id="a5b5bbaab0477105f54c80657a42858f" category="doc">Come SCV esegue le operazioni di ripristino</block>
   <block id="4b941a49c8c4f2361abf530aa6d23a53" category="doc">Configura ONTAP RBAC per il SnapCenter Plug-in per VMware vSphere</block>
-  <block id="f09becdfd77a0c14076f6312e72a5fbe" category="doc">Informazioni non visualizzate dopo l'aggiornamento a una nuova patch di SCV</block>
   <block id="12f70185f36225d9e785483fa5adec93" category="doc">Licenza per il SnapCenter Plug-in per VMware vSphere</block>
   <block id="c60c8305c7704e2a6b481202a87d34a4" category="doc">Gestisci i backup nel SnapCenter Plug-in per VMware vSphere</block>
   <block id="7806a0fcfddb17a7ef5ffbc6f69a5d84" category="doc">Gestisci le policy nel SnapCenter Plug-in per VMware vSphere</block>
   <block id="a9cf02408b537b32836b3b5e779b0f56" category="doc">Gestire i gruppi di risorse nel SnapCenter Plug-in per VMware vSphere</block>
   <block id="8ec10186a814e49a8603f7758664c43b" category="doc">Gestisci i sistemi di archiviazione nel SnapCenter Plug-in per VMware vSphere</block>
-  <block id="b3f0168240889017e1bf32ba930c88f9" category="doc">Migra i metadati da SnapCenter per VMware vSphere basato su Windows</block>
   <block id="53e2ff616a1db867b9b0647caed4ea4e" category="doc">Privilegi ONTAP minimi richiesti per SCV</block>
   <block id="c468fa820a55a1c100c86b2078a91c63" category="doc">Privilegi minimi vCenter richiesti per l'SCV</block>
   <block id="c27d4740b5308a914185b9a6ec4534ba" category="doc">Modificare i valori predefiniti di configurazione per lo SCV</block>
@@ -2230,7 +2228,6 @@ Il <block ref="205a43536d4d7a501f66e7fd657c91ca" category="inline-link-macro-rx"
   <block id="6803040d0deefc5c64d293411d2eae3c" category="doc">Flusso di lavoro di protezione dei dati per il SnapCenter Plug-in per VMware vSphere</block>
   <block id="2c20cf3dbe62e059162072efca505843" category="doc">Avvio rapido per il SnapCenter Plug-in per VMware vSphere</block>
   <block id="706c1ecc5e0dfbf5d0b578709966a41b" category="doc">Registrare lo SCV con SnapCenter Server</block>
-  <block id="946449a09a5e8fe514190b45b1239172" category="doc">Note di rilascio per il SnapCenter Plug-in per VMware vSphere</block>
   <block id="e6613d4a408bd1c5af7c93c35fd5c766" category="doc">Rimuovere il SnapCenter Plug-in per VMware vSphere</block>
   <block id="9dc439c0b26590060b9baae9a11cef15" category="doc">Flusso di lavoro REST API per eseguire il backup su richiesta utilizzando SCV</block>
   <block id="10a69d330fd1bd443bb763f537b74f8c" category="doc">Flusso di lavoro REST API per ripristinare le VM eliminate utilizzando lo SCV</block>
@@ -2242,14 +2239,12 @@ Il <block ref="205a43536d4d7a501f66e7fd657c91ca" category="inline-link-macro-rx"
   <block id="a78e138b777bd9b17098fbb8bee31a72" category="doc">Flusso di lavoro REST API per modificare le pianificazioni integrate nello SCV</block>
   <block id="e01d2deaa3a9b8da7ed18a0423a240d2" category="doc">Flussi di lavoro REST API per montare e smontare i datastore in SCV</block>
   <block id="0ab92c1e3d210a1078c8bcb60c815cda" category="doc">API REST per scaricare lavori e generare report in SCV</block>
-  <block id="251106474aba3c73dfbbf781349c0420" category="doc">REST API per contrassegnare i processi bloccati come non riusciti nello SCV</block>
   <block id="a74666d3669e18922af35742c6e64a2a" category="doc">Scopri le API REST nel SnapCenter Plug-in per VMware vSphere</block>
   <block id="ea4aaf388f103ba4af0328e2438f506c" category="doc">Riavviare il servizio client VMware vSphere per SCV</block>
   <block id="b97006b94b5abbef2e4cab535709f798" category="doc">Ripristina un backup specifico del database SCV MySQL</block>
   <block id="62bb165014392b3ca2d868cae754a575" category="doc">Ripristina le VM eliminate dai backup utilizzando lo SCV</block>
   <block id="1c1d699bb8ba3233d50c545bbd1fae6d" category="doc">Opzioni di ripristino per il SnapCenter Plug-in per VMware vSphere</block>
   <block id="d537acd00dd3c27290078e423c835ef5" category="doc">Ripristina file e cartelle guest da VMDK utilizzando SCV</block>
-  <block id="26c55d24b1e98dfc0abb17486fa64729" category="doc">Flusso di lavoro, prerequisiti e limitazioni del ripristino dei file guest in SCV</block>
   <block id="9fd1425d563e70975dbff208034dfa99" category="doc">Ripristina il backup più recente del database MySQL SCV</block>
   <block id="8092cfbde9cd8cf3324b5adcbf7237e2" category="doc">Ripristina i VMDK dai backup utilizzando SCV</block>
   <block id="5e711cf8e194d973e01259462c98c155" category="doc">Ripristina le VM dai backup utilizzando SCV</block>
@@ -2361,4 +2356,11 @@ Il <block ref="205a43536d4d7a501f66e7fd657c91ca" category="inline-link-macro-rx"
   <block id="be0cdd104110166e130ddd84d1c1fc51" category="paragraph">Per le informazioni più recenti sulle versioni supportate, consulta <block ref="c4b2de34dedab2af97f29b6fccd6575c" category="inline-link-macro-rx"></block>.</block>
   <block id="8c41baf1ca98e1184f48c4721d44d431" category="inline-link-macro">Sito di supporto NetApp</block>
   <block id="9eeb0054bc82844b2782a42bddf7c681" category="list-text">Accedi al <block ref="fe673711457a0919d053a9db0146aa49" category="inline-link-macro-rx"></block>.</block>
+  <block id="6fe778bd4f381bc596c1ad2205bf7850" category="doc">Note legali per SnapCenter Plug-in per VMware vSphere</block>
+  <block id="96fb488c6d5d6ed5f3816ffc8e3f6397" category="doc">Risolvere le informazioni mancanti dopo l'aggiornamento a una nuova patch di SCV</block>
+  <block id="09f90d69ac8c406b9baae622de8de691" category="doc">Accedi al client SnapCenter Plug-in for VMware vSphere</block>
+  <block id="d1feecd02693b9e7b54bae1972ce21f7" category="doc">Migrazione dei metadati da sistemi basati su Windows SnapCenter per VMware vSphere</block>
+  <block id="14e70facdd7f1056b19624a65647f611" category="doc">Note di rilascio per SnapCenter Plug-in per VMware vSphere 6.2</block>
+  <block id="0e1c5e24c38bf97d9c3a9e07e8ea35ac" category="doc">Contrassegna i processi bloccati come falliti utilizzando le API REST in SCV</block>
+  <block id="25dc68a1ecd07d4ec635e66b5aba9478" category="doc">Scopri come ripristinare i file guest in SCV</block>
 </blocks>

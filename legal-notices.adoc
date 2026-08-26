@@ -4,7 +4,7 @@ permalink: legal-notices.html
 keywords:  
 summary:  
 ---
-= Note legali
+= Note legali per SnapCenter Plug-in per VMware vSphere
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
