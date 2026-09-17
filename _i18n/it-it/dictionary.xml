@@ -367,17 +367,12 @@
   <block id="e60fd866a673df28143ec78f1ec5e5c6" category="admonition">Tutti gli host devono essere configurati con indirizzi IP (i nomi host FQDN non sono supportati). L'operazione di implementazione non convalida l'input prima dell'implementazione.</block>
   <block id="f1abae2f40d33bbd71a1d0a29cc016cc" category="summary">Per eseguire operazioni di ripristino per i backup delle macchine virtuali utilizzando il plug-in SnapCenter per le API REST di VMware vSphere, è necessario seguire la sequenza prescritta di chiamate API REST.</block>
   <block id="c1634a907000ddd630d2959e055bed59" category="doc">Workflow API REST per ripristinare le macchine virtuali eliminate</block>
-  <block id="c40cc36b9154fdd4a91c01ccb09ce903" category="cell">Individuare l'UUID VM dall'URL VMware Managed Objects. Notare il *uuid* della macchina virtuale che si desidera ripristinare.</block>
-  <block id="e59122dd4a3b9560e419d80fe5d7705c" category="cell"><block ref="680e278bed5cdf20b100ef3fbfa7a37f" prefix="" category="inline-code"></block></block>
-  <block id="e3d8a902b976f14935a74a07f0a8ff70" category="cell"><block ref="180c60808a741f14fed08ebd47075256" prefix="" category="inline-code"></block> Ottiene un elenco di backup per la macchina virtuale specificata. Passare il *uuid* del passaggio 1. Annotare il *backupId* del backup che si desidera ripristinare.</block>
   <block id="eccbc87e4b5ce2fe28308fd9f2a7baf3" category="cell">3</block>
   <block id="1396ed7e5eaba2f2a9d66c52606b7200" category="cell"><block ref="d8e2abe315ab3c4d79dc93692fcdc459" prefix="" category="inline-code"></block></block>
   <block id="a87ff679a2f3e71d9181a67b7542122c" category="cell">4</block>
   <block id="405a7d9fcc2a16f96442a76dd028bbde" category="cell"><block ref="b46f55ca0f70c8287c9f5c57435507ec" prefix="" category="inline-code"></block></block>
   <block id="1ed4c767960d8b89a9dd8cd0e8369b7c" category="cell"><block ref="cd167a8bf45e589a93aea03099990bf5" prefix="" category="inline-code"></block> ottiene le informazioni per l'host su cui è memorizzato il backup. Annotare le informazioni *AvailableEsxHostsList*.</block>
   <block id="e4da3b7fbbce2345d7772b0674a318d5" category="cell">5</block>
-  <block id="3a2a882001dd7896eb2b32739b29471d" category="cell"><block ref="acc5e65ecf55336d9dcae6c4b21ff885" prefix="" category="inline-code"></block></block>
-  <block id="7f8c1c53fd7e08fda5762c3337c0bce6" category="cell"><block ref="200347e95ff17482e774ac785275c8ce" prefix="" category="inline-code"></block> ripristina il backup specificato. Passare il *uuid* del passaggio 1. Passare il *backupId* del passaggio 2. Passare le informazioni dei passaggi 3 e 4 nell'attributo *restoreLocations*. Se il backup della macchina virtuale è un backup parziale, impostare<block ref="0736c145ca7c004b573fcb3b6242d260" prefix=" " category="inline-code"></block> parametro su "false". *Nota:* non è possibile ripristinare una macchina virtuale che è un modello.</block>
   <block id="e17b96bbe7517cc19e507278493adec4" category="inline-link">Gestione dei certificati di storage</block>
   <block id="8d668d142d0f3d31fe81d5725d775268" category="list-text">Accedere alla pagina *VMware vCenter Single Sign-on*.</block>
   <block id="4ac856ec3b3bf79b5253ad31fba9ff73" category="list-text">Estrarre il file .tar, che contiene il file .ova nel sistema locale. Nella pagina *Select an OVF template* (Seleziona un modello OVF), specificare la posizione di<block ref="8d8b01a4d628953e7a2225813c8edb3f" prefix=" " category="inline-code"></block> file all'interno della cartella .tar estratta.</block>
@@ -1524,7 +1519,6 @@ interruzione del lavoro</block>
   <block id="6ba7b5d818acb6cab3137d4c011e2db2" category="inline-link">Autenticazione amministratore e RBAC</block>
   <block id="b6bdb3b25a95e999fb569567041f332e" category="paragraph"><block ref="b6bdb3b25a95e999fb569567041f332e" category="inline-link-rx"></block></block>
   <block id="47d51cdb9bee4f5be50bff68bef7f005" category="paragraph">Per ogni API REST, aggiungere<block ref="3a8f2c381c875eef37ad96b7d70fc1a1" prefix=" " category="inline-code"></block> All'inizio dell'API REST per formare un endpoint completo.</block>
-  <block id="5b845076b112586b7fff13b10d9f0612" category="cell">Passare a.<block ref="7c61e9e4b133f96dbd184942bce35796" prefix=" " category="inline-code"></block></block>
   <block id="e4a70196caccbfc6c6d2c0d9df5e3013" category="paragraph">Per utilizzare le funzionalità di SnapCenter per proteggere macchine virtuali, datastore e database coerenti con le applicazioni su macchine virtualizzate, è necessario implementare il plug-in SnapCenter per VMware vSphere.
 Il <block ref="205a43536d4d7a501f66e7fd657c91ca" category="inline-link-macro-rx"></block> Fornisce istruzioni per scaricare i file OVA.</block>
   <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">Note di rilascio</block>
@@ -2363,4 +2357,15 @@ Il <block ref="205a43536d4d7a501f66e7fd657c91ca" category="inline-link-macro-rx"
   <block id="14e70facdd7f1056b19624a65647f611" category="doc">Note di rilascio per SnapCenter Plug-in per VMware vSphere 6.2</block>
   <block id="0e1c5e24c38bf97d9c3a9e07e8ea35ac" category="doc">Contrassegna i processi bloccati come falliti utilizzando le API REST in SCV</block>
   <block id="25dc68a1ecd07d4ec635e66b5aba9478" category="doc">Scopri come ripristinare i file guest in SCV</block>
+  <block id="cecbb6d90c269c98fdac515b81e0d73b" category="cell">Individua il datastore *moref* dall'URL di VMware Managed Objects. Prendi nota del moref del datastore su cui risiedeva la VM eliminata.</block>
+  <block id="f61beb61662c6537a3f0ae8663f661fe" category="cell"><block ref="00dc830fa803616a49708e2e3e3c8b5b" prefix="" category="inline-code"></block></block>
+  <block id="b009dd3584db37104eeb85f282f3ed53" category="cell"><block ref="66205e1770e6dcf2b2bd1b6d83d6e19a" prefix="" category="inline-code"></block> recupera un elenco di backup per il datastore specificato. Passa il *moref* dal passaggio 1. Nota il *backupId* del backup che vuoi ripristinare.</block>
+  <block id="3287b26eea51f72abac4a77e5b4829cd" category="cell"><block ref="f2a41487d6a8e863e610ba88a60bc84f" prefix="" category="inline-code"></block></block>
+  <block id="747eb4264c2de88633140e938e184ca6" category="cell"><block ref="4e49071979e4a204bd91c87e101a1a96" prefix="" category="inline-code"></block> recupera i dettagli del backup specificato. Passa il *backupId* dal passaggio 2. Nell'elenco delle entità, trova il *entityName* che corrisponde alla VM eliminata e annota l'*UUID*.</block>
+  <block id="1600ae4c16a60cd5ad67ed50a8ba0f1e" category="cell"><block ref="0d42da7d88167ed4dd002c063a3dcb70" prefix="" category="inline-code"></block></block>
+  <block id="796d765a2681401240691e1d250c6fa1" category="cell"><block ref="af62a8975e8577db87448344c585507f" prefix="" category="inline-code"></block> recupera la posizione dello snapshot per il backup specificato. Passa il *backupId* dal passaggio 2. Prendi nota delle informazioni di *snapshotLocationsList*.</block>
+  <block id="ef223d3a6282eb2d29c9050b41c058a6" category="cell"><block ref="17602b67d88fcff6d9024b3d93710f9e" prefix="" category="inline-code"></block></block>
+  <block id="704566d14e7a9a5778c823d1b4ec8f66" category="cell"><block ref="cd167a8bf45e589a93aea03099990bf5" prefix="" category="inline-code"></block> recupera le informazioni per l'host su cui è memorizzato il backup. Passa il *moref* dal passaggio 1. Nota le informazioni *availableEsxHostsList*.</block>
+  <block id="d87a25d74744053d50de6457d00b0f8c" category="cell"><block ref="35fb52fb97add0bf107e8814314da67c" prefix="" category="inline-code"></block></block>
+  <block id="31533fd2e85160fecb2398d5ece8c194" category="cell"><block ref="42deac4908a17efb438eb8235d8b5154" prefix="" category="inline-code"></block> ripristina il backup specificato. Passa l'*UUID* dal passaggio 3. Passa il *backupId* dal passaggio 2. Nell'attributo *restoreLocations*, passa le informazioni da *snapshotLocationsList* nel passaggio 4; nell'attributo *esxHost*, passa le informazioni da *availableEsxHostsList* nel passaggio 5. Se il backup della VM è un backup parziale, imposta il parametro <block ref="0736c145ca7c004b573fcb3b6242d260" prefix=" " category="inline-code"></block> su *false*. *Nota:* Non puoi ripristinare una VM che è un template.</block>
 </blocks>

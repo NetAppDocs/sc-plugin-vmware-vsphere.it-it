@@ -22,21 +22,20 @@ Per ogni API REST, aggiungere `\https://<server>:<port>` All'inizio dell'API RES
 | Fase | API REST | Commenti 
 
 
-| 1 | Passare a.
-`\http://<vCenter-IP>/mob` | Individuare l'UUID VM dall'URL VMware Managed Objects. Notare il *uuid* della macchina virtuale che si desidera ripristinare. 
+| 1 | Passare a. `\http://<vCenter-IP>/mob` | Individua il datastore *moref* dall'URL di VMware Managed Objects. Prendi nota del moref del datastore su cui risiedeva la VM eliminata. 
 
 
-| 2 | `/4.1/vm/{uuid}/backups` | `Get VM Backups` Ottiene un elenco di backup per la macchina virtuale specificata. Passare il *uuid* del passaggio 1. Annotare il *backupId* del backup che si desidera ripristinare. 
+| 2 | `/4.1/datastores/{moref}/backups` | `Get Datastore Backups` recupera un elenco di backup per il datastore specificato. Passa il *moref* dal passaggio 1. Nota il *backupId* del backup che vuoi ripristinare. 
 
 
-| 3 | `/4.1/vm/backups/{backupId}/
-snapshotlocations` | `Get snapshot locations` ottiene la posizione dello snapshot per il backup specificato. Passare il *backupId* del passaggio 2. Annotare le informazioni *snapshotLocationsList*. 
+| 3 | `/4.1/backups/{backupId}` | `Get Backup Details` recupera i dettagli del backup specificato. Passa il *backupId* dal passaggio 2. Nell'elenco delle entità, trova il *entityName* che corrisponde alla VM eliminata e annota l'*UUID*. 
 
 
-| 4 | `/4.1/vm/{moref}/backups/
-availableesxhosts` | `Get available ESX Hosts` ottiene le informazioni per l'host su cui è memorizzato il backup. Annotare le informazioni *AvailableEsxHostsList*. 
+| 4 | `/4.1/vm/backups/{backupId}/snapshotlocations` | `Get snapshot locations` recupera la posizione dello snapshot per il backup specificato. Passa il *backupId* dal passaggio 2. Prendi nota delle informazioni di *snapshotLocationsList*. 
 
 
-| 5 | `/4.1/vm/{uuid}/backups/
-{backupId}/restore` | `Restore VM from a backup using uuid or restore a deleted VM` ripristina il backup specificato. Passare il *uuid* del passaggio 1. Passare il *backupId* del passaggio 2. Passare le informazioni dei passaggi 3 e 4 nell'attributo *restoreLocations*. Se il backup della macchina virtuale è un backup parziale, impostare `restartVM` parametro su "false". *Nota:* non è possibile ripristinare una macchina virtuale che è un modello. 
+| 5 | `/4.1/datastores/{moref}/availableEsxHosts` | `Get available ESX Hosts` recupera le informazioni per l'host su cui è memorizzato il backup. Passa il *moref* dal passaggio 1. Nota le informazioni *availableEsxHostsList*. 
+
+
+| 6 | `/4.1/vm/{uuid}/backups/{backupId}/restoreVm` | `Restore a VM from a backup` ripristina il backup specificato. Passa l'*UUID* dal passaggio 3. Passa il *backupId* dal passaggio 2. Nell'attributo *restoreLocations*, passa le informazioni da *snapshotLocationsList* nel passaggio 4; nell'attributo *esxHost*, passa le informazioni da *availableEsxHostsList* nel passaggio 5. Se il backup della VM è un backup parziale, imposta il parametro  `restartVM` su *false*. *Nota:* Non puoi ripristinare una VM che è un template. 
 |===
