@@ -35,19 +35,42 @@ SnapCenter Plug-in for VMware vSphere 6.2.1 è una versione di manutenzione. Agg
 
 È buona norma esaminare i problemi noti risolti in una release prima di eseguire l'aggiornamento.
 
-* VMDP-7072: ONTAP gestito nel cloud su Oracle Cloud può essere aggiunto come sistema storage.
-* VMDP-7052: Il ripristino di una VM in una posizione diversa mantiene la policy di storage della VM, pertanto il ripristino non viene più rifiutato per le VM che utilizzano una policy non predefinita.
-* VMDP-7027: I pacchetti di log di supporto includono l'elenco dei sistemi storage configurati.
-* VMDP-6987: il collegamento o il ripristino di un disco virtuale non fallisce più quando vCenter segnala brevemente il datastore come non disponibile.
-* VMDP-6965: La pagina delle pianificazioni non non riesce più a caricarsi quando un record di pianificazione è incompleto.
-* VMDP-6952: Quando a un utente non è consentito eliminare un gruppo di risorse, viene visualizzato il messaggio relativo alle autorizzazioni.
-* VMDP-6939: La console di manutenzione non segnala più la mancanza di VMware Tools.
-* VMDP-6935: La procedura di ripristino di singoli file tramite esplorazione di un backup non fallisce più.
-* VMDP-6933: La distribuzione di una nuova appliance non si interrompe più durante la configurazione iniziale.
-* VMDP-6931: La pulizia dei backup secondari non attende più per ore su un volume irraggiungibile. Gli altri volumi continuano a essere elaborati.
-* VMDP-6817: La ridenominazione di un volume ONTAP di origine non lascia più i backup secondari bloccati sul vecchio nome né visualizza voci non più valide.
+|===
+| ID bug | Descrizione 
 
 
+| VMDP-7072 | ONTAP gestito nel cloud su Oracle Cloud può essere aggiunto come sistema storage. 
+
+
+| VMDP-7052 | Il ripristino di una VM in una posizione diversa mantiene la policy di storage della VM, pertanto il ripristino non viene più rifiutato per le VM che utilizzano una policy non predefinita. 
+
+
+| VMDP-7027 | I pacchetti di log di supporto includono l'elenco dei sistemi storage configurati. 
+
+
+| VMDP-6987 | Il collegamento o il ripristino di un disco virtuale non fallisce più quando vCenter segnala brevemente il datastore come non disponibile. 
+
+
+| VMDP-6965 | La pagina degli orari non non riesce più a caricarsi quando un record di orario è incompleto. 
+
+
+| VMDP-6952 | Quando un utente non può eliminare un gruppo di risorse, viene visualizzato il messaggio di autorizzazione. 
+
+
+| VMDP-6939 | La console di manutenzione non segnala più la mancanza di VMware Tools. 
+
+
+| VMDP-6935 | La consultazione di un backup per ripristinare singoli file non fallisce più. 
+
+
+| VMDP-6933 | La distribuzione di una nuova appliance si completa ora correttamente durante la configurazione iniziale. 
+
+
+| VMDP-6931 | La pulizia dei backup secondari non resta più in attesa per ore su un volume non raggiungibile. Gli altri volumi continuano a essere elaborati. 
+
+
+| VMDP-6817 | Rinominare un volume ONTAP di origine non comporta più che i backup secondari mantengano il vecchio nome o visualizzino voci non più valide. 
+|===
 
 
 [[supported-snapcenter-releases]]
